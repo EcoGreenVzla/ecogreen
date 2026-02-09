@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="https://tumuro.com/media/ui/ecogreen-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoGreen Corporate Header</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Preload the custom font for faster loading from the local public path -->
+    <link rel="preload" href="/fonts/ufonts.com_dincond-light-opentype.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <style>
+      @font-face {
+        font-family: 'Din Condensed Light';
+        /* Load font from local path to resolve CORS issue permanently */
+        src: url('/fonts/ufonts.com_dincond-light-opentype.otf') format('opentype');
+        font-style: normal;
+        font-display: swap; /* Improves font rendering performance */
+      }
+      /* Force the custom font on the body and ALL its children to ensure absolute consistency */
+      body, body * {
+        font-family: 'Din Condensed Light', 'Open Sans', sans-serif !important;
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontSize: {
+              'nav': '1.1rem',
+            },
+            fontFamily: {
+              sans: ['Din Condensed Light', 'Open Sans', 'sans-serif'],
+            },
+            colors: {
+              'ecogreen-blue': '#0E306F',
+              'ecogreen-green': '#309400',
+              'ecogreen-lime': '#54c70e',
+              'ecogreen-orange': '#f87004',
+            },
+          },
+        },
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "framer-motion": "https://esm.sh/framer-motion@^11",
+    "path": "https://esm.sh/path@^0.12.7",
+    "vite": "https://esm.sh/vite@^7.3.1",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gray-100 font-sans">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
