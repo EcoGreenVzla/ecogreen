@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 import FacebookIcon from './icons/FacebookIcon';
 import TwitterIcon from './icons/TwitterIcon';
 import InstagramIcon from './icons/InstagramIcon';
@@ -7,11 +8,11 @@ import LinkedinIcon from './icons/LinkedinIcon';
 import MailIcon from './icons/MailIcon';
 import { motion } from 'framer-motion';
 
-const FooterLink: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
+const FooterLink: React.FC<{ to: string; children: React.ReactNode }> = ({ to, children }) => (
   <li>
-    <a href={href} className="hover:text-ecogreen-lime transition-colors duration-300 pb-1 border-b border-transparent hover:border-ecogreen-lime/50">
+    <Link to={to} className="hover:text-ecogreen-lime transition-colors duration-300 pb-1 border-b border-transparent hover:border-ecogreen-lime/50">
       {children}
-    </a>
+    </Link>
   </li>
 );
 
@@ -47,19 +48,19 @@ const Footer: React.FC = () => {
             <div className="lg:col-span-2">
               <h3 className="font-semibold mb-6">Menú</h3>
               <ul className="space-y-3 font-light">
-                <FooterLink href="#">Ecogreen</FooterLink>
-                <FooterLink href="#">Campos de Aplicación</FooterLink>
-                <FooterLink href="#">Casos de Obras</FooterLink>
-                <FooterLink href="#">Petroleo</FooterLink>
-                <FooterLink href="#">Control de Erosion</FooterLink>
+                <FooterLink to="/">Ecogreen</FooterLink>
+                <FooterLink to="/campos-de-aplicacion">Campos de Aplicación</FooterLink>
+                <FooterLink to="/casos-de-obras">Casos de Obras</FooterLink>
+                <FooterLink to="/petroleo">Petroleo</FooterLink>
+                <FooterLink to="/control-de-erosion">Control de Erosion</FooterLink>
               </ul>
             </div>
             
             {/* Columna 3: Legal */}
             <div className="lg:col-span-2 pt-0 md:pt-12">
                <ul className="space-y-3 font-light">
-                <FooterLink href="#">Política de Privacidad</FooterLink>
-                <FooterLink href="#">Términos de Uso</FooterLink>
+                <li><a href="#" className="hover:text-ecogreen-lime transition-colors duration-300 pb-1 border-b border-transparent hover:border-ecogreen-lime/50">Política de Privacidad</a></li>
+                <li><a href="#" className="hover:text-ecogreen-lime transition-colors duration-300 pb-1 border-b border-transparent hover:border-ecogreen-lime/50">Términos de Uso</a></li>
               </ul>
             </div>
 

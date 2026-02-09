@@ -1,5 +1,7 @@
+
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { casosDeObrasPrincipalesData } from '../data/casosDeObrasPrincipales';
 
 // Variants for the main container to stagger children
@@ -106,15 +108,16 @@ const CasosDeObras = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
         >
-            <motion.a 
-                href="#"
-                className="inline-block bg-ecogreen-blue text-white uppercase text-lg font-semibold tracking-wider px-10 py-3 rounded-md shadow-lg"
-                whileHover={{ scale: 1.05, y: -5, boxShadow: "0px 10px 20px rgba(14, 48, 111, 0.3)" }}
-                whileTap={{ scale: 0.95 }}
-                transition={{ type: 'spring', stiffness: 300 }}
-            >
-                Ver Más
-            </motion.a>
+            <Link to="/casos-de-obras">
+                <motion.div
+                    className="inline-block bg-ecogreen-blue text-white uppercase text-lg font-semibold tracking-wider px-10 py-3 rounded-md shadow-lg"
+                    whileHover={{ scale: 1.05, y: -5, boxShadow: "0px 10px 20px rgba(14, 48, 111, 0.3)" }}
+                    whileTap={{ scale: 0.95 }}
+                    transition={{ type: 'spring', stiffness: 300 }}
+                >
+                    Ver Más
+                </motion.div>
+            </Link>
         </motion.div>
       </div>
     </section>
