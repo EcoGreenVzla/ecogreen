@@ -70,31 +70,23 @@ const SectionHeader: React.FC<{ title: string }> = ({ title }) => (
     </div>
 );
 
-// --- CUSTOM ImageCard for this page ---
 interface ImageCardProps {
     src: string;
     onClick: () => void;
 }
 const ImageCard: React.FC<ImageCardProps> = ({ src, onClick }) => (
     <motion.div
-        className="group flex flex-col rounded-md shadow-lg overflow-hidden w-full cursor-pointer"
+        className="group h-64 rounded-md shadow-lg overflow-hidden relative cursor-pointer"
         variants={cardVariants}
         whileHover={{ y: -8, scale: 1.03, boxShadow: "0px 10px 20px rgba(0,0,0,0.15)" }}
         transition={{ type: "spring", stiffness: 300 }}
         onClick={onClick}
     >
-        <div className="h-48 overflow-hidden">
-            <img
-                src={src}
-                alt="Proyecto de estabilización de taludes"
-                className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-            />
-        </div>
-        <div className="bg-ecogreen-green flex items-center p-2 h-16">
-            <div className="bg-white rounded-full p-1 mr-4 flex-shrink-0 transition-transform duration-300 ease-in-out group-hover:scale-110">
-                <img src='https://tumuro.com/media/banner-services/control-de-erosion-icon.png' alt="Icono Control de Erosión" className="h-10 w-10" />
-            </div>
-        </div>
+        <img
+            src={src}
+            alt="Proyecto de estabilización de taludes"
+            className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+        />
     </motion.div>
 );
 
