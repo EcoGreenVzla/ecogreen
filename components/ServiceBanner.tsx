@@ -16,14 +16,14 @@ const services = [
     imageSrc: 'https://tumuro.com/media/banner-services/control-de-erosion.webp',
     iconSrc: 'https://tumuro.com/media/banner-services/control-de-erosion-icon.png',
     color: 'bg-ecogreen-green',
-    href: '#control-de-erosion'
+    href: '/control-de-erosion'
   },
   {
     title: 'VIALIDAD',
     imageSrc: 'https://tumuro.com/media/banner-services/vialidad.webp',
     iconSrc: 'https://tumuro.com/media/banner-services/vialidad-icon.png',
     color: 'bg-ecogreen-orange',
-    href: '#vialidad'
+    href: '/vialidad'
   }
 ];
 
