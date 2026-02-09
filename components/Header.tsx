@@ -9,6 +9,7 @@ import InstagramIcon from './icons/InstagramIcon';
 import LinkedinIcon from './icons/LinkedinIcon';
 import MailIcon from './icons/MailIcon';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const SocialIcon: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
     <motion.a
@@ -33,7 +34,9 @@ const Header: React.FC = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
-             <img className="h-16 w-auto" src="https://tumuro.com/media/ui/ecogreen-logo.png" alt="EcoGreen Construcciones Logo" />
+             <Link to="/">
+                <img className="h-16 w-auto" src="https://tumuro.com/media/ui/ecogreen-logo.png" alt="EcoGreen Construcciones Logo" />
+             </Link>
           </div>
           <div className="hidden lg:flex items-center space-x-5">
              <SocialIcon href="#"><FacebookIcon className="h-5 w-5" /></SocialIcon>

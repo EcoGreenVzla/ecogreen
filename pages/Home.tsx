@@ -9,16 +9,14 @@ import LogoRibbon from '../components/LogoRibbon';
 
 const Home: React.FC = () => {
   return (
-    <main className="flex-grow">
-      <div className="mt-32">
-        <HeroSlider />
-        <ServiceBanner />
-        <CamposAplicacion />
-        <CasosDeObras />
-        <CtaBanner />
-        <LogoRibbon />
-      </div>
-    </main>
+    <>
+      <HeroSlider />
+      <ServiceBanner />
+      <CamposAplicacion />
+      <CasosDeObras />
+      <CtaBanner />
+      <LogoRibbon />
+    </>
   );
 };
 
