@@ -225,7 +225,8 @@ const MurosDeContencion: React.FC = () => {
 
       {/* Contenido Teórico */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-6 max-w-4xl">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl">
             <div className="flex items-center mb-8">
                 <img src="https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono" className="w-16 h-16 mr-6" />
                 <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Muros de Contención</h2>
@@ -269,6 +270,7 @@ const MurosDeContencion: React.FC = () => {
                   {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
               </button>
             </div>
+          </div>
         </div>
       </section>
 
