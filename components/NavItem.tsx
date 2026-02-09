@@ -88,12 +88,19 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
           <div className="pl-4 pb-2">
             {item.children && <Dropdown items={item.children} isMobile />}
             {/* Mobile MegaMenu can be a simplified list or a link to a separate page */}
-            {item.isMegaMenu && <Link to={item.href} className="block py-2 text-sm text-gray-300">Ver Casos de Obras</Link>}
+            {item.isMegaMenu && <Link to={'/casos-de-obras'} className="block py-2 text-sm text-gray-300">Ver Casos de Obras</Link>}
           </div>
         )}
       </li>
     );
   }
+  
+  const navContent = (
+    <>
+      {item.label}
+      {hasChildren && <ChevronDownIcon className="h-4 w-4 ml-2" />}
+    </>
+  );
 
   return (
     <motion.div 
@@ -101,10 +108,16 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
     >
-      <Link to={item.href} className="flex items-center h-full">
-        {item.label}
-        {hasChildren && <ChevronDownIcon className="h-4 w-4 ml-2" />}
-      </Link>
+      {item.href === '#' ? (
+         <button className="flex items-center h-full w-full text-left uppercase">
+           {navContent}
+         </button>
+      ) : (
+        <Link to={item.href} className="flex items-center h-full">
+          {navContent}
+        </Link>
+      )}
+
       <AnimatePresence>
         {isHovered && hasChildren && (
           <motion.div

@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
-import { Helmet } from 'react-helmet-async';
 
 // --- Data for System Grids ---
 
@@ -81,14 +80,12 @@ const MurosDeContencion: React.FC = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Muros de Contención | EcoGreen - Soluciones Verdes, Prácticas y Económicas</title>
-        <meta name="description" content="Especialistas en sistemas de contención flexibles y rígidos. Muros de tierra reforzada, gaviones, concreto armado y control de erosión en Venezuela." />
-        <meta property="og:title" content="Muros de Contención | EcoGreen" />
-        <meta property="og:description" content="Soluciones Verdes, Prácticas y Económicas en sistemas de contención flexibles y rígidos." />
-        <meta property="og:image" content="https://tumuro.com/media/muros-de-contencion/grid-sistemas-de-contencion-flexibles/muros-de-tierra-reforzada.webp" />
-        <meta property="og:url" content="https://tumuro.com/muros-de-contencion" />
-      </Helmet>
+      <title>Muros de Contención | EcoGreen - Soluciones Verdes, Prácticas y Económicas</title>
+      <meta name="description" content="Especialistas en sistemas de contención flexibles y rígidos. Muros de tierra reforzada, gaviones, concreto armado y control de erosión en Venezuela." />
+      <meta property="og:title" content="Muros de Contención | EcoGreen" />
+      <meta property="og:description" content="Soluciones Verdes, Prácticas y Económicas en sistemas de contención flexibles y rígidos." />
+      <meta property="og:image" content="https://tumuro.com/media/muros-de-contencion/grid-sistemas-de-contencion-flexibles/muros-de-tierra-reforzada.webp" />
+      <meta property="og:url" content="https://tumuro.com/muros-de-contencion" />
       
       {/* Section 1: Hero */}
       <section

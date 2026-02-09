@@ -1,0 +1,13 @@
+/*
+  Este archivo es para estilos globales. Aunque el proyecto utiliza Tailwind a través de un CDN,
+  podemos definir aquí estilos base o clases personalizadas que no estén cubiertas.
+*/
+
+body {
+  margin: 0;
+  /* Asegura que la fuente definida en index.html se aplique consistentemente */
+  font-family: 'Din Condensed Light', 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f3f4f6; /* bg-gray-100 */
+}
