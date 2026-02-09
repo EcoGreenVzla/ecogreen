@@ -5,6 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import UnderConstruction from './components/UnderConstruction';
+import ScrollToTop from './components/ScrollToTop';
 
 // Import all the new page components
 import MurosDeContencion from './pages/MurosDeContencion';
@@ -55,6 +56,7 @@ import PetroleoProducto5 from './pages/PetroleoProducto5';
 const App: React.FC = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
         <main className="flex-grow pt-32">
