@@ -2,10 +2,10 @@
 import { NavItemType } from '../types';
 
 export const navigationData: NavItemType[] = [
-  { label: 'INICIO', href: '#' },
+  { label: 'INICIO', href: '/' },
   {
     label: 'MUROS DE CONTENCIÓN',
-    href: '#',
+    href: '/muros-de-contencion',
     children: [
       {
         label: 'Sistemas Flexibles',
