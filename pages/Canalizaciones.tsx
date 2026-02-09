@@ -1,15 +1,9 @@
 
 import React from 'react';
+import UnderConstruction from '../components/UnderConstruction';
 
 const Canalizaciones: React.FC = () => {
-  return (
-    <div className="container mx-auto px-4 py-10">
-        <h1 className="text-4xl font-bold text-ecogreen-blue mb-6">Canalizaciones</h1>
-        <p className="text-lg text-gray-600">
-          Esta sección se encuentra actualmente en construcción. Vuelva pronto para ver nuestras soluciones de ingeniería en canalizaciones.
-        </p>
-    </div>
-  );
+  return <UnderConstruction title="Control de Erosión: Canalizaciones" />;
 };
 
 export default Canalizaciones;
