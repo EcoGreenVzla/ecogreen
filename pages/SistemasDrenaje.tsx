@@ -23,18 +23,18 @@ const XIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 // --- Data for Gallery ---
 const galleryImages = [
-  '/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje1.webp',
-  '/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje2.webp',
-  '/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje3.webp',
-  '/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje4.webp',
-  '/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje5.webp',
-  '/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje6.webp',
-  '/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje7.webp',
-  '/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje8.webp',
-  '/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje9.webp',
-  '/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje10.webp',
-  '/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje11.webp',
-  '/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje12.webp',
+  'https://tumuro.com/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje1.webp',
+  'https://tumuro.com/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje2.webp',
+  'https://tumuro.com/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje3.webp',
+  'https://tumuro.com/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje4.webp',
+  'https://tumuro.com/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje5.webp',
+  'https://tumuro.com/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje6.webp',
+  'https://tumuro.com/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje7.webp',
+  'https://tumuro.com/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje8.webp',
+  'https://tumuro.com/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje9.webp',
+  'https://tumuro.com/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje10.webp',
+  'https://tumuro.com/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje11.webp',
+  'https://tumuro.com/media/sistemas-de-drenaje/grid-sistemas-de-drenaje/sistemas-de-drenaje12.webp',
 ];
 
 // --- Animation Variants ---
@@ -187,7 +187,7 @@ const SistemasDrenaje: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url('/media/sistemas-de-drenaje/slider/sistemas-de-drenaje.webp')` }}
+            style={{ backgroundImage: `url('https://tumuro.com/media/sistemas-de-drenaje/slider/sistemas-de-drenaje.webp')` }}
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center p-4 z-10">
