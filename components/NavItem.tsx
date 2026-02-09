@@ -5,6 +5,7 @@ import Dropdown from './Dropdown';
 import MegaMenuCasos from './MegaMenuCasos';
 import ChevronDownIcon from './icons/ChevronDownIcon';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 interface NavItemProps {
   item: NavItemType;
@@ -78,16 +79,16 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
           role="button"
           aria-expanded={isOpen}
         >
-          <a href={item.href} className="uppercase font-semibold text-sm">
+          <Link to={item.href} className="uppercase font-semibold text-sm">
             {item.label}
-          </a>
+          </Link>
           {hasChildren && <ChevronDownIcon className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />}
         </div>
         {isOpen && hasChildren && (
           <div className="pl-4 pb-2">
             {item.children && <Dropdown items={item.children} isMobile />}
             {/* Mobile MegaMenu can be a simplified list or a link to a separate page */}
-            {item.isMegaMenu && <a href={item.href} className="block py-2 text-sm text-gray-300">Ver Casos de Obras</a>}
+            {item.isMegaMenu && <Link to={item.href} className="block py-2 text-sm text-gray-300">Ver Casos de Obras</Link>}
           </div>
         )}
       </li>
@@ -100,10 +101,10 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
       onHoverStart={handleHoverStart}
       onHoverEnd={handleHoverEnd}
     >
-      <a href={item.href} className="flex items-center h-full">
+      <Link to={item.href} className="flex items-center h-full">
         {item.label}
         {hasChildren && <ChevronDownIcon className="h-4 w-4 ml-2" />}
-      </a>
+      </Link>
       <AnimatePresence>
         {isHovered && hasChildren && (
           <motion.div
