@@ -32,18 +32,6 @@ const sliderImages = [
   'https://tumuro.com/media/slider/muros-de-contencion6.webp'
 ];
 
-// --- Internal Components ---
-
-// Reusable Section Header for visual consistency
-const SectionHeader: React.FC<{ title: string; iconSrc?: string }> = ({ title, iconSrc }) => (
-  <div className="flex flex-col items-center justify-center mb-12">
-    {iconSrc && <img src={iconSrc} alt={`${title} Icono`} className="w-20 h-20 mb-4" />}
-    <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-wide text-center text-ecogreen-blue">
-      {title}
-    </h2>
-    <div className="w-24 h-1.5 bg-ecogreen-green rounded-full mt-4" />
-  </div>
-);
 
 interface SystemCardProps {
   title: string;
@@ -123,10 +111,8 @@ const MurosDeContencion: React.FC = () => {
             />
         </AnimatePresence>
         
-        {/* Overlay Oscuro */}
         <div className="absolute inset-0 bg-black/50" />
 
-        {/* Texto Hero Centrado */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
             <motion.h1 
                 initial={{ y: 30, opacity: 0 }}
@@ -149,13 +135,13 @@ const MurosDeContencion: React.FC = () => {
 
       {/* Contenido Teórico */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-6 max-w-4xl text-center">
-            <SectionHeader 
-                title="Muros de Contención"
-                iconSrc="https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp"
-            />
+        <div className="container mx-auto px-6 max-w-4xl">
+            <div className="flex items-center mb-8">
+                <img src="https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono" className="w-16 h-16 mr-6" />
+                <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Muros de Contención</h2>
+            </div>
             
-            <p className="text-xl text-gray-700 leading-relaxed mb-6">
+            <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
                 Los muros de contención son estructuras construidas con el propósito de resistir las fuerzas ejercidas por la tierra contenida y transmitir esas fuerzas en forma segura a la fundación o a un sitio fuera de la masa susceptible a moverse. La finalidad de los muros de contención es proveer estabilidad contra la rotura de macizos de tierra o roca para evitar los deslizamientos causados por su peso propio o por empujes producidos por cargas externas.
             </p>
 
@@ -185,19 +171,24 @@ const MurosDeContencion: React.FC = () => {
                 )}
             </AnimatePresence>
             
-            <button 
-                onClick={() => setIsExpanded(!isExpanded)}
-                className="mt-8 font-bold text-lg uppercase tracking-wider border-2 border-ecogreen-blue text-ecogreen-blue hover:bg-ecogreen-blue hover:text-white transition-colors rounded-full px-6 py-2"
-            >
-                {isExpanded ? 'Cerrar ▲' : 'Leer Más ▼'}
-            </button>
+            <div className="mt-4 text-left">
+              <button 
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none"
+              >
+                  {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
+              </button>
+            </div>
         </div>
       </section>
 
       {/* Grid: Sistemas Flexibles */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-            <SectionHeader title="Sistemas de Contención Flexibles" />
+            <div className="mb-12">
+                <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Contención Flexibles</h3>
+                <div className="w-full h-1 bg-ecogreen-green"></div>
+            </div>
             <motion.div 
                 className="grid grid-cols-1 md:grid-cols-3 gap-8"
                 variants={gridContainerVariants}
@@ -213,7 +204,10 @@ const MurosDeContencion: React.FC = () => {
       {/* Grid: Sistemas Rígidos */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-            <SectionHeader title="Sistemas de Contención Rígidos" />
+            <div className="mb-12">
+                <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Contención Rígidos</h3>
+                <div className="w-full h-1 bg-ecogreen-green"></div>
+            </div>
             <motion.div 
                 className="grid grid-cols-1 md:grid-cols-3 gap-8"
                 variants={gridContainerVariants}
@@ -229,7 +223,10 @@ const MurosDeContencion: React.FC = () => {
       {/* Grid: Sistemas Drenaje */}
       <section className="py-16 bg-gray-50 mb-16">
         <div className="container mx-auto px-4">
-            <SectionHeader title="Sistemas de Drenaje" />
+            <div className="mb-12">
+                <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Drenaje</h3>
+                <div className="w-full h-1 bg-ecogreen-green"></div>
+            </div>
             <motion.div 
                 className="grid grid-cols-1 md:grid-cols-3 gap-8"
                 variants={gridContainerVariants}
