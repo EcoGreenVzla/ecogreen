@@ -3,7 +3,6 @@ import React, { useState, useRef } from 'react';
 import { NavItemType } from '../types';
 import ChevronDownIcon from './icons/ChevronDownIcon';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
-import { Link } from 'react-router-dom';
 
 interface DropdownProps {
   items: NavItemType[];
@@ -66,13 +65,13 @@ const DesktopDropdownItem: React.FC<{ item: NavItemType }> = ({ item }) => {
       onHoverEnd={handleHoverEnd}
       variants={dropdownItemVariants}
     >
-      <Link
-        to={item.href}
+      <a
+        href={item.href}
         className="flex justify-between items-center px-4 py-3 text-nav tracking-wider text-white hover:bg-ecogreen-green transition-colors duration-300"
       >
         {item.label}
         {hasChildren && <ChevronDownIcon className="h-4 w-4 rotate-[-90deg]" />}
-      </Link>
+      </a>
       <AnimatePresence>
         {isHovered && hasChildren && (
           <motion.div 
@@ -104,9 +103,9 @@ const MobileDropdownItem: React.FC<{ item: NavItemType }> = ({ item }) => {
         role="button"
         aria-expanded={isOpen}
       >
-        <Link to={item.href} className="text-sm text-gray-300 hover:text-white">
+        <a href={item.href} className="text-sm text-gray-300 hover:text-white">
           {item.label}
-        </Link>
+        </a>
         {hasChildren && <ChevronDownIcon className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />}
       </div>
       {isOpen && hasChildren && (

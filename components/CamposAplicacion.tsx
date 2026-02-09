@@ -1,24 +1,6 @@
-
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { camposData } from '../data/camposAplicacion';
-import { Link } from 'react-router-dom';
-
-const slugify = (text: string): string => {
-  const a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;'
-  const b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------'
-  const p = new RegExp(a.split('').join('|'), 'g')
-
-  return text.toString().toLowerCase()
-    .replace(/\s+/g, '-') // Replace spaces with -
-    .replace(p, c => b.charAt(a.indexOf(c))) // Replace special characters
-    .replace(/&/g, '-and-') // Replace & with 'and'
-    .replace(/[^\w\-]+/g, '') // Remove all non-word chars
-    .replace(/\-\-+/g, '-') // Replace multiple - with single -
-    .replace(/^-+/, '') // Trim - from start of text
-    .replace(/-+$/, '') // Trim - from end of text
-}
-
 
 // --- Animation Variants for Coordinated Micro-interactions ---
 
@@ -84,20 +66,18 @@ const rippleVariants: Variants = {
     }
 }
 
-const MotionLink = motion(Link);
 
 // FIX: Changed component signature to use React.FC to correctly type props and resolve issue with the 'key' prop.
-const CampoItem: React.FC<{ title: string, icon: string, index: number, href: string }> = ({ title, icon, index, href }) => {
+const CampoItem: React.FC<{ title: string, icon: string, index: number }> = ({ title, icon, index }) => {
   return (
-    <MotionLink
-      to={href}
+    <motion.div
       initial="rest"
       whileInView={{ opacity: 1, y: 0 }}
       whileHover="hover"
       whileTap="tap"
       viewport={{ once: true }}
       variants={itemVariants}
-      className="flex flex-col items-center group"
+      className="flex flex-col items-center group cursor-pointer"
       style={{ opacity: 0, y: 30 }}
       transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
     >
@@ -163,7 +143,7 @@ const CampoItem: React.FC<{ title: string, icon: string, index: number, href: st
             className="block h-[1px] bg-[#0E306F] mx-auto mt-1" 
         />
       </motion.h3>
-    </MotionLink>
+    </motion.div>
   );
 };
 
@@ -182,18 +162,14 @@ const CamposAplicacion = () => {
         </motion.h2>
         
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8">
-          {camposData.map((campo, index) => {
-            const href = `/campos-de-aplicacion/${slugify(campo.title)}`;
-            return (
-              <CampoItem 
-                key={campo.id} 
-                title={campo.title} 
-                icon={campo.icon} 
-                index={index} 
-                href={href}
-              />
-            );
-          })}
+          {camposData.map((campo, index) => (
+            <CampoItem 
+              key={campo.id} 
+              title={campo.title} 
+              icon={campo.icon} 
+              index={index} 
+            />
+          ))}
         </div>
       </div>
     </section>
