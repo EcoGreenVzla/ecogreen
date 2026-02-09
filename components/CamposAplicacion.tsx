@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { camposData } from '../data/camposAplicacion';
+import { Link } from 'react-router-dom';
 
 // --- Animation Variants for Coordinated Micro-interactions ---
 
@@ -67,83 +69,84 @@ const rippleVariants: Variants = {
 }
 
 
-// FIX: Changed component signature to use React.FC to correctly type props and resolve issue with the 'key' prop.
-const CampoItem: React.FC<{ title: string, icon: string, index: number }> = ({ title, icon, index }) => {
+const CampoItem: React.FC<{ title: string; icon: string; index: number; href: string }> = ({ title, icon, index, href }) => {
   return (
-    <motion.div
-      initial="rest"
-      whileInView={{ opacity: 1, y: 0 }}
-      whileHover="hover"
-      whileTap="tap"
-      viewport={{ once: true }}
-      variants={itemVariants}
-      className="flex flex-col items-center group cursor-pointer"
-      style={{ opacity: 0, y: 30 }}
-      transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
-    >
-      {/* Contenedor del Círculo con Borde Animado */}
-      <div className="relative w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">
-        {/* Ripple Effect */}
-        <motion.div 
-            className="absolute w-full h-full rounded-full border-2 border-[#0E306F]"
-            variants={rippleVariants}
-            style={{ scale: 1, opacity: 0 }}
-        />
-        {/* Glow Effect */}
-        <motion.div 
-            className="absolute w-full h-full rounded-full"
-            style={{ boxShadow: "0 0 20px 5px rgba(14, 48, 111, 0.4)" }}
-            variants={glowVariants}
-        />
-
-        {/* SVG para el trazo del compás (dual path) */}
-        <svg className="absolute inset-0 w-full h-full -rotate-90">
-          {/* Círculo base verde */}
-          <motion.circle
-            cx="50%" cy="50%" r="48%"
-            stroke="#309400"
-            strokeWidth="2"
-            fill="transparent"
-            initial={{ pathLength: 0 }}
-            whileInView={{ pathLength: 1 }}
-            transition={{ duration: 1.5, ease: "easeInOut" }}
-            variants={circleGreenVariants}
-          />
-          {/* Círculo animado azul (hover) */}
-          <motion.circle
-            cx="50%" cy="50%" r="48%"
-            stroke="#0E306F"
-            strokeWidth="4"
-            fill="transparent"
-            variants={circleBlueVariants}
-          />
-        </svg>
-
-        {/* Icono Interno con levitación */}
-        <motion.div 
-          variants={iconVariants}
-          className="relative z-10 w-2/3 h-2/3 flex items-center justify-center p-4"
-        >
-          <img 
-            src={icon} 
-            alt={title} 
-            className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
-          />
-        </motion.div>
-      </div>
-
-      {/* Título con Tipografía Dinámica */}
-      <motion.h3 
-        variants={titleVariants}
-        className="mt-6 text-center text-[1.2rem] font-sans tracking-wider max-w-[180px]"
+    <Link to={href}>
+      <motion.div
+        initial="rest"
+        whileInView={{ opacity: 1, y: 0 }}
+        whileHover="hover"
+        whileTap="tap"
+        viewport={{ once: true }}
+        variants={itemVariants}
+        className="flex flex-col items-center group cursor-pointer"
+        style={{ opacity: 0, y: 30 }}
+        transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
       >
-        {title}
-        <motion.span 
-            variants={underlineVariants}
-            className="block h-[1px] bg-[#0E306F] mx-auto mt-1" 
-        />
-      </motion.h3>
-    </motion.div>
+        {/* Contenedor del Círculo con Borde Animado */}
+        <div className="relative w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">
+          {/* Ripple Effect */}
+          <motion.div 
+              className="absolute w-full h-full rounded-full border-2 border-[#0E306F]"
+              variants={rippleVariants}
+              style={{ scale: 1, opacity: 0 }}
+          />
+          {/* Glow Effect */}
+          <motion.div 
+              className="absolute w-full h-full rounded-full"
+              style={{ boxShadow: "0 0 20px 5px rgba(14, 48, 111, 0.4)" }}
+              variants={glowVariants}
+          />
+
+          {/* SVG para el trazo del compás (dual path) */}
+          <svg className="absolute inset-0 w-full h-full -rotate-90">
+            {/* Círculo base verde */}
+            <motion.circle
+              cx="50%" cy="50%" r="48%"
+              stroke="#309400"
+              strokeWidth="2"
+              fill="transparent"
+              initial={{ pathLength: 0 }}
+              whileInView={{ pathLength: 1 }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              variants={circleGreenVariants}
+            />
+            {/* Círculo animado azul (hover) */}
+            <motion.circle
+              cx="50%" cy="50%" r="48%"
+              stroke="#0E306F"
+              strokeWidth="4"
+              fill="transparent"
+              variants={circleBlueVariants}
+            />
+          </svg>
+
+          {/* Icono Interno con levitación */}
+          <motion.div 
+            variants={iconVariants}
+            className="relative z-10 w-2/3 h-2/3 flex items-center justify-center p-4"
+          >
+            <img 
+              src={icon} 
+              alt={title} 
+              className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
+            />
+          </motion.div>
+        </div>
+
+        {/* Título con Tipografía Dinámica */}
+        <motion.h3 
+          variants={titleVariants}
+          className="mt-6 text-center text-[1.2rem] font-sans tracking-wider max-w-[180px]"
+        >
+          {title}
+          <motion.span 
+              variants={underlineVariants}
+              className="block h-[1px] bg-[#0E306F] mx-auto mt-1" 
+          />
+        </motion.h3>
+      </motion.div>
+    </Link>
   );
 };
 
@@ -167,7 +170,8 @@ const CamposAplicacion = () => {
               key={campo.id} 
               title={campo.title} 
               icon={campo.icon} 
-              index={index} 
+              index={index}
+              href={campo.href}
             />
           ))}
         </div>

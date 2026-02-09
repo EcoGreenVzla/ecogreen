@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -8,21 +9,21 @@ const services = [
     imageSrc: 'https://tumuro.com/media/banner-services/muros-de-contencion.webp',
     iconSrc: 'https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp',
     color: 'bg-ecogreen-blue',
-    href: '#muros-de-contencion'
+    href: '/muros-de-contencion/sistemas-flexibles'
   },
   {
     title: 'CONTROL DE EROSIÓN',
     imageSrc: 'https://tumuro.com/media/banner-services/control-de-erosion.webp',
     iconSrc: 'https://tumuro.com/media/banner-services/control-de-erosion-icon.png',
     color: 'bg-ecogreen-green',
-    href: '#control-de-erosion'
+    href: '/control-de-erosion'
   },
   {
     title: 'VIALIDAD',
     imageSrc: 'https://tumuro.com/media/banner-services/vialidad.webp',
     iconSrc: 'https://tumuro.com/media/banner-services/vialidad-icon.png',
     color: 'bg-ecogreen-orange',
-    href: '#vialidad'
+    href: '/vialidad'
   }
 ];
 
@@ -44,27 +45,28 @@ const cardVariants: Variants = {
 };
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, imageSrc, iconSrc, color, href }) => (
-    <motion.a 
-        href={href} 
-        className="group flex flex-col rounded-md shadow-lg overflow-hidden w-full"
-        variants={cardVariants}
-        whileHover={{ y: -8, scale: 1.03, boxShadow: "0px 10px 20px rgba(0,0,0,0.1)" }}
-        transition={{ type: "spring", stiffness: 300 }}
-    >
-        <div className="h-48 overflow-hidden">
-            <img
-                src={imageSrc}
-                alt={`${title} background`}
-                className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
-            />
-        </div>
-        <div className={`${color} flex items-center p-4`}>
-            <div className="bg-white rounded-full p-1 mr-4 flex-shrink-0 transition-transform duration-300 ease-in-out group-hover:scale-150">
-                <img src={iconSrc} alt={`${title} icon`} className="h-12 w-12" />
+    <Link to={href}>
+        <motion.div 
+            className="group flex flex-col rounded-md shadow-lg overflow-hidden w-full"
+            variants={cardVariants}
+            whileHover={{ y: -8, scale: 1.03, boxShadow: "0px 10px 20px rgba(0,0,0,0.1)" }}
+            transition={{ type: "spring", stiffness: 300 }}
+        >
+            <div className="h-48 overflow-hidden">
+                <img
+                    src={imageSrc}
+                    alt={`${title} background`}
+                    className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+                />
             </div>
-            <h3 className="text-white text-base font-bold uppercase tracking-wide">{title}</h3>
-        </div>
-    </motion.a>
+            <div className={`${color} flex items-center p-4`}>
+                <div className="bg-white rounded-full p-1 mr-4 flex-shrink-0 transition-transform duration-300 ease-in-out group-hover:scale-150">
+                    <img src={iconSrc} alt={`${title} icon`} className="h-12 w-12" />
+                </div>
+                <h3 className="text-white text-base font-bold uppercase tracking-wide">{title}</h3>
+            </div>
+        </motion.div>
+    </Link>
 );
 
 const bannerVariants: Variants = {
