@@ -73,16 +73,20 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
   if (isMobile) {
     return (
       <li className={mobileItemClasses}>
-        <div 
-          className="flex justify-between items-center py-3 px-2" 
-          onClick={handleToggle}
-          role="button"
-          aria-expanded={isOpen}
-        >
-          <Link to={item.href} className="uppercase font-semibold text-sm">
+        <div className="flex justify-between items-center py-3 px-2">
+          <Link to={item.href} className="uppercase font-semibold text-sm flex-grow">
             {item.label}
           </Link>
-          {hasChildren && <ChevronDownIcon className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />}
+          {hasChildren && (
+            <button 
+              onClick={handleToggle}
+              className="p-2 -mr-2"
+              aria-label={`Toggle submenu for ${item.label}`}
+              aria-expanded={isOpen}
+            >
+              <ChevronDownIcon className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
+            </button>
+          )}
         </div>
         {isOpen && hasChildren && (
           <div className="pl-4 pb-2">

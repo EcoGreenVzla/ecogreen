@@ -9,7 +9,7 @@ const services = [
     imageSrc: 'https://tumuro.com/media/banner-services/muros-de-contencion.webp',
     iconSrc: 'https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp',
     color: 'bg-ecogreen-blue',
-    href: '/muros-de-contencion/sistemas-flexibles'
+    href: '/muros-de-contencion'
   },
   {
     title: 'CONTROL DE EROSIÓN',

@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import UnderConstruction from './components/UnderConstruction';
 
 // Import all the new page components
+import MurosDeContencion from './pages/MurosDeContencion';
 import Vialidad from './pages/Vialidad';
 import Petroleo from './pages/Petroleo';
 import Contactanos from './pages/Contactanos';
@@ -61,6 +62,7 @@ const App: React.FC = () => {
             <Route path="/" element={<Home />} />
             
             {/* Top Level Routes */}
+            <Route path="/muros-de-contencion" element={<MurosDeContencion />} />
             <Route path="/vialidad" element={<Vialidad />} />
             <Route path="/petroleo" element={<Petroleo />} />
             <Route path="/contactanos" element={<Contactanos />} />
