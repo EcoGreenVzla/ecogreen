@@ -68,7 +68,7 @@ const SectionHeader: React.FC<{ title: string }> = ({ title }) => (
     </div>
 );
 
-// --- CUSTOM ImageCard for this page ---
+// --- CUSTOM ImageCard for "Control de Erosión" section ---
 interface ImageCardProps {
     src: string;
     onClick: () => void;
@@ -246,7 +246,7 @@ const RefuerzoTerraplenes: React.FC = () => {
         <div className="container mx-auto px-4">
             <SectionHeader title="Galería de Proyectos" />
             <motion.div 
-                className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+                className="grid grid-cols-1 md:grid-cols-3 gap-8"
                 variants={gridContainerVariants}
                 initial="hidden"
                 whileInView="visible"
