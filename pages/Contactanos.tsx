@@ -1,33 +1,43 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, Variants } from 'framer-motion';
-// --- Imports de Leaflet (Mapa Gratuito) ---
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
 
-// --- Iconos ---
+// --- OpenLayers Imports ---
+import Map from 'ol/Map';
+import View from 'ol/View';
+import TileLayer from 'ol/layer/Tile';
+import XYZ from 'ol/source/XYZ';
+import Overlay from 'ol/Overlay';
+import { fromLonLat } from 'ol/proj';
+import 'ol/ol.css'; // Importante para los estilos base del mapa
+
+// --- Iconos Locales ---
 import FacebookIcon from '../components/icons/FacebookIcon';
 import TwitterIcon from '../components/icons/TwitterIcon';
 import InstagramIcon from '../components/icons/InstagramIcon';
 import LinkedinIcon from '../components/icons/LinkedinIcon';
 
-// --- ESTILOS DEL MARCADOR PERSONALIZADO (CSS EN JS) ---
-// Esto dibuja el PIN AZUL con el logo dentro
-const markerStyle = `
+// --- ESTILOS CSS (Inyectados en JS) ---
+const styles = `
+  /* Estilo del PIN AZUL Personalizado */
   .custom-pin {
     background-color: #004857; /* Azul EcoGreen Oscuro */
     width: 3rem;
     height: 3rem;
     display: block;
-    left: -1.5rem;
-    top: -1.5rem;
     position: relative;
     border-radius: 3rem 3rem 0;
     transform: rotate(45deg);
     border: 3px solid #FFFFFF;
-    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: transform 0.2s ease;
   }
   
+  .custom-pin:hover {
+    transform: rotate(45deg) scale(1.1);
+    background-color: #006070;
+  }
+
   .custom-pin::after {
     content: '';
     width: 1.5rem;
@@ -41,18 +51,49 @@ const markerStyle = `
     transform: rotate(-45deg); /* Contrarrestar la rotación del pin */
     border-radius: 50%;
   }
+
+  /* Estilo del Popup */
+  .ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    bottom: 50px;
+    left: -50px;
+    min-width: 180px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: none; /* Oculto por defecto */
+    z-index: 100;
+  }
+  
+  .ol-popup::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+  }
+  
+  .ol-popup.visible {
+    display: block;
+    animation: fadeIn 0.3s;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
 `;
 
-// --- Configuración del Icono HTML para Leaflet ---
-const customDivIcon = new L.DivIcon({
-    className: 'custom-map-marker', // Clase base (no usada visualmente, usamos el html interno)
-    html: `<div class="custom-pin"></div>`,
-    iconSize: [48, 48],
-    iconAnchor: [24, 48], // La punta del pin (abajo)
-    popupAnchor: [0, -48]
-});
-
-// --- Componentes de Iconos Locales ---
+// --- Componentes de Iconos SVG ---
 const LocationMarkerIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -91,7 +132,74 @@ const SocialIcon: React.FC<{ href: string; children: React.ReactNode }> = ({ hre
 
 const Contactanos: React.FC = () => {
     // Coordenadas: Lomas De La Lagunita, Caracas
-    const position: [number, number] = [10.4345, -66.8370];
+    // OpenLayers usa [Lon, Lat]
+    const coordinates = [-66.8370, 10.4345];
+    
+    const mapRef = useRef<HTMLDivElement>(null);
+    const mapInstance = useRef<Map | null>(null);
+
+    // --- Inicialización del Mapa OpenLayers ---
+    useEffect(() => {
+        if (!mapRef.current) return;
+        if (mapInstance.current) return; // Evitar doble inicialización
+
+        // 1. Crear el elemento HTML para el Pin
+        const pinElement = document.createElement('div');
+        pinElement.className = 'custom-pin';
+
+        // 2. Crear el elemento HTML para el Popup
+        const popupElement = document.createElement('div');
+        popupElement.className = 'ol-popup';
+        popupElement.innerHTML = '<strong>EcoGreen</strong><br/>Urb. Lomas De La Lagunita';
+        
+        // Mostrar popup al hacer click en el pin
+        pinElement.addEventListener('click', () => {
+             popupElement.classList.toggle('visible');
+        });
+
+        // 3. Crear los Overlays (Capas HTML sobre el mapa)
+        const markerOverlay = new Overlay({
+            element: pinElement,
+            position: fromLonLat(coordinates),
+            positioning: 'center-center', // Centrar el div en la coordenada
+            stopEvent: false
+        });
+
+        const popupOverlay = new Overlay({
+            element: popupElement,
+            position: fromLonLat(coordinates),
+            positioning: 'bottom-center',
+            offset: [0, -45], // Subirlo un poco respecto al punto
+            stopEvent: false
+        });
+
+        // 4. Inicializar el Mapa
+        mapInstance.current = new Map({
+            target: mapRef.current,
+            layers: [
+                // Capa CartoDB Dark Matter (Estilo Oscuro Gratuito)
+                new TileLayer({
+                    source: new XYZ({
+                        url: 'https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+                        attributions: '&copy; <a href="https://www.openstreetmap.org/">OSM</a> contributors, &copy; <a href="https://carto.com/">CARTO</a>'
+                    })
+                })
+            ],
+            view: new View({
+                center: fromLonLat(coordinates),
+                zoom: 15
+            }),
+            overlays: [markerOverlay, popupOverlay]
+        });
+
+        // Limpieza al desmontar
+        return () => {
+            if (mapInstance.current) {
+                mapInstance.current.setTarget(undefined);
+                mapInstance.current = null;
+            }
+        };
+    }, []);
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -100,7 +208,7 @@ const Contactanos: React.FC = () => {
 
     return (
         <>
-            <style>{markerStyle}</style> {/* Inyección de estilos para el pin */}
+            <style>{styles}</style>
             <title>Contáctanos | EcoGreen</title>
             <meta name="description" content="Póngase en contacto con EcoGreen para soluciones de ingeniería. Estamos listos para atenderle." />
 
@@ -176,25 +284,9 @@ const Contactanos: React.FC = () => {
                 </motion.div>
             </section>
 
-            {/* Sección del Mapa Gratuito (Leaflet) */}
+            {/* Sección del Mapa OpenLayers (Estilo Oscuro) */}
             <section className="w-full h-[450px] bg-gray-900 relative z-0">
-                <MapContainer 
-                    center={position} 
-                    zoom={15} 
-                    scrollWheelZoom={false} 
-                    style={{ width: '100%', height: '100%' }}
-                >
-                    {/* Estilo CartoDB Dark Matter (Oscuro y Gratis) - Muy parecido a Midnight Commander */}
-                    <TileLayer
-                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
-                        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
-                    />
-                    <Marker position={position} icon={customDivIcon}>
-                        <Popup>
-                            <strong>EcoGreen</strong> <br /> Urbanización Lomas De La Lagunita.
-                        </Popup>
-                    </Marker>
-                </MapContainer>
+                 <div ref={mapRef} style={{ width: '100%', height: '100%' }} />
             </section>
         </>
     );
