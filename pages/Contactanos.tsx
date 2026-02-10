@@ -20,14 +20,14 @@ import LinkedinIcon from '../components/icons/LinkedinIcon';
 const styles = `
   /* Estilo del PIN AZUL Personalizado */
   .custom-pin {
-    background-color: #004857; /* Azul EcoGreen Oscuro */
+    background-color: #FFFFFF;
     width: 3rem;
     height: 3rem;
     display: block;
     position: relative;
     border-radius: 3rem 3rem 0;
     transform: rotate(45deg);
-    border: 3px solid #FFFFFF;
+    border: 3px solid #004857; /* Azul EcoGreen Oscuro */
     box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
     cursor: pointer;
     transition: transform 0.2s ease;
