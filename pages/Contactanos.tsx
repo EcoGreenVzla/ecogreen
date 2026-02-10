@@ -1,25 +1,58 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion, Variants } from 'framer-motion';
-// --- Nuevos imports para Leaflet ---
+// --- Imports de Leaflet (Mapa Gratuito) ---
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
-import 'leaflet/dist/leaflet.css'; // Importante para que el mapa se vea bien
+import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
 
+// --- Iconos ---
 import FacebookIcon from '../components/icons/FacebookIcon';
 import TwitterIcon from '../components/icons/TwitterIcon';
 import InstagramIcon from '../components/icons/InstagramIcon';
 import LinkedinIcon from '../components/icons/LinkedinIcon';
 
-// --- Configuración del Icono Personalizado en Leaflet ---
-// Leaflet no detecta automáticamente los iconos por defecto en React a veces, así que definimos uno propio.
-const customIcon = new L.Icon({
-    iconUrl: "https://tumuro.com/media/icons/favicon.png",
-    iconSize: [40, 40], // Tamaño del icono
-    iconAnchor: [20, 40], // Punto del icono que corresponde a la ubicación (centro abajo)
-    popupAnchor: [0, -40] // Donde sale el popup si lo hubiera
+// --- ESTILOS DEL MARCADOR PERSONALIZADO (CSS EN JS) ---
+// Esto dibuja el PIN AZUL con el logo dentro
+const markerStyle = `
+  .custom-pin {
+    background-color: #004857; /* Azul EcoGreen Oscuro */
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    left: -1.5rem;
+    top: -1.5rem;
+    position: relative;
+    border-radius: 3rem 3rem 0;
+    transform: rotate(45deg);
+    border: 3px solid #FFFFFF;
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  }
+  
+  .custom-pin::after {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.6rem 0 0 0.6rem;
+    background-image: url('https://tumuro.com/media/icons/favicon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    transform: rotate(-45deg); /* Contrarrestar la rotación del pin */
+    border-radius: 50%;
+  }
+`;
+
+// --- Configuración del Icono HTML para Leaflet ---
+const customDivIcon = new L.DivIcon({
+    className: 'custom-map-marker', // Clase base (no usada visualmente, usamos el html interno)
+    html: `<div class="custom-pin"></div>`,
+    iconSize: [48, 48],
+    iconAnchor: [24, 48], // La punta del pin (abajo)
+    popupAnchor: [0, -48]
 });
 
-// --- Local Icon Components for Contact Info ---
+// --- Componentes de Iconos Locales ---
 const LocationMarkerIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -37,7 +70,7 @@ const EnvelopeIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     </svg>
 );
 
-// --- Animation Variants ---
+// --- Animaciones ---
 const textVariants: Variants = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
@@ -57,7 +90,7 @@ const SocialIcon: React.FC<{ href: string; children: React.ReactNode }> = ({ hre
 );
 
 const Contactanos: React.FC = () => {
-    // Coordenadas: Lomas de La Lagunita, Caracas (Aprox)
+    // Coordenadas: Lomas De La Lagunita, Caracas
     const position: [number, number] = [10.4345, -66.8370];
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -67,6 +100,7 @@ const Contactanos: React.FC = () => {
 
     return (
         <>
+            <style>{markerStyle}</style> {/* Inyección de estilos para el pin */}
             <title>Contáctanos | EcoGreen</title>
             <meta name="description" content="Póngase en contacto con EcoGreen para soluciones de ingeniería. Estamos listos para atenderle." />
 
@@ -142,7 +176,7 @@ const Contactanos: React.FC = () => {
                 </motion.div>
             </section>
 
-            {/* Sección del Mapa con Leaflet (Estilo Oscuro) */}
+            {/* Sección del Mapa Gratuito (Leaflet) */}
             <section className="w-full h-[450px] bg-gray-900 relative z-0">
                 <MapContainer 
                     center={position} 
@@ -150,14 +184,14 @@ const Contactanos: React.FC = () => {
                     scrollWheelZoom={false} 
                     style={{ width: '100%', height: '100%' }}
                 >
-                    {/* Capa de Mapa Oscura (CartoDB Dark Matter Map) - Gratuita */}
+                    {/* Estilo CartoDB Dark Matter (Oscuro y Gratis) - Muy parecido a Midnight Commander */}
                     <TileLayer
                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
                         url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
                     />
-                    <Marker position={position} icon={customIcon}>
+                    <Marker position={position} icon={customDivIcon}>
                         <Popup>
-                            EcoGreen <br /> Urbanización Lomas De La Lagunita.
+                            <strong>EcoGreen</strong> <br /> Urbanización Lomas De La Lagunita.
                         </Popup>
                     </Marker>
                 </MapContainer>
