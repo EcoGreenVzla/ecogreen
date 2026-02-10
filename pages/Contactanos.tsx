@@ -163,4 +163,17 @@ const Contactanos: React.FC = () => {
     );
 };
 
+
+// ... imports
+
+const Contactanos: React.FC = () => {
+  const { isLoaded } = useJsApiLoader({
+    id: 'google-map-script',
+    // AQUÍ ES EL CAMBIO IMPORTANTE:
+    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "", 
+  });
+
+  // ... resto del código
+
+
 export default Contactanos;
