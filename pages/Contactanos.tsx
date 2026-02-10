@@ -1,10 +1,23 @@
 import React, { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
-import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+// --- Nuevos imports para Leaflet ---
+import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import 'leaflet/dist/leaflet.css'; // Importante para que el mapa se vea bien
+import L from 'leaflet';
+
 import FacebookIcon from '../components/icons/FacebookIcon';
 import TwitterIcon from '../components/icons/TwitterIcon';
 import InstagramIcon from '../components/icons/InstagramIcon';
 import LinkedinIcon from '../components/icons/LinkedinIcon';
+
+// --- Configuración del Icono Personalizado en Leaflet ---
+// Leaflet no detecta automáticamente los iconos por defecto en React a veces, así que definimos uno propio.
+const customIcon = new L.Icon({
+    iconUrl: "https://tumuro.com/media/icons/favicon.png",
+    iconSize: [40, 40], // Tamaño del icono
+    iconAnchor: [20, 40], // Punto del icono que corresponde a la ubicación (centro abajo)
+    popupAnchor: [0, -40] // Donde sale el popup si lo hubiera
+});
 
 // --- Local Icon Components for Contact Info ---
 const LocationMarkerIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
@@ -23,11 +36,6 @@ const EnvelopeIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
         <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
     </svg>
 );
-
-// --- Google Map Configuration ---
-const mapContainerStyle = { width: '100%', height: '100%' }; // Adjusted for parent container
-const center = { lat: 10.4345, lng: -66.8370 };
-const mapStyles = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}];
 
 // --- Animation Variants ---
 const textVariants: Variants = {
@@ -49,15 +57,11 @@ const SocialIcon: React.FC<{ href: string; children: React.ReactNode }> = ({ hre
 );
 
 const Contactanos: React.FC = () => {
-    // Usar variable de entorno de VITE
-    const { isLoaded } = useJsApiLoader({
-        id: 'google-map-script',
-        googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ""
-    });
+    // Coordenadas: Lomas de La Lagunita, Caracas (Aprox)
+    const position: [number, number] = [10.4345, -66.8370];
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Handle form submission logic here
         alert('Formulario enviado (simulación).');
     };
 
@@ -138,28 +142,25 @@ const Contactanos: React.FC = () => {
                 </motion.div>
             </section>
 
-            <section className="w-full h-[450px] bg-gray-300">
-                {isLoaded ? (
-                    <GoogleMap
-                        mapContainerStyle={mapContainerStyle}
-                        center={center}
-                        zoom={15}
-                        options={{ styles: mapStyles, disableDefaultUI: true, zoomControl: true }}
-                    >
-                        <Marker
-                            position={center}
-                            icon={{
-                                url: "https://tumuro.com/media/icons/favicon.png",
-                                // FIX: Cast `window` to `any` to resolve TypeScript error
-                                scaledSize: new (window as any).google.maps.Size(50, 50)
-                            }}
-                        />
-                    </GoogleMap>
-                ) : (
-                    <div className="w-full h-full flex items-center justify-center text-gray-500 font-semibold">
-                        Cargando mapa...
-                    </div>
-                )}
+            {/* Sección del Mapa con Leaflet (Estilo Oscuro) */}
+            <section className="w-full h-[450px] bg-gray-900 relative z-0">
+                <MapContainer 
+                    center={position} 
+                    zoom={15} 
+                    scrollWheelZoom={false} 
+                    style={{ width: '100%', height: '100%' }}
+                >
+                    {/* Capa de Mapa Oscura (CartoDB Dark Matter) - Gratuita */}
+                    <TileLayer
+                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
+                        url="https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png"
+                    />
+                    <Marker position={position} icon={customIcon}>
+                        <Popup>
+                            EcoGreen <br /> Urbanización Lomas De La Lagunita.
+                        </Popup>
+                    </Marker>
+                </MapContainer>
             </section>
         </>
     );
