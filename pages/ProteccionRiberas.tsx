@@ -1,6 +1,5 @@
-
-import React from 'react';
-import UnderConstruction from '../components/UnderConstruction';
+import React, { useState, useCallback } from 'react';
+import { motion, AnimatePresence, Variants } from 'framer-motion';
 
 // --- Icon Components (Locally defined for simplicity) ---
 const ChevronLeftIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
