@@ -1,12 +1,99 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, Variants } from 'framer-motion';
-import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
+
+// --- OpenLayers Imports ---
+import Map from 'ol/Map';
+import View from 'ol/View';
+import TileLayer from 'ol/layer/Tile';
+import XYZ from 'ol/source/XYZ';
+import Overlay from 'ol/Overlay';
+import { fromLonLat } from 'ol/proj';
+import 'ol/ol.css'; // Importante para los estilos base del mapa
+
+// --- Iconos Locales ---
 import FacebookIcon from '../components/icons/FacebookIcon';
 import TwitterIcon from '../components/icons/TwitterIcon';
 import InstagramIcon from '../components/icons/InstagramIcon';
 import LinkedinIcon from '../components/icons/LinkedinIcon';
 
-// --- Local Icon Components for Contact Info ---
+// --- ESTILOS CSS (Inyectados en JS) ---
+const styles = `
+  /* Estilo del PIN AZUL Personalizado */
+  .custom-pin {
+    background-color: #FFFFFF;
+    width: 3rem;
+    height: 3rem;
+    display: block;
+    position: relative;
+    border-radius: 3rem 3rem 0;
+    transform: rotate(45deg);
+    border: 3px solid #004857; /* Azul EcoGreen Oscuro */
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.5);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+  }
+  
+  .custom-pin:hover {
+    transform: rotate(45deg) scale(1.1);
+    background-color: #006070;
+  }
+
+  .custom-pin::after {
+    content: '';
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0.6rem 0 0 0.6rem;
+    background-image: url('https://tumuro.com/media/icons/favicon.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    transform: rotate(-45deg); /* Contrarrestar la rotación del pin */
+    border-radius: 50%;
+  }
+
+  /* Estilo del Popup */
+  .ol-popup {
+    position: absolute;
+    background-color: white;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    bottom: 50px;
+    left: -50px;
+    min-width: 180px;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    display: none; /* Oculto por defecto */
+    z-index: 100;
+  }
+  
+  .ol-popup::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+  }
+  
+  .ol-popup.visible {
+    display: block;
+    animation: fadeIn 0.3s;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+`;
+
+// --- Componentes de Iconos SVG ---
 const LocationMarkerIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
     <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -24,12 +111,7 @@ const EnvelopeIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
     </svg>
 );
 
-// --- Google Map Configuration ---
-const mapContainerStyle = { width: '100%', height: '100%' }; // Adjusted for parent container
-const center = { lat: 10.4345, lng: -66.8370 };
-const mapStyles = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}];
-
-// --- Animation Variants ---
+// --- Animaciones ---
 const textVariants: Variants = {
     initial: { opacity: 0, y: 30 },
     animate: { opacity: 1, y: 0, transition: { duration: 0.7, ease: 'easeOut' } },
@@ -49,20 +131,84 @@ const SocialIcon: React.FC<{ href: string; children: React.ReactNode }> = ({ hre
 );
 
 const Contactanos: React.FC = () => {
-    // Usar variable de entorno de VITE
-    const { isLoaded } = useJsApiLoader({
-        id: 'google-map-script',
-        googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ""
-    });
+    // Coordenadas: Lomas De La Lagunita, Caracas
+    // OpenLayers usa [Lon, Lat]
+    const coordinates = [-66.8370, 10.4345];
+    
+    const mapRef = useRef<HTMLDivElement>(null);
+    const mapInstance = useRef<Map | null>(null);
+
+    // --- Inicialización del Mapa OpenLayers ---
+    useEffect(() => {
+        if (!mapRef.current) return;
+        if (mapInstance.current) return; // Evitar doble inicialización
+
+        // 1. Crear el elemento HTML para el Pin
+        const pinElement = document.createElement('div');
+        pinElement.className = 'custom-pin';
+
+        // 2. Crear el elemento HTML para el Popup
+        const popupElement = document.createElement('div');
+        popupElement.className = 'ol-popup';
+        popupElement.innerHTML = '<strong>EcoGreen</strong><br/>Urb. Lomas De La Lagunita';
+        
+        // Mostrar popup al hacer click en el pin
+        pinElement.addEventListener('click', () => {
+             popupElement.classList.toggle('visible');
+        });
+
+        // 3. Crear los Overlays (Capas HTML sobre el mapa)
+        const markerOverlay = new Overlay({
+            element: pinElement,
+            position: fromLonLat(coordinates),
+            positioning: 'center-center', // Centrar el div en la coordenada
+            stopEvent: false
+        });
+
+        const popupOverlay = new Overlay({
+            element: popupElement,
+            position: fromLonLat(coordinates),
+            positioning: 'bottom-center',
+            offset: [0, -45], // Subirlo un poco respecto al punto
+            stopEvent: false
+        });
+
+        // 4. Inicializar el Mapa
+        mapInstance.current = new Map({
+            target: mapRef.current,
+            layers: [
+                // Capa CartoDB Dark Matter (Estilo Oscuro Gratuito)
+                new TileLayer({
+                    source: new XYZ({
+                        url: 'https://basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',
+                        attributions: '&copy; <a href="https://www.openstreetmap.org/">OSM</a> contributors, &copy; <a href="https://carto.com/">CARTO</a>'
+                    })
+                })
+            ],
+            view: new View({
+                center: fromLonLat(coordinates),
+                zoom: 15
+            }),
+            overlays: [markerOverlay, popupOverlay]
+        });
+
+        // Limpieza al desmontar
+        return () => {
+            if (mapInstance.current) {
+                mapInstance.current.setTarget(undefined);
+                mapInstance.current = null;
+            }
+        };
+    }, []);
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        // Handle form submission logic here
         alert('Formulario enviado (simulación).');
     };
 
     return (
         <>
+            <style>{styles}</style>
             <title>Contáctanos | EcoGreen</title>
             <meta name="description" content="Póngase en contacto con EcoGreen para soluciones de ingeniería. Estamos listos para atenderle." />
 
@@ -138,28 +284,9 @@ const Contactanos: React.FC = () => {
                 </motion.div>
             </section>
 
-            <section className="w-full h-[450px] bg-gray-300">
-                {isLoaded ? (
-                    <GoogleMap
-                        mapContainerStyle={mapContainerStyle}
-                        center={center}
-                        zoom={15}
-                        options={{ styles: mapStyles, disableDefaultUI: true, zoomControl: true }}
-                    >
-                        <Marker
-                            position={center}
-                            icon={{
-                                url: "https://tumuro.com/media/icons/favicon.png",
-                                // FIX: Cast `window` to `any` to resolve TypeScript error
-                                scaledSize: new (window as any).google.maps.Size(50, 50)
-                            }}
-                        />
-                    </GoogleMap>
-                ) : (
-                    <div className="w-full h-full flex items-center justify-center text-gray-500 font-semibold">
-                        Cargando mapa...
-                    </div>
-                )}
+            {/* Sección del Mapa OpenLayers (Estilo Oscuro) */}
+            <section className="w-full h-[450px] bg-gray-900 relative z-0">
+                 <div ref={mapRef} style={{ width: '100%', height: '100%' }} />
             </section>
         </>
     );
