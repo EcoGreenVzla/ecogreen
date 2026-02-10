@@ -1,5 +1,4 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, Variants } from 'framer-motion';
 import { GoogleMap, useJsApiLoader, Marker } from '@react-google-maps/api';
 import FacebookIcon from '../components/icons/FacebookIcon';
@@ -26,7 +25,7 @@ const EnvelopeIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 );
 
 // --- Google Map Configuration ---
-const mapContainerStyle = { width: '100%', height: '450px' };
+const mapContainerStyle = { width: '100%', height: '100%' }; // Adjusted for parent container
 const center = { lat: 10.4345, lng: -66.8370 };
 const mapStyles = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}];
 
@@ -50,9 +49,10 @@ const SocialIcon: React.FC<{ href: string; children: React.ReactNode }> = ({ hre
 );
 
 const Contactanos: React.FC = () => {
+    // Usar variable de entorno de VITE
     const { isLoaded } = useJsApiLoader({
         id: 'google-map-script',
-        googleMapsApiKey: process.env.GEMINI_API_KEY || ""
+        googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY || ""
     });
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -150,30 +150,19 @@ const Contactanos: React.FC = () => {
                             position={center}
                             icon={{
                                 url: "https://tumuro.com/media/icons/favicon.png",
-                                // FIX: Cast `window` to `any` to resolve TypeScript error 'Property 'google' does not exist on type 'Window''. The Google Maps script is loaded asynchronously, but TypeScript's global Window type is not aware of the `google` object.
+                                // FIX: Cast `window` to `any` to resolve TypeScript error
                                 scaledSize: new (window as any).google.maps.Size(50, 50)
                             }}
                         />
                     </GoogleMap>
                 ) : (
-                    <div className="w-full h-full flex items-center justify-center">Cargando mapa...</div>
+                    <div className="w-full h-full flex items-center justify-center text-gray-500 font-semibold">
+                        Cargando mapa...
+                    </div>
                 )}
             </section>
         </>
     );
 };
-
-
-// ... imports
-
-const Contactanos: React.FC = () => {
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    // AQUÍ ES EL CAMBIO IMPORTANTE:
-    googleMapsApiKey: import.meta.env.VITE_GOOGLE_MAPS_API_KEY || "", 
-  });
-
-  // ... resto del código
-
 
 export default Contactanos;
