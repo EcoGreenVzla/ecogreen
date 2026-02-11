@@ -16,18 +16,18 @@ interface NavItemProps {
 const dropdownVariants: Variants = {
   hidden: {
     opacity: 0,
-    y: -10,
+    y: -5,
     transition: {
-      duration: 0.2,
-      ease: 'easeInOut'
+      duration: 0.15,
+     
     }
   },
   visible: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.2,
-      ease: 'easeInOut'
+      duration: 0.15,
+    
     }
   }
 };
@@ -55,15 +55,16 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
   const handleHoverEnd = () => {
     timeoutRef.current = window.setTimeout(() => {
       setIsHovered(false);
-    }, 300); // 300ms delay to prevent accidental closing
+    }, 200); // Reduje a 200ms para que se sienta más ágil
   };
 
 
   const desktopItemClasses = `
-    px-4 py-3 transition-colors duration-300
+    px-4 py-3 transition-colors duration-200
     ${isFirst ? 'bg-ecogreen-green' : 'bg-ecogreen-blue'}
     hover:bg-ecogreen-green
     ${!item.isMegaMenu ? 'relative' : ''}
+    flex items-center h-full cursor-pointer
   `;
 
   const mobileItemClasses = `
