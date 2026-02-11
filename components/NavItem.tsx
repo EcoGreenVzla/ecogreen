@@ -18,7 +18,7 @@ const dropdownVariants: Variants = {
     opacity: 0,
     y: -5,
     transition: {
-      duration: 0.15,
+      duration: 0.30,
      
     }
   },
@@ -26,7 +26,7 @@ const dropdownVariants: Variants = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.15,
+      duration: 0.30,
     
     }
   }
