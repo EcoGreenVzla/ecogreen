@@ -2,7 +2,7 @@
 import { NavItemType } from '../types';
 
 export const navigationData: NavItemType[] = [
-  { label: 'INICIO', href: '/' },
+  { label: 'ECOGREEN', href: '/' },
   {
     label: 'MUROS DE CONTENCIÓN',
     href: '/muros-de-contencion',
