@@ -230,30 +230,29 @@ const Construccioncivil: React.FC = () => {
 
       {/* Contenido Teórico */}
       <section className="py-20 bg-white">
-          <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
-           La industria de la construcción cumple un importante rol en el desarrollo de un país, tanto cultural como económico, ya que a través de la construcción se satisface las necesidades de infraestructura de la mayoría de las actividades económicas y sociales de una nación. La industria de la construcción se puede dividir en dos grandes grupos: diseño y ejecución. En ambas fases ECOGREEN cuenta con un gran grupo de profesionales en las áreas de arquitectura, paisajismo, ingeniería, geotecnia, geología, entre otros, que se encargan de realizar los estudios y proyectos necesarios para dar solución en cada aplicación. Al mismo tiempo ECOGREEN cuenta con un equipo multidisciplinario en el área operativa de ejecución de obras, que está respaldado por equipos y maquinarias especializadas para cada campo de aplicación, que cumplen con las normas y estándares internacionales medioambientales.
-            </p>
-        <AnimatePresence>
-          {isExpanded && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="overflow-hidden text-left"
-            >
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
-                <p>Los productos que ECOGREEN ofrece van dirigidos a solucionar problemas de estabilización de taludes, control de erosión y muros de contención de todas las técnicas. Sin embargo ECOGREEN siempre fomentará las nuevas tecnologías ecológicas, ratificando nuestra filosofía de negocio con conciencia de prácticas y políticas "VERDES" en pro del saneamiento ambiental e innovando en alternativas de mayor factibilidad económica.</p>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <div className="mt-4 text-left">
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none"
-          >
-            {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
-          </button>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl">
+            <div className="flex items-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">INFRAESTRUCTURA URBANA
+              </h2>
+            </div>
+            <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
+              La industria de la construcción cumple un importante rol en el desarrollo de un país, tanto cultural como económico, ya que a través de la construcción se satisface las necesidades de infraestructura de la mayoría de las actividades económicas y sociales de una nación. La industria de la construcción se puede dividir en dos grandes grupos: diseño y ejecución. En ambas fases ECOGREEN cuenta con un gran grupo de profesionales en las áreas de arquitectura, paisajismo, ingeniería, geotecnia, geología, entre otros, que se encargan de realizar los estudios y proyectos necesarios para dar solución en cada aplicación. Al mismo tiempo ECOGREEN cuenta con un equipo multidisciplinario en el área operativa de ejecución de obras, que está respaldado por equipos y maquinarias especializadas para cada campo de aplicación, que cumplen con las normas y estándares internacionales medioambientales.                 </p>
+            <AnimatePresence>
+              {isExpanded && (
+                <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="overflow-hidden text-left">
+                  <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
+                    <p>Los productos que ECOGREEN ofrece van dirigidos a solucionar problemas de estabilización de taludes, control de erosión y muros de contención de todas las técnicas. Sin embargo ECOGREEN siempre fomentará las nuevas tecnologías ecológicas, ratificando nuestra filosofía de negocio con conciencia de prácticas y políticas "VERDES" en pro del saneamiento ambiental e innovando en alternativas de mayor factibilidad económica.</p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <div className="mt-4 text-left">
+              <button onClick={() => setIsExpanded(!isExpanded)} className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none">
+                {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       {/* Grid: Sistemas Flexibles */}
