@@ -225,24 +225,32 @@ const SectorAgricola: React.FC = () => {
 
       {/* Contenido Teórico */}
       <section className="py-20 bg-white">
-        <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
-          Los términos conservación ambiental, conservación de las especies, conservación de la naturaleza y protección de la naturaleza Son algunos de los nombres con que se conocen las distintas formas de preservación de la naturaleza, el medio ambiente o específicamente alguna de sus partes: la flora y la fauna, las distintas especies, los distintos ecosistemas, valores paisajísticos, entre otros. La conservación ambiental comprende un conjunto de acciones tendientes a un manejo, uso y cuidado responsable de los bienes comunes en un territorio determinado, que asegure el mantenimiento y potencie sus condiciones presentes desde la identidad y costumbres de las comunidades locales y para las generaciones futuras.
-        </p>
-        <AnimatePresence>
-          <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: 'auto' }}
-            exit={{ opacity: 0, height: 0 }}
-            className="overflow-hidden text-center"
-          >
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
-              <p>Los aportes de ECOGREEN al sector agrícola son de suma importancia, debido a que es una actividad económica que abarca la producción, industrialización y comercialización de productos alimenticios. La incorporación de soluciones ECOGREEN garantiza la continuidad en los procesos de producción agrícola, debido a que permite solventar problemas de operatividad que se presentan en áreas como por ejemplo, las vías de penetración a zonas agrícolas anegadas en épocas de lluvia. Con la utilización de geomallas de refuerzo de alto módulo ECOGREEN se logra estabilizar la vialidad agrícola sin la necesidad de transportar y aportar gran cantidad de material de relleno, logrando así minimizar los tiempos del transporte de distribución de las cosechas en épocas de invierno. Al mismo tiempo ECOGREEN contribuye con soluciones como las canalizaciones y protección de riberas, para evitar inundaciones en grandes sembradíos. También hace grandes aportes en la construcción de diques, presas y lagunas para el manejo y almacenamiento de agua para riego, que garantizan la producción agrícola en época de sequía. Es importante resaltar que la agricultura es uno de los pilares económicos fundamentales para el desarrollo sustentable de un país.</p>
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl">
+                <div className="flex items-center mb-8">
+                    <img src="https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono" className="w-16 h-16 mr-6" />
+                    <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Sector Agricola</h2>
+                </div>
+                
+                <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
+                  Los aportes de ECOGREEN al sector agrícola son de suma importancia, debido a que es una actividad económica que abarca la producción, industrialización y comercialización de productos alimenticios. La incorporación de soluciones ECOGREEN garantiza la continuidad en los procesos de producción agrícola, debido a que permite solventar problemas de operatividad que se presentan en áreas como por ejemplo, las vías de penetración a zonas agrícolas anegadas en épocas de lluvia. Con la utilización de geomallas de refuerzo de alto módulo ECOGREEN se logra estabilizar la vialidad agrícola sin la necesidad de transportar y aportar gran cantidad de material de relleno, logrando así minimizar los tiempos del transporte de distribución de las cosechas en épocas de invierno. Al mismo tiempo ECOGREEN contribuye con soluciones como las canalizaciones y protección de riberas, para evitar inundaciones en grandes sembradíos. También hace grandes aportes en la construcción de diques, presas y lagunas para el manejo y almacenamiento de agua para riego, que garantizan la producción agrícola en época de sequía. Es importante resaltar que la agricultura es uno de los pilares económicos fundamentales para el desarrollo sustentable de un país.
+                </p>
+                <AnimatePresence>
+                    {isExpanded && (
+                        <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{ opacity: 1, height: 'auto' }}
+                            exit={{ opacity: 0, height: 0 }}
+                            className="overflow-hidden text-left"
+                        >
+                        </motion.div>
+                    )}
+                </AnimatePresence>       
+                <div className="mt-4 text-left">
+                </div>
+              </div>
             </div>
-          </motion.div>
-        </AnimatePresence>
-        <div className="mt-4 text-left">
-        </div>
-      </section>
+          </section>
       {/* Grid: Sistemas Flexibles */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
