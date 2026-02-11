@@ -12,10 +12,10 @@ export const navigationData: NavItemType[] = [
         href: '/muros-de-contencion/sistemas-flexibles',
         children: [
           { label: 'Muros De Tierra Reforzada', href: '/muros-de-contencion/sistemas-flexibles/tierra-reforzada' },
-          { label: 'Gavión', href: '/muros-de-contencion/sistemas-flexibles/gavion' },
-          { label: 'Gavión Reforzado', href: '/muros-de-contencion/sistemas-flexibles/gavion-reforzado' },
+          { label: 'Muros Gavión', href: '/muros-de-contencion/sistemas-flexibles/gavion' },
+          { label: 'Muros De Gavión Reforzado', href: '/muros-de-contencion/sistemas-flexibles/gavion-reforzado' },
           { label: 'Muros Mixtos', href: '/muros-de-contencion/sistemas-flexibles/muros-mixtos' },
-          { label: 'Refuerzo de Taludes', href: '/muros-de-contencion/sistemas-flexibles/refuerzo-taludes' },
+          { label: 'Refuerzo de Taludes Y Terraplenes', href: '/muros-de-contencion/sistemas-flexibles/refuerzo-taludes' },
         ],
       },
       {
