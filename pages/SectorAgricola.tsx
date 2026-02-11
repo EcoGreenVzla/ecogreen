@@ -21,20 +21,20 @@ const ChevronRightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 // --- Data for System Grids (Linked to Navigation Menu) ---
 const sectorAgricola = [
-  { title: 'MUROS DE CONTENCIÓN', href: '/muros-de-contencion/sistemas-flexibles/tierra-reforzada', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-contencion-cda.webp' },
-  { title: 'SISTEMA DE CONTENCIÓN FLEXIBLES', href: '/sistemas-de-contencion-flexibles', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/sistemas-de-contencion-flexibles1.webp' },
-  { title: 'MUROS DE TIERRA REFORZADA', href: '/muros-de-contencion/muros-de-tierra-reforzada', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-tierra-reforzada-cda.webp' },
-  { title: 'MUROS DE GAVIÓN', href: '/muros-de-contencion/sistemas-flexibles/muros-de-gavion', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-gavion-cda.webp' },
-  { title: 'MUROS DE GAVIÓN REFORZADOS', href: '/muros-de-contencion/sistemas-flexibles/muros-de-gavion-reforzados', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-gavion-reforzados-cda.webp' },
+ { title: 'MUROS DE CONTENCIÓN', href: '/muros-de-contencion', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-contencion-cda.webp' },
+  { title: 'SISTEMA DE CONTENCIÓN FLEXIBLES', href: '/muros-de-contencion/sistemas-flexibles', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/sistemas-de-contencion-flexibles1.webp' },
+  { title: 'MUROS DE TIERRA REFORZADA', href: '/muros-de-contencion/sistemas-flexibles/tierra-reforzada', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-tierra-reforzada-cda.webp' },
+  { title: 'MUROS DE GAVIÓN', href: '/muros-de-contencion/sistemas-flexibles/gavion', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-gavion-cda.webp' },
+  { title: 'MUROS DE GAVIÓN REFORZADOS', href: '/muros-de-contencion/sistemas-flexibles/gavion-reforzado', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-gavion-reforzados-cda.webp' },
   { title: 'MUROS MIXTOS', href: '/muros-de-contencion/sistemas-flexibles/muros-mixtos', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-mixtos-cda.webp' },
-  { title: 'REFUERZO DE TALUDES Y TERRAPLENES', href: '/muros-de-contencion/sistemas-flexibles/refuerzo-de-taludes-y-terraplenes', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/refuerzo-de-taludes-y-terraplenes-cda.webp' },
-  { title: 'SISTEMAS DE DRENAJE', href: '/muros-de-contencion/sistemas-de-drenaje', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/sistemas-de-drenaje-cda.webp' },
+  { title: 'REFUERZO DE TALUDES Y TERRAPLENES', href: '/muros-de-contencion/sistemas-flexibles/refuerzo-taludes', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/refuerzo-de-taludes-y-terraplenes-cda.webp' },
+  { title: 'SISTEMAS DE DRENAJE', href: '/muros-de-contencion/sistemas-drenaje', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/sistemas-de-drenaje-cda.webp' },
   { title: 'CONTROL DE EROSIÓN', href: '/control-de-erosion', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/control-de-erosion-cda.webp' },
-  { title: 'ESTABILIZACIÓN DE TALUDES', href: '/control-de-erosion/estabilizacion-de-taludes', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/estabilizacion-de-taludes-cda.webp' },
+  { title: 'ESTABILIZACIÓN DE TALUDES', href: '/control-de-erosion/estabilizacion-taludes', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/estabilizacion-de-taludes-cda.webp' },
   { title: 'REFORESTACIÓN', href: '/control-de-erosion/reforestacion', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/reforestacion-cda.webp' },
   { title: 'CANALIZACIONES', href: '/control-de-erosion/canalizaciones', imgSrc: 'https://tumuro.com/media/construccion-civil/grid-construccion-civil/canalizaciones-cda.webp' },
-  { title: 'DIQUES Y PRESAS', href: '/control-de-erosion/diques-y-presas', imgSrc: 'https://tumuro.com/media/construccion-civil/grid-construccion-civil/diques-y-presas-cda.webp' },
-  { title: 'PROTECCIÓN DE RIBERAS', href: '', imgSrc: 'https://tumuro.com/media/industria-petroleo-y-gas/grid-industria-petroleo-y-gas/proteccion-de-riberas-cda.webp' },
+  { title: 'DIQUES Y PRESAS', href: '/control-de-erosion/diques-presas', imgSrc: 'https://tumuro.com/media/construccion-civil/grid-construccion-civil/diques-y-presas-cda.webp' },
+  { title: 'PROTECCIÓN DE RIBERAS', href: '/control-de-erosion/proteccion-riberas', imgSrc: 'https://tumuro.com/media/industria-petroleo-y-gas/grid-industria-petroleo-y-gas/proteccion-de-riberas-cda.webp' },
   { title: 'RECONSTRUCCIÓN DE FALLAS DE BORDE', href: '', imgSrc: 'https://tumuro.com/media/industria-petroleo-y-gas/grid-industria-petroleo-y-gas/reconstruccion-de-fallas-de-borde-cda.webp' },
   { title: 'RAMPAS Y VIAS DE PENETRACIÓN', href: '', imgSrc: 'https://tumuro.com/media/industria-petroleo-y-gas/grid-industria-petroleo-y-gas/rampas-y-vias-de-penetracion-cda.webp' },
   { title: 'SEPARACIÓN Y ESTABILIZACIÓN DE SUBRASANTES', href: '', imgSrc: 'https://tumuro.com/media/industria-petroleo-y-gas/grid-industria-petroleo-y-gas/separacion-y-estabilizacion-de-subrasantes-cda.webp' },
@@ -224,34 +224,28 @@ const SectorAgricola: React.FC = () => {
       </section>
 
       {/* Contenido Teórico */}
-      <section className="py-20 bg-white">
-            <div className="container mx-auto px-4">
-              <div className="max-w-4xl">
-                <div className="flex items-center mb-8">
-                    <img src="https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono" className="w-16 h-16 mr-6" />
-                    <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Sector Agricola</h2>
+        <section className="py-20 bg-white">
+              <div className="container mx-auto px-4">
+                <div className="max-w-4xl">
+                  <div className="flex items-center mb-8">
+                    <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Sector Agricola
+                    </h2>
+                  </div>
+                  <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
+                    Los aportes de ECOGREEN al sector agrícola son de suma importancia, debido a que es una actividad económica que abarca la producción, industrialización y comercialización de productos alimenticios. La incorporación de soluciones ECOGREEN garantiza la continuidad en los procesos de producción agrícola, debido a que permite solventar problemas de operatividad que se presentan en áreas como por ejemplo, las vías de penetración a zonas agrícolas anegadas en épocas de lluvia. Con la utilización de geomallas de refuerzo de alto módulo ECOGREEN se logra estabilizar la vialidad agrícola sin la necesidad de transportar y aportar gran cantidad de material de relleno, logrando así minimizar los tiempos del transporte de distribución de las cosechas en épocas de invierno. Al mismo tiempo ECOGREEN contribuye con soluciones como las canalizaciones y protección de riberas, para evitar inundaciones en grandes sembradíos. También hace grandes aportes en la construcción de diques, presas y lagunas para el manejo y almacenamiento de agua para riego, que garantizan la producción agrícola en época de sequía. Es importante resaltar que la agricultura es uno de los pilares económicos fundamentales para el desarrollo sustentable de un país.
+               </p>
+                  <div className="mt-4 text-left">
+                  </div>
                 </div>
-                
-                <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
-                  Los aportes de ECOGREEN al sector agrícola son de suma importancia, debido a que es una actividad económica que abarca la producción, industrialización y comercialización de productos alimenticios. La incorporación de soluciones ECOGREEN garantiza la continuidad en los procesos de producción agrícola, debido a que permite solventar problemas de operatividad que se presentan en áreas como por ejemplo, las vías de penetración a zonas agrícolas anegadas en épocas de lluvia. Con la utilización de geomallas de refuerzo de alto módulo ECOGREEN se logra estabilizar la vialidad agrícola sin la necesidad de transportar y aportar gran cantidad de material de relleno, logrando así minimizar los tiempos del transporte de distribución de las cosechas en épocas de invierno. Al mismo tiempo ECOGREEN contribuye con soluciones como las canalizaciones y protección de riberas, para evitar inundaciones en grandes sembradíos. También hace grandes aportes en la construcción de diques, presas y lagunas para el manejo y almacenamiento de agua para riego, que garantizan la producción agrícola en época de sequía. Es importante resaltar que la agricultura es uno de los pilares económicos fundamentales para el desarrollo sustentable de un país.
-                </p>
-                <AnimatePresence>
-                    {isExpanded && (
-                        <motion.div
-                            initial={{ opacity: 0, height: 0 }}
-                            animate={{ opacity: 1, height: 'auto' }}
-                            exit={{ opacity: 0, height: 0 }}
-                            className="overflow-hidden text-left"
-                        >
-                        </motion.div>
-                    )}
-                </AnimatePresence>       
               </div>
-            </div>
-          </section>
+            </section>
       {/* Grid: Sistemas Flexibles */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
+             <div className="mb-12">
+            <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">SECTOR AGRICOLA</h3>
+            <div className="w-full h-1 bg-ecogreen-green"></div>
+          </div>
           <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             variants={gridContainerVariants}
