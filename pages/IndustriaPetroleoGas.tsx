@@ -254,7 +254,7 @@ const IndustriaPetroleoGas: React.FC = () => {
                     <p>
                       La industria del petróleo se divide normalmente en tres fases:
                     </p>
-                    <ul className="list-disc list-inside space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
+                    <ul className="list-disc list-inside space-y-2 pl-4 mt-4">
                       <li>"Upstream" Exploración, extracción y producción.</li>
                       <li>"Midstream" Transporte, procesos y almacenamiento.</li>
                       <li>"Downstream" Refinación, comercialización y distribución.</li>
@@ -271,42 +271,6 @@ const IndustriaPetroleoGas: React.FC = () => {
               </button>
             </div>
           </div>
-        </div>
-      </section>
-      <section className="py-20 bg-white">
-        <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
-          Los términos conservación ambiental, conservación de las especies, conservación de la naturaleza y protección de la naturaleza Son algunos de los nombres con que se conocen las distintas formas de preservación de la naturaleza, el medio ambiente o específicamente alguna de sus partes: la flora y la fauna, las distintas especies, los distintos ecosistemas, valores paisajísticos, entre otros. La conservación ambiental comprende un conjunto de acciones tendientes a un manejo, uso y cuidado responsable de los bienes comunes en un territorio determinado, que asegure el mantenimiento y potencie sus condiciones presentes desde la identidad y costumbres de las comunidades locales y para las generaciones futuras.
-        </p>
-        <AnimatePresence>
-          {isExpanded && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="overflow-hidden text-left"
-            >
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
-                <p>La industria petrolera incluye procesos globales de exploración, extracción, refinación, transporte (frecuentemente a través de buques petroleros y oleoductos) y la mercadotecnia del producto Petróleo y sus derivados. Los productos de mayor volumen en la industria son los combustibles como por ejemplo el fueloil y la gasolina. El petróleo es la materia prima de muchos productos químicos incluyendo productos farmacéuticos, disolventes, fertilizantes, pesticidas y plásticos.</p>
-              </div>
-              <ul className="list-disc list-inside space-y-2 pl-4 mt-4 text-gray-700">
-                <p>El Petróleo es un producto esencial para muchas industrias, y es de vital importancia para el mantenimiento de la misma civilización industrializada, por lo que se considera una industria critica en la mayoría de las naciones. El petróleo alimenta un porcentaje muy alto del consumo de energía del mundo.</p>
-                <p>La industria del petróleo se divide normalmente en tres fases:</p>
-                <li> Control de erosión y estabilización de taludes con geomantas verdes ECOGREEN.</li>
-                <li> Construcción de muros reforestables de tierra reforzada con geomallas de poliéster ECOGREEN de alto modulo, para reparar fallas de bordes en vialidad y construir terraplenes.</li>
-                <li> Protección de riberas y construcción de obras hidráulicas, diques, presas y canales con gaviones metálicos ECOGREEN fabricados a máquina.</li>
-                <p>Las soluciones y productos ECOGREEN aportan beneficios al ecosistema intervenido en cualquiera de las tres fases antes mencionadas. Entre las principales aplicaciones en la industria petrolera se encuentran: El refuerzo y estabilización de vías de penetración a zonas petroleras de difícil acceso debido a la baja capacidad portante de suelos blandos, ECOGREEN también estabiliza las áreas y taludes controlando la erosión con el uso de Ecomantos Verdes que fomentan la rápida reforestación. En los casos donde la vialidad y los campos petroleros requieren ser pavimentados ECOGREEN suministra e instala geomallas de refuerzo de poliéster de alto modulo para aumentar la capacidad de soporte de la capa de rodamiento, sin la necesidad de aportar ni transportar grandes volúmenes de material granular para mejorar las condiciones geotécnicas del suelo. Entre muchas otras soluciones se encuentran también sistemas de drenaje, rampas y terraplenes, protección de estribos de puentes, construcción de diques, presas, impermeabilización de canales y lagunas para lodos de perforación, suministro de todo tipo de tuberías y válvulas utilizadas en los procesos de extracción, producción, refinación y transporte.</p>
-                <p>ECOGREEN siempre fomentará las nuevas tecnologías ecológicas, ratificando nuestra filosofía de negocio con conciencia de prácticas y políticas "VERDES" en pro del saneamiento ambiental e innovando en alternativas de mayor factibilidad económica.</p>
-              </ul>
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <div className="mt-4 text-left">
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none"
-          >
-            {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
-          </button>
         </div>
       </section>
       {/* Grid: Sistemas Flexibles */}
