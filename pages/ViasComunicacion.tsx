@@ -259,7 +259,7 @@ const ViasdeComunicacion: React.FC = () => {
            <section className="py-16 bg-gray-50">
              <div className="container mx-auto px-4">
                   <div className="mb-12">
-                 <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">SECTOR AGRICOLA</h3>
+                 <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">VÍAS DE COMUNICACIÓN</h3>
                  <div className="w-full h-1 bg-ecogreen-green"></div>
                </div>
                <motion.div
