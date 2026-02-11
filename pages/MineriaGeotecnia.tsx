@@ -44,7 +44,7 @@ const mineriaYgeotecnia = [
 ];
 
 const sliderImages = [
-  'https://tumuro.com/media/obras-hidraulicas/slider/obras-hidraulicas.webp',
+  'https://tumuro.com/media/mineria-geologia-y-geotecnia/slider/morocha-mineria.webp',
 ];
 
 const textVariants: Variants = {
