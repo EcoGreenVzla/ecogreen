@@ -254,7 +254,7 @@ const IndustriaPetroleoGas: React.FC = () => {
                     <p>
                       La industria del petróleo se divide normalmente en tres fases:
                     </p>
-                    <ul className="list-disc list-inside space-y-2 pl-4 mt-4">
+                    <ul className="list-disc list-inside space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
                       <li>"Upstream" Exploración, extracción y producción.</li>
                       <li>"Midstream" Transporte, procesos y almacenamiento.</li>
                       <li>"Downstream" Refinación, comercialización y distribución.</li>
