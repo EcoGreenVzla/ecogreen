@@ -60,7 +60,7 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
 
 
   const desktopItemClasses = `
-    px-4 py-3 transition-colors duration-200
+    px-8 py-3 transition-colors duration-200
     ${isFirst ? 'bg-ecogreen-green' : 'bg-ecogreen-blue'}
     hover:bg-ecogreen-green
     ${!item.isMegaMenu ? 'relative' : ''}
