@@ -248,10 +248,6 @@ const IndustriaPetroleoGas: React.FC = () => {
                   <div className="space-y-6 text-xl text-gray-700 leading-relaxed text-left">
                     <p>
                       El Petróleo es un producto esencial para muchas industrias, y es de vital importancia para el mantenimiento de la misma civilización industrializada, por lo que se considera una industria critica en la mayoría de las naciones. El petróleo alimenta un porcentaje muy alto del consumo de energía del mundo.
-                    </p>
-                  </div>
-                  <div>
-                    <p>
                       La industria del petróleo se divide normalmente en tres fases:
                     </p>
                     <ul className="list-disc list-inside space-y-2 pl-4">
