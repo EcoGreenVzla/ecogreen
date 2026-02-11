@@ -246,15 +246,15 @@ const ProteccionAmbiental: React.FC = () => {
                 <p>En Ecología, sostenibilidad o sustentabilidad se describe como el estado productivo de los sistemas biológicos en el trascurrir del tiempo. Se refiere al equilibrio de una especie con los recursos de su entorno. Por extensión se aplica a la explotación de un recurso por debajo del límite de renovación de estos. Es por esto que ECOGREEN es promotor de la utilización de técnicas medio ambientales y la incorporación de productos que aportan beneficios al ecosistema siendo mínimamente invasivos. Entre las principales soluciones ecológicas de ECOGREEN se encuentran:</p>
               </div>
               <ul className="list-disc list-inside space-y-2 pl-4 mt-4">
-                <li>• Control de erosión y estabilización de taludes con geomantas verdes ECOGREEN.</li>
-                <li>• Construcción de muros reforestables de tierra reforzada con geomallas de poliéster ECOGREEN de alto modulo, para reparar fallas de bordes en vialidad y construir terraplenes.</li>
-                <li>• Protección de riberas y construcción de obras hidráulicas, diques, presas y canales con gaviones metálicos ECOGREEN fabricados a máquina.</li>
-                <li>• Contención y revestimiento de taludes, sistemas contra deslizamientos y caída de rocas.</li>
-                <li>• Separación y estabilización de subrasantes con geomallas ECOGREEN, sin la necesidad de incorporar grandes volúmenes de relleno.</li>
-                <li>• Refuerzo de terraplenes y vías de penetración agrícolas y petroleras, sobre suelos blandos.</li>
-                <li>• Instalación de sistemas de subdrenajes en vialidad, campos deportivos y manejo de lixiviados.</li>
-                <li>• Reforestación y mantenimiento de áreas verdes.</li>
-                <li>• Construcción de rellenos sanitarios y lagunas de oxidación</li>
+                <li> Control de erosión y estabilización de taludes con geomantas verdes ECOGREEN.</li>
+                <li> Construcción de muros reforestables de tierra reforzada con geomallas de poliéster ECOGREEN de alto modulo, para reparar fallas de bordes en vialidad y construir terraplenes.</li>
+                <li> Protección de riberas y construcción de obras hidráulicas, diques, presas y canales con gaviones metálicos ECOGREEN fabricados a máquina.</li>
+                <li> Contención y revestimiento de taludes, sistemas contra deslizamientos y caída de rocas.</li>
+                <li> Separación y estabilización de subrasantes con geomallas ECOGREEN, sin la necesidad de incorporar grandes volúmenes de relleno.</li>
+                <li> Refuerzo de terraplenes y vías de penetración agrícolas y petroleras, sobre suelos blandos.</li>
+                <li>Instalación de sistemas de subdrenajes en vialidad, campos deportivos y manejo de lixiviados.</li>
+                <li>Reforestación y mantenimiento de áreas verdes.</li>
+                <li> Construcción de rellenos sanitarios y lagunas de oxidación</li>
               </ul>
             </motion.div>
           )}
