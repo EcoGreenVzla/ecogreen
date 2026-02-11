@@ -21,24 +21,24 @@ const ChevronRightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 // --- Data for System Grids (Linked to Navigation Menu) ---
 const proteccionAmbiental = [
-  { title: 'MUROS DE CONTENCIÓN', href: '/muros-de-contencion/sistemas-flexibles/tierra-reforzada', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-contencion-cda.webp' },
-  { title: 'SISTEMA DE CONTENCIÓN FLEXIBLES', href: '/sistemas-de-contencion-flexibles', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/sistemas-de-contencion-flexibles1.webp' },
-  { title: 'MUROS DE TIERRA REFORZADA', href: '/muros-de-contencion/muros-de-tierra-reforzada', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-tierra-reforzada-cda.webp' },
-  { title: 'MUROS DE GAVIÓN', href: '/muros-de-contencion/sistemas-flexibles/muros-de-gavion', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-gavion-cda.webp' },
-  { title: 'MUROS DE GAVIÓN REFORZADOS', href: '/muros-de-contencion/sistemas-flexibles/muros-de-gavion-reforzados', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-gavion-reforzados-cda.webp' },
+  { title: 'MUROS DE CONTENCIÓN', href: '/muros-de-contencion', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-contencion-cda.webp' },
+  { title: 'SISTEMA DE CONTENCIÓN FLEXIBLES', href: '/muros-de-contencion/sistemas-flexibles', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/sistemas-de-contencion-flexibles1.webp' },
+  { title: 'MUROS DE TIERRA REFORZADA', href: '/muros-de-contencion/sistemas-flexibles/tierra-reforzada', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-tierra-reforzada-cda.webp' },
+  { title: 'MUROS DE GAVIÓN', href: '/muros-de-contencion/sistemas-flexibles/gavion', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-gavion-cda.webp' },
+  { title: 'MUROS DE GAVIÓN REFORZADOS', href: '/muros-de-contencion/sistemas-flexibles/gavion-reforzado', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-gavion-reforzados-cda.webp' },
   { title: 'MUROS MIXTOS', href: '/muros-de-contencion/sistemas-flexibles/muros-mixtos', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-mixtos-cda.webp' },
-  { title: 'REFUERZO DE TALUDES Y TERRAPLENES', href: '/muros-de-contencion/sistemas-flexibles/refuerzo-de-taludes-y-terraplenes', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/refuerzo-de-taludes-y-terraplenes-cda.webp' },
-  { title: 'SISTTEMA DE CONTENCIÓN RIGIDOS', href: '/muros-de-contencion/sistemas-de-contencion-rigidos', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/sistemas-de-contencion-rigidos13.webp' },
-  { title: 'MUROS ANCLADOS Y PANTALLAS ATIRANTADAS', href: '/muros-de-contencion/muros-anclados-y-pantallas-atirantadas', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-anclados-y-pantallas-atirantadas-cda.webp' },
-  { title: 'MUROS DE CONCRETO ARMADO', href: '/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-concreto-armado-cda.webp' },
-  { title: 'MUROS CICLÓPEOS', href: '/muros-de-contencion/sistemas-de-contencion-rigidos/muros-ciclopeos', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-ciclopeos-cda.webp' },
-  { title: 'PILOTES Y MICROPILOTES', href: '/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/pilotes-y-micropilotes-cda.webp' },
-  { title: 'SISTEMAS DE DRENAJE', href: '/muros-de-contencion/sistemas-de-drenaje', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/sistemas-de-drenaje-cda.webp' },
+  { title: 'REFUERZO DE TALUDES Y TERRAPLENES', href: '/muros-de-contencion/sistemas-flexibles/refuerzo-taludes', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/refuerzo-de-taludes-y-terraplenes-cda.webp' },
+  { title: 'SISTTEMA DE CONTENCIÓN RIGIDOS', href: '/muros-de-contencion/sistemas-rigidos', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/sistemas-de-contencion-rigidos13.webp' },
+  { title: 'MUROS ANCLADOS Y PANTALLAS ATIRANTADAS', href: '/muros-de-contencion/sistemas-rigidos/muros-anclados', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-anclados-y-pantallas-atirantadas-cda.webp' },
+  { title: 'MUROS DE CONCRETO ARMADO', href: '/muros-de-contencion/sistemas-rigidos/concreto-armado', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-concreto-armado-cda.webp' },
+  { title: 'MUROS CICLÓPEOS', href: '/muros-de-contencion/sistemas-rigidos/muros-ciclopeos', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-ciclopeos-cda.webp' },
+  { title: 'PILOTES Y MICROPILOTES', href: '/muros-de-contencion/sistemas-rigidos/pilotes-micropilotes', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/pilotes-y-micropilotes-cda.webp' },
+  { title: 'SISTEMAS DE DRENAJE', href: '/muros-de-contencion/sistemas-drenaje', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/sistemas-de-drenaje-cda.webp' },
   { title: 'CONTROL DE EROSIÓN', href: '/control-de-erosion', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/control-de-erosion-cda.webp' },
-  { title: 'ESTABILIZACIÓN DE TALUDES', href: '/control-de-erosion/estabilizacion-de-taludes', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/estabilizacion-de-taludes-cda.webp' },
+  { title: 'ESTABILIZACIÓN DE TALUDES', href: '/control-de-erosion/estabilizacion-taludes', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/estabilizacion-de-taludes-cda.webp' },
   { title: 'REFORESTACIÓN', href: '/control-de-erosion/reforestacion', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/reforestacion-cda.webp' },
-  { title: 'CANALIZACIONES', href: '/control-de-erosion/canalizaciones', imgSrc: 'https://tumuro.com/media/construccion-civil/grid-construccion-civil/canalizaciones-cda.webp' },
-  { title: 'DIQUES Y PRESAS', href: '/control-de-erosion/diques-y-presas', imgSrc: 'https://tumuro.com/media/construccion-civil/grid-construccion-civil/diques-y-presas-cda.webp' },
+  { title: 'RECONSTRUCCIÓN DE FALLAS DE BORDE', href: '', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/reconstruccion-de-fallas-de-borde-cda.webp' },
+  { title: 'REFUERZO DE PAVIMENTOS Y REPAVIMENTACIÓN', href: '', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/refuerzo-de-pavimentos-y-repavimentacion-cda.webp' },
   { title: 'SUBDRENAJES Y ALCANTARILLAS', href: '', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/subdrenajes-y-alcantarillas-cda.webp' },
   { title: 'ACERAS Y CAMINERIAS', href: '', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/aceras-y-caminerias-cda.webp' },
   { title: 'MANTENIMIENTO DE AREAS VERDES', href: '', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/mantenimiento-de-areas-verdes-cda.webp' },
@@ -230,42 +230,42 @@ const ProteccionAmbiental: React.FC = () => {
 
       {/* Contenido Teórico */}
       <section className="py-20 bg-white">
-        <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
-          Los términos conservación ambiental, conservación de las especies, conservación de la naturaleza y protección de la naturaleza Son algunos de los nombres con que se conocen las distintas formas de preservación de la naturaleza, el medio ambiente o específicamente alguna de sus partes: la flora y la fauna, las distintas especies, los distintos ecosistemas, valores paisajísticos, entre otros. La conservación ambiental comprende un conjunto de acciones tendientes a un manejo, uso y cuidado responsable de los bienes comunes en un territorio determinado, que asegure el mantenimiento y potencie sus condiciones presentes desde la identidad y costumbres de las comunidades locales y para las generaciones futuras.
-        </p>
-        <AnimatePresence>
-          {isExpanded && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="overflow-hidden text-left"
-            >
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
-                <p>Las grandes obras de infraestructura, muchas veces generan impactos sociales y ambientales, poniendo en riesgo la salud y el bienestar de las comunidades afectadas, por lo que precisan de exhaustivos estudios de impacto ambiental previos a su realización. Es por esto que ECOGREEN fomenta la incorporación de la INFRAESTRUCTURA VERDE, que se compone principalmente por los suelos y la vegetación, y que tiene como objetivo incorporar mayor número de áreas reforestadas y mejorar la gestión del agua de lluvia de los ambientes construidos, para lograr beneficios laterales tales como; mejorar la calidad del aire y reducir el efecto "Isla de Calor"</p>
-                <p>En Ecología, sostenibilidad o sustentabilidad se describe como el estado productivo de los sistemas biológicos en el trascurrir del tiempo. Se refiere al equilibrio de una especie con los recursos de su entorno. Por extensión se aplica a la explotación de un recurso por debajo del límite de renovación de estos. Es por esto que ECOGREEN es promotor de la utilización de técnicas medio ambientales y la incorporación de productos que aportan beneficios al ecosistema siendo mínimamente invasivos. Entre las principales soluciones ecológicas de ECOGREEN se encuentran:</p>
-              </div>
-              <ul className="list-disc list-inside space-y-2 pl-4 mt-4 text-gray-700">
-                <li> Control de erosión y estabilización de taludes con geomantas verdes ECOGREEN.</li>
-                <li> Construcción de muros reforestables de tierra reforzada con geomallas de poliéster ECOGREEN de alto modulo, para reparar fallas de bordes en vialidad y construir terraplenes.</li>
-                <li> Protección de riberas y construcción de obras hidráulicas, diques, presas y canales con gaviones metálicos ECOGREEN fabricados a máquina.</li>
-                <li> Contención y revestimiento de taludes, sistemas contra deslizamientos y caída de rocas.</li>
-                <li> Separación y estabilización de subrasantes con geomallas ECOGREEN, sin la necesidad de incorporar grandes volúmenes de relleno.</li>
-                <li> Refuerzo de terraplenes y vías de penetración agrícolas y petroleras, sobre suelos blandos.</li>
-                <li> Instalación de sistemas de subdrenajes en vialidad, campos deportivos y manejo de lixiviados.</li>
-                <li> Reforestación y mantenimiento de áreas verdes.</li>
-                <li> Construcción de rellenos sanitarios y lagunas de oxidación</li>
-              </ul>
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <div className="mt-4 text-left">
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none"
-          >
-            {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
-          </button>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl">
+            <div className="flex items-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">PROTECCIÓN AMBIENTAL
+              </h2>
+            </div>
+            <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
+              Los términos conservación ambiental, conservación de las especies, conservación de la naturaleza y protección de la naturaleza Son algunos de los nombres con que se conocen las distintas formas de preservación de la naturaleza, el medio ambiente o específicamente alguna de sus partes: la flora y la fauna, las distintas especies, los distintos ecosistemas, valores paisajísticos, entre otros. La conservación ambiental comprende un conjunto de acciones tendientes a un manejo, uso y cuidado responsable de los bienes comunes en un territorio determinado, que asegure el mantenimiento y potencie sus condiciones presentes desde la identidad y costumbres de las comunidades locales y para las generaciones futuras.                  </p>
+            <AnimatePresence>
+              {isExpanded && (
+                <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="overflow-hidden text-left">
+                  <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
+                    <p>
+                      Las grandes obras de infraestructura, muchas veces generan impactos sociales y ambientales, poniendo en riesgo la salud y el bienestar de las comunidades afectadas, por lo que precisan de exhaustivos estudios de impacto ambiental previos a su realización. Es por esto que ECOGREEN fomenta la incorporación de la INFRAESTRUCTURA VERDE, que se compone principalmente por los suelos y la vegetación, y que tiene como objetivo incorporar mayor número de áreas reforestadas y mejorar la gestión del agua de lluvia de los ambientes construidos, para lograr beneficios laterales tales como; mejorar la calidad del aire y reducir el efecto "Isla de Calor"</p>
+                  </div>
+                  <div>
+                    <p>En Ecología, sostenibilidad o sustentabilidad se describe como el estado productivo de los sistemas biológicos en el trascurrir del tiempo. Se refiere al equilibrio de una especie con los recursos de su entorno. Por extensión se aplica a la explotación de un recurso por debajo del límite de renovación de estos. Es por esto que ECOGREEN es promotor de la utilización de técnicas medio ambientales y la incorporación de productos que aportan beneficios al ecosistema siendo mínimamente invasivos. Entre las principales soluciones ecológicas de ECOGREEN se encuentran:</p>
+                    <ul className="list-disc list-inside space-y-2 pl-4 mt-4">
+                      <li>Disponibilidad de los materiales geosintéticos que los conforman.</li>
+                      <li>En los casos de derrumbes o deslizamientos se puede utilizar el material fallado por lo que no se requiere de aporte de material.</li>
+                      <li>Excelente tiempo de ejecución.</li>
+                      <li>Disponibilidad de los equipos y maquinarias especializadas para su construcción.</li>
+                      <li>No requiere de mano de obra calificada.</li>
+                      <li>Son consideradas como la solución más económica.</li>
+                      <li>Es el sistema de contención que menos impacta el ambiente, ya que su fachada puede quedar completamente reforestada.</li>
+                    </ul>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <div className="mt-4 text-left">
+              <button onClick={() => setIsExpanded(!isExpanded)} className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none">
+                {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       {/* Grid: Sistemas Flexibles */}
