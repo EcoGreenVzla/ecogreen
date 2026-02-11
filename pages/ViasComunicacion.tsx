@@ -122,7 +122,7 @@ const ViasdeComunicacion: React.FC = () => {
 
   return (
     <>
-      <title>Sector Agricola | EcoGreen</title>
+      <title>Vias De Comunicacion | EcoGreen</title>
       <meta name="description" content="Descubra nuestras soluciones en protección ambiental, una alternativa confiable, económica y adaptable para infraestructura urbana y vial." />
 
       {/* Hero Section */}
@@ -222,54 +222,25 @@ const ViasdeComunicacion: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Contenido Teórico */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
-            <div className="flex items-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">VÍAS DE COMUNICACIÓN
-              </h2>
-            </div>
-            <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
-              Las vías de comunicación son el conjunto de infraestructuras que forman la red de vías urbanas e interurbanas por la que se desarrolla la circulación o el desplazamiento. Las principales son las calles, avenidas, rutas, carreteras, vías de penetración agrícolas y petroleras, autopistas, puentes, túneles, entre otros. Los patios de puertos y pistas de aeropuertos también son considerados como vías de comunicación, al igual que toda la red de vías férreas y líneas de metro.               </p>
-            <div className="mt-4 text-left">
-            </div>
-          </div>
-        </div>
-      </section>
       {/* Grid: Sistemas Flexibles */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
-            <div className="flex items-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">VÍAS DE COMUNICACIÓN
-              </h2>
-            </div>
-            <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
-              Las vías de comunicación son el conjunto de infraestructuras que forman la red de vías urbanas e interurbanas por la que se desarrolla la circulación o el desplazamiento. Las principales son las calles, avenidas, rutas, carreteras, vías de penetración agrícolas y petroleras, autopistas, puentes, túneles, entre otros. Los patios de puertos y pistas de aeropuertos también son considerados como vías de comunicación, al igual que toda la red de vías férreas y líneas de metro.
-            </p> <AnimatePresence>
-              {isExpanded && (
-                <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="overflow-hidden text-left">
-                  <div className="space-y-6 text-xl text-gray-700 leading-relaxed text-left">
-                    <p>
-                      En todos los tipos de vías de comunicación ECOGREEN aporta innumerables beneficios que optimizan los tiempos y rendimientos de construcción, e incorpora un sin fin de productos a las obras que minimizan los costos y dan mayor vida útil a las mismas. ECOGREEN siempre priorizará las técnicas que funciones en armonía con la naturaleza y sean mínimamente invasivas con el medio ambiente.
-                    </p>
-                    <p>
-                      ECOGREEN es promotor de la Infraestructura Verde y todos sus productos y soluciones aportan beneficios al ecosistema intervenido. Entre las principales aplicaciones se encuentran: Reconstrucción de fallas de borde con diferentes técnicas de muros de contención, refuerzo y estabilización de vías de penetración a zonas petroleras y agrícolas, control de erosión y estabilización de taludes con el uso de Ecomantos Verdes ECOGREEN, refuerzo de pavimentos con geomallas de poliéster de alto modulo, estabilización de suelos blandos, sistemas de drenaje, rampas y terraplenes, protección de estribos de puentes. Las vías de comunicación también incluyen los cursos de agua, ECOGREEN también se especializa en la construcción de diques, presas, y en la impermeabilización de canales y lagunas.
-                    </p>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-            <div className="mt-4 text-left">
-              <button onClick={() => setIsExpanded(!isExpanded)} className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none">
-                {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+        {/* Grid: Sistemas Flexibles */}
+           <section className="py-16 bg-gray-50">
+             <div className="container mx-auto px-4">
+                  <div className="mb-12">
+                 <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">SECTOR AGRICOLA</h3>
+                 <div className="w-full h-1 bg-ecogreen-green"></div>
+               </div>
+               <motion.div
+                 className="grid grid-cols-1 md:grid-cols-3 gap-8"
+                 variants={gridContainerVariants}
+                 initial="hidden"
+                 whileInView="visible"
+                 viewport={{ once: true }}
+               >
+                 {viasdeComunicacion.map((sys) => <SystemCard key={sys.title} {...sys} />)}
+               </motion.div>
+             </div>
+           </section>
     </>
   );
 };
