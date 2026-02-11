@@ -37,7 +37,7 @@ const industriaPetroleogas = [
   { title: 'REFORESTACIÓN', href: '/control-de-erosion/reforestacion', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/reforestacion-cda.webp' },
   { title: 'CANALIZACIONES', href: '/control-de-erosion/canalizaciones', imgSrc: 'https://tumuro.com/media/construccion-civil/grid-construccion-civil/canalizaciones-cda.webp' },
   { title: 'DIQUES Y PRESAS', href: '/control-de-erosion/diques-y-presas', imgSrc: 'https://tumuro.com/media/construccion-civil/grid-construccion-civil/diques-y-presas-cda.webp' },
-  { title: 'PROTECCIÓN DE RIBERAS', href: '', imgSrc: 'https://tumuro.com/media/control-de-erosion/grid-control-de-erosion/proteccion-de-riberas-cda.webp' },
+  { title: 'PROTECCIÓN DE RIBERAS', href: '', imgSrc: 'https://tumuro.com/media/industria-petroleo-y-gas/grid-industria-petroleo-y-gas/proteccion-de-riberas-cda.webp' },
   { title: 'RECONSTRUCCIÓN DE FALLAS DE BORDE', href: '', imgSrc: 'https://tumuro.com/media/industria-petroleo-y-gas/grid-industria-petroleo-y-gas/reconstruccion-de-fallas-de-borde-cda.webp' },
   { title: 'REFUERZO DE PAVIMENTOS Y REPAVIMENTACIÓN', href: '', imgSrc: 'https://tumuro.com/media/industria-petroleo-y-gas/grid-industria-petroleo-y-gas/refuerzo-de-pavimentos-y-repavimentacion-cda.webp' },
   { title: 'RAMPAS Y VIAS DE PENETRACIÓN', href: '', imgSrc: 'https://tumuro.com/media/industria-petroleo-y-gas/grid-industria-petroleo-y-gas/rampas-y-vias-de-penetracion-cda.webp' },
@@ -52,7 +52,7 @@ const industriaPetroleogas = [
 ];
 
 const sliderImages = [
-  'https://tumuro.com/media/industria-petroleo-gas/slider/industria-petroleo-gas.webp',
+  'https://tumuro.com/media/industria-petroleo-y-gas/slider/industria-petroleo-y-gas.webp',
 ];
 
 const textVariants: Variants = {
