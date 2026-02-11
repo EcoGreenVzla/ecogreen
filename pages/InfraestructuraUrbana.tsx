@@ -41,7 +41,7 @@ const insfraestructuraUrbana = [
   { title: 'SUBDRENAJES Y ALCANTARILLAS', href: '', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/subdrenajes-y-alcantarillas-cda.webp' },
   { title: 'ACERAS Y CAMINERIAS', href: '', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/aceras-y-caminerias-cda.webp' },
   { title: 'MANTENIMIENTO DE AREAS VERDES', href: '', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/mantenimiento-de-areas-verdes-cda.webp' },
-  { title: 'JARDINES VERTICALES Y TECHOS VERDES', href: '', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/subdrenajes-y-alcantarillas.webp' },
+  { title: 'JARDINES VERTICALES Y TECHOS VERDES', href: '', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/subdrenajes-y-alcantarillas-cda.webp' },
 
 
 ];
