@@ -96,7 +96,7 @@ const SystemCard: React.FC<SystemCardProps> = ({ title, href, imgSrc }) => (
 
 
 const InfraestructuraUrbana: React.FC = () => {
-   const [isExpanded, setIsExpanded] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const nextSlide = useCallback(() => {
@@ -229,28 +229,35 @@ const InfraestructuraUrbana: React.FC = () => {
 
       {/* Contenido Teórico */}
       <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
-            <div className="flex items-center mb-8">
-              <img src="https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono Infraestructura Urbana" className="w-16 h-16 mr-6" />
-              <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Infraestructura Urbana</h2>
-            </div>
-
-            <div className="space-y-6 text-xl text-gray-700 leading-relaxed text-left">
-              <p>
-                ECOGREEN incorpora innumerables soluciones en diferentes campos de aplicación en la infraestructura urbana. Las obras proyectadas y ejecutadas por los profesionales de la arquitectura, urbanistas, ingenieros civiles, entre muchos otros, sirven de soporte para el desarrollo de otras actividades y su necesario funcionamiento en la organización estructural de las ciudades. Los aportes de las soluciones ECOGREEN abarcan muchos sectores importantes en los que se encuentran; el sector TRANSPORTE que contempla las calles, carreteras, autopistas, vías férreas, puertos y aeropuertos. La infraestructura ENERGÉTICA que incluye las redes eléctricas, transformación, distribución y alumbrado público, calefacción urbana, refinerías, oleoductos, gasoductos, plantas eólicas, térmicas y nucleares. Infraestructura HIDRÁULICA que agrupa todas las redes de recolección y reciclaje de residuos, vertederos y rellenos sanitarios, redes de desagüe y alcantarillado, embalses, depósitos, tratamiento y distribución de agua potable. Otro sector importante es las TELECOMUNICACIONES que está conformado por las obras de telefonía fija, redes de televisión, repetidoras, centrales, fibra óptica y celdas de telefonía celular. Y por último el sector de las EDIFICACIONES que abarca las principales obras de infraestructura que se encuentran más visibles y cercanas a las comunidades, como lo son las viviendas, instituciones educativas, comercios, industria, hospitales y centros de salud, parques, etc.
-              </p>
-
-              {isExpanded && (
-              <ul className="list-disc list-inside space-y-2 pl-4">
-                <p>
-                Las grandes obras de infraestructura, muchas veces generan impactos sociales y ambientales, poniendo en riesgo la salud y el bienestar de las comunidades afectadas, por lo que precisan de exhaustivos estudios de impacto ambiental previos a su realización. Es por esto que ECOGREEN fomenta la incorporación de la INFRAESTRUCTURA VERDE, que se compone principalmente por los suelos y la vegetación, y que tiene como objetivo incorporar mayor número de áreas reforestadas y mejorar la gestión del agua de lluvia de los ambientes construidos, para lograr beneficios laterales tales como; mejorar la calidad del aire y reducir el efecto "Isla de Calor"
-              </p>
-              </ul>
-              )}  
-            </div>
-          </div>
-        </div>
+        <AnimatePresence>
+          {isExpanded && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              className="overflow-hidden text-left"
+            >
+              <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
+                <p>El sistema de muros de contención que ha tenido más éxito a nivel mundial en obras de infraestructura urbana y vial es el denominado muro de tierra reforzada o también conocido como muro verde. Este sistema soluciona el restablecimiento de las dimensiones de las vías falladas y reconstruye los deslizamientos de suelo en un período de tiempo muy corto. Este tipo de sistema de contención nació con la creación del sistema registrado “tierra armada” creado por el ingeniero francés Henry Vidal en el año 1960. Dicha técnica consiste en la inclusión de una serie de tiras metálicas que van amarradas a unas escamas de concreto prefabricadas que conforman la fachada del muro. Estas tiras metálicas son capaces de desarrollar una tensión que permiten la fricción entre el elemento y el suelo, logrando así cortar la superficie de falla dentro del relleno utilizado para conformar el volumen de tierra de contención. Sin embargo aun cuando esta técnica se ha utilizado con relativo éxito y ha tenido un buen desempeño en muchas aplicaciones en diversos países, presenta la limitante de la duración del refuerzo metálico dentro de la masa de suelo de contención, debido a que esta se encuentra expuesta a un proceso permanente de corrosión producto de las condiciones de humedad, acidez o alcalinidad que están presentes en el suelo compactado.</p>
+                <p>En Europa a finales de la década de los sesenta se comenzó a estudiar el uso de nuevos materiales que pudiesen soportar las condiciones de humedad, acidez o alcalinidad que se encuentran dentro del suelo. Estos materiales son conocidos en la actualidad como productos geosintéticos, las materias primas que los conforman son poliéster, polipropileno y polietileno en algunos casos.</p>
+                <div>
+                  <p>Los muros de tierra reforzada construidos con productos geosintéticos se rigen bajo el mismo basamento teórico del sistema “tierra armada” con la diferencia que las tiras metálicas son sustituidas por geotextiles o por geomallas de diferentes tipos. Estos muros son considerados el mejor sistema de contención de la ingeniería contemporánea debido a que presentan muchas ventajas, entre las cuales se encuentran:</p>
+                  <ul className="list-disc list-inside space-y-2 pl-4 mt-4">
+                    <li>Disponibilidad de los materiales geosintéticos que los conforman.</li>
+                    <li>En los casos de derrumbes o deslizamientos se puede utilizar el material fallado por lo que no se requiere de aporte de material.</li>
+                    <li>Excelente tiempo de ejecución.</li>
+                    <li>Disponibilidad de los equipos y maquinarias especializadas para su construcción.</li>
+                    <li>No requiere de mano de obra calificada.</li>
+                    <li>Son consideradas como la solución más económica.</li>
+                    <li>Es el sistema de contención que menos impacta el ambiente, ya que su fachada puede quedar completamente reforestada.</li>
+                  </ul>
+                </div>
+                <p>Lo que determina que material geosintético se debe incorporar al muro de tierra reforzada, es el tipo de material de relleno que se va a utilizar para ser compactado. Esto significa que si el material de relleno a utilizar es de mayor granulometría, el geosintético ideal es una geomalla, debido a que los orificios de la geomalla se traban con las partículas gruesas generando un alto módulo de fricción entre el elemento y el suelo, a diferencia si el relleno es de granulometría fina el material ideal sería un geotextil tejido, siempre tomando en cuenta la resistencia a la tracción del producto geosintético como tal.</p>
+                <p>Es muy importante resaltar la virtud que tienen los muros de tierra reforzada en cuanto al acabado de su fachada, tomando en cuenta que existe la flexibilidad de colocarles bloques, concreto proyectado, gaviones o reforestarlos con la vegetación de la zona o cualquier otra que se quiera incorporar logrando minimizar el impacto ambiental armonizando ecológicamente el sistema de muro con el ambiente.</p>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
         <div className="mt-4 text-left">
           <button
             onClick={() => setIsExpanded(!isExpanded)}
