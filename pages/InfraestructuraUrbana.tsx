@@ -229,30 +229,34 @@ const InfraestructuraUrbana: React.FC = () => {
 
       {/* Contenido Teórico */}
       <section className="py-20 bg-white">
-          <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
-             ECOGREEN incorpora innumerables soluciones en diferentes campos de aplicación en la infraestructura urbana. Las obras proyectadas y ejecutadas por los profesionales de la arquitectura, urbanistas, ingenieros civiles, entre muchos otros, sirven de soporte para el desarrollo de otras actividades y su necesario funcionamiento en la organización estructural de las ciudades. Los aportes de las soluciones ECOGREEN abarcan muchos sectores importantes en los que se encuentran; el sector TRANSPORTE que contempla las calles, carreteras, autopistas, vías férreas, puertos y aeropuertos. La infraestructura ENERGÉTICA que incluye las redes eléctricas, transformación, distribución y alumbrado público, calefacción urbana, refinerías, oleoductos, gasoductos, plantas eólicas, térmicas y nucleares. Infraestructura HIDRÁULICA que agrupa todas las redes de recolección y reciclaje de residuos, vertederos y rellenos sanitarios, redes de desagüe y alcantarillado, embalses, depósitos, tratamiento y distribución de agua potable. Otro sector importante es las TELECOMUNICACIONES que está conformado por las obras de telefonía fija, redes de televisión, repetidoras, centrales, fibra óptica y celdas de telefonía celular. Y por último el sector de las EDIFICACIONES que abarca las principales obras de infraestructura que se encuentran más visibles y cercanas a las comunidades, como lo son las viviendas, instituciones educativas, comercios, industria, hospitales y centros de salud, parques, etc.
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl">
+            <div className="flex items-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">PROTECCIÓN DE RIBERAS
+              </h2>
+            </div>
+            <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
+              Existen muchas riberas y costas que requieren protección contra la erosión hídrica, así como también obras civiles que requieren que sus fundaciones y estructuras estén en contacto permanente con cursos de agua, debido a limitaciones de espacio o por la aplicación para la que fueron diseñadas. Para garantizar su funcionabilidad en el tiempo estas estructuras también deben ser protegidas contra la erosión. Al proceso de sustracción de masa sólida a la roca o a la perdida de partículas finas del suelo, llevado a cabo por un flujo de agua se le denomina Erosión Hídrica. En los casos donde se cuenta con piedras o material granular grueso, la solución para el control de erosión ideal son las cestas de gavión metálicas ECOGREEN fabricadas a máquina bajo la normativa internacional ASTM, las cuales especifican los diferentes tamaños, geometrías, calibres de los alambres y sus diferentes recubrimientos, según el tipo de obra donde se apliquen. En los casos donde solo se cuenta con material de relleno de granulometría fina, recomendamos las innovadoras formaletas textiles ECOGREEN que tienen forma de funda de gran capacidad y son especiales para conformar estructuras de control hidráulico o también llamadas obras fluviales.
             </p>
-        <AnimatePresence>
-          {isExpanded && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="overflow-hidden text-left"
-            >
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
-                <p>Las grandes obras de infraestructura, muchas veces generan impactos sociales y ambientales, poniendo en riesgo la salud y el bienestar de las comunidades afectadas, por lo que precisan de exhaustivos estudios de impacto ambiental previos a su realización. Es por esto que ECOGREEN fomenta la incorporación de la INFRAESTRUCTURA VERDE, que se compone principalmente por los suelos y la vegetación, y que tiene como objetivo incorporar mayor número de áreas reforestadas y mejorar la gestión del agua de lluvia de los ambientes construidos, para lograr beneficios laterales tales como; mejorar la calidad del aire y reducir el efecto "Isla de Calor"</p>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <div className="mt-4 text-left">
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none"
-          >
-            {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
-          </button>
+            <AnimatePresence>
+              {isExpanded && (
+                <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="overflow-hidden text-left">
+                  <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
+                    <p>Entre las principales obras fluviales se encuentran; Obras longitudinales para la delimitación de causes y protección de las márgenes de ríos. Control de erosión en la construcción de tomas y almacenes de agua a orillas de cursos de agua. Construcción de espigones y obras transversales para crear retención de sedimentos del material en suspensión y controlar el transporte de sólidos, modificando a su vez las pendientes del cauce y la velocidad del caudal de los ríos.</p>
+                    <p>Las formaletas textiles ECOGREEN cuando se llenan con concreto adquieren la forma de un gran bloque que se comporta como una gran unidad de alta resistencia al impacto y a la fricción, y logra obtener un alto peso adecuado para la conformación de estructuras flexibles de protección y revestimiento de orillas.</p>
+                    <p>Para la protección contra la socavación y como sistema para control de erosión ó conformación de estructuras, las formaletas textiles ECOGREEN tiene varias ventajas sobre otros sistemas convencionales. En comparación con los revestimientos de Piedra tipo Rip-Rap, las formaletas ECOGREEN es un revestimiento continuo con peso y tamaño homogéneo y de menor espesor. Se puede instalar sin equipo pesado y sin controles especiales, debido a que el concreto es vertido o bombeado al interior de la formaleta textil y ésta va adquiriendo su forma predeterminada. Se puede adaptar a diferentes superficies del terreno incluso bajo agua, garantizando un total contacto con la superficie. A diferencia de otras soluciones convencionales se requiere menor transporte de materiales al sitio de la obra mejorando el rendimiento de la instalación y el costo de la mano de obra, ya que es considerablemente menor debido a que no requiere de mano de obra especializada.</p>
+                    <p>Otra solución innovadora son los tubos geotextiles ECOGREEN que poseen dimensiones en su circunferencia mayores a 2 m y longitudes mayores a 6 m, son fabricados con geotextiles tejidos de alto módulo, y funcionan llenos de arena o lodo. Los tubos geotextil ECOGREEN son utilizados en aplicaciones costeras y ribereñas para la construcción de diversos tipos de estructuras de control hidráulico, espigones, protección de orillas y confinamiento de zonas secas o islas artificiales.</p>
+                    <p>Para efectos de posicionamiento, los tubos geotextil ECOGREEN están provistos de asas de geotextil desde las cuales se sujetan al suelo o a sistemas de postes para mantener su ubicación durante el llenado. Generalmente se apoyan sobre un geotextil denominado manto antisocavación, el cual está dotado de lastres para mantenerse en contacto con la superficie y evitar la socavación en la zona de apoyo del tubo geotextil.</p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <div className="mt-4 text-left">
+              <button onClick={() => setIsExpanded(!isExpanded)} className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none">
+                {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       {/* Grid: Sistemas Flexibles */}
