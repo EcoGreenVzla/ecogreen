@@ -76,7 +76,7 @@ const App: React.FC = () => {
             <Route path="/muros-de-contencion/sistemas-flexibles" element={<SistemasFlexibles />} />
             <Route path="/muros-de-contencion/sistemas-rigidos" element={<SistemasRigidos />} />
             <Route path="/muros-de-contencion/sistemas-drenaje" element={<SistemasDrenaje />} />
-            <Route path="/muros-de-contencion/sistemas-flexibles/muros-de-tierra-reforzada" element={<TierraReforzada />} />
+            <Route path="/muros-de-contencion/sistemas-flexibles/tierra-reforzada" element={<TierraReforzada />} />
             <Route path="/muros-de-contencion/sistemas-flexibles/gavion" element={<Gavion />} />
             <Route path="/muros-de-contencion/sistemas-flexibles/gavion-reforzado" element={<GavionReforzado />} />
             <Route path="/muros-de-contencion/sistemas-flexibles/muros-mixtos" element={<MurosMixtos />} />
