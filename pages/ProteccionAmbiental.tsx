@@ -252,8 +252,8 @@ const ProteccionAmbiental: React.FC = () => {
                 <li> Contención y revestimiento de taludes, sistemas contra deslizamientos y caída de rocas.</li>
                 <li> Separación y estabilización de subrasantes con geomallas ECOGREEN, sin la necesidad de incorporar grandes volúmenes de relleno.</li>
                 <li> Refuerzo de terraplenes y vías de penetración agrícolas y petroleras, sobre suelos blandos.</li>
-                <li>Instalación de sistemas de subdrenajes en vialidad, campos deportivos y manejo de lixiviados.</li>
-                <li>Reforestación y mantenimiento de áreas verdes.</li>
+                <li> Instalación de sistemas de subdrenajes en vialidad, campos deportivos y manejo de lixiviados.</li>
+                <li> Reforestación y mantenimiento de áreas verdes.</li>
                 <li> Construcción de rellenos sanitarios y lagunas de oxidación</li>
               </ul>
             </motion.div>
