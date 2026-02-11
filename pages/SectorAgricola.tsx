@@ -254,10 +254,6 @@ const SectorAgricola: React.FC = () => {
       {/* Grid: Sistemas Flexibles */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="mb-12">
-            <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sector Agricola</h3>
-            <div className="w-full h-1 bg-ecogreen-green"></div>
-          </div>
           <motion.div
             className="grid grid-cols-1 md:grid-cols-3 gap-8"
             variants={gridContainerVariants}
