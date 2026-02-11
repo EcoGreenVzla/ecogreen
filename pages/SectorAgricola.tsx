@@ -246,8 +246,6 @@ const SectorAgricola: React.FC = () => {
                         </motion.div>
                     )}
                 </AnimatePresence>       
-                <div className="mt-4 text-left">
-                </div>
               </div>
             </div>
           </section>
