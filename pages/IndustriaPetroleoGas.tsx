@@ -245,7 +245,7 @@ const IndustriaPetroleoGas: React.FC = () => {
             <AnimatePresence>
               {isExpanded && (
                 <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="overflow-hidden text-left">
-                  <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
+                  <div className="space-y-6 text-xl text-gray-700 leading-relaxed text-left">
                     <p>
                       El Petróleo es un producto esencial para muchas industrias, y es de vital importancia para el mantenimiento de la misma civilización industrializada, por lo que se considera una industria critica en la mayoría de las naciones. El petróleo alimenta un porcentaje muy alto del consumo de energía del mundo.
                     </p>
@@ -254,7 +254,7 @@ const IndustriaPetroleoGas: React.FC = () => {
                     <p>
                       La industria del petróleo se divide normalmente en tres fases:
                     </p>
-                    <ul className="list-disc list-inside space-y-2 pl-4 mt-4">
+                    <ul className="list-disc list-inside space-y-2 pl-4">
                       <li>"Upstream" Exploración, extracción y producción.</li>
                       <li>"Midstream" Transporte, procesos y almacenamiento.</li>
                       <li>"Downstream" Refinación, comercialización y distribución.</li>
