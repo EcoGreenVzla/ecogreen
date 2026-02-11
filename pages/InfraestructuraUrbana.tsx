@@ -205,54 +205,33 @@ const InfraestructuraUrbana: React.FC = () => {
         >
           <ChevronRightIcon className="h-12 w-12 md:h-16 md:w-16" />
         </motion.button>
-
-        <div className="absolute bottom-6 left-0 right-0 z-20">
-          <div className="flex items-center justify-center gap-2">
-            {sliderImages.map((_, index) => (
-              <motion.button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className="w-3 h-3 rounded-full transition-colors"
-                animate={currentSlide === index ? "active" : "inactive"}
-                variants={{
-                  active: { backgroundColor: '#54c70e', scale: 1.2 },
-                  inactive: { backgroundColor: '#ffffff', scale: 1 }
-                }}
-                whileHover={{ scale: 1.3 }}
-                transition={{ duration: 0.3 }}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
-          </div>
-        </div>
       </section>
 
       {/* Contenido Teórico */}
       <section className="py-20 bg-white">
-          <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
-             ECOGREEN incorpora innumerables soluciones en diferentes campos de aplicación en la infraestructura urbana. Las obras proyectadas y ejecutadas por los profesionales de la arquitectura, urbanistas, ingenieros civiles, entre muchos otros, sirven de soporte para el desarrollo de otras actividades y su necesario funcionamiento en la organización estructural de las ciudades. Los aportes de las soluciones ECOGREEN abarcan muchos sectores importantes en los que se encuentran; el sector TRANSPORTE que contempla las calles, carreteras, autopistas, vías férreas, puertos y aeropuertos. La infraestructura ENERGÉTICA que incluye las redes eléctricas, transformación, distribución y alumbrado público, calefacción urbana, refinerías, oleoductos, gasoductos, plantas eólicas, térmicas y nucleares. Infraestructura HIDRÁULICA que agrupa todas las redes de recolección y reciclaje de residuos, vertederos y rellenos sanitarios, redes de desagüe y alcantarillado, embalses, depósitos, tratamiento y distribución de agua potable. Otro sector importante es las TELECOMUNICACIONES que está conformado por las obras de telefonía fija, redes de televisión, repetidoras, centrales, fibra óptica y celdas de telefonía celular. Y por último el sector de las EDIFICACIONES que abarca las principales obras de infraestructura que se encuentran más visibles y cercanas a las comunidades, como lo son las viviendas, instituciones educativas, comercios, industria, hospitales y centros de salud, parques, etc.
-            </p>
-        <AnimatePresence>
-          {isExpanded && (
-            <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: 'auto' }}
-              exit={{ opacity: 0, height: 0 }}
-              className="overflow-hidden text-left"
-            >
-              <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
-                <p>Las grandes obras de infraestructura, muchas veces generan impactos sociales y ambientales, poniendo en riesgo la salud y el bienestar de las comunidades afectadas, por lo que precisan de exhaustivos estudios de impacto ambiental previos a su realización. Es por esto que ECOGREEN fomenta la incorporación de la INFRAESTRUCTURA VERDE, que se compone principalmente por los suelos y la vegetación, y que tiene como objetivo incorporar mayor número de áreas reforestadas y mejorar la gestión del agua de lluvia de los ambientes construidos, para lograr beneficios laterales tales como; mejorar la calidad del aire y reducir el efecto "Isla de Calor"</p>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <div className="mt-4 text-left">
-          <button
-            onClick={() => setIsExpanded(!isExpanded)}
-            className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none"
-          >
-            {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
-          </button>
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl">
+            <div className="flex items-center mb-8">
+              <img src="https://tumuro.com/media/banner-services/control-de-erosion-icon.png" alt="Icono Protección de Riberas" className="w-16 h-16 mr-6" />
+              <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Protección de Riberas</h2>
+            </div>
+            <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
+              ECOGREEN incorpora innumerables soluciones en diferentes campos de aplicación en la infraestructura urbana. Las obras proyectadas y ejecutadas por los profesionales de la arquitectura, urbanistas, ingenieros civiles, entre muchos otros, sirven de soporte para el desarrollo de otras actividades y su necesario funcionamiento en la organización estructural de las ciudades. Los aportes de las soluciones ECOGREEN abarcan muchos sectores importantes en los que se encuentran; el sector TRANSPORTE que contempla las calles, carreteras, autopistas, vías férreas, puertos y aeropuertos. La infraestructura ENERGÉTICA que incluye las redes eléctricas, transformación, distribución y alumbrado público, calefacción urbana, refinerías, oleoductos, gasoductos, plantas eólicas, térmicas y nucleares. Infraestructura HIDRÁULICA que agrupa todas las redes de recolección y reciclaje de residuos, vertederos y rellenos sanitarios, redes de desagüe y alcantarillado, embalses, depósitos, tratamiento y distribución de agua potable. Otro sector importante es las TELECOMUNICACIONES que está conformado por las obras de telefonía fija, redes de televisión, repetidoras, centrales, fibra óptica y celdas de telefonía celular. Y por último el sector de las EDIFICACIONES que abarca las principales obras de infraestructura que se encuentran más visibles y cercanas a las comunidades, como lo son las viviendas, instituciones educativas, comercios, industria, hospitales y centros de salud, parques, etc.                 </p>
+            <AnimatePresence>
+              {isExpanded && (
+                <motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="overflow-hidden text-left">
+                  <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
+                    <p>Las grandes obras de infraestructura, muchas veces generan impactos sociales y ambientales, poniendo en riesgo la salud y el bienestar de las comunidades afectadas, por lo que precisan de exhaustivos estudios de impacto ambiental previos a su realización. Es por esto que ECOGREEN fomenta la incorporación de la INFRAESTRUCTURA VERDE, que se compone principalmente por los suelos y la vegetación, y que tiene como objetivo incorporar mayor número de áreas reforestadas y mejorar la gestión del agua de lluvia de los ambientes construidos, para lograr beneficios laterales tales como; mejorar la calidad del aire y reducir el efecto "Isla de Calor"</p>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+            <div className="mt-4 text-left">
+              <button onClick={() => setIsExpanded(!isExpanded)} className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none">
+                {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
+              </button>
+            </div>
+          </div>
         </div>
       </section>
       {/* Grid: Sistemas Flexibles */}
