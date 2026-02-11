@@ -20,7 +20,7 @@ const ChevronRightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 
 // --- Data for System Grids (Linked to Navigation Menu) ---
-const Construccioncivil = [
+const construccionCivil = [
   { title: 'MUROS DE CONTENCIÓN', href: '/muros-de-contencion/sistemas-flexibles/tierra-reforzada', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-contencion-cda.webp' },
   { title: 'SISTEMA DE CONTENCIÓN FLEXIBLES', href: '/sistemas-de-contencion-flexibles', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/sistemas-de-contencion-flexibles1.webp' },
   { title: 'MUROS DE TIERRA REFORZADA', href: '/muros-de-contencion/muros-de-tierra-reforzada', imgSrc: 'https://tumuro.com/media/infraestructura-urbana/grid-infraestructura-urbana/muros-de-tierra-reforzada-cda.webp' },
@@ -96,7 +96,7 @@ const SystemCard: React.FC<SystemCardProps> = ({ title, href, imgSrc }) => (
 );
 
 
-const construccionCivil: React.FC = () => {
+const Construccioncivil: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
