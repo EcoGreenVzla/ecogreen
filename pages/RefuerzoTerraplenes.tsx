@@ -88,11 +88,6 @@ const ImageCard: React.FC<ImageCardProps> = ({ src, onClick }) => (
                 className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
             />
         </div>
-        <div className="bg-ecogreen-green flex items-center p-2 h-16">
-            <div className="bg-white rounded-full p-1 mr-4 flex-shrink-0 transition-transform duration-300 ease-in-out group-hover:scale-110">
-                <img src='https://tumuro.com/media/banner-services/control-de-erosion-icon.png' alt="Icono Control de Erosión" className="h-10 w-10" />
-            </div>
-        </div>
     </motion.div>
 );
 
