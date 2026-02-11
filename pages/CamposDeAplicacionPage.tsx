@@ -22,7 +22,7 @@ const sliderImages = [
 
 ];
 
-const erosionSystems = [
+const camposdeAplicacion = [
     { title: 'INFRAESTRUCTURA URBANA', href: '/campos-de-aplicacion/infraestructura-urbana', imgSrc: 'https://tumuro.com/media/campos-de-aplicacion/grid-campos-de-aplicacion/infraestructura-urbana1.webp' },
     { title: 'CONSTRUCCIÓN CIVIL', href: '/campos-de-aplicacion/construccion-civil', imgSrc: 'https://tumuro.com/media/campos-de-aplicacion/grid-campos-de-aplicacion/construccion-civil1.webp' },
     { title: 'PROTECCIÓN AMBIENTAL', href: '/campos-de-aplicacion/proteccion-ambiental', imgSrc: 'https://tumuro.com/media/campos-de-aplicacion/grid-campos-de-aplicacion/proteccion-ambiental1.webp' },
@@ -65,28 +65,26 @@ interface SystemCardProps {
 }
 const MotionLink = motion(Link);
 
-const ErosionSystemCard: React.FC<SystemCardProps> = ({ title, href, imgSrc }) => (
-    <MotionLink
-        to={href}
-        className="group flex flex-col rounded-md shadow-lg overflow-hidden w-full"
-        variants={cardVariants}
-        whileHover={{ y: -8, scale: 1.03, boxShadow: "0px 10px 20px rgba(0,0,0,0.1)" }}
-        transition={{ type: "spring", stiffness: 300 }}
-    >
-        <div className="h-48 overflow-hidden">
-            <img
-                src={imgSrc}
-                alt={`${title} background`}
-                className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
-            />
-        </div>
-        <div className="bg-ecogreen-green flex items-center p-4">
-            <div className="bg-white rounded-full p-1 mr-4 flex-shrink-0 transition-transform duration-300 ease-in-out group-hover:scale-110">
-                <img src='https://tumuro.com/media/banner-services/control-de-erosion-icon.png' alt={`${title} icon`} className="h-12 w-12" />
-            </div>
-            <h3 className="text-white text-base font-bold uppercase tracking-wide">{title}</h3>
-        </div>
-    </MotionLink>
+
+const SystemCard: React.FC<SystemCardProps> = ({ title, href, imgSrc }) => (
+  <MotionLink
+    to={href}
+    className="group flex flex-col rounded-md shadow-lg overflow-hidden relative"
+    variants={cardVariants}
+    whileHover={{ y: -8, scale: 1.02, boxShadow: "0px 12px 24px rgba(0,0,0,0.15)" }}
+    transition={{ type: "spring", stiffness: 300 }}
+  >
+    <div className="h-64 overflow-hidden">
+      <img
+        src={imgSrc}
+        alt={title}
+        className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
+      />
+    </div>
+    <div className="absolute bottom-0 left-0 right-0 bg-ecogreen-blue py-3 px-4 flex items-center justify-center">
+      <h3 className="text-white text-base font-bold uppercase tracking-wide text-center">{title}</h3>
+    </div>
+  </MotionLink>
 );
 
 
@@ -192,7 +190,7 @@ const CamposDeAplicacionPage: React.FC = () => {
                 whileInView="visible"
                 viewport={{ once: true }}
             >
-                {erosionSystems.map((sys) => <ErosionSystemCard key={sys.title} {...sys} />)}
+                {camposdeAplicacion.map((sys) => <SystemCard key={sys.title} {...sys} />)}
             </motion.div>
         </div>
       </section>
