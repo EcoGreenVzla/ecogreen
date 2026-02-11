@@ -233,7 +233,7 @@ const Construccioncivil: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <div className="flex items-center mb-8">
-              <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">INFRAESTRUCTURA URBANA
+              <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">CONSTRUCCION CIVIL
               </h2>
             </div>
             <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">

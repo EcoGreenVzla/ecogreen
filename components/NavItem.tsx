@@ -1,36 +1,16 @@
-
 import React, { useState, useRef } from 'react';
 import { NavItemType } from '../types';
 import Dropdown from './Dropdown';
 import MegaMenuCasos from './MegaMenuCasos';
 import ChevronDownIcon from './icons/ChevronDownIcon';
-import { motion, AnimatePresence, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
+// NOTA: Eliminamos las importaciones de framer-motion que causaban el bug
 
 interface NavItemProps {
   item: NavItemType;
   isMobile?: boolean;
   isFirst?: boolean;
 }
-
-const dropdownVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    y: -5,
-    transition: {
-      duration: 0.30,
-     
-    }
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.30,
-    
-    }
-  }
-};
 
 const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = false }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,7 +24,8 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
     }
   };
   
-  const handleHoverStart = () => {
+  // Lógica: Entra el mouse -> Se abre INMEDIATAMENTE
+  const handleMouseEnter = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
@@ -52,24 +33,24 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
     setIsHovered(true);
   };
 
-  const handleHoverEnd = () => {
+  // Lógica: Sale el mouse -> Espera 400ms (casi medio segundo) antes de cerrar
+  // Esto evita que se cierre si pasas el mouse rápido por el borde
+  const handleMouseLeave = () => {
     timeoutRef.current = window.setTimeout(() => {
       setIsHovered(false);
-    }, 200); // Reduje a 200ms para que se sienta más ágil
+    }, 400); 
   };
 
-
+  // Aquí controlas la separación de los botones (px-8)
   const desktopItemClasses = `
-    px-8 py-3 transition-colors duration-200
+    px-8 py-3 transition-colors duration-200 
     ${isFirst ? 'bg-ecogreen-green' : 'bg-ecogreen-blue'}
     hover:bg-ecogreen-green
     ${!item.isMegaMenu ? 'relative' : ''}
     flex items-center h-full cursor-pointer
   `;
 
-  const mobileItemClasses = `
-    border-b border-gray-700
-  `;
+  const mobileItemClasses = `border-b border-gray-700`;
 
   if (isMobile) {
     return (
@@ -100,29 +81,27 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
   }
 
   return (
-    <motion.div 
+    <div 
       className={desktopItemClasses}
-      onHoverStart={handleHoverStart}
-      onHoverEnd={handleHoverEnd}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
-      <Link to={item.href} className="flex items-center h-full">
+      <Link to={item.href} className="flex items-center h-full w-full">
         {item.label}
         {hasChildren && <ChevronDownIcon className="h-4 w-4 ml-2" />}
       </Link>
-      <AnimatePresence>
-        {isHovered && hasChildren && (
-          <motion.div
-            className={`absolute top-full z-20 pt-2 ${item.isMegaMenu ? 'left-0 right-0' : 'left-0'}`}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={dropdownVariants}
-          >
-            {item.isMegaMenu ? <MegaMenuCasos /> : <Dropdown items={item.children || []} />}
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.div>
+      
+      {/* SOLUCIÓN: Renderizado condicional simple (&&).
+        Sin animaciones, sin AnimatePresence, sin motion.div.
+        Si isHovered es true, aparece. Si es false, desaparece. 
+        Esto elimina el bug del "cuadro azul vacío".
+      */}
+      {isHovered && hasChildren && (
+        <div className={`absolute top-full z-50 pt-0 ${item.isMegaMenu ? 'left-0 right-0' : 'left-0'}`}>
+          {item.isMegaMenu ? <MegaMenuCasos /> : <Dropdown items={item.children || []} />}
+        </div>
+      )}
+    </div>
   );
 };
 
