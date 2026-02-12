@@ -12,17 +12,17 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const SocialIcon: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
-    <motion.a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-gray-500 hover:text-ecogreen-blue transition-colors duration-200"
-        whileHover={{ scale: 1.2, y: -3 }}
-        whileTap={{ scale: 0.95 }}
-        transition={{ type: 'spring', stiffness: 300 }}
-    >
-        {children}
-    </motion.a>
+  <motion.a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-gray-500 hover:text-ecogreen-blue transition-colors duration-200"
+    whileHover={{ scale: 1.2, y: -3 }}
+    whileTap={{ scale: 0.95 }}
+    transition={{ type: 'spring', stiffness: 300 }}
+  >
+    {children}
+  </motion.a>
 );
 
 const Header: React.FC = () => {
@@ -34,30 +34,34 @@ const Header: React.FC = () => {
       <div className="max-w-[1440px] mx-auto px-6 py-4"> {/* Más ancho y más padding vertical */}
         <div className="flex justify-between items-center">
           <div className="flex-shrink-0">
-             <Link to="/">
-                {/* Logo más grande como en la captura original */}
-                <img className="h-24 md:h-28 w-auto" src="https://tumuro.com/media/ui/ecogreen-logo.png" alt="EcoGreen Construcciones Logo" />
-             </Link>
+            <Link to="/">
+              {/* Logo más grande como en la captura original */}
+              <img className="h-24 md:h-28 w-auto" src="https://tumuro.com/media/ui/ecogreen-logo.png" alt="EcoGreen Construcciones Logo" />
+            </Link>
           </div>
-          
+
           {/* Redes sociales con iconos un poco más grandes */}
           <div className="hidden lg:flex items-center space-x-6">
-             <SocialIcon href="#"><FacebookIcon className="h-6 w-6" /></SocialIcon>
-             <SocialIcon href="#"><TwitterIcon className="h-6 w-6" /></SocialIcon>
-             <SocialIcon href="#"><InstagramIcon className="h-6 w-6" /></SocialIcon>
-             <SocialIcon href="#"><LinkedinIcon className="h-6 w-6" /></SocialIcon>
-             <SocialIcon href="mailto:info@ecogreen.com"><MailIcon className="h-6 w-6" /></SocialIcon>
+            <SocialIcon href="#"><FacebookIcon className="h-6 w-6" /></SocialIcon>
+            <SocialIcon href="#"><TwitterIcon className="h-6 w-6" /></SocialIcon>
+            <SocialIcon href="#"><InstagramIcon className="h-6 w-6" /></SocialIcon>
+            <SocialIcon href="#"><LinkedinIcon className="h-6 w-6" /></SocialIcon>
+            <SocialIcon href="mailto:info@ecogreen.com"><MailIcon className="h-6 w-6" /></SocialIcon>
           </div>
-          
+
           {/* ... (botón móvil igual) ... */}
         </div>
       </div>
 
       {/* Barra de navegación principal (Nav) */}
       <div className="bg-ecogreen-blue w-full"> {/* Fondo azul que cubre todo el ancho */}
-        <Nav isMobile={false} />
+        <Nav
+          items={navigationData || []}
+          isMobileMenuOpen={isMobileMenuOpen}
+          setIsMobileMenuOpen={setIsMobileMenuOpen}
+        />
       </div>
-      
+
       {/* ... (Menú móvil igual) ... */}
     </header>
   );
