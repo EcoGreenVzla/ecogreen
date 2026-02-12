@@ -68,15 +68,6 @@ const mobileImages = [
 'https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion3.png',
   // ... agrega las demás
 ];
-const sliderImages = [
-
-];
-
-const textVariants: Variants = {
-  initial: { opacity: 0, x: 50 },
-  animate: { opacity: 1, x: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-  exit: { opacity: 0, x: -50, transition: { duration: 0.3, ease: 'easeIn' } }
-};
 
 
 interface SystemCardProps {
@@ -96,26 +87,28 @@ const cardVariants: Variants = {
 const MotionLink = motion(Link);
 
 const SystemCard: React.FC<SystemCardProps> = ({ title, href, imgSrc }) => (
-  <MotionLink
-    to={href}
-    className="group flex flex-col rounded-md shadow-lg overflow-hidden relative"
+  <motion.div
     variants={cardVariants}
-    whileHover={{ y: -8, scale: 1.02, boxShadow: "0px 12px 24px rgba(0,0,0,0.15)" }}
-    transition={{ type: "spring", stiffness: 300 }}
+    className="group flex flex-col rounded-md shadow-lg overflow-hidden relative h-full"
+    whileHover={{ y: -8 }}
   >
-    <div className="h-64 overflow-hidden">
-      <img
-        src={imgSrc}
-        alt={title}
-        className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-      />
-    </div>
-    <div className="absolute bottom-0 left-0 right-0 bg-ecogreen-blue py-3 px-4 flex items-center justify-center">
-      <h3 className="text-white text-base font-bold uppercase tracking-wide text-center">{title}</h3>
-    </div>
-  </MotionLink>
+    <Link to={href} className="flex flex-col h-full">
+      <div className="h-64 overflow-hidden">
+        <img
+          src={imgSrc}
+          alt={title}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+        />
+      </div>
+      {/* Aplicamos font-black para que la letra no se vea delgada */}
+      <div className="absolute bottom-0 left-0 right-0 bg-ecogreen-blue py-4 px-4">
+        <h3 className="text-white text-base font-black uppercase tracking-tighter text-center leading-tight">
+          {title}
+        </h3>
+      </div>
+    </Link>
+  </motion.div>
 );
-
 
 const MurosDeContencion: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -261,7 +254,7 @@ const MurosDeContencion: React.FC = () => {
       </section>
 
       {/* Grid: Sistemas Flexibles */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-gray-0">
         <div className="container mx-auto px-4">
           <div className="mb-12">
             <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Contención Flexibles</h3>
