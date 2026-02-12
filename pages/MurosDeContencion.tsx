@@ -51,8 +51,21 @@ const desktopImages = [
 
 // Imágenes para Celular (Verticales)
 const mobileImages = [
-  'https://tumuro.com/media/slider/muros-mobile-1.jpg',
-  'https://tumuro.com/media/slider/muros-mobile-2.jpg',
+'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado1.png',
+'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada1.png',
+'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado2.png',
+'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado3.png',
+'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada2.png',
+'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado4.png',
+'https://tumuro.com/data3/images/muros-de-contencion/muro-mixto1.png',
+'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion1.png',
+'https://tumuro.com/data3/images/muros-de-contencion/pantalla-atirantada-mixta-reticulada1.jpg',
+'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada3.png',
+'https://tumuro.com/data3/images/muros-de-contencion/pantalla-atirantada1.jpg',
+'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada4.png',
+'https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion1.png',
+'https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion2.png',
+'https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion3.png',
   // ... agrega las demás
 ];
 const sliderImages = [
