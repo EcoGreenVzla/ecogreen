@@ -189,16 +189,15 @@ const MurosDeContencion: React.FC = () => {
           <ChevronRightIcon className="w-10 h-10" />
         </button>
 
-        {/* Contenido centrado: Título azul con fondo sólido (no transparente) */}
-        {/* Contenido alineado a la derecha con transparencia */}
-        <div className="relative z-10 flex flex-col items-end justify-center h-full px-4 md:px-20">
-          {/* bg-ecogreen-blue/70 activa la transparencia que pides */}
-          <div className="bg-ecogreen-blue/70 p-6 md:p-10 shadow-2xl text-center max-w-lg">
-            <h1 className="text-white text-3xl md:text-5xl font-black uppercase tracking-tighter">
+        {/* Contenido centrado con transparencia para replicar la segunda captura */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
+          {/* bg-ecogreen-blue/80 para un azul profundo pero con transparencia */}
+          <div className="bg-ecogreen-blue/80 p-6 md:p-12 shadow-2xl max-w-2xl backdrop-blur-sm">
+            <h1 className="text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mb-2">
               Muros de Contención
             </h1>
-            <p className="text-ecogreen-green mt-2 font-bold text-sm md:text-lg">
-              SOLUCIONES VERDES, PRÁCTICAS Y ECONÓMICAS
+            <p className="text-ecogreen-green font-bold text-base md:text-xl uppercase">
+              Soluciones Verdes, Prácticas y Económicas
             </p>
           </div>
         </div>
