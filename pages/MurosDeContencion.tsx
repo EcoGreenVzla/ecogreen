@@ -62,7 +62,7 @@ interface SystemCardProps {
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
   visible: {
-    opacity: 1,
+    opacity: 0,
     y: 0,
     transition: { type: 'spring', stiffness: 100, damping: 20 }
   },
@@ -131,15 +131,13 @@ const MurosDeContencion: React.FC = () => {
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: 0 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 1 }}
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${sliderImages[currentSlide]})` }}
           />
         </AnimatePresence>
-
-        <div className="absolute inset-0 bg-black/0" />
 
         <div className="absolute inset-0 flex items-center justify-center md:justify-end p-4 md:p-12 lg:p-24 z-10">
           <div className='flex flex-col items-center md:items-end'>
