@@ -168,150 +168,139 @@ const MurosDeContencion: React.FC = () => {
 
       {/* Hero Section (Homepage Style) */}
       {/* Hero Section - Ajuste para que se vea como la versión vieja */}
-      <section className="relative w-full h-[500px] md:h-[570px] overflow-hidden bg-white">
+      {/* Hero Section */}
+      <section className="relative w-full h-[500px] md:h-[700px] overflow-hidden bg-white">
         <AnimatePresence mode="wait">
+          {/* AQUÍ ESTÁ EL COMPONENTE QUE BUSCAS */}
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.8 }}
-            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            // Añade estas 4 líneas aquí mismo para que funcione con el dedo:
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
+            onDragEnd={(e, { offset }) => {
+              if (offset.x < -50) nextSlide();
+              if (offset.x > 50) prevSlide();
+            }}
+            className="absolute inset-0 bg-cover bg-center cursor-grab active:cursor-grabbing"
             style={{ backgroundImage: `url(${activeImages[currentSlide]})` }}
           />
         </AnimatePresence>
 
-        {/* Controles de flechas (opcional, pero recomendado) */}
-        <button onClick={prevSlide} className="absolute left-4 top-1/2 z-20 -translate-y-1/2 text-white/50 hover:text-white">
-          <ChevronLeftIcon className="w-10 h-10" />
-        </button>
-        <button onClick={nextSlide} className="absolute right-4 top-1/2 z-20 -translate-y-1/2 text-white/50 hover:text-white">
-          <ChevronRightIcon className="w-10 h-10" />
-        </button>
+        {/* ... el resto del código (flechas y título) viene después ... */}
 
-        {/* Contenido centrado con transparencia para replicar la segunda captura */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
-          {/* bg-ecogreen-blue/80 para un azul profundo pero con transparencia */}
-          <div className="bg-ecogreen-blue/80 p-6 md:p-12 shadow-2xl max-w-2xl backdrop-blur-sm">
-            <h1 className="text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mb-2">
-              Muros de Contención
-            </h1>
-            <p className="text-ecogreen-green font-bold text-base md:text-xl uppercase">
-              Soluciones Verdes, Prácticas y Económicas
-            </p>
-          </div>
-        </div>
-      </section>
+        {/* Contenido Teórico */}
+        <section className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl">
+              <div className="flex items-center mb-8">
+                <img src="https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono" className="w-16 h-16 mr-6" />
+                <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Muros de Contención</h2>
+              </div>
 
-      {/* Contenido Teórico */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
-            <div className="flex items-center mb-8">
-              <img src="https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono" className="w-16 h-16 mr-6" />
-              <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Muros de Contención</h2>
-            </div>
+              <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
+                Los muros de contención son estructuras construidas con el propósito de resistir las fuerzas ejercidas por la tierra contenida y transmitir esas fuerzas en forma segura a la fundación o a un sitio fuera de la masa susceptible a moverse. La finalidad de los muros de contención es proveer estabilidad contra la rotura de macizos de tierra o roca para evitar los deslizamientos causados por su peso propio o por empujes producidos por cargas externas.
+              </p>
 
-            <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
-              Los muros de contención son estructuras construidas con el propósito de resistir las fuerzas ejercidas por la tierra contenida y transmitir esas fuerzas en forma segura a la fundación o a un sitio fuera de la masa susceptible a moverse. La finalidad de los muros de contención es proveer estabilidad contra la rotura de macizos de tierra o roca para evitar los deslizamientos causados por su peso propio o por empujes producidos por cargas externas.
-            </p>
+              <AnimatePresence>
+                {isExpanded && (
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{ opacity: 1, height: 'auto' }}
+                    exit={{ opacity: 0, height: 0 }}
+                    className="overflow-hidden text-left"
+                  >
+                    <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
+                      <p>
+                        Los muros de contención están considerados como una de las técnicas de construcción más antiguas de la humanidad. Tomando en cuenta las construcciones de piedra existentes construidas por las civilizaciones prehistóricas. Sin embargo, su estudio utilizando modelos teóricos y su dimensionamiento en bases racionales comienza a desarrollarse en el siglo XVIII, cuando Coulomb en 1773 presentó su trabajo sobre la determinación del empuje lateral aplicado por el suelo sobre una estructura de contención. Esta determinación es el paso más importante en el dimensionamiento de un muro de contención.
+                      </p>
+                      <p>
+                        La mecánica de suelo moderna utiliza ampliamente el modelo desarrollado por Coulomb, tomando en cuenta que es una de las bases principales de los métodos corrientes de dimensionamientos de muros de contención. El análisis de un muro de contención consiste en el análisis del equilibrio del conjunto formado por el macizo de suelo y la propia estructura. Este equilibrio es afectado por las características de resistencia, deformabilidad, permeabilidad y por el peso propio de esos dos elementos, además de las condiciones que rigen la interacción entre ellos.
+                      </p>
+                      <p>
+                        Posteriormente, en 1857 nace la teoría de Rankine, la cual se basa en las condiciones de esfuerzo en el suelo en un estado de equilibrio plástico. También se analiza la estabilidad por el método ordinario de las dovelas para taludes de suelos estratificados, propuesto por Bishop en 1955.
+                      </p>
+                      <p>
+                        Existen varios tipos de muros de contención y cada uno de ellos tiene un método de cálculo y una geometría diferente. Estos tipos de muros los podemos clasificar en dos grandes grupos:
+                      </p>
+                    </div>
+                  </motion.div>
+                )}
+              </AnimatePresence>
 
-            <AnimatePresence>
-              {isExpanded && (
-                <motion.div
-                  initial={{ opacity: 0, height: 0 }}
-                  animate={{ opacity: 1, height: 'auto' }}
-                  exit={{ opacity: 0, height: 0 }}
-                  className="overflow-hidden text-left"
+              <div className="mt-4 text-left">
+                <button
+                  onClick={() => setIsExpanded(!isExpanded)}
+                  className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none"
                 >
-                  <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
-                    <p>
-                      Los muros de contención están considerados como una de las técnicas de construcción más antiguas de la humanidad. Tomando en cuenta las construcciones de piedra existentes construidas por las civilizaciones prehistóricas. Sin embargo, su estudio utilizando modelos teóricos y su dimensionamiento en bases racionales comienza a desarrollarse en el siglo XVIII, cuando Coulomb en 1773 presentó su trabajo sobre la determinación del empuje lateral aplicado por el suelo sobre una estructura de contención. Esta determinación es el paso más importante en el dimensionamiento de un muro de contención.
-                    </p>
-                    <p>
-                      La mecánica de suelo moderna utiliza ampliamente el modelo desarrollado por Coulomb, tomando en cuenta que es una de las bases principales de los métodos corrientes de dimensionamientos de muros de contención. El análisis de un muro de contención consiste en el análisis del equilibrio del conjunto formado por el macizo de suelo y la propia estructura. Este equilibrio es afectado por las características de resistencia, deformabilidad, permeabilidad y por el peso propio de esos dos elementos, además de las condiciones que rigen la interacción entre ellos.
-                    </p>
-                    <p>
-                      Posteriormente, en 1857 nace la teoría de Rankine, la cual se basa en las condiciones de esfuerzo en el suelo en un estado de equilibrio plástico. También se analiza la estabilidad por el método ordinario de las dovelas para taludes de suelos estratificados, propuesto por Bishop en 1955.
-                    </p>
-                    <p>
-                      Existen varios tipos de muros de contención y cada uno de ellos tiene un método de cálculo y una geometría diferente. Estos tipos de muros los podemos clasificar en dos grandes grupos:
-                    </p>
-                  </div>
-                </motion.div>
-              )}
-            </AnimatePresence>
-
-            <div className="mt-4 text-left">
-              <button
-                onClick={() => setIsExpanded(!isExpanded)}
-                className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none"
-              >
-                {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
-              </button>
+                  {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Grid: Sistemas Flexibles */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="mb-12">
-            <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Contención Flexibles</h3>
-            <div className="w-full h-1 bg-ecogreen-green"></div>
+        {/* Grid: Sistemas Flexibles */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="mb-12">
+              <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Contención Flexibles</h3>
+              <div className="w-full h-1 bg-ecogreen-green"></div>
+            </div>
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+              variants={gridContainerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {sistemasFlexibles.map((sys) => <SystemCard key={sys.title} {...sys} />)}
+            </motion.div>
           </div>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            variants={gridContainerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {sistemasFlexibles.map((sys) => <SystemCard key={sys.title} {...sys} />)}
-          </motion.div>
-        </div>
-      </section>
+        </section>
 
-      {/* Grid: Sistemas Rígidos */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="mb-12">
-            <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Contención Rígidos</h3>
-            <div className="w-full h-1 bg-ecogreen-green"></div>
+        {/* Grid: Sistemas Rígidos */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="mb-12">
+              <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Contención Rígidos</h3>
+              <div className="w-full h-1 bg-ecogreen-green"></div>
+            </div>
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+              variants={gridContainerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {sistemasRigidos.map((sys) => <SystemCard key={sys.title} {...sys} />)}
+            </motion.div>
           </div>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            variants={gridContainerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {sistemasRigidos.map((sys) => <SystemCard key={sys.title} {...sys} />)}
-          </motion.div>
-        </div>
-      </section>
+        </section>
 
-      {/* Grid: Sistemas Drenaje */}
-      <section className="py-16 bg-gray-50 mb-16">
-        <div className="container mx-auto px-4">
-          <div className="mb-12">
-            <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Drenaje</h3>
-            <div className="w-full h-1 bg-ecogreen-green"></div>
+        {/* Grid: Sistemas Drenaje */}
+        <section className="py-16 bg-gray-50 mb-16">
+          <div className="container mx-auto px-4">
+            <div className="mb-12">
+              <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Drenaje</h3>
+              <div className="w-full h-1 bg-ecogreen-green"></div>
+            </div>
+            <motion.div
+              className="grid grid-cols-1 md:grid-cols-3 gap-8"
+              variants={gridContainerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+            >
+              {sistemasDrenaje.map((sys) => <SystemCard key={sys.title} {...sys} />)}
+            </motion.div>
           </div>
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-8"
-            variants={gridContainerVariants}
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true }}
-          >
-            {sistemasDrenaje.map((sys) => <SystemCard key={sys.title} {...sys} />)}
-          </motion.div>
-        </div>
-      </section>
-    </>
-  );
+        </section>
+      </>
+      );
 };
 
-export default MurosDeContencion;
+      export default MurosDeContencion;
