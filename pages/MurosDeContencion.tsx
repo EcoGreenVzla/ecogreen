@@ -190,8 +190,8 @@ const MurosDeContencion: React.FC = () => {
         </button>
 
         {/* Contenido centrado con transparencia para replicar la segunda captura */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full px-4 text-center">
-          {/* bg-ecogreen-blue/80 para un azul profundo pero con transparencia */}
+        {/* Contenido alineado a la derecha para replicar la captura */}
+        <div className="relative z-10 flex flex-col items-end justify-center h-full px-4 md:px-20 text-center">
           <div className="bg-ecogreen-blue/80 p-6 md:p-12 shadow-2xl max-w-2xl backdrop-blur-sm">
             <h1 className="text-white text-4xl md:text-6xl font-black uppercase tracking-tighter mb-2">
               Muros de Contención
