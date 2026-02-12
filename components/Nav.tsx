@@ -15,7 +15,7 @@ const Nav: React.FC<NavProps> = ({ items, isMobileMenuOpen, setIsMobileMenuOpen 
     <>
       {/* Desktop Navigation */}
       <nav className="hidden lg:flex bg-ecogreen-blue text-white uppercase font-thin text-nav tracking-wider relative">
-        <div className="container mx-auto flex">
+        <div className="container  h-[10vh] mx-auto w-full flex">
           {items.map((item, index) => (
             <NavItem 
               key={index} 
