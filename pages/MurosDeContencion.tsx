@@ -51,21 +51,21 @@ const desktopImages = [
 
 // Imágenes para Celular (Verticales)
 const mobileImages = [
-'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado1.png',
-'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada1.png',
-'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado2.png',
-'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado3.png',
-'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada2.png',
-'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado4.png',
-'https://tumuro.com/data3/images/muros-de-contencion/muro-mixto1.png',
-'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion1.png',
-'https://tumuro.com/data3/images/muros-de-contencion/pantalla-atirantada-mixta-reticulada1.jpg',
-'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada3.png',
-'https://tumuro.com/data3/images/muros-de-contencion/pantalla-atirantada1.jpg',
-'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada4.png',
-'https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion1.png',
-'https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion2.png',
-'https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion3.png',
+  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado1.png',
+  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada1.png',
+  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado2.png',
+  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado3.png',
+  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada2.png',
+  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado4.png',
+  'https://tumuro.com/data3/images/muros-de-contencion/muro-mixto1.png',
+  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion1.png',
+  'https://tumuro.com/data3/images/muros-de-contencion/pantalla-atirantada-mixta-reticulada1.jpg',
+  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada3.png',
+  'https://tumuro.com/data3/images/muros-de-contencion/pantalla-atirantada1.jpg',
+  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada4.png',
+  'https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion1.png',
+  'https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion2.png',
+  'https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion3.png',
   // ... agrega las demás
 ];
 
@@ -141,14 +141,14 @@ const MurosDeContencion: React.FC = () => {
 
 
   const gridContainerVariants: Variants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2 // Esto hace que las tarjetas aparezcan una tras otra
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2 // Esto hace que las tarjetas aparezcan una tras otra
+      }
     }
-  }
-};
+  };
   const prevSlide = () => {
     setCurrentSlide((prev) => (prev - 1 + activeImages.length) % activeImages.length);
   };
@@ -168,7 +168,7 @@ const MurosDeContencion: React.FC = () => {
 
       {/* Hero Section (Homepage Style) */}
       {/* Hero Section - Ajuste para que se vea como la versión vieja */}
-      <section className="relative w-full h-[500px] md:h-[700px] overflow-hidden bg-white">
+      <section className="relative w-full h-[500px] md:h-[570px] overflow-hidden bg-white">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
@@ -190,8 +190,10 @@ const MurosDeContencion: React.FC = () => {
         </button>
 
         {/* Contenido centrado: Título azul con fondo sólido (no transparente) */}
-        <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
-          <div className="bg-ecogreen-blue p-6 md:p-10 shadow-2xl text-center">
+        {/* Contenido alineado a la derecha con transparencia */}
+        <div className="relative z-10 flex flex-col items-end justify-center h-full px-4 md:px-20">
+          {/* bg-ecogreen-blue/70 activa la transparencia que pides */}
+          <div className="bg-ecogreen-blue/70 p-6 md:p-10 shadow-2xl text-center max-w-lg">
             <h1 className="text-white text-3xl md:text-5xl font-black uppercase tracking-tighter">
               Muros de Contención
             </h1>
@@ -254,7 +256,7 @@ const MurosDeContencion: React.FC = () => {
       </section>
 
       {/* Grid: Sistemas Flexibles */}
-      <section className="py-16 bg-gray-0">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="mb-12">
             <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Contención Flexibles</h3>
