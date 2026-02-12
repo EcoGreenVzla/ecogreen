@@ -37,13 +37,26 @@ const sistemasDrenaje = [
   { title: 'Sistemas de Drenaje', href: '/muros-de-contencion/sistemas-drenaje', imgSrc: 'https://tumuro.com/media/muros-de-contencion/grid-sistemas-de-drenaje/sistemas-de-drenaje.webp' },
 ];
 
-const sliderImages = [
+
+// Imágenes para Computadora (Horizontales, una sola foto completa, NO collages)
+const desktopImages = [
   'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg',
   'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion2.jpg',
   'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion3.jpg',
   'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion4.jpg',
   'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion5.jpg',
-  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg'
+  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg',
+  // ... agrega las demás
+];
+
+// Imágenes para Celular (Verticales)
+const mobileImages = [
+  'https://tumuro.com/media/slider/muros-mobile-1.jpg',
+  'https://tumuro.com/media/slider/muros-mobile-2.jpg',
+  // ... agrega las demás
+];
+const sliderImages = [
+
 ];
 
 const textVariants: Variants = {
@@ -95,30 +108,52 @@ const MurosDeContencion: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  const nextSlide = useCallback(() => {
-    setCurrentSlide((prevIndex) => (prevIndex + 1) % sliderImages.length);
+  // NUEVO: Estado para saber si es móvil
+  const [isMobile, setIsMobile] = useState(false);
+
+  // NUEVO: Detectar cambio de tamaño de pantalla
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768); // 768px es el punto de quiebre estándar para tablets/móviles
+    };
+
+    // Ejecutar al inicio
+    handleResize();
+
+    // Escuchar cambios
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const prevSlide = () => {
-    setCurrentSlide((prevIndex) => (prevIndex - 1 + sliderImages.length) % sliderImages.length);
-  };
+  // Elegir qué lista usar según el dispositivo
+  const activeImages = isMobile ? mobileImages : desktopImages;
 
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  }
+  // ... el resto de tus funciones (nextSlide, prevSlide) ...
+  const nextSlide = useCallback(() => {
+    setCurrentSlide((prev) => (prev + 1) % activeImages.length);
+  }, [activeImages.length]);
 
-  useEffect(() => {
-    const slideInterval = setInterval(nextSlide, 5000);
-    return () => clearInterval(slideInterval);
-  }, [nextSlide]);
 
   const gridContainerVariants: Variants = {
-    hidden: { opacity: 1 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15 },
-    },
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2 // Esto hace que las tarjetas aparezcan una tras otra
+    }
+  }
+};
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + activeImages.length) % activeImages.length);
   };
+
+  // Auto-play para que rote solo como la web vieja
+  useEffect(() => {
+    const timer = setInterval(nextSlide, 5000);
+    return () => clearInterval(timer);
+  }, [nextSlide]);
+
+
 
   return (
     <>
@@ -126,99 +161,37 @@ const MurosDeContencion: React.FC = () => {
       <meta name="description" content="Soluciones integrales en muros de contención flexibles, rígidos y sistemas de drenaje." />
 
       {/* Hero Section (Homepage Style) */}
-      <section className="relative w-full h-[70vh] max-h-[700px] overflow-hidden bg-gray-800">
-        <AnimatePresence>
+      {/* Hero Section - Ajuste para que se vea como la versión vieja */}
+      <section className="relative w-full h-[500px] md:h-[700px] overflow-hidden bg-white">
+        <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 1 }}
-            className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url(${sliderImages[currentSlide]})` }}
+            transition={{ duration: 0.8 }}
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${activeImages[currentSlide]})` }}
           />
         </AnimatePresence>
 
-       
+        {/* Controles de flechas (opcional, pero recomendado) */}
+        <button onClick={prevSlide} className="absolute left-4 top-1/2 z-20 -translate-y-1/2 text-white/50 hover:text-white">
+          <ChevronLeftIcon className="w-10 h-10" />
+        </button>
+        <button onClick={nextSlide} className="absolute right-4 top-1/2 z-20 -translate-y-1/2 text-white/50 hover:text-white">
+          <ChevronRightIcon className="w-10 h-10" />
+        </button>
 
-        <div className="absolute inset-0 flex items-center justify-center md:justify-end p-4 md:p-12 lg:p-24 z-10">
-          <div className='flex flex-col items-center md:items-end'>
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentSlide}
-                variants={textVariants}
-                initial="initial"
-                animate="animate"
-                exit="exit"
-                className="bg-ecogreen-blue/70 p-6 md:p-8 text-center md:text-right text-white max-w-xl"
-              >
-                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-ecogreen-lime uppercase drop-shadow-lg">
-                  Muros de Contención
-                </h2>
-                <p className="mt-2 text-sm md:text-lg font-semibold uppercase tracking-wider drop-shadow-md">
-                  Soluciones Verdes, Prácticas y Económicas
-                </p>
-              </motion.div>
-            </AnimatePresence>
-            <div className='flex md:hidden mt-6 space-x-8'>
-              <motion.button
-                onClick={prevSlide}
-                className="text-white/80 hover:text-white transition drop-shadow-lg p-2 bg-black/20 rounded-full"
-                whileHover={{ scale: 1.1, backgroundColor: 'rgba(0,0,0,0.4)' }}
-                whileTap={{ scale: 0.95 }}
-                aria-label="Previous slide"
-              >
-                <ChevronLeftIcon className="h-8 w-8" />
-              </motion.button>
-              <motion.button
-                onClick={nextSlide}
-                className="text-white/80 hover:text-white transition drop-shadow-lg p-2 bg-black/20 rounded-full"
-                whileHover={{ scale: 1.1, backgroundColor: 'rgba(0,0,0,0.4)' }}
-                whileTap={{ scale: 0.95 }}
-                aria-label="Next slide"
-              >
-                <ChevronRightIcon className="h-8 w-8" />
-              </motion.button>
-            </div>
-          </div>
-        </div>
-
-        <motion.button
-          onClick={prevSlide}
-          className="hidden md:block absolute top-1/2 left-4 -translate-y-1/2 text-white/70 hover:text-white transition drop-shadow-lg z-20"
-          whileHover={{ scale: 1.1, x: -5 }}
-          whileTap={{ scale: 0.95 }}
-          aria-label="Previous slide"
-        >
-          <ChevronLeftIcon className="h-12 w-12 md:h-16 md:w-16" />
-        </motion.button>
-        <motion.button
-          onClick={nextSlide}
-          className="hidden md:block absolute top-1/2 right-4 -translate-y-1/2 text-white/70 hover:text-white transition drop-shadow-lg z-20"
-          whileHover={{ scale: 1.1, x: 5 }}
-          whileTap={{ scale: 0.95 }}
-          aria-label="Next slide"
-        >
-          <ChevronRightIcon className="h-12 w-12 md:h-16 md:w-16" />
-        </motion.button>
-
-        <div className="absolute bottom-6 left-0 right-0 z-20">
-          <div className="flex items-center justify-center gap-2">
-            {sliderImages.map((_, index) => (
-              <motion.button
-                key={index}
-                onClick={() => goToSlide(index)}
-                className="w-3 h-3 rounded-full transition-colors"
-                animate={currentSlide === index ? "active" : "inactive"}
-                variants={{
-                  active: { backgroundColor: '#54c70e', scale: 1.2 },
-                  inactive: { backgroundColor: '#ffffff', scale: 1 }
-                }}
-                whileHover={{ scale: 1.3 }}
-                transition={{ duration: 0.3 }}
-                aria-label={`Go to slide ${index + 1}`}
-              />
-            ))}
+        {/* Contenido centrado: Título azul con fondo sólido (no transparente) */}
+        <div className="relative z-10 flex flex-col items-center justify-center h-full px-4">
+          <div className="bg-ecogreen-blue p-6 md:p-10 shadow-2xl text-center">
+            <h1 className="text-white text-3xl md:text-5xl font-black uppercase tracking-tighter">
+              Muros de Contención
+            </h1>
+            <p className="text-ecogreen-green mt-2 font-bold text-sm md:text-lg">
+              SOLUCIONES VERDES, PRÁCTICAS Y ECONÓMICAS
+            </p>
           </div>
         </div>
       </section>
