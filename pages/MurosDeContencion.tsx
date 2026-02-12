@@ -38,18 +38,18 @@ const sistemasDrenaje = [
 ];
 
 const sliderImages = [
-  'https://tumuro.com/media/slider/muros-de-contencion1.webp',
-  'https://tumuro.com/media/slider/muros-de-contencion2.webp',
-  'https://tumuro.com/media/slider/muros-de-contencion3.webp',
-  'https://tumuro.com/media/slider/muros-de-contencion4.webp',
-  'https://tumuro.com/media/slider/muros-de-contencion5.webp',
-  'https://tumuro.com/media/slider/muros-de-contencion6.webp'
+  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg',
+  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion2.jpg',
+  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion3.jpg',
+  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion4.jpg',
+  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion5.jpg',
+  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg'
 ];
 
 const textVariants: Variants = {
-    initial: { opacity: 0, x: 50 },
-    animate: { opacity: 1, x: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-    exit: { opacity: 0, x: -50, transition: { duration: 0.3, ease: 'easeIn' } }
+  initial: { opacity: 0, x: 50 },
+  animate: { opacity: 1, x: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+  exit: { opacity: 0, x: -50, transition: { duration: 0.3, ease: 'easeIn' } }
 };
 
 
@@ -61,8 +61,8 @@ interface SystemCardProps {
 
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
+  visible: {
+    opacity: 1,
     y: 0,
     transition: { type: 'spring', stiffness: 100, damping: 20 }
   },
@@ -128,98 +128,98 @@ const MurosDeContencion: React.FC = () => {
       {/* Hero Section (Homepage Style) */}
       <section className="relative w-full h-[70vh] max-h-[700px] overflow-hidden bg-gray-800">
         <AnimatePresence>
-            <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${sliderImages[currentSlide]})` }}
-            />
+          <motion.div
+            key={currentSlide}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 1 }}
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${sliderImages[currentSlide]})` }}
+          />
         </AnimatePresence>
-        
-        <div className="absolute inset-0 bg-black/40" />
+
+        <div className="absolute inset-0 bg-black/0" />
 
         <div className="absolute inset-0 flex items-center justify-center md:justify-end p-4 md:p-12 lg:p-24 z-10">
-            <div className='flex flex-col items-center md:items-end'>
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={currentSlide}
-                        variants={textVariants}
-                        initial="initial"
-                        animate="animate"
-                        exit="exit"
-                        className="bg-ecogreen-blue/70 p-6 md:p-8 text-center md:text-right text-white max-w-xl"
-                    >
-                        <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-ecogreen-lime uppercase drop-shadow-lg">
-                            Muros de Contención
-                        </h2>
-                        <p className="mt-2 text-sm md:text-lg font-semibold uppercase tracking-wider drop-shadow-md">
-                            Soluciones Verdes, Prácticas y Económicas
-                        </p>
-                    </motion.div>
-                </AnimatePresence>
-                <div className='flex md:hidden mt-6 space-x-8'>
-                    <motion.button
-                        onClick={prevSlide}
-                        className="text-white/80 hover:text-white transition drop-shadow-lg p-2 bg-black/20 rounded-full"
-                        whileHover={{ scale: 1.1, backgroundColor: 'rgba(0,0,0,0.4)'}}
-                        whileTap={{ scale: 0.95 }}
-                        aria-label="Previous slide"
-                    >
-                        <ChevronLeftIcon className="h-8 w-8" />
-                    </motion.button>
-                    <motion.button
-                        onClick={nextSlide}
-                        className="text-white/80 hover:text-white transition drop-shadow-lg p-2 bg-black/20 rounded-full"
-                        whileHover={{ scale: 1.1, backgroundColor: 'rgba(0,0,0,0.4)'}}
-                        whileTap={{ scale: 0.95 }}
-                        aria-label="Next slide"
-                    >
-                        <ChevronRightIcon className="h-8 w-8" />
-                    </motion.button>
-                </div>
+          <div className='flex flex-col items-center md:items-end'>
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={currentSlide}
+                variants={textVariants}
+                initial="initial"
+                animate="animate"
+                exit="exit"
+                className="bg-ecogreen-blue/70 p-6 md:p-8 text-center md:text-right text-white max-w-xl"
+              >
+                <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-ecogreen-lime uppercase drop-shadow-lg">
+                  Muros de Contención
+                </h2>
+                <p className="mt-2 text-sm md:text-lg font-semibold uppercase tracking-wider drop-shadow-md">
+                  Soluciones Verdes, Prácticas y Económicas
+                </p>
+              </motion.div>
+            </AnimatePresence>
+            <div className='flex md:hidden mt-6 space-x-8'>
+              <motion.button
+                onClick={prevSlide}
+                className="text-white/80 hover:text-white transition drop-shadow-lg p-2 bg-black/20 rounded-full"
+                whileHover={{ scale: 1.1, backgroundColor: 'rgba(0,0,0,0.4)' }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Previous slide"
+              >
+                <ChevronLeftIcon className="h-8 w-8" />
+              </motion.button>
+              <motion.button
+                onClick={nextSlide}
+                className="text-white/80 hover:text-white transition drop-shadow-lg p-2 bg-black/20 rounded-full"
+                whileHover={{ scale: 1.1, backgroundColor: 'rgba(0,0,0,0.4)' }}
+                whileTap={{ scale: 0.95 }}
+                aria-label="Next slide"
+              >
+                <ChevronRightIcon className="h-8 w-8" />
+              </motion.button>
             </div>
+          </div>
         </div>
 
         <motion.button
-            onClick={prevSlide}
-            className="hidden md:block absolute top-1/2 left-4 -translate-y-1/2 text-white/70 hover:text-white transition drop-shadow-lg z-20"
-            whileHover={{ scale: 1.1, x: -5 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="Previous slide"
+          onClick={prevSlide}
+          className="hidden md:block absolute top-1/2 left-4 -translate-y-1/2 text-white/70 hover:text-white transition drop-shadow-lg z-20"
+          whileHover={{ scale: 1.1, x: -5 }}
+          whileTap={{ scale: 0.95 }}
+          aria-label="Previous slide"
         >
-            <ChevronLeftIcon className="h-12 w-12 md:h-16 md:w-16" />
+          <ChevronLeftIcon className="h-12 w-12 md:h-16 md:w-16" />
         </motion.button>
         <motion.button
-            onClick={nextSlide}
-            className="hidden md:block absolute top-1/2 right-4 -translate-y-1/2 text-white/70 hover:text-white transition drop-shadow-lg z-20"
-            whileHover={{ scale: 1.1, x: 5 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="Next slide"
+          onClick={nextSlide}
+          className="hidden md:block absolute top-1/2 right-4 -translate-y-1/2 text-white/70 hover:text-white transition drop-shadow-lg z-20"
+          whileHover={{ scale: 1.1, x: 5 }}
+          whileTap={{ scale: 0.95 }}
+          aria-label="Next slide"
         >
-            <ChevronRightIcon className="h-12 w-12 md:h-16 md:w-16" />
+          <ChevronRightIcon className="h-12 w-12 md:h-16 md:w-16" />
         </motion.button>
 
         <div className="absolute bottom-6 left-0 right-0 z-20">
-            <div className="flex items-center justify-center gap-2">
-                {sliderImages.map((_, index) => (
-                    <motion.button
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className="w-3 h-3 rounded-full transition-colors"
-                        animate={currentSlide === index ? "active" : "inactive"}
-                        variants={{
-                            active: { backgroundColor: '#54c70e', scale: 1.2 },
-                            inactive: { backgroundColor: '#ffffff', scale: 1 }
-                        }}
-                        whileHover={{ scale: 1.3 }}
-                        transition={{ duration: 0.3 }}
-                        aria-label={`Go to slide ${index + 1}`}
-                    />
-                ))}
-            </div>
+          <div className="flex items-center justify-center gap-2">
+            {sliderImages.map((_, index) => (
+              <motion.button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className="w-3 h-3 rounded-full transition-colors"
+                animate={currentSlide === index ? "active" : "inactive"}
+                variants={{
+                  active: { backgroundColor: '#54c70e', scale: 1.2 },
+                  inactive: { backgroundColor: '#ffffff', scale: 1 }
+                }}
+                whileHover={{ scale: 1.3 }}
+                transition={{ duration: 0.3 }}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </section>
 
@@ -228,46 +228,46 @@ const MurosDeContencion: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <div className="flex items-center mb-8">
-                <img src="https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono" className="w-16 h-16 mr-6" />
-                <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Muros de Contención</h2>
+              <img src="https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono" className="w-16 h-16 mr-6" />
+              <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Muros de Contención</h2>
             </div>
-            
+
             <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">
-                Los muros de contención son estructuras construidas con el propósito de resistir las fuerzas ejercidas por la tierra contenida y transmitir esas fuerzas en forma segura a la fundación o a un sitio fuera de la masa susceptible a moverse. La finalidad de los muros de contención es proveer estabilidad contra la rotura de macizos de tierra o roca para evitar los deslizamientos causados por su peso propio o por empujes producidos por cargas externas.
+              Los muros de contención son estructuras construidas con el propósito de resistir las fuerzas ejercidas por la tierra contenida y transmitir esas fuerzas en forma segura a la fundación o a un sitio fuera de la masa susceptible a moverse. La finalidad de los muros de contención es proveer estabilidad contra la rotura de macizos de tierra o roca para evitar los deslizamientos causados por su peso propio o por empujes producidos por cargas externas.
             </p>
 
             <AnimatePresence>
-                {isExpanded && (
-                    <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        className="overflow-hidden text-left"
-                    >
-                        <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
-                            <p>
-                                Los muros de contención están considerados como una de las técnicas de construcción más antiguas de la humanidad. Tomando en cuenta las construcciones de piedra existentes construidas por las civilizaciones prehistóricas. Sin embargo, su estudio utilizando modelos teóricos y su dimensionamiento en bases racionales comienza a desarrollarse en el siglo XVIII, cuando Coulomb en 1773 presentó su trabajo sobre la determinación del empuje lateral aplicado por el suelo sobre una estructura de contención. Esta determinación es el paso más importante en el dimensionamiento de un muro de contención.
-                            </p>
-                            <p>
-                                La mecánica de suelo moderna utiliza ampliamente el modelo desarrollado por Coulomb, tomando en cuenta que es una de las bases principales de los métodos corrientes de dimensionamientos de muros de contención. El análisis de un muro de contención consiste en el análisis del equilibrio del conjunto formado por el macizo de suelo y la propia estructura. Este equilibrio es afectado por las características de resistencia, deformabilidad, permeabilidad y por el peso propio de esos dos elementos, además de las condiciones que rigen la interacción entre ellos.
-                            </p>
-                            <p>
-                                Posteriormente, en 1857 nace la teoría de Rankine, la cual se basa en las condiciones de esfuerzo en el suelo en un estado de equilibrio plástico. También se analiza la estabilidad por el método ordinario de las dovelas para taludes de suelos estratificados, propuesto por Bishop en 1955.
-                            </p>
-                            <p>
-                                Existen varios tipos de muros de contención y cada uno de ellos tiene un método de cálculo y una geometría diferente. Estos tipos de muros los podemos clasificar en dos grandes grupos:
-                            </p>
-                        </div>
-                    </motion.div>
-                )}
+              {isExpanded && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  className="overflow-hidden text-left"
+                >
+                  <div className="space-y-6 text-lg text-gray-700 leading-relaxed pt-4 pb-8 border-t border-gray-200 mt-4">
+                    <p>
+                      Los muros de contención están considerados como una de las técnicas de construcción más antiguas de la humanidad. Tomando en cuenta las construcciones de piedra existentes construidas por las civilizaciones prehistóricas. Sin embargo, su estudio utilizando modelos teóricos y su dimensionamiento en bases racionales comienza a desarrollarse en el siglo XVIII, cuando Coulomb en 1773 presentó su trabajo sobre la determinación del empuje lateral aplicado por el suelo sobre una estructura de contención. Esta determinación es el paso más importante en el dimensionamiento de un muro de contención.
+                    </p>
+                    <p>
+                      La mecánica de suelo moderna utiliza ampliamente el modelo desarrollado por Coulomb, tomando en cuenta que es una de las bases principales de los métodos corrientes de dimensionamientos de muros de contención. El análisis de un muro de contención consiste en el análisis del equilibrio del conjunto formado por el macizo de suelo y la propia estructura. Este equilibrio es afectado por las características de resistencia, deformabilidad, permeabilidad y por el peso propio de esos dos elementos, además de las condiciones que rigen la interacción entre ellos.
+                    </p>
+                    <p>
+                      Posteriormente, en 1857 nace la teoría de Rankine, la cual se basa en las condiciones de esfuerzo en el suelo en un estado de equilibrio plástico. También se analiza la estabilidad por el método ordinario de las dovelas para taludes de suelos estratificados, propuesto por Bishop en 1955.
+                    </p>
+                    <p>
+                      Existen varios tipos de muros de contención y cada uno de ellos tiene un método de cálculo y una geometría diferente. Estos tipos de muros los podemos clasificar en dos grandes grupos:
+                    </p>
+                  </div>
+                </motion.div>
+              )}
             </AnimatePresence>
-            
+
             <div className="mt-4 text-left">
-              <button 
-                  onClick={() => setIsExpanded(!isExpanded)}
-                  className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none"
+              <button
+                onClick={() => setIsExpanded(!isExpanded)}
+                className="bg-ecogreen-blue text-white font-bold text-sm uppercase tracking-wider transition-colors rounded-full px-6 py-3 hover:bg-ecogreen-green focus:outline-none"
               >
-                  {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
+                {isExpanded ? 'Cerrar ▲' : 'Leer Mas ▼'}
               </button>
             </div>
           </div>
@@ -277,57 +277,57 @@ const MurosDeContencion: React.FC = () => {
       {/* Grid: Sistemas Flexibles */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-            <div className="mb-12">
-                <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Contención Flexibles</h3>
-                <div className="w-full h-1 bg-ecogreen-green"></div>
-            </div>
-            <motion.div 
-                className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                variants={gridContainerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                {sistemasFlexibles.map((sys) => <SystemCard key={sys.title} {...sys} />)}
-            </motion.div>
+          <div className="mb-12">
+            <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Contención Flexibles</h3>
+            <div className="w-full h-1 bg-ecogreen-green"></div>
+          </div>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={gridContainerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {sistemasFlexibles.map((sys) => <SystemCard key={sys.title} {...sys} />)}
+          </motion.div>
         </div>
       </section>
 
       {/* Grid: Sistemas Rígidos */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-            <div className="mb-12">
-                <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Contención Rígidos</h3>
-                <div className="w-full h-1 bg-ecogreen-green"></div>
-            </div>
-            <motion.div 
-                className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                variants={gridContainerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                {sistemasRigidos.map((sys) => <SystemCard key={sys.title} {...sys} />)}
-            </motion.div>
+          <div className="mb-12">
+            <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Contención Rígidos</h3>
+            <div className="w-full h-1 bg-ecogreen-green"></div>
+          </div>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={gridContainerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {sistemasRigidos.map((sys) => <SystemCard key={sys.title} {...sys} />)}
+          </motion.div>
         </div>
       </section>
 
       {/* Grid: Sistemas Drenaje */}
       <section className="py-16 bg-gray-50 mb-16">
         <div className="container mx-auto px-4">
-            <div className="mb-12">
-                <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Drenaje</h3>
-                <div className="w-full h-1 bg-ecogreen-green"></div>
-            </div>
-            <motion.div 
-                className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                variants={gridContainerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                {sistemasDrenaje.map((sys) => <SystemCard key={sys.title} {...sys} />)}
-            </motion.div>
+          <div className="mb-12">
+            <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Drenaje</h3>
+            <div className="w-full h-1 bg-ecogreen-green"></div>
+          </div>
+          <motion.div
+            className="grid grid-cols-1 md:grid-cols-3 gap-8"
+            variants={gridContainerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+          >
+            {sistemasDrenaje.map((sys) => <SystemCard key={sys.title} {...sys} />)}
+          </motion.div>
         </div>
       </section>
     </>
