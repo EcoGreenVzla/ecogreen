@@ -35,15 +35,15 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
              <Link to="/">
-                <img className="h-16 w-auto" src="https://tumuro.com/media/ui/ecogreen-logo.png" alt="EcoGreen Construcciones Logo" />
+                <img className="h-24 w-auto" src="https://tumuro.com/media/ui/ecogreen-logo.png" alt="EcoGreen Construcciones Logo" />
              </Link>
           </div>
           <div className="hidden lg:flex items-center space-x-5">
-             <SocialIcon href="#"><FacebookIcon className="h-5 w-5" /></SocialIcon>
-             <SocialIcon href="#"><TwitterIcon className="h-5 w-5" /></SocialIcon>
-             <SocialIcon href="#"><InstagramIcon className="h-5 w-5" /></SocialIcon>
-             <SocialIcon href="#"><LinkedinIcon className="h-5 w-5" /></SocialIcon>
-             <SocialIcon href="mailto:info@ecogreen.com"><MailIcon className="h-5 w-5" /></SocialIcon>
+             <SocialIcon href="#"><FacebookIcon className="h-10 w-10" /></SocialIcon>
+             <SocialIcon href="#"><TwitterIcon className="h-10 w-10" /></SocialIcon>
+             <SocialIcon href="#"><InstagramIcon className="h-10 w-10" /></SocialIcon>
+             <SocialIcon href="#"><LinkedinIcon className="h-10 w-10" /></SocialIcon>
+             <SocialIcon href="mailto:info@ecogreen.com"><MailIcon className="h-10 w-10" /></SocialIcon>
           </div>
           <div className="lg:hidden">
             <button
