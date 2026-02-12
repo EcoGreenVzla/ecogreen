@@ -3,20 +3,29 @@ import { NavItemType } from '../types';
 import Dropdown from './Dropdown';
 import MegaMenuCasos from './MegaMenuCasos';
 import ChevronDownIcon from './icons/ChevronDownIcon';
-import { Link } from 'react-router-dom';
-// NOTA: Eliminamos las importaciones de framer-motion que causaban el bug
+import { Link, useLocation } from 'react-router-dom';
 
 interface NavItemProps {
   item: NavItemType;
   isMobile?: boolean;
-  isFirst?: boolean;
 }
 
-const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = false }) => {
+const checkIsActive = (item: NavItemType, currentPath: string): boolean => {
+  if (item.href === currentPath) return true;
+  if (item.children) {
+    return item.children.some(child => checkIsActive(child, currentPath));
+  }
+  return false;
+};
+
+const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
   const timeoutRef = useRef<number | null>(null);
   const hasChildren = !!item.children || item.isMegaMenu;
+  
+  const location = useLocation();
+  const isActive = checkIsActive(item, location.pathname);
 
   const handleToggle = () => {
     if (isMobile && hasChildren) {
@@ -24,7 +33,6 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
     }
   };
   
-  // Lógica: Entra el mouse -> Se abre INMEDIATAMENTE
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
@@ -33,24 +41,25 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
     setIsHovered(true);
   };
 
-  // Lógica: Sale el mouse -> Espera 400ms (casi medio segundo) antes de cerrar
-  // Esto evita que se cierre si pasas el mouse rápido por el borde
   const handleMouseLeave = () => {
     timeoutRef.current = window.setTimeout(() => {
       setIsHovered(false);
     }, 400); 
   };
 
-  // Aquí controlas la separación de los botones (px-8)
+  const activeClasses = isActive 
+    ? 'bg-[#2A9648] text-white' 
+    : 'bg-ecogreen-blue hover:bg-[#2A9648] text-white';
+
+  // CAMBIO REALIZADO: Aumentamos de 'py-2' a 'py-6' para mayor grosor
   const desktopItemClasses = `
-    px-8 py-3 transition-colors duration-200 
-    ${isFirst ? 'bg-ecogreen-green' : 'bg-ecogreen-blue'}
-    hover:bg-ecogreen-green
+    px-4 py-4 transition-colors duration-200 
+    ${activeClasses}
     ${!item.isMegaMenu ? 'relative' : ''}
-    flex items-center h-full cursor-pointer
+    flex items-center justify-center h-full cursor-pointer
   `;
 
-  const mobileItemClasses = `border-b border-gray-700`;
+  const mobileItemClasses = `border-b border-gray-700 ${isActive ? 'bg-[#2A9648] text-white' : ''}`;
 
   if (isMobile) {
     return (
@@ -71,9 +80,9 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
           )}
         </div>
         {isOpen && hasChildren && (
-          <div className="pl-4 pb-2">
+          <div className="pl-4 pb-2 bg-ecogreen-blue">
             {item.children && <Dropdown items={item.children} isMobile />}
-            {item.isMegaMenu && <Link to={item.href} className="block py-2 text-sm text-gray-300">Ver Casos de Obras</Link>}
+            {item.isMegaMenu && <Link to={item.href} className="block py-2 text-sm text-gray-300 hover:text-white">Ver Casos de Obras</Link>}
           </div>
         )}
       </li>
@@ -86,16 +95,13 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <Link to={item.href} className="flex items-center h-full w-full">
+      <Link 
+        to={item.href} 
+        className="flex items-center justify-center h-full w-full whitespace-pre-line text-center leading-tight"
+      >
         {item.label}
-        {hasChildren && <ChevronDownIcon className="h-4 w-4 ml-2" />}
       </Link>
       
-      {/* SOLUCIÓN: Renderizado condicional simple (&&).
-        Sin animaciones, sin AnimatePresence, sin motion.div.
-        Si isHovered es true, aparece. Si es false, desaparece. 
-        Esto elimina el bug del "cuadro azul vacío".
-      */}
       {isHovered && hasChildren && (
         <div className={`absolute top-full z-50 pt-0 ${item.isMegaMenu ? 'left-0 right-0' : 'left-0'}`}>
           {item.isMegaMenu ? <MegaMenuCasos /> : <Dropdown items={item.children || []} />}
