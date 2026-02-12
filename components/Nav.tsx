@@ -14,24 +14,29 @@ const Nav: React.FC<NavProps> = ({ items, isMobileMenuOpen, setIsMobileMenuOpen 
   return (
     <>
       {/* Desktop Navigation */}
-      {/* Cambiamos font-thin por font-black */}
-      <nav className="hidden lg:flex bg-ecogreen-blue text-white uppercase font-black text-nav tracking-tighter relative">
-        <div className="max-w-[1440px] mx-auto flex w-full"> {/* w-full para que use todo el ancho */}
+      <nav className="hidden lg:flex bg-ecogreen-blue text-white uppercase font-thin text-nav tracking-wider relative">
+        <div className="container mx-auto flex">
           {items.map((item, index) => (
-            <NavItem key={index} item={item} isFirst={index === 0} />
+            <NavItem 
+              key={index} 
+              item={item} 
+              isFirst={index === 0}
+            />
           ))}
         </div>
       </nav>
 
       {/* Mobile Navigation Drawer */}
-      <div
-        className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity lg:hidden ${isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
-          }`}
+      <div 
+        className={`fixed inset-0 bg-black bg-opacity-50 z-40 transition-opacity lg:hidden ${
+          isMobileMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
+        }`}
         onClick={() => setIsMobileMenuOpen(false)}
       ></div>
       <div
-        className={`fixed top-0 right-0 h-full w-80 bg-ecogreen-blue text-white shadow-lg z-50 transform transition-transform lg:hidden ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}
+        className={`fixed top-0 right-0 h-full w-80 bg-ecogreen-blue text-white shadow-lg z-50 transform transition-transform lg:hidden ${
+          isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
         role="dialog"
         aria-modal="true"
         aria-labelledby="mobile-menu-title"

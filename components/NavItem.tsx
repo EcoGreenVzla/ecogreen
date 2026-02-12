@@ -23,7 +23,7 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
       setIsOpen(!isOpen);
     }
   };
-
+  
   // Lógica: Entra el mouse -> Se abre INMEDIATAMENTE
   const handleMouseEnter = () => {
     if (timeoutRef.current) {
@@ -38,17 +38,17 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
   const handleMouseLeave = () => {
     timeoutRef.current = window.setTimeout(() => {
       setIsHovered(false);
-    }, 400);
+    }, 400); 
   };
 
   // Aquí controlas la separación de los botones (px-8)
-  // Aumentamos el padding lateral para que el menú se vea "más ancho"
   const desktopItemClasses = `
-  px-12 py-4 transition-colors duration-200 
-  ${isFirst ? 'bg-ecogreen-green' : 'bg-ecogreen-blue'}
-  hover:bg-ecogreen-green
-  flex items-center h-full cursor-pointer
-`;
+    px-8 py-3 transition-colors duration-200 
+    ${isFirst ? 'bg-ecogreen-green' : 'bg-ecogreen-blue'}
+    hover:bg-ecogreen-green
+    ${!item.isMegaMenu ? 'relative' : ''}
+    flex items-center h-full cursor-pointer
+  `;
 
   const mobileItemClasses = `border-b border-gray-700`;
 
@@ -60,7 +60,7 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
             {item.label}
           </Link>
           {hasChildren && (
-            <button
+            <button 
               onClick={handleToggle}
               className="p-2 -mr-2"
               aria-label={`Toggle submenu for ${item.label}`}
@@ -81,7 +81,7 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
   }
 
   return (
-    <div
+    <div 
       className={desktopItemClasses}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -90,7 +90,7 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false, isFirst = fal
         {item.label}
         {hasChildren && <ChevronDownIcon className="h-4 w-4 ml-2" />}
       </Link>
-
+      
       {/* SOLUCIÓN: Renderizado condicional simple (&&).
         Sin animaciones, sin AnimatePresence, sin motion.div.
         Si isHovered es true, aparece. Si es false, desaparece. 
