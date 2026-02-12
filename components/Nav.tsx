@@ -1,4 +1,3 @@
-
 import React from 'react';
 import NavItem from './NavItem';
 import XIcon from './icons/XIcon';
@@ -14,8 +13,9 @@ const Nav: React.FC<NavProps> = ({ items, isMobileMenuOpen, setIsMobileMenuOpen 
   return (
     <>
       {/* Desktop Navigation */}
-      <nav className="hidden lg:flex bg-ecogreen-blue text-white uppercase font-thin text-nav tracking-wider relative">
-        <div className="container  h-[10vh] mx-auto w-full flex">
+      {/* AGREGADO: 'justify-center' para centrar los elementos del menú */}
+      <nav className="hidden lg:flex bg-ecogreen-blue text-white uppercase font-thin text-[12pt] tracking-wider relative">
+        <div className="container mx-auto flex justify-center items-center">
           {items.map((item, index) => (
             <NavItem 
               key={index} 

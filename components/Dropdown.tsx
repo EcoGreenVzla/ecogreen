@@ -1,51 +1,31 @@
-
 import React, { useState, useRef } from 'react';
 import { NavItemType } from '../types';
 import ChevronDownIcon from './icons/ChevronDownIcon';
-import { motion, AnimatePresence, Variants } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 interface DropdownProps {
   items: NavItemType[];
   isMobile?: boolean;
 }
 
-const dropdownMenuVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    transition: {
-      when: "afterChildren",
-    }
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      when: "beforeChildren",
-      staggerChildren: 0.05,
-    }
+const checkIsActive = (item: NavItemType, currentPath: string): boolean => {
+  if (item.href === currentPath) return true;
+  if (item.children) {
+    return item.children.some(child => checkIsActive(child, currentPath));
   }
+  return false;
 };
 
-const dropdownItemVariants: Variants = {
-  hidden: {
-    opacity: 0,
-    x: -15,
-  },
-  visible: {
-    opacity: 1,
-    x: 0,
-    transition: { type: 'spring', stiffness: 300, damping: 24 }
-  }
-};
-
-// --- Desktop Dropdown Components with Animation ---
-
+// --- Desktop Dropdown Item ---
 const DesktopDropdownItem: React.FC<{ item: NavItemType }> = ({ item }) => {
   const [isHovered, setIsHovered] = useState(false);
   const timeoutRef = useRef<number | null>(null);
   const hasChildren = !!item.children;
+  
+  const location = useLocation();
+  const isActive = checkIsActive(item, location.pathname);
 
-  const handleHoverStart = () => {
+  const handleMouseEnter = () => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current);
       timeoutRef.current = null;
@@ -53,64 +33,62 @@ const DesktopDropdownItem: React.FC<{ item: NavItemType }> = ({ item }) => {
     setIsHovered(true);
   };
 
-  const handleHoverEnd = () => {
+  const handleMouseLeave = () => {
     timeoutRef.current = window.setTimeout(() => {
       setIsHovered(false);
-    }, 300); // 300ms delay to prevent accidental closing
+    }, 300); 
   };
 
+  // CORRECCIÓN: Hover ahora usa #2A9648 en lugar de ecogreen-green genérico
+  const activeClasses = isActive 
+    ? 'bg-[#2A9648] text-white' 
+    : 'text-white hover:bg-[#2A9648]';
+
   return (
-    <motion.li 
+    <li 
       className="relative"
-      onHoverStart={handleHoverStart}
-      onHoverEnd={handleHoverEnd}
-      variants={dropdownItemVariants}
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
     >
       <Link
         to={item.href}
-        className="flex justify-between items-center px-4 py-3 text-nav tracking-wider text-white hover:bg-ecogreen-green transition-colors duration-300"
+        className={`flex justify-between items-center px-4 py-3 text-nav tracking-wider transition-colors duration-200 ${activeClasses}`}
       >
         {item.label}
         {hasChildren && <ChevronDownIcon className="h-4 w-4 rotate-[-90deg]" />}
       </Link>
-      <AnimatePresence>
-        {isHovered && hasChildren && (
-          <motion.div 
-            className="absolute top-0 left-full w-auto z-20"
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-          >
+      
+      {isHovered && hasChildren && (
+          <div className="absolute top-0 left-full w-auto z-20">
              <Dropdown items={item.children || []} />
-          </motion.div>
-        )}
-      </AnimatePresence>
-    </motion.li>
+          </div>
+      )}
+    </li>
   );
 };
 
-
-// --- Mobile Dropdown Components (Logic remains the same) ---
-
+// --- Mobile Dropdown Item (Sin cambios visuales requeridos, ya usaba lógica condicional simple) ---
 const MobileDropdownItem: React.FC<{ item: NavItemType }> = ({ item }) => {
   const [isOpen, setIsOpen] = useState(false);
   const hasChildren = !!item.children;
+  const location = useLocation();
+  const isActive = checkIsActive(item, location.pathname);
 
   return (
     <li>
       <div 
-        className="flex justify-between items-center py-2 px-2" 
+        className={`flex justify-between items-center py-2 px-2 ${isActive ? 'text-[#2A9648] font-bold' : 'text-gray-300 hover:text-white'}`}
         onClick={() => hasChildren && setIsOpen(!isOpen)}
         role="button"
         aria-expanded={isOpen}
       >
-        <Link to={item.href} className="text-sm text-gray-300 hover:text-white">
+        <Link to={item.href} className="text-sm flex-grow">
           {item.label}
         </Link>
         {hasChildren && <ChevronDownIcon className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />}
       </div>
       {isOpen && hasChildren && (
-        <div className="pl-4">
+        <div className="pl-4 border-l border-gray-600 ml-2">
           <Dropdown items={item.children} isMobile />
         </div>
       )}
@@ -119,7 +97,6 @@ const MobileDropdownItem: React.FC<{ item: NavItemType }> = ({ item }) => {
 };
 
 // --- Main Dropdown Component ---
-
 const Dropdown: React.FC<DropdownProps> = ({ items, isMobile = false }) => {
   if (isMobile) {
     return (
@@ -133,17 +110,11 @@ const Dropdown: React.FC<DropdownProps> = ({ items, isMobile = false }) => {
   
   return (
     <div className="bg-ecogreen-blue shadow-lg rounded-b-md min-w-[260px]">
-      <motion.ul 
-        className="py-2"
-        variants={dropdownMenuVariants}
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
-      >
+      <ul className="py-2">
         {items.map((subItem, index) => (
           <DesktopDropdownItem key={index} item={subItem} />
         ))}
-      </motion.ul>
+      </ul>
     </div>
   );
 };

@@ -1,10 +1,9 @@
-
 import { NavItemType } from '../types';
 
 export const navigationData: NavItemType[] = [
   { label: 'ECOGREEN', href: '/' },
   {
-    label: 'MUROS DE CONTENCIÓN',
+    label: 'MUROS DE\nCONTENCIÓN',
     href: '/muros-de-contencion',
     children: [
       {
@@ -32,7 +31,7 @@ export const navigationData: NavItemType[] = [
     ],
   },
   {
-    label: 'CONTROL DE EROSIÓN',
+    label: 'CONTROL DE\nEROSIÓN',
     href: '/control-de-erosion',
     children: [
       { label: 'Estabilización de Taludes', href: '/control-de-erosion/estabilizacion-taludes' },
@@ -56,7 +55,7 @@ export const navigationData: NavItemType[] = [
     ]
   },
   {
-    label: 'CAMPOS DE APLICACIÓN',
+    label: 'CAMPOS DE\nAPLICACIÓN',
     href: '/campos-de-aplicacion',
     children: [
         { label: 'Infraestructura Urbana', href: '/campos-de-aplicacion/infraestructura-urbana' },
@@ -69,6 +68,6 @@ export const navigationData: NavItemType[] = [
         { label: 'Minería y Geotecnia', href: '/campos-de-aplicacion/mineria-geotecnia' },
     ]
   },
-  { label: 'CASOS DE OBRAS', href: '/casos-de-obras', isMegaMenu: true },
+  { label: 'CASOS DE\nOBRAS', href: '/casos-de-obras', isMegaMenu: true },
   { label: 'CONTÁCTANOS', href: '/contactanos' },
 ];
