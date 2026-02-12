@@ -168,7 +168,7 @@ const MurosDeContencion: React.FC = () => {
 
       {/* Hero Section (Homepage Style) */}
       {/* Hero Section - Ajuste para que se vea como la versión vieja */}
-      <section className="relative w-full h-[500px] md:h-[570px] overflow-hidden bg-white">
+      <section className="relative w-full h-[70vh] max-h-[700px] overflow-hidden bg-white">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentSlide}
