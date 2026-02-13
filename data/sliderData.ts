@@ -199,7 +199,23 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
 
 
 
-
+// =====================================================================
+  // 6. SISTEMAS DE DRENAJE (sistemas-de-drenaje.tsx)
+  // =====================================================================
+  'ID-sistemas-de-drenaje.tsx': {
+    title: "SISTEMAS DE DRENAJE",
+    subtitle: "UNA VÍA PARA EL AGUA.", // Extraído del span #slider-p
+    link: "/muros-de-contencion/sistemas-de-drenaje",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-drenaje/sistemas-de-drenaje.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-drenaje/sistemas-de-drenaje.jpg"
+    ]
+  },
+  // =====================================================================
+  //  Final del bloque de slider
+  // =====================================================================
 
 
 

@@ -158,4 +158,53 @@ export const textosData: Record<string, TextoData> = {
   // Final del bloque de texto
   // =====================================================================
 
+
+
+
+// =====================================================================
+  // 6. SISTEMAS DE DRENAJE (sistemas-de-drenaje.tsx)
+  // =====================================================================
+  'ID-sistemas-de-drenaje.tsx': {
+    title: "Sistemas de Drenaje",
+    // iconSrc: "https://tumuro.com/media/banner-services/drenaje-icon.webp", // Opcional, si tienes un ícono para esta sección
+    introContent: (
+      <>
+        <p>
+          En cualquier obra de ingeniería es fundamental tener un manejo hidráulico adecuado, para evitar problemas posteriores. En terraplenes construidos para obras viales el enemigo principal es el agua, debido a que puede producir el deterioro del cuerpo del terraplén, socavándolo y arrastrando el material fino. Otro ejemplo cotidiano se presenta en la construcción de muros de contención tradicionales donde el desalojo del agua infiltrada es muy importante para evitar la sobre saturación y que ésta a su vez aumente las presiones sobre la cara del muro, ya que su función es retener suelo y no la presión hidrostática.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Existen varios sistemas de drenaje ECOGREEN, entre ellos se encuentran los drenajes verticales, drenes planares, geotextiles no tejidos, geomembranas impermeables, geodrenes y el conocido dren francés. Adicionalmente a su función como elementos drenantes, todos estos sistemas también son aplicados en obras como protección, separación y filtración, en diversas aplicaciones como por ejemplo, rellenos sanitarios, túneles, estructuras subterráneas, canchas deportivas, jardines, vialidades, entre otros.
+        </p>
+        <p>
+          Los drenes verticales ECOGREEN son estructuras flexibles que se encuentran en contacto con el suelo. Están constituidos por tres elementos; el principal es la geomalla de drenaje que cumple la función de conducción del agua percolada e infiltrada, hasta una tubería perforada longitudinal denominada geodren, que se encarga de evacuar el fluido. Estos geodrenes se instalan en la parte inferior de la superficie a drenar, y están envueltos por geotextiles no tejidos al igual que la geomalla denante. Su principal función es la filtración, permitiendo el paso de los fluidos y reteniendo las partículas del suelo. Este sistema sustituye al tradicional dren francés y es constantemente utilizado para el abatimiento del nivel freático.
+        </p>
+        <p>
+          El dren planar ECOGREEN es exactamente igual al geocompuesto de drenaje vertical, la única variante es la posición horizontal de su instalación. Su mayor aplicación se encuentra en la construcción de terraplenes con suelos de alta plasticidad y alta compresibilidad, donde se presentan asentamientos que provocan serios hundimientos que amenazan la nivelación de la vía. Este problema también se presenta cuando se construyen edificaciones sobre suelos blandos donde la capacidad de carga es sumamente baja. Por ello resulta de gran importancia incorporar el sistema de drenaje planar ECOGREEN para separar suelos de diferente granulometría y evitar la contaminación entre ellos y al mismo tiempo previniendo la acumulación de agua para obtener una base bien drenada y seca.
+        </p>
+        <p>
+          En las estructuras subterráneas y en los túneles es necesario evitar la presencia de agua infiltrada proveniente de las rocas fracturadas o del terreno circundante, debido a que causa un acelerado desgaste de la obra, reduciendo los parámetros de seguridad y aumentando los costos de mantenimiento. En los jardines, canchas deportivas y rellenos sanitarios también es muy importante mantener un óptimo equilibrio hidrológico y de drenaje para lograr conducir eficientemente las aguas pluviales y los lixiviados, para evitar la contaminación de los mantos freáticos y cuerpos de agua.
+        </p>
+        <p>
+          Así mismo, la creciente utilización de geomembranas impermeables para el manejo del agua de lluvia en jardines y áreas verdes, se debe a que este sistema impide la infiltración de agua y elimina el arrastre de finos que causa la pérdida de la capacidad portante del suelo y produce deslizamientos.
+        </p>
+      </>
+    )
+  },
+  // =====================================================================
+  //  Final del bloque de texto
+  // =====================================================================
+
+
+
+
+
+
+
+
+
+
 };
