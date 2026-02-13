@@ -2,6 +2,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence, Variants } from 'framer-motion';
+import { sliderData } from '../data/sliderData';
 
 // --- Icon Components (Locally defined for simplicity) ---
 const ChevronLeftIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
@@ -36,39 +37,6 @@ const sistemasRigidos = [
 const sistemasDrenaje = [
   { title: 'Sistemas de Drenaje', href: '/muros-de-contencion/sistemas-drenaje', imgSrc: 'https://tumuro.com/media/muros-de-contencion/grid-sistemas-de-drenaje/sistemas-de-drenaje.webp' },
 ];
-
-
-// Imágenes para Computadora (Horizontales, una sola foto completa, NO collages)
-const desktopImages = [
-  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg',
-  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion2.jpg',
-  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion3.jpg',
-  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion4.jpg',
-  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion5.jpg',
-  'https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg',
-  // ... agrega las demás
-];
-
-// Imágenes para Celular (Verticales)
-const mobileImages = [
-  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado1.png',
-  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada1.png',
-  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado2.png',
-  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado3.png',
-  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada2.png',
-  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado4.png',
-  'https://tumuro.com/data3/images/muros-de-contencion/muro-mixto1.png',
-  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion1.png',
-  'https://tumuro.com/data3/images/muros-de-contencion/pantalla-atirantada-mixta-reticulada1.jpg',
-  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada3.png',
-  'https://tumuro.com/data3/images/muros-de-contencion/pantalla-atirantada1.jpg',
-  'https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada4.png',
-  'https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion1.png',
-  'https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion2.png',
-  'https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion3.png',
-  // ... agrega las demás
-];
-
 
 interface SystemCardProps {
   title: string;
@@ -111,12 +79,11 @@ const SystemCard: React.FC<SystemCardProps> = ({ title, href, imgSrc }) => (
 );
 
 const MurosDeContencion: React.FC = () => {
+  // Obtenemos la data del slider para esta página
+  const pageData = sliderData['muros-de-contencion'];
   const [isExpanded, setIsExpanded] = useState(false);
   const [currentSlide, setCurrentSlide] = useState(0);
-
-  // NUEVO: Estado para saber si es móvil
   const [isMobile, setIsMobile] = useState(false);
-
   // NUEVO: Detectar cambio de tamaño de pantalla
   useEffect(() => {
     const handleResize = () => {
@@ -132,7 +99,7 @@ const MurosDeContencion: React.FC = () => {
   }, []);
 
   // Elegir qué lista usar según el dispositivo
-  const activeImages = isMobile ? mobileImages : desktopImages;
+ const activeImages = isMobile ? pageData.mobileImages : pageData.desktopImages;
 
   // ... el resto de tus funciones (nextSlide, prevSlide) ...
   const nextSlide = useCallback(() => {
