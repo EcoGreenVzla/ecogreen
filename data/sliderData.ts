@@ -277,24 +277,158 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
   // =====================================================================
 
 
+// =====================================================================
+  // 10. MUROS MIXTOS (muros-mixtos.tsx)
+  // =====================================================================
+  'ID-muros-mixtos.tsx': {
+    title: "MUROS MIXTOS",
+    subtitle: "COMBINACIÓN DE SOLUCIONES PARA CADA NECESIDAD.",
+    link: "/muros-de-contencion/sistemas-de-contencion-flexibles/muros-mixtos",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-mixtos/muros-mixtos.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-mixtos/muros-mixtos.png"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
+
+
+// =====================================================================
+  // 11. REFUERZO DE TALUDES Y TERRAPLENES (refuerzo-de-taludes-y-terraplenes.tsx)
+  // =====================================================================
+  'ID-refuerzo-de-taludes-y-terraplenes.tsx': {
+    title: "REFUERZO DE TALUDES Y TERRAPLENES",
+    subtitle: "SISTEMAS DE CONTENCIÓN REFORESTABLES.",
+    link: "/refuerzo-de-taludes-y-terraplenes",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/refuerzo-de-taludes-y-terraplenes.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/refuerzo-de-taludes-y-terraplenes.png",
+      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/Morocha-1B.jpg"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
+
+// =====================================================================
+  // 12. MUROS ANCLADOS Y PANTALLAS ATIRANTADAS (muros-anclados-y-pantallas-atirantadas.tsx)
+  // =====================================================================
+  'ID-muros-anclados-y-pantallas-atirantadas.tsx': {
+    title: "MUROS ANCLADOS Y PANTALLAS ATIRANTADAS",
+    subtitle: "CUANDO LA GEOTECNIA EXIGE PROFUNDIDAD.",
+    link: "/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas/muros-anclados-y-pantallas-atirantadas.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas/muros-anclados-y-pantallas-atirantadas.jpg"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
 
 
 
+// =====================================================================
+  // 13. MUROS CICLÓPEOS (muros-de-ciclopeos.tsx)
+  // =====================================================================
+  'ID-muros-de-ciclopeos.tsx': {
+    title: "MUROS CICLÓPEOS",
+    subtitle: "CUANDO LO COLONIAL IMPERA.",
+    link: "/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-ciclopeos",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-ciclopeos/muros-de-ciclopeos.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-ciclopeos/muros-de-ciclopeos.jpg"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
+
+// =====================================================================
+  // 14. PILOTES Y MICROPILOTES (pilotes-y-micropilotes.tsx)
+  // =====================================================================
+  'ID-pilotes-y-micropilotes.tsx': {
+    title: "PILOTES Y MICROPILOTES",
+    subtitle: "FUNDACIONES EN SUELO FIRME.",
+    link: "/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes/pilotes-y-micropilotes.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes/pilotes-y-micropilotes.jpg"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
+
+  // =====================================================================
+  // 15. ESTABILIZACIÓN DE TALUDES (estabilizacion-de-taludes.tsx)
+  // =====================================================================
+  'ID-estabilizacion-de-taludes.tsx': {
+    title: "ESTABILIZACIÓN DE TALUDES",
+    subtitle: "SOLUCIONES ECOLÓGICAS PERMANENTES.",
+    link: "/control-de-erosion/estabilizacion-de-taludes",
+    desktopImages: [
+      "https://tumuro.com/data1/images/estabilization-de-taludes/Morocha.JPG"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/estabilization-de-taludes/Morocha-Derecha.jpg",
+      "https://tumuro.com/data3/images/estabilization-de-taludes/Morocha-Izquierda.jpg"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
+
+// =====================================================================
+  // 16. REFORESTACIÓN (reforestacion.tsx)
+  // =====================================================================
+  'ID-reforestacion.tsx': {
+    title: "REFORESTACIÓN",
+    subtitle: "MUROS 100% VERDES.",
+    link: "/control-de-erosion/reforestacion",
+    desktopImages: [
+      "https://tumuro.com/data1/images/reforestation/MOROCHA.JPG"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/reforestation/MOROCHA-DERECHA.jpg",
+      "https://tumuro.com/data3/images/reforestation/MOROCHA-IZQ.jpg"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+// =====================================================================
+  // 17. CANALIZACIONES (canalizaciones.tsx)
+  // =====================================================================
+  'ID-canalizaciones.tsx': {
+    title: "CANALIZACIONES",
+    subtitle: "PROTECCIÓN DE LOS CAUCES.",
+    link: "/control-de-erosion/canalizaciones",
+    desktopImages: [
+      "https://tumuro.com/data1/images/canalizaciones/MOROCHAS/MOROCHAS.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/canalizaciones/mobiles/Foto-Banner-Derecha-Canalizaciones.jpg",
+      "https://tumuro.com/data3/images/canalizaciones/mobiles/Foto-Banner-Izquierda-Canalizaciones.jpg"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
 
 
 

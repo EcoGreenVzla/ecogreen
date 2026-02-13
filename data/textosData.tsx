@@ -325,9 +325,295 @@ export const textosData: Record<string, TextoData> = {
 
 
 
+// =====================================================================
+  // 10. MUROS MIXTOS (muros-mixtos.tsx)
+  // =====================================================================
+  'ID-muros-mixtos.tsx': {
+    title: "Muros Mixtos",
+    introContent: (
+      <>
+        <p>
+          Se denominan muros mixtos a la combinación de dos técnicas de sistemas de contención, esta modalidad se utiliza en los casos donde existen dos tipo de material de relleno para la conformación del muro de contención. Es muy importante señalar que la incidencia que tiene el material de relleno en el valor total de un muro de contención es muy importante, por esta razón es necesario evaluar antes de iniciar la estabilización de cualquier talud, la cercanía y disponibilidad de canteras o sitios donde sacar el material de préstamo, para minimizar la incidencia del relleno en el costo total de la obra.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          La combinación mas común es la construcción de un muro de gavión en la base y en la parte alta un muro de tierra reforzada, esto es debido a que en muchos casos existe la presencia de circulación de agua por la fachada de la base del muro y los gaviones tienen mejor comportamiento en las obras hidráulicas que los muros de tierra reforzada. Sin embargo sobre el muro de gavión se coloca un muro de tierra reforzada por ser el sistema más económico y más rápido de construir.
+        </p>
+        <p className="mt-4 font-semibold">Ventajas principales:</p>
+        <ul className="list-disc list-inside space-y-2 pl-4 mt-2 font-medium text-gray-700">
+            <li>Disponibilidad de los materiales que los conforman.</li>
+            <li>Excelente tiempo de ejecución.</li>
+            <li>Disponibilidad de los equipos y maquinarias especializadas para su construcción.</li>
+            <li>No requiere de mano de obra calificada.</li>
+            <li>Son muy flexibles ya que se adaptan a las deformaciones y movimientos del terreno, sin perder su estabilidad.</li>
+            <li>Se adaptan a la disponibilidad del material de relleno para su conformación.</li>
+        </ul>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
 
 
 
+// =====================================================================
+  // 11. REFUERZO DE TALUDES Y TERRAPLENES (refuerzo-de-taludes-y-terraplenes.tsx)
+  // =====================================================================
+  'ID-refuerzo-de-taludes-y-terraplenes.tsx': {
+    title: "Refuerzo de Taludes y Terraplenes",
+    introContent: (
+      <>
+        <p>
+          Al momento de iniciar la construcción de un terraplén, hay que tomar en cuenta los dos tipos más comunes de inestabilidad, como lo son los desprendimientos o corrimientos. Los desprendimientos o comúnmente llamados derrumbes son movimientos de suelo producidos por la falta de apoyo, debido a una escasa cantidad de terreno de soporte. En la mayoría de los casos se trata de rocas que caen por un talud, debido a la perdida del apoyo que la sustenta.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Analizar la estabilidad de un talud realizado en macizos rocosos fracturados es parte de dos procesos. El primero es analizar la estructura del corte realizado para determinar si la orientación de las discontinuidades podría resultar en inestabilidad (análisis cinemático). El segundo paso requiere un análisis de estabilidad por el método del equilibrio límite para comparar las fuerzas resistentes contra las causantes de la falla.
+        </p>
+        <p>
+          Los taludes y terraplenes reforzados con <strong>GEOMALLAS ECOGREEN</strong> se rigen bajo el mismo basamento teórico del sistema “Tierra Armada“, con la diferencia que las tiras metálicas son sustituidas con Geomallas de poliéster.
+        </p>
+        <p className="mt-4 font-semibold">Ventajas principales:</p>
+        <ul className="list-disc list-inside space-y-2 pl-4 mt-2 font-medium text-gray-700">
+            <li>Disponibilidad inmediata de materiales geosintéticos y equipos especializados.</li>
+            <li>Reutilización del material fallado, eliminando a menudo la necesidad de material de préstamo.</li>
+            <li>Excelente tiempo de ejecución y solución económica por no requerir mano de obra calificada.</li>
+            <li>Bajo impacto ambiental: fachada completamente reforestada que armoniza con el entorno.</li>
+        </ul>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de texto
+  // =====================================================================
+// =====================================================================
+  // 12. MUROS ANCLADOS Y PANTALLAS ATIRANTADAS (muros-anclados-y-pantallas-atirantadas.tsx)
+  // =====================================================================
+  'ID-muros-anclados-y-pantallas-atirantadas.tsx': {
+    title: "Muros Anclados y Pantallas Atirantadas",
+    introContent: (
+      <>
+        <p>
+          En los últimos años se ha vuelto muy popular el uso de anclajes de acero en la estabilización de taludes. Los muros anclados incluyen los pernos metálicos para cumplir la función de sostenimiento de los bloques de roca que se encuentre en situación de inestabilidad. Esta tecnología minimiza la relajación o desprendimiento de los bloques de rocas; una vez que los bloques se encuentran sueltos es muy difícil recobrar la estabilidad completa del macizo, por eso la colocación de anclajes es fundamental.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Existen dos técnicas principales en esta categoría:
+        </p>
+        
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Anclajes Pasivos (Pernos individuales)</h3>
+        <p>
+          Constituidos por varillas de acero colocadas dentro de perforaciones inyectadas con cemento. El macizo de roca se refuerza por intermedio de la cabilla, evitando caídas de roca y deslizamientos en macizos fracturados.
+        </p>
+        <p className="mt-2 font-semibold">Ventajas de los anclajes pasivos:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+            <li>Estabilización de bloques individuales o puntos específicos.</li>
+            <li>Técnica simple de instalación relativamente rápida.</li>
+            <li>Disponibilidad de materiales y equipos especializados.</li>
+            <li>Solución medianamente económica.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Anclajes Activos (Pantallas Atirantadas)</h3>
+        <p>
+          Consisten en la colocación de tirantes de acero anclados profundamente por debajo de la superficie de falla potencial y tensados mediante gatos hidráulicos. Producen fuerzas de compresión que aumentan la fricción y contrarrestan las fuerzas desestabilizadoras.
+        </p>
+        <p className="mt-2 font-semibold">Ventajas de las pantallas atirantadas:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 font-medium text-gray-700">
+            <li>Ideal para limitaciones severas de espacio (pendientes fuertes, sótanos).</li>
+            <li>Construcción progresiva de arriba hacia abajo (descendente) durante la excavación.</li>
+            <li>Permite excavar con seguridad junto a edificios o estructuras existentes.</li>
+            <li>Capacidad para alcanzar alturas considerables.</li>
+        </ul>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de texto
+  // =====================================================================
+
+
+
+
+// =====================================================================
+  // 13. MUROS CICLÓPEOS (muros-de-ciclopeos.tsx)
+  // =====================================================================
+  'ID-muros-de-ciclopeos.tsx': {
+    title: "Muros Ciclópeos",
+    introContent: (
+      <>
+        <p>
+          Los muros ciclópeos o también llamados de concreto ciclópeo son una mezcla de concreto con cantos o bloques de roca dura. La proporción más utilizada en la mezcla es 60% de concreto y 40% de volumen de piedra. Es importante resaltar que a medida que aumente la proporción de piedra en la mezcla, aumenta también la posibilidad de agrietamiento del muro debido al aumento de zonas de debilidad estructural interna.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Este tipo de técnica disminuye los volúmenes de concreto debido a la incorporación de grandes volúmenes de piedra. Sin embargo, este sistema no puede soportar esfuerzos de flexión grandes. Los muros de concreto ciclópeo son relativamente simples de construir e incluso se pueden adaptar a curvas y diferentes formas para proyectos arquitectónicos. Requieren de una cimentación excelente, ya que no permiten deformaciones. Su principal limitante es la altura, pues a partir de los 4.00 m comienzan a ser antieconómicos.
+        </p>
+        <p className="mt-4 font-semibold">Ventajas de esta técnica:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
+            <li>Disponibilidad de los materiales que los conforman.</li>
+            <li>Uso de equipos y maquinarias de construcción convencionales.</li>
+            <li>No requiere de mano de obra calificada.</li>
+            <li>Simplicidad constructiva.</li>
+            <li>Alta adaptabilidad a diseños arquitectónicos variados.</li>
+        </ul>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de texto
+  // =====================================================================
+
+
+// =====================================================================
+  // 14. PILOTES Y MICROPILOTES (pilotes-y-micropilotes.tsx)
+  // =====================================================================
+  'ID-pilotes-y-micropilotes.tsx': {
+    title: "Pilotes y Micropilotes",
+    introContent: (
+      <>
+        <p>
+          Los pilotes hincados son considerados estructuras enterradas que son capaces de resistir esfuerzos a flexión, estos son colocados dentro del suelo atravesando la superficie de falla. Esta técnica es utilizada en ocasiones para la estabilización de deslizamientos activos poco profundos, ya que trabajan empotradas en el suelo firme por debajo de la falla.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Para mejorar la rigidez y el comportamiento general del sistema, es común la utilización de estructuras de concreto armado para unir las cabezas de los pilotes. En casos donde la excavación previa es imposible, la construcción de pilas perforadas de 1,00 a 2,00 m de diámetro resulta una solución muy efectiva.
+        </p>
+        <p className="mt-4">
+          Por otro lado, el <strong>Soil Nailing</strong> utiliza micropilotes vacíos capaces de movilizar resistencia a la tensión. A diferencia de los pilotes, los micropilotes (conformados por cabillas, vigas o tubos inyectados) no suelen resistir grandes cargas laterales a flexión, pero son sumamente eficientes en materiales fracturados o sueltos.
+        </p>
+        <p className="mt-4 font-semibold">Ventajas principales:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
+            <li>Disponibilidad de materiales y equipos especializados.</li>
+            <li>Tiempo de construcción relativamente rápido.</li>
+            <li>Capacidad de construcción en sitios de difícil acceso.</li>
+            <li>Alta eficiencia como refuerzo en materiales fracturados o sueltos.</li>
+        </ul>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de texto
+  // =====================================================================
+
+
+// =====================================================================
+  // 15. ESTABILIZACIÓN DE TALUDES (estabilizacion-de-taludes.tsx)
+  // =====================================================================
+  'ID-estabilizacion-de-taludes.tsx': {
+    title: "Estabilización de Taludes",
+    introContent: (
+      <>
+        <p>
+          En geotecnia es indispensable analizar la estabilidad o la posible inestabilidad de un talud a la hora de realizar un proyecto o una obra de construcción. La inestabilidad de un talud se puede producir por razones geológicas, como laderas posiblemente inestables, relieve, estratificación, meteorización, entre otros. Las <strong>GEOMANTAS ECOGREEN</strong> solucionan el problema de las inestabilidades superficiales generalmente con comportamientos paralelos al talud, en muchos casos en la zona de la capa vegetal.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Las GEOMANTAS ECOGREEN son un sistema flexible para la estabilización de taludes fabricados a base de geomallas de poliéster de alto modulo y, en muchos casos, se presentan en combinación con mallas de alambres fuertemente galvanizados y anclajes pasivos. Este sistema constituye una solución económica y es considerado una excelente alternativa frente a estructuras rígidas de concreto.
+        </p>
+        <p>
+          El proceso de instalación comienza con la limpieza, nivelación y perfilado de la superficie. Luego se coloca y tensa la geomanta mediante anclajes y planchas de fijación que garantizan la óptima transmisión de carga. Este sistema se adapta perfectamente a la topografía del terreno, evitando deslizamientos, deformaciones y desprendimientos.
+        </p>
+        <p className="mt-4">
+          Es importante resaltar que las <strong>GEOMANTAS VERDES ECOGREEN</strong> son la técnica más rápida y económica actualmente. Además de su eficiencia técnica, ofrecen la ventaja ecológica de una cobertura vegetal final que armoniza con el medio ambiente y fomenta el desarrollo de <strong>INFRAESTRUCTURA VERDE</strong>.
+        </p>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
+
+// =====================================================================
+  // 16. REFORESTACIÓN (reforestacion.tsx)
+  // =====================================================================
+  'ID-reforestacion.tsx': {
+    title: "Reforestación",
+    introContent: (
+      <>
+        <p>
+          Desde tiempos remotos se conoce el uso de la vegetación para controlar la erosión y estabilizar taludes. A partir de los años treinta comenzó a resurgir esta práctica de manera más científica y metódica, ganando popularidad en la última década debido al mayor nivel de conciencia ambiental y a la disponibilidad de parámetros técnicos que validan estas soluciones ecológicas.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          A finales de los sesenta se introdujeron los geosintéticos como las <strong>GEOMANTAS ECOGREEN</strong>, materiales capaces de soportar las condiciones químicas del suelo. En combinación con pastos especializados como el <strong>Vetiver</strong>, estas geomantas ofrecen una solución ideal: la alta resistencia a la tracción del polímero se une a la fuerza radicular de la planta, que ancla el suelo profundamente.
+        </p>
+        <p>
+          Dependiendo de la necesidad paisajística, también se pueden utilizar especies como la gudelia, maní forrajero o flores de distintos colores para dar vistosidad. El éxito del sistema depende de buenas prácticas agrícolas: asegurar una óptima germinación para que el sistema radicular aporte evapotranspiración y abatimiento de la humedad.
+        </p>
+        <p className="mt-4 font-semibold">Consideraciones técnicas para el éxito:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
+            <li>Análisis químico del suelo y aporte de material orgánico.</li>
+            <li>Selección de la especie vegetal acorde al clima y topografía.</li>
+            <li>Mantenimiento y riego constante durante la fase de establecimiento.</li>
+            <li>Uso de geomallas de alto módulo para garantizar la estabilidad estructural inicial.</li>
+        </ul>
+        <p className="mt-4">
+          Los muros de tierra reforzada reforestados son la técnica más económica y ecológica hoy día, contribuyendo activamente con la <strong>Infraestructura Verde</strong> urbana y rural.
+        </p>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
+
+
+// =====================================================================
+  // 17. CANALIZACIONES (canalizaciones.tsx)
+  // =====================================================================
+  'ID-canalizaciones.tsx': {
+    title: "Canalizaciones",
+    introContent: (
+      <>
+        <p>
+          Un canal o canalización es una obra destinada al transporte de fluidos, para darle una dirección deseada. En la mayoría de los casos el fluido transportado es el agua. Los canales tienen como característica principal que son abiertos a la atmosfera y su conocimiento se remonta a milenios, desde Mesopotamia hasta el Imperio Romano y el antiguo Perú.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          La estabilidad de un curso de agua depende del equilibrio entre la acción del flujo y la resistencia de los materiales que constituyen el cauce. La necesidad de protección para estabilizar cursos de agua naturales es indispensable para limitar erosiones y proteger obras civiles ribereñas como terraplenes de carreteras, estribos de puentes y urbanismos.
+        </p>
+        <p>
+          ECOGREEN utiliza principalmente <strong>revestimientos flexibles</strong> como las Geomantas Verdes de poliéster y las cestas de gavión metálicas. Estos sistemas garantizan la reducción de fugas, soportan los esfuerzos del flujo en taludes y fondo, y aportan condiciones favorables para el refuerzo de la vegetación existente.
+        </p>
+        <p className="mt-4">
+          Los <strong>gaviones metálicos ECOGREEN</strong> presentan la ventaja de permitir obras sin desvíos del curso de agua, ya que son estructuras drenantes y permeables que eliminan el empuje hidrostático. Fabricados con malla hexagonal de doble torsión y recubrimiento galvanizado (y PVC en ambientes agresivos), cumplen con todas las normas internacionales de durabilidad.
+        </p>
+        <p className="mt-4 font-semibold">Tipos de canales según su geometría:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
+            <li><strong>Canales Rectangulares:</strong> Utilizados en zonas urbanas con espacio limitado, a menudo embaulados totalmente.</li>
+            <li><strong>Canales Trapezoidales:</strong> Comunes en zonas rurales y agrícolas para riego o recuperación de cursos naturales.</li>
+        </ul>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
 
 
 
