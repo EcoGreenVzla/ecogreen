@@ -488,8 +488,25 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
   // Final del bloque de slider
   // =====================================================================
 
-  
 
+// =====================================================================
+  // 21. INFRAESTRUCTURA URBANA (infraestructura-urbana.tsx)
+  // =====================================================================
+  'ID-infraestructura-urbana.tsx': {
+    title: "INFRAESTRUCTURA URBANA",
+    subtitle: "SOLUCIONES ECOLÓGICAS.",
+    link: "/campos-de-aplicacion/infraestructura-urbana",
+    desktopImages: [
+      "https://tumuro.com/images/infraestructura-urbana.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/images/infraestructura-urbana2.jpg",
+      "https://tumuro.com/images/infraestructura-urbana3.jpg"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
 
 
 

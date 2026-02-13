@@ -725,7 +725,32 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
 
 
-
+// =====================================================================
+  // 21. INFRAESTRUCTURA URBANA (infraestructura-urbana.tsx)
+  // =====================================================================
+  'ID-infraestructura-urbana.tsx': {
+    title: "Infraestructura Urbana",
+    introContent: (
+      <>
+        <p>
+          ECOGREEN incorpora innumerables soluciones en diferentes campos de aplicación en la infraestructura urbana. Nuestras obras sirven de soporte para el desarrollo de actividades vitales en la organización estructural de las ciudades, abarcando sectores estratégicos como Transporte, Energía, Hidráulica, Telecomunicaciones y Edificaciones.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Aportamos soluciones en el sector <strong>TRANSPORTE</strong> (carreteras, autopistas, puertos); infraestructura <strong>ENERGÉTICA</strong> (redes eléctricas, plantas térmicas y eólicas); infraestructura <strong>HIDRÁULICA</strong> (redes de alcantarillado, plantas de tratamiento y embalses); <strong>TELECOMUNICACIONES</strong> y el sector de <strong>EDIFICACIONES</strong> (viviendas, hospitales y parques).
+        </p>
+        <p className="mt-4">
+          Fomentamos la incorporación de la <strong>INFRAESTRUCTURA VERDE</strong>, compuesta por suelos y vegetación, con el objetivo de mejorar la gestión del agua de lluvia, elevar la calidad del aire y reducir el efecto "Isla de Calor" en los ambientes construidos, mitigando así el impacto ambiental de las grandes obras.
+        </p>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
 
 
 
