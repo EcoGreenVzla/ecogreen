@@ -618,10 +618,74 @@ export const textosData: Record<string, TextoData> = {
 
 
 
+// =====================================================================
+  // 18. DIQUES Y PRESAS (diques-y-presas.tsx)
+  // =====================================================================
+  'ID-diques-y-presas.tsx': {
+    title: "Diques y Presas",
+    introContent: (
+      <>
+        <p>
+          Un dique es una construcción diseñada específicamente para evitar el paso del agua y regular flujos hídricos. Puede ser de origen natural o construido por el hombre utilizando diversos materiales como tierra, mampostería de piedra u hormigón, y posee un carácter que puede ser permanente o temporal según los requerimientos de la obra.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          En la ingeniería moderna, los diques y presas construidos con sistemas flexibles representan una ventaja significativa. El uso de <strong>gaviones metálicos y colchonetas ECOGREEN</strong> permite la creación de estructuras que, además de retener el empuje hídrico, poseen una permeabilidad intrínseca que elimina las presiones hidrostáticas excesivas detrás del paramento.
+        </p>
+        <p>
+          Estas estructuras son fundamentales en el control de crecidas, la protección de riberas y la generación de embalses. Al ser sistemas modulares, se adaptan a los asentamientos diferenciales del terreno sin perder su integridad estructural, algo que las estructuras rígidas de concreto simple no pueden lograr con la misma eficiencia.
+        </p>
+        <p className="mt-4 font-semibold">Ventajas de los sistemas EcoGreen en presas:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
+            <li>Alta resistencia mecánica y durabilidad ante la erosión hidráulica.</li>
+            <li>Capacidad de filtración y drenaje natural.</li>
+            <li>Bajo impacto ambiental al permitir la integración de vegetación.</li>
+            <li>Facilidad de transporte y montaje en sitios de difícil acceso fluvial.</li>
+        </ul>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
 
-
-
-
+// =====================================================================
+  // 19. PROTECCIÓN DE RIBERAS (proteccion-de-riberas.tsx)
+  // =====================================================================
+  'ID-proteccion-de-riberas.tsx': {
+    title: "Protección de Riberas",
+    introContent: (
+      <>
+        <p>
+          Existen muchas riberas y costas que requieren protección contra la erosión hídrica, así como también obras civiles cuyas fundaciones están en contacto permanente con cursos de agua. Al proceso de sustracción de masa sólida a la roca o a la perdida de partículas finas del suelo por flujo de agua se le denomina <strong>Erosión Hídrica</strong>. ECOGREEN ofrece soluciones adaptadas según la granulometría del material disponible, desde gaviones metálicos hasta formaletas textiles innovadoras.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          En casos con material granular grueso, la solución ideal son las <strong>cestas de gavión metálicas ECOGREEN</strong>, fabricadas bajo normativa ASTM. Si se cuenta con material de relleno fino, recomendamos las <strong>formaletas textiles ECOGREEN</strong>: fundas de gran capacidad que, al llenarse con concreto, forman bloques de alta resistencia al impacto y la fricción, adaptándose a superficies irregulares incluso bajo el agua.
+        </p>
+        <p className="mt-4">
+          Otra solución de vanguardia son los <strong>tubos geotextiles ECOGREEN</strong>. Fabricados con textiles tejidos de alto módulo, funcionan llenos de arena o lodo para aplicaciones costeras, construcción de espigones y confinamiento de islas artificiales. Estos sistemas incluyen mantos antisocavación dotados de lastres para mantener el contacto permanente con la superficie del lecho.
+        </p>
+        <p className="mt-4 font-semibold">Principales Obras Fluviales:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
+            <li>Delimitación de cauces y protección de márgenes de ríos.</li>
+            <li>Construcción de espigones y obras transversales para retención de sedimentos.</li>
+            <li>Control de erosión en tomas y almacenes de agua ribereños.</li>
+            <li>Modificación de pendientes del cauce para control de velocidad del caudal.</li>
+            <li>Conformación de estructuras flexibles de revestimiento de orillas.</li>
+        </ul>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
 
 
 

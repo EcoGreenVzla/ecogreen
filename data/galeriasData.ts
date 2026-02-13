@@ -380,6 +380,72 @@ export const galeriasData: Record<string, GaleriaData> = {
 
 
 
+// =====================================================================
+  // 18. DIQUES Y PRESAS (diques-y-presas.tsx)
+  // =====================================================================
+  'ID-diques-y-presas.tsx': {
+    id: 'ID-diques-y-presas.tsx',
+    items: [
+      { src: 'https://tumuro.com/media/diques-y-presas/grid-diques-y-presas/1.jpg', title: 'Construcción de dique de protección con gaviones en curso de agua natural.' },
+      { src: 'https://tumuro.com/media/diques-y-presas/grid-diques-y-presas/2.jpg', title: 'Presa de retención de sedimentos mediante sistemas modulares ECOGREEN.' },
+      { src: 'https://tumuro.com/media/diques-y-presas/grid-diques-y-presas/3.jpg', title: 'Estructura de control hídrico para prevención de inundaciones.' },
+      { src: 'https://tumuro.com/media/diques-y-presas/grid-diques-y-presas/4.jpg', title: 'Detalle de dique flexible adaptado a la topografía del cauce.' },
+      { src: 'https://tumuro.com/media/diques-y-presas/grid-diques-y-presas/5.jpg', title: 'Sistema de protección de riberas y control de flujo.' },
+      { src: 'https://tumuro.com/media/diques-y-presas/grid-diques-y-presas/6.jpg', title: 'Presa filtrante construida con tecnología de gaviones de doble torsión.' },
+      { src: 'https://tumuro.com/media/diques-y-presas/grid-diques-y-presas/7.jpg', title: 'Vista aérea de proyecto de canalización y diques de contención.' },
+      { src: 'https://tumuro.com/media/diques-y-presas/grid-diques-y-presas/8.jpg', title: 'Mantenimiento y estabilidad de taludes en zonas de embalse.' },
+      { src: 'https://tumuro.com/media/diques-y-presas/grid-diques-y-presas/9.jpg', title: 'Aplicación de geomallas en el refuerzo de presas de tierra.' },
+      { src: 'https://tumuro.com/media/diques-y-presas/grid-diques-y-presas/10.jpg', title: 'Control de erosión en el vertedero de una presa de retención.' },
+      { src: 'https://tumuro.com/media/diques-y-presas/grid-diques-y-presas/11.jpg', title: 'Dique longitudinal para la recuperación de márgenes fluviales.' },
+      { src: 'https://tumuro.com/media/diques-y-presas/grid-diques-y-presas/12.jpg', title: 'Ingeniería hidráulica aplicada para el manejo de cauces de montaña.' }
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de galeria
+  // =====================================================================
+
+
+// =====================================================================
+  // 19. PROTECCIÓN DE RIBERAS (proteccion-de-riberas.tsx)
+  // =====================================================================
+  'ID-proteccion-de-riberas.tsx': {
+    id: 'ID-proteccion-de-riberas.tsx',
+    items: [
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/1.jpg', title: 'Canalización y reconstrucción de muros ciclópeos en Quebrada Caroata, Caracas. 2004' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/2.jpg', title: 'Protección de planta de tratamiento con Muro de Gavión de 6 m en Río San Pedro. 2006' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/3.jpg', title: 'Base de Muro de Gavión Reforzado de 25 m de altura en Desarrollo Alto Verde. 2006' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/4.jpg', title: 'Protección de Terraplén Reforzado con gaviones ECOGREEN en Río Castan, Edo. Trujillo. 2012' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/5.jpg', title: 'Terraplén Reforzado para protección contra inundaciones de Centro Hospitalario, Trujillo. 2012' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/6.jpg', title: 'Muro de Gavión para control de erosión en margen del Rio San Pedro, Los Teques. 2006' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/7.jpg', title: 'Terraplén de protección hidráulica de 600 m de largo en el Río Castan. 2012' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/8.jpg', title: 'Muros de Gavión para control de erosión en campos de golf, Izcaragua Country Club. 2009' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/9.jpg', title: 'Reconstrucción de canales marginales con muros ciclópeos en Sector Quinta Crespo. 2004' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/10.jpg', title: 'Reconstrucción de falla de borde con Muro de Gavión en vialidad principal, Alto Verde. 2007' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/11.jpg', title: 'Terraplén Reforzado de 6 m de alto para protección de infraestructura hospitalaria. 2012' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/12.jpg', title: 'Estabilización de Troncal 005 con Muro de Gavión de 130 m, Tinaco, Edo. Cojedes. 2015' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/13.jpg', title: 'Control de erosión con Muro de Gavión Reforzado en planta de tratamiento hídrico. 2007' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/14.jpg', title: 'Protección con enrocado y gaviones ECOGREEN de terraplén reforzado, Valera. 2012' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/15.jpg', title: 'Construcción de Muro de Gavión para control de erosión en Rio La Guama, Cojedes. 2015' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/16.jpg', title: 'Control de erosión hídrica en la quebrada Izcaragua mediante gaviones. 2009' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/17.jpg', title: 'Vista panorámica de protección marginal en el Rio La Guama, Tinaco. 2015' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/18.jpg', title: 'Protección y estabilización de la Troncal 005 con muros rígidos y gaviones. 2015' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/19.jpg', title: 'Construcción longitudinal de muros de gavión en margen del Rio La Guama. 2015' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/20.jpg', title: 'Protección de márgenes de quebrada en el Campo de Golf del Club Izcaragua. 2009' },
+      { src: 'https://tumuro.com/data2/images/proteccion-de-riberas/21.jpg', title: 'Sistema integral de protección contra inundaciones con gaviones y enrocado, Trujillo. 2012' }
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de galeria
+  // =====================================================================
+
+
+
+
+
+
+
+
+
 
 
 

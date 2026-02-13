@@ -431,6 +431,47 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
   // =====================================================================
 
 
+// =====================================================================
+  // 18. DIQUES Y PRESAS (diques-y-presas.tsx)
+  // =====================================================================
+  'ID-diques-y-presas.tsx': {
+    title: "DIQUES Y PRESAS",
+    subtitle: "CONTROL EFECTIVO DE FLUJOS HÍDRICOS.",
+    link: "/control-de-erosion/diques-y-presas",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/refuerzo-de-taludes-y-terraplenes.jpg" // Imagen referencial de ingeniería hidráulica
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/refuerzo-de-taludes-y-terraplenes.png"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
+
+// =====================================================================
+  // 19. PROTECCIÓN DE RIBERAS (proteccion-de-riberas.tsx)
+  // =====================================================================
+  'ID-proteccion-de-riberas.tsx': {
+    title: "PROTECCIÓN DE RIBERAS",
+    subtitle: "CONTROL DE LA EROSIÓN HÍDRICA.",
+    link: "/control-de-erosion/proteccion-de-riberas",
+    desktopImages: [
+      "https://tumuro.com/data1/images/proteccion-de-riberas/Morocha-Proteccion-de-Riberas.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/proteccion-de-riberas/Morocha-Derecha-Proteción-de-Riberas.jpg",
+      "https://tumuro.com/data3/images/proteccion-de-riberas/Morocha%20Izquierda%20Proteccion%20de%20Riberas%20.JPG"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
+
+
+
+
+
 
 
 
