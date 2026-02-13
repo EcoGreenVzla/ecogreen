@@ -470,7 +470,25 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
 
 
 
+// =====================================================================
+  // 20. MUROS DE CONCRETO ARMADO (muros-de-concreto-armado.tsx)
+  // =====================================================================
+  'ID-muros-de-concreto-armado.tsx': {
+    title: "MUROS DE CONCRETO ARMADO",
+    subtitle: "UNA SOLUCIÓN TRADICIONAL CONFIABLE.",
+    link: "/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado/muros-de-concreto-armado.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado/muros-de-concreto-armado.jpg"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
 
+  
 
 
 

@@ -689,7 +689,40 @@ export const textosData: Record<string, TextoData> = {
 
 
 
-
+// =====================================================================
+  // 20. MUROS DE CONCRETO ARMADO (muros-de-concreto-armado.tsx)
+  // =====================================================================
+  'ID-muros-de-concreto-armado.tsx': {
+    title: "Muros de Concreto Armado",
+    introContent: (
+      <>
+        <p>
+          Los muros de concreto armado pueden diseñarse para grandes alturas, inclusive superiores a los 10,00 m, aunque requieren de una excelente cimentación. Son económicamente viables hasta los 8,00 m de altura y representan una de las técnicas más extendidas globalmente para la estabilización de deslizamientos de taludes y terraplenes debido a su simplicidad constructiva.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Estas estructuras están constituidas por masas de concreto reforzadas con varillas de acero, capaces de resistir las presiones laterales del suelo apoyándose en una cimentación por fuera de la masa inestable. El diseño incluye la estabilidad intrínseca contra volcamiento y deslizamiento, así como el análisis de esfuerzos cortantes y momentos internos.
+        </p>
+        <p className="mt-4">
+          Existen diversos tipos según su geometría: los <strong>muros empotrados (cantilever)</strong> en forma de L o T invertida; los <strong>muros con contrafuertes</strong>, que aportan rigidez adicional; y los <strong>muros con estribos</strong>, que utilizan placas superiores horizontales para soportar mayores momentos. Es imperativo que cuenten con sistemas de drenaje y barbacanas para aliviar la presión hidrostática del agua represada.
+        </p>
+        <p className="mt-4 font-semibold">Ventajas principales:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
+            <li>Disponibilidad universal de materiales (acero y concreto).</li>
+            <li>Uso de métodos y maquinarias convencionales de construcción.</li>
+            <li>No requiere de mano de obra altamente especializada.</li>
+            <li>Capacidad de alcanzar alturas considerables bajo diseño riguroso.</li>
+            <li>Solución estructural de larga durabilidad y probada eficiencia.</li>
+        </ul>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
 
 
 

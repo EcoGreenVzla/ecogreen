@@ -440,7 +440,29 @@ export const galeriasData: Record<string, GaleriaData> = {
 
 
 
-
+// =====================================================================
+  // 20. MUROS DE CONCRETO ARMADO (muros-de-concreto-armado.tsx)
+  // =====================================================================
+  'ID-muros-de-concreto-armado.tsx': {
+    id: 'ID-muros-de-concreto-armado.tsx',
+    items: [
+      { src: 'https://tumuro.com/data2/images/muros-de-concreto-armado/muros-de-concreto-armado1.jpg', title: 'Muros de concreto armado de 6 m de altura para ampliación de jardines en Bosque Valle, Caracas. 2010' },
+      { src: 'https://tumuro.com/data2/images/muros-de-concreto-armado/muros-de-concreto-armado2.jpg', title: 'Construcción de muros de concreto armado para vivienda en Urb. Las Marías, El Hatillo. 2011' },
+      { src: 'https://tumuro.com/data2/images/muros-de-concreto-armado/muros-de-concreto-armado3.jpg', title: 'Desarrollo de muros estructurales en el Conjunto Habitacional Bosque Valle, Distrito Capital. 2010' },
+      { src: 'https://tumuro.com/data2/images/muros-de-concreto-armado/muros-de-concreto-armado4.jpg', title: 'Fundaciones y muros de concreto armado para infraestructura residencial en El Hatillo. 2011' },
+      { src: 'https://tumuro.com/data2/images/muros-de-concreto-armado/muros-de-concreto-armado5.jpg', title: 'Construcción de muros para sala de bombas en Parque El Agua, Palo Negro, Edo. Aragua. 2016' },
+      { src: 'https://tumuro.com/data2/images/muros-de-concreto-armado/muros-de-concreto-armado6.jpg', title: 'Canalización de río artificial con sistemas rígidos de concreto armado en Palo Negro. 2016' },
+      { src: 'https://tumuro.com/data2/images/muros-de-concreto-armado/muros-de-concreto-armado7.jpg', title: 'Vaciado de concreto premezclado para serie de 40 muros en Bosque Valle. 2010' },
+      { src: 'https://tumuro.com/data2/images/muros-de-concreto-armado/muros-de-concreto-armado8.jpg', title: 'Tanque de almacenamiento de agua construido con muros de concreto armado en Urb. La Unión. 2017' },
+      { src: 'https://tumuro.com/data2/images/muros-de-concreto-armado/muros-de-concreto-armado9.jpg', title: 'Fundaciones para bases de toboganes en infraestructura recreativa, Estado Aragua. 2016' },
+      { src: 'https://tumuro.com/data2/images/muros-de-concreto-armado/muros-de-concreto-armado10.jpg', title: 'Vista estructural de muros en proceso constructivo en Bosque Valle. 2010' },
+      { src: 'https://tumuro.com/data2/images/muros-de-concreto-armado/muros-de-concreto-armado11.jpg', title: 'Detalle de armado de refuerzo metálico en muros de vivienda unifamiliar. 2011' },
+      { src: 'https://tumuro.com/data2/images/muros-de-concreto-armado/muros-de-concreto-armado12.jpg', title: 'Construcción de canales hidráulicos de concreto armado en Parque El Agua. 2016' }
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de galeria
+  // =====================================================================
 
 
 
