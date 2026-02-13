@@ -12,8 +12,8 @@ const Home: React.FC = () => {
   return (
     <>
       {/* 2. REEMPLAZO DEL COMPONENTE */}
-      {/* Usamos la clave 'index' que definiste en tu archivo de datos */}
-      <HeroSliderResponsive data={sliderData['index']} />
+      
+      <HeroSliderResponsive data={sliderData['ID-index.tsx']} />
       
       <ServiceBanner />
       <CamposAplicacion />

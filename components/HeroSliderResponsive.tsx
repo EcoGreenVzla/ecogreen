@@ -1,15 +1,15 @@
-
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { HeroSectionResponsive } from '../types';
 import ChevronLeftIcon from './icons/ChevronLeftIcon';
 import ChevronRightIcon from './icons/ChevronRightIcon';
 
 interface Props {
-  data: HeroSectionResponsive;
+  data: HeroSectionResponsive | undefined;
   autoPlayDuration?: number;
 }
 
 const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }) => {
+  // 1. DECLARAMOS TODOS LOS HOOKS PRIMERO
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
@@ -18,8 +18,6 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
   const currentX = useRef<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  if (!data) return null;
-
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
@@ -27,7 +25,8 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  const activeImages = isMobile ? data.mobileImages : data.desktopImages;
+  // Extraemos la data de forma segura
+  const activeImages = isMobile ? data?.mobileImages : data?.desktopImages;
   const safeImages = activeImages || [];
   const totalSlides = safeImages.length;
 
@@ -89,7 +88,8 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
   const onTouchMove = (e: React.TouchEvent) => handleMove(e.touches[0].clientX);
   const onTouchEnd = () => handleEnd();
 
-  if (totalSlides === 0) return null;
+  // 2. AHORA SÍ, HACEMOS LOS RETURNS TEMPRANOS SI NO HAY DATA
+  if (!data || totalSlides === 0) return null;
 
   return (
     <div 

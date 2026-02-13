@@ -18,10 +18,7 @@ const MurosDeContencion: React.FC = () => {
       <meta name="description" content="Soluciones integrales en muros de contención flexibles, rígidos y sistemas de drenaje." />
 
       {/* 1. Hero Slider Dinámico */}
-      {/* CORRECCIÓN: Se actualizó la clave a 'ID-muros-de-contencion.tsx' 
-          para que coincida con el objeto en data/sliderData.ts 
-      */}
-      <HeroSliderResponsive data={sliderData['ID-muros-de-contencion.tsx']} />
+      <HeroSliderResponsive data={sliderData['muros-de-contencion']} />
 
       {/* 2. Sección Teórica Dinámica */}
       <TextoCollapsable 
