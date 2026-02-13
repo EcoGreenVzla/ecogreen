@@ -198,6 +198,149 @@ export const textosData: Record<string, TextoData> = {
   //  Final del bloque de texto
   // =====================================================================
 
+// =====================================================================
+  // 7. MUROS DE TIERRA REFORZADA (muros-de-tierra-reforzada.tsx)
+  // =====================================================================
+  'ID-muros-de-tierra-reforzada.tsx': {
+    title: "Muros de Tierra Reforzada",
+    introContent: (
+      <>
+        <p>
+          El hombre siempre ha tratado de construir en zonas consideradas valiosas debido a su estética o posición geográfica, sin embargo estas zonas no siempre cuentan con buenas cimentaciones. Por esta razón a través de los siglos se ha desarrollado el concepto de suelo reforzado es verdaderamente antiguo ya que hace 3000 años los babilonios utilizaron ramas entrelazadas de palmera para reforzar sus monumentos. También se conoce que la gran muralla china construida hace más de 2000 años, contiene secciones en donde la arcilla y la arena fueron reforzadas con ramas.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          El sistema de muros de contención que ha tenido más éxito a nivel mundial en obras de infraestructura urbana y vial es el denominado muro de tierra reforzada o también conocido como muro verde. Este sistema soluciona el restablecimiento de las dimensiones de las vías falladas y reconstruye los deslizamientos de suelo en un período de tiempo muy corto. Este tipo de sistema de contención nació con la creación del sistema registrado “tierra armada” creado por el ingeniero francés Henry Vidal en el año 1960. Dicha técnica consiste en la inclusión de una serie de tiras metálicas que van amarradas a unas escamas de concreto prefabricadas que conforman la fachada del muro.
+        </p>
+        <p>
+          Los muros de tierra reforzada construidos con productos geosintéticos se rigen bajo el mismo basamento teórico del sistema “tierra armada” con la diferencia que las tiras metálicas son sustituidas por geotextiles o por geomallas de diferentes tipos. Estos muros son considerados el mejor sistema de contención de la ingeniería contemporánea debido a que presentan muchas ventajas:
+        </p>
+        <ul className="list-disc list-inside space-y-2 pl-4 mt-4 font-medium text-gray-700">
+            <li>Disponibilidad de los materiales geosintéticos que los conforman.</li>
+            <li>Reutilización del material fallado en casos de derrumbes.</li>
+            <li>Excelente tiempo de ejecución.</li>
+            <li>Disponibilidad de equipos y maquinarias especializadas.</li>
+            <li>No requiere de mano de obra calificada.</li>
+            <li>Solución más económica.</li>
+            <li>Mínimo impacto ambiental (fachada reforestada).</li>
+        </ul>
+        <p className="mt-4">
+          Es muy importante resaltar la virtud que tienen los muros de tierra reforzada en cuanto al acabado de su fachada, tomando en cuenta que existe la flexibilidad de colocarles bloques, concreto proyectado, gaviones o reforestarlos con la vegetación de la zona, logrando minimizar el impacto ambiental armonizando ecológicamente el sistema de muro con el ambiente.
+        </p>
+      </>
+    )
+  },
+
+  // =====================================================================
+  //  Final del bloque de texto
+  // =====================================================================
+
+
+
+
+
+
+
+
+
+  // =====================================================================
+  //  Final del bloque de texto
+  // =====================================================================
+
+
+
+
+// =====================================================================
+  // 8. MUROS DE GAVIÓN (muros-de-gavion.tsx)
+  // =====================================================================
+  'ID-muros-de-gavion.tsx': {
+    title: "Muros de Gavión",
+    introContent: (
+      <>
+        <p>
+          Los muros de contención construidos con gaviones tienen su origen en Europa y fue en el siglo XIX cuando por primera vez fueron empleados en su versión moderna. Esta técnica ha ido en crecimiento en cuanto a su utilización y campos de aplicación. En América Latina comenzaron a ser utilizados al inicio de los años 70 y hoy en día están siendo utilizados en todos los países del continente americano.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Las cestas de gavión que conforman este tipo de muro de contención son elementos modulares de formas variadas, fabricadas a partir de mallas metálicas de doble torsión con orificios hexagonales, estas cestas son llenadas con piedras de diferente granulometría de forma manual o con maquinarias de construcción convencional.
+        </p>
+        <p>
+          Las estructuras de gavión son muy ventajosas desde el punto de vista técnico y económico, ya que poseen un conjunto de características funcionales que los diferencian de los demás sistemas de contención. Entre las principales ventajas se encuentran:
+        </p>
+        <ul className="list-disc list-inside space-y-2 pl-4 mt-4 font-medium text-gray-700">
+            <li>Excelente tiempo de ejecución y disponibilidad de materiales.</li>
+            <li>No requiere de mano de obra calificada ni maquinaria pesada especializada.</li>
+            <li>Estructuras monolíticas y altamente resistentes a la tracción.</li>
+            <li>Gran flexibilidad: se adaptan a los movimientos del terreno sin perder estabilidad.</li>
+            <li>Máxima permeabilidad: alivian por completo el empuje hidrostático.</li>
+            <li>Ideales para la conformación de obras hidráulicas.</li>
+        </ul>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
+
+
+  // =====================================================================
+  // 9. MUROS DE GAVIÓN REFORZADOS (muros-de-gavion-reforzados.tsx)
+  // =====================================================================
+  'ID-muros-de-gavion-reforzados.tsx': {
+    title: "Muros de Gavión Reforzados",
+    introContent: (
+      <>
+        <p>
+          Este tipo de sistema está compuesto en su estructura principal, por un muro de contención de tierra reforzada y su paramento o fachada está compuesta por cestas de gavión rellenas de piedras. Esta combinación de técnicas nos permite construir muros de tierra reforzada en las márgenes de ríos y en zonas costeras, debido a que la fachada de piedra con su respectivo geotextil no tejido como filtro, no permiten que el caudal de agua que drena por la cara del talud, produzca el arrastre de finos del material de relleno que conforman el muro de tierra reforzada.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Cada parte que conforma los muros de gavión reforzado cumple una función primordial para el buen desempeño del sistema de contención. El material que cumple la función de anclaje está constituido por geotextiles tejidos o geomallas de refuerzo de alto modulo fabricadas de polipropileno, polietileno o poliéster, encargado de cortar la superficie de falla dentro del relleno. Las cestas de gavión rellenas de piedras garantizan el acabado final de la fachada. Juntos, ambos materiales deben estar amarrados íntimamente para garantizar la continuidad y resistir los esfuerzos de tracción.
+        </p>
+        <p className="mt-4 font-semibold">Las ventajas que ofrecen los muros de gavión reforzados son:</p>
+        <ul className="list-disc list-inside space-y-2 pl-4 mt-2 font-medium text-gray-700">
+            <li>Disponibilidad inmediata de materiales geosintéticos y cestas de gavión.</li>
+            <li>Excelente tiempo de ejecución y uso de maquinaria convencional.</li>
+            <li>Alta flexibilidad para adaptarse a deformaciones y movimientos del terreno.</li>
+            <li>En casos de derrumbes, permite reutilizar el material fallado como relleno.</li>
+            <li>Construcción eficiente en márgenes de río y costas con requerimiento reducido de material pétreo.</li>
+            <li>No requiere de mano de obra calificada.</li>
+        </ul>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de texto
+  // =====================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

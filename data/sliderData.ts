@@ -219,10 +219,62 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
 
 
 
+// =====================================================================
+  // 7. MUROS DE TIERRA REFORZADA (muros-de-tierra-reforzada.tsx)
+  // =====================================================================
+  'ID-muros-de-tierra-reforzada.tsx': {
+    title: "MUROS DE TIERRA REFORZADA",
+    subtitle: "SOLUCIONES VERDES DE ALTA RESISTENCIA.",
+    link: "/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-tierra-reforzada",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-tierra-reforzada/talud-reforzado1.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-tierra-reforzada/talud-reforzado1.png"
+    ]
+  },
+
+// =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
 
 
+  // =====================================================================
+  // 8. MUROS DE GAVIÓN (muros-de-gavion.tsx)
+  // =====================================================================
+  'ID-muros-de-gavion.tsx': {
+    title: "MUROS DE GAVIÓN",
+    subtitle: "LA SOLUCIÓN PARA LAS OBRAS HIDRÁULICAS.",
+    link: "/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion/muros-de-gavion.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion/muros-de-gavion.png"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
 
 
+// =====================================================================
+  // 9. MUROS DE GAVIÓN REFORZADOS (muros-de-gavion-reforzados.tsx)
+  // =====================================================================
+  'ID-muros-de-gavion-reforzados.tsx': {
+    title: "MUROS DE GAVIÓN REFORZADOS",
+    subtitle: "SISTEMAS ECOLÓGICOS PARA LA ARQUITECTURA.",
+    link: "/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion-reforzados",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion-reforzados/muros-de-gavion-reforzados.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion-reforzados/muros-de-gavion-reforzados.png"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
 
 
 
