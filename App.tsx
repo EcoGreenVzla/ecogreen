@@ -21,7 +21,7 @@ import SistemasRigidos from './pages/SistemasRigidos';
 import SistemasDrenaje from './pages/SistemasDrenaje';
 
 import TierraReforzada from './pages/MurosDeTierraReforzada';
-import Gavion from './pages/Gavion';
+import Gavion from './pages/muros-de-gavion';
 import GavionReforzado from './pages/GavionReforzado';
 import MurosMixtos from './pages/MurosMixtos';
 import RefuerzoTaludes from './pages/RefuerzoTaludes';
