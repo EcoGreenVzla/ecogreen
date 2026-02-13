@@ -1,259 +1,30 @@
+import React from 'react';
 
-import React, { useState, useEffect, useCallback } from 'react';
-import { Link } from 'react-router-dom';
-import { motion, AnimatePresence, Variants } from 'framer-motion';
+// Componentes
+import HeroSliderResponsive from '../components/HeroSliderResponsive';
+import TextoCollapsable from '../components/TextoCollapsable';
+import GridSistemasDeContencionRigidos from '../components/GridSistemasDeContencionRigidos';
 
-// --- Icon Components (Locally defined for simplicity) ---
-const ChevronLeftIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
-  </svg>
-);
+// Data
+import { sliderData } from '../data/sliderData';
+import { textosData } from '../data/textosData';
 
-const ChevronRightIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" {...props}>
-    <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
-  </svg>
-);
-
-
-// --- Data for System Grids ---
-const sistemasRigidos = [
-  { title: 'Muros Anclados y Pantallas', href: '/muros-de-contencion/sistemas-rigidos/muros-anclados', imgSrc: 'https://tumuro.com/media/muros-de-contencion/grid-sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas.webp' },
-  { title: 'Muros de Concreto Armado', href: '/muros-de-contencion/sistemas-rigidos/concreto-armado', imgSrc: 'https://tumuro.com/media/muros-de-contencion/grid-sistemas-de-contencion-rigidos/muros-de-concreto-armado.webp' },
-  { title: 'Muros Ciclópeos', href: '/muros-de-contencion/sistemas-rigidos/muros-ciclopeos', imgSrc: 'https://tumuro.com/media/muros-de-contencion/grid-sistemas-de-contencion-rigidos/muros-de-ciclopeos.webp' },
-  { title: 'Pilotes y Micropilotes', href: '/muros-de-contencion/sistemas-rigidos/pilotes-micropilotes', imgSrc: 'https://tumuro.com/media/muros-de-contencion/grid-sistemas-de-contencion-rigidos/pilotes-y-micropilotes.webp' },
-];
-
-const sliderImages = [
-    'https://tumuro.com/media/sistemas-de-contencion-rigidos/slider/sistemas-de-contencion-rigidos1.webp',
-    'https://tumuro.com/media/sistemas-de-contencion-rigidos/slider/sistemas-de-contencion-rigidos2.webp',
-    'https://tumuro.com/media/sistemas-de-contencion-rigidos/slider/sistemas-de-contencion-rigidos3.webp',
-    'https://tumuro.com/media/sistemas-de-contencion-rigidos/slider/sistemas-de-contencion-rigidos4.webp',
-    'https://tumuro.com/media/sistemas-de-contencion-rigidos/slider/sistemas-de-contencion-rigidos5.webp',
-    'https://tumuro.com/media/sistemas-de-contencion-rigidos/slider/sistemas-de-contencion-rigidos6.webp'
-];
-
-const textVariants: Variants = {
-    initial: { opacity: 0, x: 50 },
-    animate: { opacity: 1, x: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-    exit: { opacity: 0, x: -50, transition: { duration: 0.3, ease: 'easeIn' } }
-};
-
-
-interface SystemCardProps {
-  title: string;
-  href: string;
-  imgSrc: string;
-}
-
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: { type: 'spring', stiffness: 100, damping: 20 }
-  },
-};
-const MotionLink = motion(Link);
-
-const SystemCard: React.FC<SystemCardProps> = ({ title, href, imgSrc }) => (
-  <MotionLink
-    to={href}
-    className="group flex flex-col rounded-md shadow-lg overflow-hidden relative"
-    variants={cardVariants}
-    whileHover={{ y: -8, scale: 1.02, boxShadow: "0px 12px 24px rgba(0,0,0,0.15)" }}
-    transition={{ type: "spring", stiffness: 300 }}
-  >
-    <div className="h-64 overflow-hidden">
-      <img
-        src={imgSrc}
-        alt={title}
-        className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110"
-      />
-    </div>
-    <div className="absolute bottom-0 left-0 right-0 bg-ecogreen-blue py-3 px-4 flex items-center justify-center">
-      <h3 className="text-white text-base font-bold uppercase tracking-wide text-center">{title}</h3>
-    </div>
-  </MotionLink>
-);
-
-
-const SistemasRigidos: React.FC = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  const nextSlide = useCallback(() => {
-    setCurrentSlide((prevIndex) => (prevIndex + 1) % sliderImages.length);
-  }, []);
-
-  const prevSlide = () => {
-    setCurrentSlide((prevIndex) => (prevIndex - 1 + sliderImages.length) % sliderImages.length);
-  };
-
-  const goToSlide = (index: number) => {
-    setCurrentSlide(index);
-  }
-
-  useEffect(() => {
-    const slideInterval = setInterval(nextSlide, 5000);
-    return () => clearInterval(slideInterval);
-  }, [nextSlide]);
-
-  const gridContainerVariants: Variants = {
-    hidden: { opacity: 1 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.15 },
-    },
-  };
-
+const SistemasDeContencionRigidos: React.FC = () => {
   return (
-    <>
+    <div className="w-full m-0 p-0">
       <title>Sistemas de Contención Rígidos | EcoGreen</title>
-      <meta name="description" content="Soluciones en muros rígidos, concreto armado, anclados y pantallas para contención segura." />
 
-      {/* Hero Section */}
-      <section className="relative w-full h-[70vh] max-h-[700px] overflow-hidden bg-gray-800">
-        <AnimatePresence>
-            <motion.div
-                key={currentSlide}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1 }}
-                className="absolute inset-0 bg-cover bg-center"
-                style={{ backgroundImage: `url(${sliderImages[currentSlide]})` }}
-            />
-        </AnimatePresence>
-        
-        <div className="absolute inset-0 bg-black/40" />
+      {/* 1. Hero Slider Dinámico */}
+      <HeroSliderResponsive data={sliderData['ID-sistemas-de-contencion-rigidos.tsx']} />
 
-        <div className="absolute inset-0 flex items-center justify-center md:justify-end p-4 md:p-12 lg:p-24 z-10">
-            <div className='flex flex-col items-center md:items-end'>
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={currentSlide}
-                        variants={textVariants}
-                        initial="initial"
-                        animate="animate"
-                        exit="exit"
-                        className="bg-ecogreen-blue/70 p-6 md:p-8 text-center md:text-right text-white max-w-xl"
-                    >
-                        <h1 className="text-2xl md:text-4xl lg:text-5xl font-bold text-ecogreen-lime uppercase drop-shadow-lg">
-                            SISTEMAS DE CONTENCIÓN RÍGIDOS
-                        </h1>
-                        <p className="mt-2 text-sm md:text-lg font-semibold uppercase tracking-wider drop-shadow-md">
-                            SOLUCIONES EN CONCRETO.
-                        </p>
-                    </motion.div>
-                </AnimatePresence>
-                <div className='flex md:hidden mt-6 space-x-8'>
-                    <motion.button
-                        onClick={prevSlide}
-                        className="text-white/80 hover:text-white transition drop-shadow-lg p-2 bg-black/20 rounded-full"
-                        whileHover={{ scale: 1.1, backgroundColor: 'rgba(0,0,0,0.4)'}}
-                        whileTap={{ scale: 0.95 }}
-                        aria-label="Previous slide"
-                    >
-                        <ChevronLeftIcon className="h-8 w-8" />
-                    </motion.button>
-                    <motion.button
-                        onClick={nextSlide}
-                        className="text-white/80 hover:text-white transition drop-shadow-lg p-2 bg-black/20 rounded-full"
-                        whileHover={{ scale: 1.1, backgroundColor: 'rgba(0,0,0,0.4)'}}
-                        whileTap={{ scale: 0.95 }}
-                        aria-label="Next slide"
-                    >
-                        <ChevronRightIcon className="h-8 w-8" />
-                    </motion.button>
-                </div>
-            </div>
-        </div>
+      {/* 2. Sección Teórica Dinámica */}
+      <TextoCollapsable data={textosData['ID-sistemas-de-contencion-rigidos.tsx']} />
 
-        <motion.button
-            onClick={prevSlide}
-            className="hidden md:block absolute top-1/2 left-4 -translate-y-1/2 text-white/70 hover:text-white transition drop-shadow-lg z-20"
-            whileHover={{ scale: 1.1, x: -5 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="Previous slide"
-        >
-            <ChevronLeftIcon className="h-12 w-12 md:h-16 md:w-16" />
-        </motion.button>
-        <motion.button
-            onClick={nextSlide}
-            className="hidden md:block absolute top-1/2 right-4 -translate-y-1/2 text-white/70 hover:text-white transition drop-shadow-lg z-20"
-            whileHover={{ scale: 1.1, x: 5 }}
-            whileTap={{ scale: 0.95 }}
-            aria-label="Next slide"
-        >
-            <ChevronRightIcon className="h-12 w-12 md:h-16 md:w-16" />
-        </motion.button>
+      {/* 3. Grid de Sistemas Rígidos */}
+      <GridSistemasDeContencionRigidos />
 
-        <div className="absolute bottom-6 left-0 right-0 z-20">
-            <div className="flex items-center justify-center gap-2">
-                {sliderImages.map((_, index) => (
-                    <motion.button
-                        key={index}
-                        onClick={() => goToSlide(index)}
-                        className="w-3 h-3 rounded-full transition-colors"
-                        animate={currentSlide === index ? "active" : "inactive"}
-                        variants={{
-                            active: { backgroundColor: '#54c70e', scale: 1.2 },
-                            inactive: { backgroundColor: '#ffffff', scale: 1 }
-                        }}
-                        whileHover={{ scale: 1.3 }}
-                        transition={{ duration: 0.3 }}
-                        aria-label={`Go to slide ${index + 1}`}
-                    />
-                ))}
-            </div>
-        </div>
-      </section>
-
-      {/* Contenido Teórico */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl">
-            <div className="flex items-center mb-8">
-                <img src="https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono Sistemas Rígidos" className="w-16 h-16 mr-6" />
-                <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">SISTEMAS DE CONTENCIÓN RÍGIDOS</h2>
-            </div>
-            
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-left">
-                <p>
-                    Las estructuras rígidas son aquellas que son construidas con materiales que no aceptan cualquier tipo de deformación. Debido a esta característica estos muros presentan varias limitaciones técnicas en cuanto a su aplicación, como por ejemplo no permiten ningún tipo de deformaciones o asentamientos del suelo, esto trae como consecuencia que dependen de un excelente terreno de fundación para ser construidos. Otra de las limitaciones de este tipo de estructuras es que requieren de un eficiente sistema de drenaje para su óptimo funcionamiento.
-                </p>
-                <p>
-                    Sin embargo algunas estructuras rígidas se presentan como la mejor solución en los casos donde las limitaciones de espacio son considerables, como por ejemplo: Taludes con pendientes muy fuertes, sótanos o cualquier estructura subterránea que deba ocupar el menor espacio posible para dar funcionalidad al espacio construido.
-                </p>
-                <p>
-                    Entre los muros de contención considerados como estructuras rígidas tenemos:
-                </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Grid: Sistemas Rígidos */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-            <div className="mb-12">
-                <h3 className="text-3xl font-bold text-left text-ecogreen-blue mb-2 uppercase tracking-wide">Sistemas de Contención Rígidos</h3>
-                <div className="w-full h-1 bg-ecogreen-green"></div>
-            </div>
-            <motion.div 
-                className="grid grid-cols-1 md:grid-cols-3 gap-8"
-                variants={gridContainerVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-            >
-                {sistemasRigidos.map((sys) => <SystemCard key={sys.title} {...sys} />)}
-            </motion.div>
-        </div>
-      </section>
-    </>
+    </div>
   );
 };
 
-export default SistemasRigidos;
+export default SistemasDeContencionRigidos;
