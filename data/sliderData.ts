@@ -508,10 +508,49 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
   // Final del bloque de slider
   // =====================================================================
 
+// =====================================================================
+  // 22. CONSTRUCCIÓN CIVIL (construccion-civil.tsx)
+  // =====================================================================
+  'ID-construccion-civil.tsx': {
+    title: "CONSTRUCCIÓN CIVIL",
+    subtitle: "INFRAESTRUCTURA VERDE.",
+    link: "/campos-de-aplicacion/construccion-civil",
+    desktopImages: [
+      "https://tumuro.com/images/construccion-civil.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/images/construccion-civil2.jpg",
+      "https://tumuro.com/images/construccion-civil3.jpg"
+    ]
+  },
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
+// =====================================================================
+  // 23. PROTECCIÓN AMBIENTAL (proteccion-ambiental.tsx)
+  // =====================================================================
+  'ID-proteccion-ambiental.tsx': {
+    title: "PROTECCIÓN AMBIENTAL",
+    subtitle: "DESARROLLO SUSTENTABLE.",
+    link: "/campos-de-aplicacion/proteccion-ambiental",
+    desktopImages: [
+      "https://tumuro.com/images/proteccion-ambiental.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/images/proteccion-ambiental2.jpg",
+      "https://tumuro.com/images/proteccion-ambiental3.jpg"
+    ]
+  },
+
+
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
 
 
 
 
+  
 
 
 };

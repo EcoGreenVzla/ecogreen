@@ -753,6 +753,71 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
 
 
+// =====================================================================
+  // 22. CONSTRUCCIÓN CIVIL (construccion-civil.tsx)
+  // =====================================================================
+  'ID-construccion-civil.tsx': {
+    title: "Construcción Civil",
+    introContent: (
+      <>
+        <p>
+          La industria de la construcción cumple un importante rol en el desarrollo de un país, satisfaciendo las necesidades de infraestructura de la mayoría de las actividades económicas y sociales. ECOGREEN cuenta con un gran grupo de profesionales en arquitectura, paisajismo, ingeniería y geotecnia para realizar estudios y proyectos integrales en cada aplicación.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Contamos con un equipo multidisciplinario en el área operativa respaldado por maquinaria especializada que cumple con los estándares internacionales medioambientales. Nuestros servicios van dirigidos a solucionar problemas de estabilización de taludes, control de erosión y muros de contención utilizando diversas técnicas.
+        </p>
+        <p className="mt-4">
+          En ECOGREEN fomentamos activamente las <strong>nuevas tecnologías ecológicas</strong>, ratificando nuestra filosofía de prácticas "VERDES" en pro del saneamiento ambiental e innovando en alternativas que ofrezcan una mayor factibilidad económica para nuestros clientes.
+        </p>
+      </>
+    )
+  },
+  // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
+
+
+// =====================================================================
+  // 23. PROTECCIÓN AMBIENTAL (proteccion-ambiental.tsx)
+  // =====================================================================
+  'ID-proteccion-ambiental.tsx': {
+    title: "Protección Ambiental",
+    introContent: (
+      <>
+        <p>
+          La conservación ambiental comprende un conjunto de acciones tendientes a un manejo, uso y cuidado responsable de los bienes comunes en un territorio determinado. El objetivo es asegurar el mantenimiento y potenciar las condiciones presentes de los ecosistemas, respetando la identidad y costumbres locales para las generaciones futuras.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          ECOGREEN fomenta la incorporación de la <strong>INFRAESTRUCTURA VERDE</strong>, compuesta principalmente por suelos y vegetación. Buscamos integrar áreas reforestadas y mejorar la gestión del agua de lluvia en ambientes construidos para mitigar el efecto "Isla de Calor" y elevar la calidad del aire.
+        </p>
+        <p className="mt-4 font-semibold">Nuestras principales soluciones ecológicas incluyen:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
+            <li>Estabilización de taludes con geomantas verdes ECOGREEN.</li>
+            <li>Muros reforestables de tierra reforzada con geomallas de poliéster.</li>
+            <li>Obras hidráulicas, diques y canales con gaviones metálicos de bajo impacto.</li>
+            <li>Separación de subrasantes con geosintéticos para reducir volúmenes de relleno.</li>
+            <li>Sistemas de subdrenaje para el manejo eficiente de lixiviados y aguas pluviales.</li>
+            <li>Construcción de rellenos sanitarios y lagunas de oxidación.</li>
+        </ul>
+      </>
+    )
+  },
+
+
+  // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
+
+
+
 
 
 
