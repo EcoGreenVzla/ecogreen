@@ -14,3 +14,16 @@ export interface CasoDeObra {
   system: 'Flexible' | 'Rígido';
   category: 'Estabilización' | 'Refuerzo' | 'Protección';
 }
+
+
+// === NUEVA ESTRUCTURA PARA EL SLIDER RESPONSIVE (MIGRACIÓN) ===
+export interface HeroSectionResponsive {
+  title: string;
+  subtitle?: string;
+  link?: string;
+  buttonText?: string;
+  
+  // Listas independientes de imágenes (URLs como texto simple)
+  desktopImages: string[]; 
+  mobileImages: string[];  
+}

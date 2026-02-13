@@ -35,7 +35,7 @@ const Header: React.FC = () => {
         <div className="flex justify-between items-center py-4">
           <div className="flex-shrink-0">
              <Link to="/">
-                <img className="h-24 w-auto" src="https://tumuro.com/media/ui/ecogreen-logo.png" alt="EcoGreen Construcciones Logo" />
+                <img className="h-24 w-auto" src="https://tumuro.com/images/ecogreen-logo.png" alt="EcoGreen Construcciones Logo" />
              </Link>
           </div>
           <div className="hidden lg:flex items-center space-x-5">
