@@ -8,20 +8,17 @@ interface Props {
   autoPlayDuration?: number;
 }
 
-const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }) => { // Delay aumentado a 8000ms
+const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isMobile, setIsMobile] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   
-  // Referencias para el arrastre (Swipe/Drag)
   const startX = useRef<number>(0);
   const currentX = useRef<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  // BLINDAJE
   if (!data) return null;
 
-  // DETECTOR DE PANTALLA
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
@@ -37,7 +34,6 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
     setCurrentSlide(0);
   }, [isMobile]);
 
-  // --- NAVEGACIÓN ---
   const nextSlide = useCallback(() => {
     if (totalSlides <= 1) return;
     setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
@@ -48,15 +44,13 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
     setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
   }, [totalSlides]);
 
-  // Autoplay (Se detiene si estás arrastrando)
   useEffect(() => {
     if (totalSlides <= 1 || isDragging) return;
     const timer = setInterval(nextSlide, autoPlayDuration);
     return () => clearInterval(timer);
   }, [nextSlide, autoPlayDuration, totalSlides, isDragging]);
 
-  // --- LÓGICA DE ARRASTRE UNIFICADA (TOUCH & MOUSE) ---
-  
+  // --- ARRASTRE ---
   const handleStart = (clientX: number) => {
     setIsDragging(true);
     startX.current = clientX;
@@ -72,9 +66,8 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
     setIsDragging(false);
     
     const distance = startX.current - currentX.current;
-    const minSwipeDistance = 50; // Sensibilidad del arrastre
+    const minSwipeDistance = 50;
 
-    // Si currentX es 0, significa que fue solo un clic, no un arrastre
     if (currentX.current === 0) return;
 
     if (distance > minSwipeDistance) {
@@ -83,23 +76,14 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
       prevSlide();
     }
     
-    // Resetear valores
     startX.current = 0;
     currentX.current = 0;
   };
 
-  // Eventos Mouse (Desktop)
-  const onMouseDown = (e: React.MouseEvent) => {
-    e.preventDefault(); // Evita que se seleccione la imagen al arrastrar
-    handleStart(e.clientX);
-  };
+  const onMouseDown = (e: React.MouseEvent) => { e.preventDefault(); handleStart(e.clientX); };
   const onMouseMove = (e: React.MouseEvent) => handleMove(e.clientX);
   const onMouseUp = () => handleEnd();
-  const onMouseLeave = () => {
-    if (isDragging) setIsDragging(false);
-  };
-
-  // Eventos Touch (Mobile)
+  const onMouseLeave = () => { if (isDragging) setIsDragging(false); };
   const onTouchStart = (e: React.TouchEvent) => handleStart(e.touches[0].clientX);
   const onTouchMove = (e: React.TouchEvent) => handleMove(e.touches[0].clientX);
   const onTouchEnd = () => handleEnd();
@@ -124,20 +108,30 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
          <img src={safeImages[0]} alt="Spacer" className="w-full h-auto" />
       </div>
 
-      {/* 2. CAPA DE TEXTO (Ajustado: Sin botón, texto más pequeño, posición izquierda) */}
-      <div className="absolute inset-0 z-20 flex items-center justify-start pointer-events-none px-6 md:px-16 lg:px-24">
-        <div className="bg-ecogreen-blue/80 p-6 md:p-8 max-w-lg text-left pointer-events-auto shadow-sm backdrop-blur-[2px]">
-          {/* Título más pequeño (text-xl md:text-3xl) */}
-          <h2 className="text-xl md:text-3xl font-bold text-white uppercase mb-2 leading-tight tracking-wide">
+      {/* =================================================================
+         2. CAPA DE TEXTO (MODIFICADA: Abajo a la Derecha)
+      ================================================================= */}
+      {/* - items-end: Alinea verticalmente al fondo (foot).
+          - justify-end: Alinea horizontalmente a la derecha.
+          - pb-12 md:pb-24: Espaciado inferior generoso.
+          - pr-6 md:pr-16: Espaciado derecho generoso.
+      */}
+      <div className="absolute inset-0 z-20 flex items-end justify-end pointer-events-none pb-12 pr-6 md:pb-24 md:pr-16">
+        
+        {/* Caja semitransparente */}
+        <div className="bg-ecogreen-blue/90 p-6 md:p-10 max-w-lg text-right pointer-events-auto shadow-lg backdrop-blur-[2px]">
+          
+          {/* Título: Verde #5aef00 */}
+          <h2 className="text-xl md:text-4xl font-bold text-[#5aef00] uppercase mb-2 leading-tight tracking-wide">
             {data.title}
           </h2>
-          {/* Subtítulo más pequeño (text-sm md:text-lg) */}
+          
+          {/* Subtítulo: Blanco e Itálica */}
           {data.subtitle && (
-            <p className="text-sm md:text-lg text-white/90 font-light uppercase tracking-wider leading-relaxed">
+            <p className="text-sm md:text-xl text-white font-light italic uppercase tracking-wider leading-relaxed">
               {data.subtitle}
             </p>
           )}
-          {/* ELIMINADO: Botón y Links */}
         </div>
       </div>
 
@@ -152,20 +146,19 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
               <img 
                 src={imgUrl} 
                 alt={`Slide ${index + 1}`} 
-                className="w-full h-full object-fill block pointer-events-none" // pointer-events-none evita arrastrar la imagen fantasma del navegador
+                className="w-full h-full object-fill block pointer-events-none" 
               />
             </div>
           ))}
         </div>
       </div>
 
-      {/* 4. FLECHAS DE NAVEGACIÓN (Reincorporadas) */}
+      {/* 4. FLECHAS DE NAVEGACIÓN */}
       {totalSlides > 1 && (
         <>
           <button
             onClick={(e) => { e.stopPropagation(); prevSlide(); }}
             className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-30 p-2 md:p-3 text-white hover:text-ecogreen-green transition-all bg-black/20 hover:bg-black/50 rounded-full backdrop-blur-sm cursor-pointer"
-            aria-label="Anterior"
           >
             <ChevronLeftIcon className="h-6 w-6 md:h-10 md:w-10" />
           </button>
@@ -173,7 +166,6 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
           <button
             onClick={(e) => { e.stopPropagation(); nextSlide(); }}
             className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-30 p-2 md:p-3 text-white hover:text-ecogreen-green transition-all bg-black/20 hover:bg-black/50 rounded-full backdrop-blur-sm cursor-pointer"
-            aria-label="Siguiente"
           >
             <ChevronRightIcon className="h-6 w-6 md:h-10 md:w-10" />
           </button>
