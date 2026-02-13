@@ -59,7 +59,7 @@ const App: React.FC = () => {
       <ScrollToTop />
       <div className="flex flex-col min-h-screen">
         <Header />
-        <main className="flex-grow pt-32">
+        <main className="flex-grow !pt-0 !mt-0">
           <Routes>
             <Route path="/" element={<Home />} />
             

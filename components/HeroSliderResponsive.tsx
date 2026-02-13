@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import { HeroSectionResponsive } from '../types';
 import ChevronLeftIcon from './icons/ChevronLeftIcon';
@@ -93,7 +94,7 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
   return (
     <div 
       ref={containerRef}
-      className={`relative w-full bg-gray-100 group overflow-hidden ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+      className={`relative w-full bg-gray-100 group overflow-hidden -mt-[1px] ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
       onMouseDown={onMouseDown}
       onMouseMove={onMouseMove}
       onMouseUp={onMouseUp}
@@ -108,25 +109,12 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
          <img src={safeImages[0]} alt="Spacer" className="w-full h-auto" />
       </div>
 
-      {/* =================================================================
-         2. CAPA DE TEXTO (MODIFICADA: Abajo a la Derecha)
-      ================================================================= */}
-      {/* - items-end: Alinea verticalmente al fondo (foot).
-          - justify-end: Alinea horizontalmente a la derecha.
-          - pb-12 md:pb-24: Espaciado inferior generoso.
-          - pr-6 md:pr-16: Espaciado derecho generoso.
-      */}
+      {/* 2. CAPA DE TEXTO */}
       <div className="absolute inset-0 z-20 flex items-end justify-end pointer-events-none pb-12 pr-6 md:pb-24 md:pr-16">
-        
-        {/* Caja semitransparente */}
         <div className="bg-ecogreen-blue/90 p-6 md:p-10 max-w-lg text-right pointer-events-auto shadow-lg backdrop-blur-[2px]">
-          
-          {/* Título: Verde #5aef00 */}
           <h2 className="text-xl md:text-4xl font-bold text-[#5aef00] uppercase mb-2 leading-tight tracking-wide">
             {data.title}
           </h2>
-          
-          {/* Subtítulo: Blanco e Itálica */}
           {data.subtitle && (
             <p className="text-sm md:text-xl text-white font-light italic uppercase tracking-wider leading-relaxed">
               {data.subtitle}

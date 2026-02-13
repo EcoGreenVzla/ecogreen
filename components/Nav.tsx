@@ -1,3 +1,4 @@
+
 import React from 'react';
 import NavItem from './NavItem';
 import XIcon from './icons/XIcon';
@@ -17,10 +18,10 @@ const Nav: React.FC<NavProps> = ({ items, isMobileMenuOpen, setIsMobileMenuOpen 
       <nav className="hidden lg:flex bg-ecogreen-blue text-white uppercase font-thin text-[12pt] tracking-wider relative">
         <div className="container mx-auto flex justify-center items-center">
           {items.map((item, index) => (
+            // FIX: Removed 'isFirst' prop as it is not defined in NavItemProps interface in NavItem.tsx
             <NavItem 
               key={index} 
               item={item} 
-              isFirst={index === 0}
             />
           ))}
         </div>
