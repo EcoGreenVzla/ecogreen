@@ -3,7 +3,7 @@ import React from 'react';
 // Componentes Reutilizables
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
 import TextoCollapsable from '../components/TextoCollapsable';
-import GridSistemasDeContencionFlexibles from '../components/GridSistemasDeContencionFlexibles';
+import GridList from '../components/GridList'; // <--- Importamos el componente único
 
 // Bases de datos
 import { sliderData } from '../data/sliderData';
@@ -20,8 +20,10 @@ const SistemasDeContencionFlexibles: React.FC = () => {
       {/* 2. Sección Teórica Dinámica */}
       <TextoCollapsable data={textosData['ID-sistemas-de-contencion-flexibles.tsx']} />
 
-      {/* 3. Grid de Sistemas Flexibles (Componente Independiente) */}
-      <GridSistemasDeContencionFlexibles />
+
+           {/* Sistemas Flexibles */}
+      <GridList id="ID-sistemas-de-contencion-flexibles.tsx" /> 
+
 
     </div>
   );

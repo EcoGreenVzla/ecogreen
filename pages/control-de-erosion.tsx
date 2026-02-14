@@ -3,7 +3,7 @@ import React from 'react';
 // Componentes
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
 import TextoCollapsable from '../components/TextoCollapsable';
-import GridSolucionesControlErosion from '../components/GridSolucionesControlErosion';
+import GridList from '../components/GridList'; // <--- Importamos el componente único
 
 // Data
 import { sliderData } from '../data/sliderData';
@@ -20,8 +20,12 @@ const ControlDeErosion: React.FC = () => {
       {/* 2. Sección Teórica Dinámica */}
       <TextoCollapsable data={textosData['ID-control-de-erosion.tsx']} />
 
+
       {/* 3. Grid de Soluciones de Control de Erosión */}
-      <GridSolucionesControlErosion />
+            <GridList id="ID-control-de-erosion.tsx" />
+      
+
+
 
     </div>
   );

@@ -4,6 +4,7 @@ import React from 'react';
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
 import TextoCollapsable from '../components/TextoCollapsable';
 import GridSistemasDeContencionRigidos from '../components/GridSistemasDeContencionRigidos';
+import GridList from '../components/GridList'; // <--- Importamos el componente único
 
 // Data
 import { sliderData } from '../data/sliderData';
@@ -20,8 +21,8 @@ const SistemasDeContencionRigidos: React.FC = () => {
       {/* 2. Sección Teórica Dinámica */}
       <TextoCollapsable data={textosData['ID-sistemas-de-contencion-rigidos.tsx']} />
 
-      {/* 3. Grid de Sistemas Rígidos */}
-      <GridSistemasDeContencionRigidos />
+      {/* Sistemas Rígidos */}
+      <GridList id="ID-sistemas-de-contencion-rigidos.tsx" />
 
     </div>
   );
