@@ -492,13 +492,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
 // =====================================================================
   // 21. INFRAESTRUCTURA URBANA (infraestructura-urbana.tsx)
   // =====================================================================
-  'ID-infraestructura-urbana.tsx': {
+'ID-infraestructura-urbana.tsx': {
     title: "INFRAESTRUCTURA URBANA",
     subtitle: "SOLUCIONES ECOLÓGICAS.",
     link: "/campos-de-aplicacion/infraestructura-urbana",
-    desktopImages: [
-      "https://tumuro.com/images/infraestructura-urbana.jpg"
-    ],
+    desktopImages: ["https://tumuro.com/images/infraestructura-urbana.jpg"],
     mobileImages: [
       "https://tumuro.com/images/infraestructura-urbana2.jpg",
       "https://tumuro.com/images/infraestructura-urbana3.jpg"
@@ -511,13 +509,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
 // =====================================================================
   // 22. CONSTRUCCIÓN CIVIL (construccion-civil.tsx)
   // =====================================================================
-  'ID-construccion-civil.tsx': {
+'ID-construccion-civil.tsx': {
     title: "CONSTRUCCIÓN CIVIL",
     subtitle: "INFRAESTRUCTURA VERDE.",
     link: "/campos-de-aplicacion/construccion-civil",
-    desktopImages: [
-      "https://tumuro.com/images/construccion-civil.jpg"
-    ],
+    desktopImages: ["https://tumuro.com/images/construccion-civil.jpg"],
     mobileImages: [
       "https://tumuro.com/images/construccion-civil2.jpg",
       "https://tumuro.com/images/construccion-civil3.jpg"
@@ -546,11 +542,105 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
   // =====================================================================
   // Final del bloque de slider
   // =====================================================================
+// =====================================================================
+  // 24. INDUSTRIA, PETRÓLEO Y GAS (petroleo.tsx)
+  // =====================================================================
+'ID-industria-petroleo-y-gas.tsx': {
+    title: "INDUSTRIA, PETRÓLEO Y GAS",
+    subtitle: "SECTOR ENERGÉTICO.",
+    link: "/campos-de-aplicacion/industria-petroleo-y-gas",
+    desktopImages: ["https://tumuro.com/images/industria-petroleo-y-gas.jpg"],
+    mobileImages: [
+      "https://tumuro.com/images/industria-petroleo-y-gas2.jpg",
+      "https://tumuro.com/images/industria-petroleo-y-gas3.jpg"
+    ]
+  },
+
+
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
 
 
 
+// =====================================================================
+  // 25. SECTOR AGRÍCOLA (sector-agricola.tsx)
+  // =====================================================================
+  'ID-sector-agricola.tsx': {
+    title: "SECTOR AGRÍCOLA",
+    subtitle: "SEGURIDAD ALIMENTARIA.",
+    link: "/campos-de-aplicacion/sector-agricola",
+    desktopImages: [
+      "https://tumuro.com/images/sector-agricola.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/images/sector-agricola2.jpg",
+      "https://tumuro.com/images/sector-agricola3.jpg"
+    ]
+  },
 
-  
+  // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
+
+
+// =====================================================================
+  // 26. VÍAS DE COMUNICACIÓN (vias-de-comunicacion.tsx)
+  // =====================================================================
+  'ID-vias-de-comunicacion.tsx': {
+    title: "VÍAS DE COMUNICACIÓN",
+    subtitle: "VIALIDAD SEGURA.",
+    link: "/campos-de-aplicacion/vias-de-comunicacion",
+    desktopImages: [
+      "https://tumuro.com/data1/images/vias-de-comunicacion/vias-de-comunicacion.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/vias-de-comunicacion/vias-de-comunicacion2.jpg",
+      "https://tumuro.com/data3/images/vias-de-comunicacion/vias-de-comunicacion3.jpg"
+    ]
+  },
+
+ // =====================================================================
+  // Final del bloque de slider
+  // =====================================================================
+
+// =====================================================================
+  // 18. DIQUES Y PRESAS (diques-y-presas.tsx)
+  // =====================================================================
+
+
+  // =====================================================================
+  // 27. OBRAS HIDRÁULICAS (obras-hidraulicas.tsx)
+  // =====================================================================
+  'ID-obras-hidraulicas.tsx': {
+    title: "OBRAS HIDRÁULICAS",
+    subtitle: "PROTECCIÓN DE CAUCES.",
+    link: "/campos-de-aplicacion/obras-hidraulicas",
+    desktopImages: [
+      "https://tumuro.com/images/obras-hidraulicas.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/images/obras-hidraulicas2.jpg",
+      "https://tumuro.com/images/obras-hidraulicas3.jpg"
+    ]
+  },
+ 
+
+// =====================================================================
+  // 28. MINERÍA, GEOLOGÍA Y GEOTECNIA (mineria-geologia-y-geotecnia.tsx)
+  // =====================================================================
+  'ID-mineria.tsx': {
+    title: "MINERÍA, GEOLOGÍA Y GEOTECNIA",
+    subtitle: "PROYECTOS DE EXPLOTACIÓN RESPONSABLES.",
+    link: "/campos-de-aplicacion/mineria-geologia-y-geotecnia",
+    desktopImages: [
+      "https://tumuro.com/images/Morocha-MINERIA.JPG"
+    ],
+    mobileImages: [
+      "https://tumuro.com/images/Morocha-Derecha-MINERIA.jpg",
+      "https://tumuro.com/images/Morocha-Izquierda-MINERIA.jpg"
+    ]
+  },
 
 
 };

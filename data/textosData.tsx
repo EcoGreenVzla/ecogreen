@@ -817,9 +817,179 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
 
 
+// =====================================================================
+  // 24. INDUSTRIA, PETRÓLEO Y GAS (industria-petroleo-y-gas.tsx)
+  // =====================================================================
+  'ID-industria-petroleo-y-gas.tsx': {
+    title: "Industria, Petróleo y Gas",
+    introContent: (
+      <>
+        <p>
+          La industria petrolera incluye procesos globales de exploración, extracción, refinación, transporte y mercadotecnia del producto Petróleo y sus derivados. El petróleo es la materia prima de muchos productos químicos esenciales y alimenta un porcentaje muy alto del consumo de energía del mundo, siendo una industria crítica para la civilización industrializada.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          La industria se divide normalmente en tres fases donde las soluciones <strong>ECOGREEN</strong> aportan beneficios directos: <strong>Upstream</strong> (Exploración y extracción), <strong>Midstream</strong> (Transporte y almacenamiento) y <strong>Downstream</strong> (Refinación y distribución).
+        </p>
+        <p className="mt-4 font-semibold">Nuestras principales aplicaciones incluyen:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
+            <li>Refuerzo y estabilización de vías de penetración en suelos blandos para zonas de difícil acceso.</li>
+            <li>Estabilización de taludes y control de erosión con Ecomantos Verdes para rápida reforestación.</li>
+            <li>Uso de geomallas de refuerzo para aumentar la capacidad de soporte en pavimentos sin grandes volúmenes de relleno.</li>
+            <li>Sistemas de drenaje, rampas, terraplenes y protección de estribos de puentes.</li>
+            <li>Construcción de diques, presas e impermeabilización de canales y lagunas para lodos de perforación.</li>
+            <li>Suministro de tuberías y válvulas especializadas para procesos de extracción y transporte.</li>
+        </ul>
+        <p className="mt-4">
+          En ECOGREEN ratificamos nuestra filosofía de negocio con conciencia de prácticas y políticas <strong>"VERDES"</strong>, innovando en alternativas de mayor factibilidad económica para el sector energético.
+        </p>
+      </>
+    )
+  },
+
+   // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
 
 
 
+// =====================================================================
+  // 25. SECTOR AGRÍCOLA (sector-agricola.tsx)
+  // =====================================================================
+  'ID-sector-agricola.tsx': {
+    title: "Sector Agrícola",
+    introContent: (
+      <>
+        <p>
+          Los aportes de ECOGREEN al sector agrícola son de suma importancia para garantizar la continuidad en los procesos de producción, industrialización y comercialización de productos alimenticios. Nuestras soluciones permiten solventar problemas críticos de operatividad que suelen presentarse en áreas rurales y de cultivo, especialmente durante las épocas de lluvia.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Mediante la utilización de <strong>geomallas de refuerzo de alto módulo</strong>, ECOGREEN logra estabilizar las vías de penetración agrícola anegadas sin necesidad de transportar grandes volúmenes de material de relleno. Esto minimiza los tiempos de distribución de cosechas y asegura el acceso a zonas difíciles.
+        </p>
+        <p className="mt-4">
+          Nuestras contribuciones clave al sector incluyen:
+        </p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
+            <li>Estabilización de vialidad agrícola para el transporte de cosechas.</li>
+            <li>Canalizaciones y protección de riberas para evitar inundaciones en sembradíos.</li>
+            <li>Construcción de diques, presas y lagunas para el almacenamiento de agua de riego.</li>
+            <li>Garantía de producción agrícola constante incluso en épocas de sequía.</li>
+        </ul>
+        <p className="mt-4">
+          La agricultura es un pilar económico fundamental, y ECOGREEN se compromete con soluciones que promueven el desarrollo sustentable del campo.
+        </p>
+      </>
+    )
+  },
+
+  // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
+
+
+// =====================================================================
+  // 26. VÍAS DE COMUNICACIÓN (vias-de-comunicacion.tsx)
+  // =====================================================================
+  'ID-vias-de-comunicacion.tsx': {
+    title: "Vías de Comunicación",
+    introContent: (
+      <>
+        <p>
+          Las vías de comunicación forman la red vital urbana e interurbana que permite el desplazamiento de personas y bienes. ECOGREEN aporta soluciones integrales para calles, carreteras, vías de penetración agrícolas y petroleras, autopistas, puentes y túneles, optimizando rendimientos y extendiendo la vida útil de la infraestructura.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Como promotores de la <strong>Infraestructura Verde</strong>, nuestras soluciones armonizan con la naturaleza siendo mínimamente invasivas. Nos especializamos en la reconstrucción de fallas de borde, el refuerzo de pavimentos con geomallas de alto módulo y la estabilización de suelos blandos para garantizar la seguridad vial.
+        </p>
+        <p className="mt-4 font-semibold">Nuestras aplicaciones en vialidad incluyen:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
+            <li>Reconstrucción de fallas de borde con muros de contención flexibles y rígidos.</li>
+            <li>Refuerzo de pavimentos para aumentar la capacidad de carga.</li>
+            <li>Estabilización de vías de acceso a zonas petroleras y agrícolas.</li>
+            <li>Sistemas de drenaje y subdrenaje para proteger el cuerpo de la vía.</li>
+            <li>Protección de estribos de puentes y construcción de diques de defensa.</li>
+            <li>Sistemas contra caída de rocas en cortes de carretera.</li>
+        </ul>
+      </>
+    )
+  },
+
+
+  // =====================================================================
+  // Final del bloque de textos
+  // =====================================================================
+
+
+
+
+// =====================================================================
+  // 27. OBRAS HIDRÁULICAS (obras-hidraulicas.tsx)
+  // =====================================================================
+  'ID-obras-hidraulicas.tsx': {
+    title: "Obras Hidráulicas",
+    introContent: (
+      <>
+        <p>
+          La accidentada topografía nacional es favorable para la construcción de obras hidráulicas. Las soluciones ECOGREEN se dividen en obras transversales (diques y presas) y longitudinales (protección de riberas y espigones). Estas infraestructuras de gran inversión requieren una vida útil garantizada, lograda a través de sistemas que se adapten a los asentamientos diferenciales de los cauces.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Utilizando <strong>cestas de gavión metálicas ECOGREEN</strong> fabricadas a máquina, ofrecemos una solución flexible y permeable. A diferencia del concreto rígido, los gaviones permiten realizar obras sin desviar cursos de agua, ya que alivian el empuje hidrostático y funcionan eficientemente bajo grandes presiones sin necesidad de complejas fundaciones o ataguías.
+        </p>
+        <p className="mt-4 font-semibold">Tipos de Canales según Aplicación:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
+            <li><strong>Canales Rectangulares:</strong> Ideales para zonas urbanas con espacio limitado, a menudo embaulados para permitir el paso de vías de comunicación.</li>
+            <li><strong>Canales Trapezoidales:</strong> Utilizados en zonas rurales y agrícolas para riego, recuperación de cauces naturales y control de erosión a cielo abierto.</li>
+        </ul>
+        <p className="mt-4">
+          Nuestros gaviones cuentan con recubrimiento galvanizado de zinc y, en ambientes agresivos, con recubrimiento de <strong>PVC</strong>, cumpliendo con todas las normas internacionales de durabilidad y bajo impacto ambiental.
+        </p>
+      </>
+    )
+  },
+
+// =====================================================================
+  // 28. MINERÍA, GEOLOGÍA Y GEOTECNIA (mineria-geologia-y-geotecnia.tsx)
+  // =====================================================================
+  'ID-mineria.tsx': {
+    title: "Minería, Geología y Geotecnia",
+    introContent: (
+      <>
+        <p>
+          La minería es una actividad fundamental del sector primario dedicada a la extracción de minerales metálicos, no metálicos y energéticos. ECOGREEN cuenta con un departamento exclusivo en el área de geología y geotecnia encargado de proyectar y ejecutar planes de exploración y explotación minera bajo normativas internacionales y un estricto cuidado del medio ambiente.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          Ofrecemos soluciones integrales en todas las etapas de un proyecto minero, desde el plan inicial de exploración y delimitación hasta la puesta en marcha de plantas de extracción y procesamiento "llave en mano". Nuestros procedimientos geológicos cumplen con los estándares legales mundiales para garantizar la estabilidad del sector productivo y la preservación ecológica.
+        </p>
+        <p className="mt-4 font-semibold">Procesos clave que ejecutamos:</p>
+        <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
+            <li>Estudios de suelo previos con recuperación de núcleos e instalación de pozos.</li>
+            <li>Levantamientos topográficos, geofísicos y geomática cartográfica.</li>
+            <li>Geología de superficie y prospección en campo para mapas de exploración.</li>
+            <li>Certificación de muestras y categorización de recursos minerales para mercados internacionales.</li>
+            <li>Ejecución de proyectos y montaje de plantas de explotación en minas.</li>
+            <li>Sistemas de contención para taludes y protección contra caída de rocas.</li>
+        </ul>
+      </>
+    )
+  },
 
 
 
