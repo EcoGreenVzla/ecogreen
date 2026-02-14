@@ -5,6 +5,14 @@ import MegaMenuCasos from './MegaMenuCasos';
 import ChevronDownIcon from './icons/ChevronDownIcon';
 import { Link, useLocation } from 'react-router-dom';
 
+/**
+ * GUÍA DE AJUSTES (Sincronizado con Dropdown a 10pt):
+ * text-[10pt]  -> font-size: Igualado al tamaño de los submenús.
+ * pt-[10pt]    -> Padding Top: 1em (ahora basado en 10pt).
+ * px-[12.5pt]  -> Padding Horizontal: 1.25em (ahora basado en 10pt).
+ * pb-[7.5pt]   -> Padding Bottom: 0.75em (ahora basado en 10pt).
+ */
+
 interface NavItemProps {
   item: NavItemType;
   isMobile?: boolean;
@@ -21,7 +29,7 @@ const checkIsActive = (item: NavItemType, currentPath: string): boolean => {
 const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [isHovered, setIsHovered] = useState(false);
-  const timeoutRef = useRef<number | null>(null);
+  // Eliminamos timeoutRef ya que no se usará para el cierre instantáneo
   const hasChildren = !!item.children || item.isMegaMenu;
   
   const location = useLocation();
@@ -34,55 +42,42 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false }) => {
   };
   
   const handleMouseEnter = () => {
-    if (timeoutRef.current) {
-      clearTimeout(timeoutRef.current);
-      timeoutRef.current = null;
-    }
-    setIsHovered(true);
+    setIsHovered(true); // Apertura instantánea
   };
 
   const handleMouseLeave = () => {
-    timeoutRef.current = window.setTimeout(() => {
-      setIsHovered(false);
-    }, 400); 
+    setIsHovered(false); // Cierre instantáneo (eliminado el delay de 400ms)
   };
 
   const activeClasses = isActive 
     ? 'bg-[#2A9648] text-white' 
-    : 'bg-ecogreen-blue hover:bg-[#2A9648] text-white';
+    : 'bg-[#0E306F] hover:bg-[#2A9648] text-white';
 
-  // CAMBIO REALIZADO: Aumentamos de 'py-2' a 'py-6' para mayor grosor
   const desktopItemClasses = `
-    px-4 py-4 transition-colors duration-200 
+    inline-block transition-colors duration-200 
     ${activeClasses}
     ${!item.isMegaMenu ? 'relative' : ''}
-    flex items-center justify-center h-full cursor-pointer
+    cursor-pointer
+    pt-[10pt] px-[12.5pt] pb-[7.5pt]
   `;
-
-  const mobileItemClasses = `border-b border-gray-700 ${isActive ? 'bg-[#2A9648] text-white' : ''}`;
 
   if (isMobile) {
     return (
-      <li className={mobileItemClasses}>
+      <li className={`border-b border-gray-700 ${isActive ? 'bg-[#2A9648] text-white' : ''}`}>
         <div className="flex justify-between items-center py-3 px-2">
           <Link to={item.href} className="uppercase font-semibold text-sm flex-grow">
-            {item.label}
+            <span dangerouslySetInnerHTML={{ __html: item.label }} />
           </Link>
           {hasChildren && (
-            <button 
-              onClick={handleToggle}
-              className="p-2 -mr-2"
-              aria-label={`Toggle submenu for ${item.label}`}
-              aria-expanded={isOpen}
-            >
+            <button onClick={() => setIsOpen(!isOpen)} className="p-2 -mr-2">
               <ChevronDownIcon className={`h-4 w-4 transition-transform ${isOpen ? 'rotate-180' : ''}`} />
             </button>
           )}
         </div>
         {isOpen && hasChildren && (
-          <div className="pl-4 pb-2 bg-ecogreen-blue">
+          <div className="pl-4 pb-2 bg-[#0E306F]">
             {item.children && <Dropdown items={item.children} isMobile />}
-            {item.isMegaMenu && <Link to={item.href} className="block py-2 text-sm text-gray-300 hover:text-white">Ver Casos de Obras</Link>}
+            {item.isMegaMenu && <Link to={item.href} className="block py-2 text-xs text-gray-300">Ver Casos de Obras</Link>}
           </div>
         )}
       </li>
@@ -95,11 +90,12 @@ const NavItem: React.FC<NavItemProps> = ({ item, isMobile = false }) => {
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
+      {/* Se eliminó el comentario de la línea 86 que causaba el error de compilación */}
       <Link 
         to={item.href} 
-        className="flex items-center justify-center h-full w-full whitespace-pre-line text-center leading-tight"
+        className="text-[10pt] leading-[1.15em] tracking-[1px] text-white uppercase text-center block"
       >
-        {item.label}
+        <span dangerouslySetInnerHTML={{ __html: item.label }} />
       </Link>
       
       {isHovered && hasChildren && (
