@@ -2,8 +2,10 @@ import { NavItemType } from '../types';
 
 /**
  * ARCHIVO DE CONFIGURACIÓN DE NAVEGACIÓN
- * - Los saltos de línea se definen con <br> (requiere dangerouslySetInnerHTML en el componente).
- * - La propiedad 'isMegaMenu' activa el diseño ancho para secciones como 'Casos de Obras'.
+ * - Los saltos de línea se definen con <br>.
+ * - Para añadir un elemento: Inserta un nuevo objeto { label, href }.
+ * - Para deshabilitar: Comenta el objeto con // o /*.
+ * - Para eliminar: Borra el objeto del array.
  */
 export const navigationData: NavItemType[] = [
   { label: 'ECOGREEN', href: '/' },
@@ -59,6 +61,8 @@ export const navigationData: NavItemType[] = [
         { label: 'PRODUCTO / SERVICIO 5', href: '/petroleo/producto-5' },
     ]
   },
+  // ADICIONAL: Obras Civiles después de Petróleo
+  { label: 'OBRAS CIVILES', href: '/obras-civiles' },
   {
     label: 'CAMPOS DE<br>APLICACIÓN',
     href: '/campos-de-aplicacion',
