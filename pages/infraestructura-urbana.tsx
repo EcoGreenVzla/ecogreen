@@ -5,6 +5,7 @@ import GridInfraestructuraUrbana from '../components/GridInfraestructuraUrbana';
 
 import { sliderData } from '../data/sliderData';
 import { textosData } from '../data/textosData';
+import GridList from '@/components/GridList';
 
 const InfraestructuraUrbana: React.FC = () => {
   const pageID = 'ID-infraestructura-urbana.tsx';
@@ -19,8 +20,10 @@ const InfraestructuraUrbana: React.FC = () => {
       {/* Introducción y Texto Expandible */}
       <TextoCollapsable data={textosData[pageID]} />
 
-      {/* Cuadrícula de Navegación de Servicios */}
-      <GridInfraestructuraUrbana />
+      {/*GRID DINAMICO SISTEMAS DE CONTENCIÓN RÍGIDOS*/}
+      <GridList id="ID-infraestructura-urbana.tsx" />
+
+
     </div>
   );
 };

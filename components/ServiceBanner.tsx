@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
 import { Link } from 'react-router-dom';
@@ -36,34 +35,42 @@ interface ServiceCardProps {
 }
 
 const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 30 },
-  visible: { 
-    opacity: 1, 
-    y: 0,
-    transition: { type: 'spring', stiffness: 100, damping: 20 }
-  },
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+        opacity: 1, 
+        y: 0,
+        transition: { duration: 0.5, ease: "easeOut" }
+    },
 };
 
 const ServiceCard: React.FC<ServiceCardProps> = ({ title, imageSrc, iconSrc, color, href }) => (
-    <Link to={href}>
+    <Link to={href} className="group block">
         <motion.div 
-            className="group flex flex-col rounded-md shadow-lg overflow-hidden w-full"
             variants={cardVariants}
-            whileHover={{ y: -8, scale: 1.03, boxShadow: "0px 10px 20px rgba(0,0,0,0.1)" }}
-            transition={{ type: "spring", stiffness: 300 }}
+            whileHover={{ scale: 1.03 }} 
+            transition={{ type: "spring", stiffness: 300, damping: 20 }}
+            /* CAMBIO: rounded-lg (8px) -> rounded-sm (2px)
+               Esto hace que la esquina sea casi recta, pero no "afilada" al 100%,
+               manteniendo un acabado profesional.
+            */
+            className="relative overflow-hidden rounded-sm shadow-lg bg-white"
         >
-            <div className="h-48 overflow-hidden">
-                <img
-                    src={imageSrc}
+            <div className="h-64 overflow-hidden">
+                <img 
+                    src={imageSrc} 
                     alt={`${title} background`}
-                    className="w-full h-full object-cover transition-transform duration-300 ease-in-out group-hover:scale-105"
+                    className="w-full h-full object-cover" 
                 />
             </div>
+            
             <div className={`${color} flex items-center p-4`}>
-                <div className="bg-white rounded-full p-1 mr-4 flex-shrink-0 transition-transform duration-300 ease-in-out group-hover:scale-150">
+                <div className="bg-white rounded-full p-1 mr-4 flex-shrink-0 transition-transform duration-300 ease-in-out group-hover:scale-110">
                     <img src={iconSrc} alt={`${title} icon`} className="h-12 w-12" />
                 </div>
-                <h3 className="text-white text-base font-bold uppercase tracking-wide">{title}</h3>
+                
+                <h3 className="font-gotcha text-[1.4em] tracking-[1px] pt-[0.5em] m-0 text-white leading-none uppercase">
+                    <span dangerouslySetInnerHTML={{ __html: title }} />
+                </h3>
             </div>
         </motion.div>
     </Link>

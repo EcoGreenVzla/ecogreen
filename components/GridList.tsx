@@ -9,18 +9,24 @@ interface GridListProps {
 
 const gridContainerVariants: Variants = {
   hidden: { opacity: 0 },
-  visible: { opacity: 1, transition: { staggerChildren: 0.1 } }
+  visible: { 
+    opacity: 1, 
+    transition: { staggerChildren: 0.1 } 
+  }
 };
 
 const cardVariants: Variants = {
   hidden: { opacity: 0, y: 30 },
-  visible: { opacity: 1, y: 0, transition: { type: 'spring', stiffness: 100, damping: 20 } },
+  visible: { 
+    opacity: 1, 
+    y: 0, 
+    transition: { type: 'spring', stiffness: 100, damping: 20 } 
+  },
 };
 
 const GridList: React.FC<GridListProps> = ({ id }) => {
   const data = gridListData[id];
 
-  // Si no hay data para ese ID, no renderizamos nada
   if (!data) {
     console.warn(`GridList: No data found for ID "${id}"`);
     return null;
@@ -48,39 +54,37 @@ const GridList: React.FC<GridListProps> = ({ id }) => {
           {data.items.map((item, index) => (
             <motion.div 
               key={`${item.title}-${index}`} 
-              variants={cardVariants} 
-              className="group flex flex-col rounded-md shadow-lg overflow-hidden relative h-64 bg-white" 
-              whileHover={{ y: -8 }}
+              variants={cardVariants}
+              whileHover={{ scale: 1.03 }} 
+              transition={{ type: "spring", stiffness: 300, damping: 20 }}
+              // Quitamos h-64 fijo para que el box se adapte al contenido de imagen + texto
+              className="group flex flex-col rounded-sm shadow-lg overflow-hidden bg-white border border-gray-100"
             >
               <Link to={item.href} className="flex flex-col h-full">
-                <div className="h-full overflow-hidden">
+                
+                {/* 1. CONTENEDOR DE IMAGEN: 
+                    Definimos una altura (ej. h-70) para que todas las fotos sean uniformes.
+                    Usamos object-cover para que la imagen ocupe todo su espacio sin deformarse.
+                */}
+                <div className="h-70 w-full overflow-hidden">
                   <img 
                     src={item.imgSrc} 
                     alt={item.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
+                    className="w-full h-full object-cover" 
                   />
                 </div>
                 
-                {/* Contenedor del título (Footer de la tarjeta).
-                   Mantenemos el fondo azul corporativo.
+                {/* 2. BLOQUE DE TEXTO INFERIOR:
+                    - Eliminamos 'absolute', 'bottom-0', etc.
+                    - flex-grow asegura que si hay textos de distintas longitudes, 
+                      el bloque azul se estire para igualar las alturas en la misma fila.
                 */}
-                <div className="absolute bottom-0 left-0 right-0 bg-ecogreen-blue px-4 pb-2">
-                  
-                  {/* APLICACIÓN DE ESTILOS "Gotcha" SOLICITADOS:
-                      
-                      - font-gotcha:     Aplica la fuente 'GotchaLight' (configurada en Tailwind).
-                      - text-[1.4em]:    Equivale a font-size: 1.4em.
-                      - tracking-[1px]:  Equivale a letter-spacing: 1px.
-                      - pt-[0.5em]:      Equivale a padding-top: 0.5em.
-                      - m-0:             Equivale a margin: 0.
-                      - leading-none:    Ajusta el interlineado para que no quede muy separado.
-                      - text-white:      Para asegurar contraste sobre el fondo azul.
-                  */}
-                  <h3 className="font-gotcha text-[1.4em] tracking-[1px] pt-[0.5em] m-0 text-white text-center leading-none uppercase">
-                    {/* dangerouslySetInnerHTML permite que funcionen los <br> en los títulos */}
+                <div className="bg-ecogreen-blue px-4 py-4 flex-grow flex items-center justify-center">
+                  <h3 className="font-gotcha text-[1.4em] tracking-[0px] m-0 text-white text-center leading-tight uppercase">
                     <span dangerouslySetInnerHTML={{ __html: item.title }} />
                   </h3>
                 </div>
+
               </Link>
             </motion.div>
           ))}

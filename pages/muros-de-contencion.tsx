@@ -24,13 +24,13 @@ const MurosDeContencion: React.FC = () => {
 
       {/* 3. Grids de Sistemas (Conectados dinámicamente) */}
       
-      {/* Sistemas Flexibles */}
+      {/*GRID DINAMICO SISTEMAS DE CONTENCIÓN FLEXIBLES*/}
       <GridList id="ID-sistemas-de-contencion-flexibles.tsx" />
       
-      {/* Sistemas Rígidos */}
+      {/*GRID DINAMICO SISTEMAS DE CONTENCIÓN RÍGIDOS*/}
       <GridList id="ID-sistemas-de-contencion-rigidos.tsx" />
       
-      {/* Sistemas de Drenaje */}
+      {/* GRID ESTATICO Sistemas de Drenaje */}
        <GridSistemasDeDrenaje />
 
     </div>
