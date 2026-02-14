@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,24 +5,38 @@
     <link rel="icon" type="image/png" href="https://tumuro.com/media/icons/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>EcoGreen - tumuro.com</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <!-- Preload the custom font for faster loading from the local public path -->
+    
     <link rel="preload" href="/fonts/ufonts.com_dincond-light-opentype.otf" as="font" type="font/otf" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/GotchaGothicLight.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
     <style>
+      /* Fuente Original */
       @font-face {
         font-family: 'Din Condensed Light';
-        /* Load font from local path to resolve CORS issue permanently */
         src: url('/fonts/ufonts.com_dincond-light-opentype.otf') format('opentype');
         font-style: normal;
-        font-display: swap; /* Improves font rendering performance */
+        font-display: swap; 
       }
-      /* Force the custom font on the body and ALL its children to ensure absolute consistency */
+
+      /* NUEVA Fuente: Gotcha */
+      @font-face {
+        font-family: 'GotchaLight';
+        src: url('/fonts/GotchaGothicLight.ttf') format('truetype');
+        font-weight: normal;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      /* Estilos Globales (Mantenemos tu configuración de prioridad) */
       body, body * {
-        font-family: 'Din Condensed Light', 'Open Sans', sans-serif !important;
+        font-family: 'Din Condensed Light', 'Open Sans', sans-serif;
       }
     </style>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -33,9 +46,12 @@
               'nav': '1.1rem',
             },
             fontFamily: {
+              // Tu configuración original + la nueva fuente
               sans: ['Din Condensed Light', 'Open Sans', 'sans-serif'],
+              gotcha: ['GotchaLight', 'sans-serif'], // <--- Agregado para usar en los Grids
             },
             colors: {
+              // Mantenemos tus colores corporativos exactos
               'ecogreen-blue': '#0E306F',
               'ecogreen-green': '#309400',
               'ecogreen-lime': '#54c70e',
@@ -45,25 +61,26 @@
         },
       }
     </script>
-  <script type="importmap">
-{
-  "imports": {
-    "react/": "https://esm.sh/react@^19.2.4/",
-    "react": "https://esm.sh/react@^19.2.4",
-    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
-    "react-router-dom": "https://esm.sh/react-router-dom@^6.28.0",
-    "framer-motion": "https://esm.sh/framer-motion@^11",
-    "@react-google-maps/api": "https://esm.sh/@react-google-maps/api@^2.19.3",
-    "path": "https://esm.sh/path@^0.12.7",
-    "vite": "https://esm.sh/vite@^7.3.1",
-    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3",
-    "url": "https://esm.sh/url@^0.11.4",
-    "ol/": "https://esm.sh/ol@^10.8.0/"
-  }
-}
-</script>
-<link rel="stylesheet" href="/index.css">
-</head>
+
+    <script type="importmap">
+    {
+      "imports": {
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "react-router-dom": "https://esm.sh/react-router-dom@^6.28.0",
+        "framer-motion": "https://esm.sh/framer-motion@^11",
+        "@react-google-maps/api": "https://esm.sh/@react-google-maps/api@^2.19.3",
+        "path": "https://esm.sh/path@^0.12.7",
+        "vite": "https://esm.sh/vite@^7.3.1",
+        "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.3",
+        "url": "https://esm.sh/url@^0.11.4",
+        "ol/": "https://esm.sh/ol@^10.8.0/"
+      }
+    }
+    </script>
+    <link rel="stylesheet" href="/index.css">
+  </head>
   <body class="bg-gray-100 font-sans">
     <div id="root"></div>
     <script type="module" src="/index.tsx"></script>

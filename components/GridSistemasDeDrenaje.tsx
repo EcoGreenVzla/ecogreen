@@ -60,9 +60,11 @@ const GridSistemasDeDrenaje: React.FC = () => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
                   />
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-ecogreen-blue py-4 px-4">
-                  <h3 className="text-white text-base font-black uppercase tracking-tighter text-center leading-tight">
-                    {sys.title}
+                
+                {/* Contenedor del título actualizado */}
+                <div className="absolute bottom-0 left-0 right-0 bg-ecogreen-blue px-4 pb-2">
+                  <h3 className="font-gotcha text-[1.4em] tracking-[1px] pt-[0.5em] m-0 text-white text-center leading-none uppercase">
+                    <span dangerouslySetInnerHTML={{ __html: sys.title }} />
                   </h3>
                 </div>
               </Link>

@@ -4,7 +4,7 @@ import { motion, Variants } from 'framer-motion';
 import { gridListData } from '../data/gridListData';
 
 interface GridListProps {
-  id: string; // El ID que usaremos para buscar en la data
+  id: string; 
 }
 
 const gridContainerVariants: Variants = {
@@ -20,7 +20,7 @@ const cardVariants: Variants = {
 const GridList: React.FC<GridListProps> = ({ id }) => {
   const data = gridListData[id];
 
-  // Si no hay data para ese ID, no renderizamos nada (o podrías retornar un mensaje de error)
+  // Si no hay data para ese ID, no renderizamos nada
   if (!data) {
     console.warn(`GridList: No data found for ID "${id}"`);
     return null;
@@ -60,10 +60,25 @@ const GridList: React.FC<GridListProps> = ({ id }) => {
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
                   />
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 bg-ecogreen-blue py-4 px-4">
-                  <h3 className="text-white text-base font-black uppercase tracking-tighter text-center leading-tight">
-                    {/* Manejo de títulos con saltos de línea si es necesario, aunque en la data ya están planos */}
-                    {item.title}
+                
+                {/* Contenedor del título (Footer de la tarjeta).
+                   Mantenemos el fondo azul corporativo.
+                */}
+                <div className="absolute bottom-0 left-0 right-0 bg-ecogreen-blue px-4 pb-2">
+                  
+                  {/* APLICACIÓN DE ESTILOS "Gotcha" SOLICITADOS:
+                      
+                      - font-gotcha:     Aplica la fuente 'GotchaLight' (configurada en Tailwind).
+                      - text-[1.4em]:    Equivale a font-size: 1.4em.
+                      - tracking-[1px]:  Equivale a letter-spacing: 1px.
+                      - pt-[0.5em]:      Equivale a padding-top: 0.5em.
+                      - m-0:             Equivale a margin: 0.
+                      - leading-none:    Ajusta el interlineado para que no quede muy separado.
+                      - text-white:      Para asegurar contraste sobre el fondo azul.
+                  */}
+                  <h3 className="font-gotcha text-[1.4em] tracking-[1px] pt-[0.5em] m-0 text-white text-center leading-none uppercase">
+                    {/* dangerouslySetInnerHTML permite que funcionen los <br> en los títulos */}
+                    <span dangerouslySetInnerHTML={{ __html: item.title }} />
                   </h3>
                 </div>
               </Link>
