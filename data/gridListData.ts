@@ -21,8 +21,8 @@ export const gridListData: Record<string, GridSection> = {
       { title: 'SECTOR AGRÍCOLA', href: '/campos-de-aplicacion/sector-agricola', imgSrc: 'https://tumuro.com/images/SECTOR-AGRICOLA1.JPG' },
       { title: 'VIAS DE COMUNICACIÓN', href: '/campos-de-aplicacion/vias-de-comunicacion', imgSrc: 'https://tumuro.com/images/VIAS-DE-COMUNICACION1.jpg' },
       { title: 'OBRAS HIDRÁULICAS', href: '/campos-de-aplicacion/obras-hidraulicas', imgSrc: 'https://tumuro.com/images/OBRAS-HIDRAULICAS1.jpg' },
-      { title: 'MINERÍA, GEOLOGÍA Y GEOTECNIA', href: '/campos-de-aplicacion/mineria-geologia-y-geotecnia', imgSrc: 'https://tumuro.com/images/MINERIA,-GEOLOGIA-Y-GEOTECNIA1.jpg' },
-    ]
+      { title: 'MINERÍA, GEOLOGÍA Y GEOTECNIA', href: '/campos-de-aplicacion/mineria-geologia-y-geotecnia', imgSrc: 'https://tumuro.com/images/MINERIA,-GEOLOGIA-Y-GEOTECNIA1.JPG' },
+    ]                                                                                                                         
   },
 
   // 2. CONSTRUCCIÓN CIVIL
