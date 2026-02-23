@@ -1,151 +1,137 @@
-
 import React, { useState, useMemo, useEffect } from 'react';
-import { casosDeObrasData } from '../data/casosDeObras';
-import { CasoDeObra } from '../types';
+import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+// Importamos la base de datos única de las obras
+import { casosDeObrasPrincipalesData } from '../data/casosDeObrasPrincipales';
+// Iconos de las flechas
 import ChevronLeftIcon from './icons/ChevronLeftIcon';
 import ChevronRightIcon from './icons/ChevronRightIcon';
-import { motion, Variants } from 'framer-motion';
-
-type FilterType = 'all' | CasoDeObra['type'];
-
-const FilterButton: React.FC<{
-    label: string;
-    onClick: () => void;
-    isActive: boolean;
-}> = ({ label, onClick, isActive }) => (
-    <button
-        onClick={onClick}
-        className={`px-4 py-2 text-nav tracking-wider font-medium rounded-md transition-colors ${
-            isActive
-                ? 'bg-ecogreen-green text-white'
-                : 'bg-white/10 text-white hover:bg-white/20'
-        }`}
-    >
-        {label}
-    </button>
-);
-
-const megaMenuContainerVariants: Variants = {
-  visible: {
-    transition: {
-      staggerChildren: 0.1,
-      ease: 'easeOut'
-    }
-  },
-  hidden: {}
-};
-
-const columnVariants: Variants = {
-   visible: { opacity: 1, x: 0, transition: { duration: 0.4, ease: 'easeOut' } },
-   hidden: (custom: number) => ({ opacity: 0, x: custom })
-};
-
 
 const MegaMenuCasos: React.FC = () => {
-    const [filterType, setFilterType] = useState<FilterType>('all');
+    // ESTADOS (La "memoria" del componente)
+    // filterType: Guarda qué categoría está seleccionada (ej: 'Talud' o 'all')
+    const [filterType, setFilterType] = useState<string>('all');
+    // currentIndex: Guarda en qué posición está el carrusel de obras
     const [currentIndex, setCurrentIndex] = useState(0);
 
+    // 1. GENERADOR DE BOTONES: Busca en la data qué tipos existen (Talud, Ribera, etc.) 
+    // y crea una lista sin repetir nombres para los botones del filtro.
+    const categories = useMemo(() => {
+        const types = casosDeObrasPrincipalesData.map(obra => obra.type);
+        return Array.from(new Set(types)); 
+    }, []);
+
+    // 2. FILTRO MÁGICO: Crea una nueva lista solo con las obras que coinciden 
+    // con el botón que el usuario presionó.
     const filteredCasos = useMemo(() => {
-        return casosDeObrasData.filter(caso => {
-            const typeMatch = filterType === 'all' || caso.type === filterType;
-            return typeMatch;
-        });
+        return casosDeObrasPrincipalesData.filter(caso => 
+            filterType === 'all' || caso.type === filterType
+        );
     }, [filterType]);
-    
-    useEffect(() => {
-        setCurrentIndex(0);
-    }, [filteredCasos]);
 
-    const ITEMS_PER_PAGE = 3;
-    const canGoPrev = currentIndex > 0;
-    const canGoNext = currentIndex < filteredCasos.length - ITEMS_PER_PAGE;
+    // EFECTO: Si el usuario cambia de filtro, el carrusel vuelve al principio (posición 0).
+    useEffect(() => setCurrentIndex(0), [filterType]);
 
-    const handlePrev = () => {
-        if (canGoPrev) {
-            setCurrentIndex(prev => prev - 1);
-        }
-    };
-
-    const handleNext = () => {
-        if (canGoNext) {
-            setCurrentIndex(prev => prev + 1);
-        }
-    };
-
-    const types: FilterType[] = ['all', 'Talud', 'Terraplén', 'Ribera'];
+    // CONFIGURACIÓN DEL CARRUSEL (Slider)
+    const ITEMS_PER_PAGE = 3; // Cuántas obras se ven al mismo tiempo
+    const canGoPrev = currentIndex > 0; // ¿Hay obras hacia la izquierda?
+    const canGoNext = currentIndex < filteredCasos.length - ITEMS_PER_PAGE; // ¿Hay obras hacia la derecha?
 
     return (
-        <motion.div 
-            className="bg-ecogreen-blue shadow-lg text-white w-full"
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            variants={megaMenuContainerVariants}
-        >
-            <div className="container mx-auto p-6">
-                <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
-                    {/* Filters Section */}
-                    <motion.div 
-                        className="lg:col-span-1 border-r border-white/20 pr-6"
-                        custom={-40}
-                        variants={columnVariants}
-                    >
-                        <h3 className="font-bold text-white mb-4 uppercase text-nav tracking-wider">Filtrar Obras</h3>
-                        <div>
-                            <h4 className="font-semibold text-sm mb-2">Tipo de Obra</h4>
-                            <div className="flex flex-wrap gap-2">
-                                {types.map(t => <FilterButton key={t} label={t==='all' ? 'Todos' : t} onClick={() => setFilterType(t)} isActive={filterType === t} />)}
-                            </div>
+        /* --- EL GRAN CONTENEDOR DEL MENÚ ---
+           bg-ecogreen-blue: Color azul de fondo.
+           shadow-2xl: Sombra muy grande para dar profundidad.
+           border-t: Línea blanca muy fina en la parte superior.
+        */
+        <motion.div className="bg-ecogreen-blue shadow-2xl text-white w-full border-t border-white/10">
+            <div className="container mx-auto p-8">
+                {/* DIVISIÓN: 1 columna para filtros (izquierda) y 3 para las fotos (derecha) */}
+                <div className="grid grid-cols-1 lg:grid-cols-4 gap-10">
+                    
+                    {/* --- PARTE IZQUIERDA: LOS BOTONES DE FILTRO --- */}
+                    <div className="lg:col-span-1 border-r border-white/20 pr-6">
+                        <h3 className="font-bold mb-6 uppercase text-[11pt] tracking-widest">Filtrar Proyectos</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {/* Botón 'TODOS': Si está activo, se pone verde (bg-ecogreen-green) */}
+                            <button 
+                                onClick={() => setFilterType('all')}
+                                className={`px-3 py-1.5 text-[9pt] font-bold rounded transition-colors ${filterType === 'all' ? 'bg-ecogreen-green-fall text-white' : 'bg-white/10 hover:bg-white/20'}`}
+                            >
+                                TODOS
+                            </button>
+                            {/* Generamos el resto de botones (Talud, Terraplén...) automáticamente */}
+                            {categories.map(cat => (
+                                <button 
+                                    key={cat}
+                                    onClick={() => setFilterType(cat)}
+                                    className={`px-3 py-1.5 text-[9pt] font-bold rounded uppercase transition-colors ${filterType === cat ? 'bg-ecogreen-green text-white' : 'bg-white/10 hover:bg-white/20'}`}
+                                >
+                                    {cat}
+                                </button>
+                            ))}
                         </div>
-                    </motion.div>
+                    </div>
 
-                    {/* Content Section */}
-                    <motion.div 
-                        className="lg:col-span-3"
-                        custom={40}
-                        variants={columnVariants}
-                    >
-                        <h3 className="font-bold text-white mb-4 uppercase text-nav tracking-wider">Casos de Obras Destacados</h3>
+                    {/* --- PARTE DERECHA: LAS TARJETAS DE LAS OBRAS --- */}
+                    <div className="lg:col-span-3">
                          {filteredCasos.length > 0 ? (
-                            <div className="relative">
-                                <div className="flex items-center justify-center space-x-4">
-                                    {filteredCasos.slice(currentIndex, currentIndex + ITEMS_PER_PAGE).map((caso) => (
-                                        <div key={caso.id} className="group bg-white/5 border border-white/10 rounded-lg overflow-hidden w-1/3">
-                                            <img src={caso.thumbnail} alt={caso.title} className="w-full h-32 object-cover transition-transform group-hover:scale-105" />
-                                            <div className="p-3">
-                                                <p className="text-xs text-gray-300">#{caso.id}</p>
-                                                <h5 className="font-semibold text-sm truncate text-white">{caso.title}</h5>
+                            <div className="relative flex items-center group/nav">
+                                <div className="flex space-x-6 w-full">
+                                    {/* Recortamos la lista para mostrar solo de 3 en 3 */}
+                                    {filteredCasos.slice(currentIndex, currentIndex + ITEMS_PER_PAGE).map((obra) => (
+                                        <Link 
+                                            key={obra.id} 
+                                            to={`/casos-de-obras/${obra.id}`} // Enlace dinámico a la página de la obra
+                                            /* bg-white/5: Fondo de la tarjeta casi transparente */
+                                            className="group w-1/3 bg-white/90 rounded-lg overflow-hidden border border-white/10 hover:border-ecogreen-green/50 transition-all"
+                                        >
+                                            {/* ÁREA DE LA IMAGEN */}
+                                            <div className="h-42 overflow-hidden relative">
+                                                <img src={obra.image} alt={obra.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                                                
+                                                {/* BADGE (Etiqueta de número): 
+                                                    bg-ecogreen-green: Fondo Verde.
+                                                    text-white: Texto Blanco.
+                                                    text-sm: Letra más grande y legible.
+                                                */}
+                                                <div className="absolute top-2 left-2 bg-ecogreen-green-fall text-white text-[18px] px-2 py-0.5 rounded  shadow-lg">
+                                                    #{obra.id}
+                                                </div>
                                             </div>
-                                        </div>
+
+                                            {/* ÁREA DE TEXTO (Debajo de la foto) */}
+                                            <div className="p-3">
+                                                {/* Tipo de obra en verde (ej: TALUD) */}
+                                                <p className="text-[10pt] text-ecogreen-green font-bold uppercase mb-1">{obra.type}</p>
+                                                
+                                                {/* Título de la obra:
+                                                    Se mantiene blanco (text-white) y cambia a verde solo al pasar el mouse.
+                                                */}
+                                                <h5 className="font-bold text-[12pt] leading-tight line-clamp-2 uppercase group-hover:text-ecogreen-green transition-colors text-ecogreen-blue">
+                                                    {obra.title}
+                                                </h5>
+                                            </div>
+                                        </Link>
                                     ))}
                                 </div>
+
+                                {/* FLECHAS DE NAVEGACIÓN: Solo aparecen si hay más de 3 obras en la lista */}
                                 {filteredCasos.length > ITEMS_PER_PAGE && (
-                                    <>
-                                        <button
-                                            onClick={handlePrev}
-                                            disabled={!canGoPrev}
-                                            className="absolute top-1/2 -translate-y-1/2 -left-3 p-1 bg-white/20 rounded-full shadow-lg hover:bg-white/30 disabled:opacity-30 disabled:cursor-not-allowed transition"
-                                            aria-label="Previous case"
-                                        >
-                                            <ChevronLeftIcon className="h-6 w-6 text-white" />
+                                    <div className="absolute -right-4 -left-4 flex justify-between pointer-events-none">
+                                        <button onClick={() => setCurrentIndex(prev => prev - 1)} disabled={!canGoPrev} className={`pointer-events-auto p-2 bg-ecogreen-green rounded-full shadow-lg transition-opacity ${!canGoPrev ? 'opacity-0' : 'opacity-100'}`}>
+                                            <ChevronLeftIcon className="h-4 w-4" />
                                         </button>
-                                        <button
-                                            onClick={handleNext}
-                                            disabled={!canGoNext}
-                                            className="absolute top-1/2 -translate-y-1/2 -right-3 p-1 bg-white/20 rounded-full shadow-lg hover:bg-white/30 disabled:opacity-30 disabled:cursor-not-allowed transition"
-                                            aria-label="Next case"
-                                        >
-                                            <ChevronRightIcon className="h-6 w-6 text-white" />
+                                        <button onClick={() => setCurrentIndex(prev => prev + 1)} disabled={!canGoNext} className={`pointer-events-auto p-2 bg-ecogreen-green rounded-full shadow-lg transition-opacity ${!canGoNext ? 'opacity-0' : 'opacity-100'}`}>
+                                            <ChevronRightIcon className="h-4 w-4" />
                                         </button>
-                                    </>
+                                    </div>
                                 )}
                             </div>
                         ) : (
-                             <div className="flex items-center justify-center h-44">
-                                <p className="text-center text-gray-300">No se encontraron obras con los filtros seleccionados.</p>
-                            </div>
+                             /* MENSAJE DE ERROR: Si una categoría está vacía */
+                             <p className="text-gray-400 italic text-center py-10">No hay obras registradas en esta categoría.</p>
                         )}
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </motion.div>
