@@ -700,7 +700,8 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
       "https://tumuro.com/data1/images/casos-de-obras/200/morocha/ECO200.27-ECO200.PRINCIPAL.JPG"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/casos-de-obras/200/mobil/ECO200.PRINCIPAL.JPG"
+      "https://tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE1.jpg",
+      "https://tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE2.jpg"
     ]
   },
 
@@ -727,8 +728,8 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
       "https://tumuro.com/data2/images/casos-de-obras/135/MOROCHA_135.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/135/mobil/ECO135_MOBILE1.jpg",
-      "https://tumuro.com/data2/images/casos-de-obras/135/mobil/ECO135_MOBILE2.jpg"
+      "https://tumuro.com/data2/images/casos-de-obras/135/ECO135_MOBILE1.jpg",
+      "https://tumuro.com/data2/images/casos-de-obras/135/ECO135_MOBILE2.jpg"
     ]
   },
    'ID-obra-270.tsx': {
@@ -739,8 +740,8 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
       "https://tumuro.com/data2/images/casos-de-obras/270/MOROCHA_ECO270.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/270/mobil/ECO270_MOBILE1.jpg",
-      "https://tumuro.com/data2/images/casos-de-obras/270/mobil/ECO270_MOBILE2.jpg"
+      "https://tumuro.com/data2/images/casos-de-obras/270/ECO270_MOBILE1.jpg",
+      "https://tumuro.com/data2/images/casos-de-obras/270/ECO270_MOBILE2.jpg"
 
     ]
   },
