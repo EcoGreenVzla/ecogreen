@@ -286,7 +286,7 @@ export const gridListData: Record<string, GridSection> = {
       { title: 'OBRA ECOGREEN #100', href: '/casos-de-obras/100', imgSrc: 'https://tumuro.com/images/ECO100.PRINCIPAL.JPG' },
       { title: 'OBRA ECOGREEN #150', href: '/casos-de-obras/150', imgSrc: 'https://tumuro.com/images/ECO150.PRINCIPAL.JPG' },
       { title: 'OBRA ECOGREEN #200', href: '/casos-de-obras/200', imgSrc: 'https://tumuro.com/images/ECO200.PRINCIPAL.JPG' },
-      { title: 'OBRA ECOGREEN #215', href: '/casos-de-obras/215', imgSrc: 'https://tumuro.com/images/ECO215.PRINCIPAL.jpg' },
+      { title: 'OBRA ECOGREEN #215', href: '/casos-de-obras/215', imgSrc: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215_PRINCIPAL.jpg' },
       { title: 'OBRA ECOGREEN #135', href: '/casos-de-obras/135', imgSrc: 'https://tumuro.com/images/ECO135.PRINCIPAL.jpg' },
       { title: 'OBRA ECOGREEN #270', href: '/casos-de-obras/270', imgSrc: 'https://tumuro.com/images/ECO270.PRINCIPAL.jpg' },
       { title: 'OBRA ECOGREEN #300', href: '/casos-de-obras/300', imgSrc: 'https://tumuro.com/images/ECO300.PRINCIPAL.jpg' },

@@ -46,14 +46,14 @@ export const casosDeObrasPrincipalesData: CasoDeObraPrincipal[] = [
    {
     id: 270,
     image: 'https://tumuro.com/images/ECO270.PRINCIPAL.jpg',
-    title: 'MURO DE TIERRA REFORZADA',
+    title: 'MURO DE TIERRA REFORZADA URB. CERRO VERDE',
     description: 'MURO DE TIERRA REFORZADA URB. CERRO VERDE',
     type: 'Muro de Tierra Reforzada',
   },
    {
     id: 300,
     image: 'https://tumuro.com/images/ECO300.PRINCIPAL.jpg',
-    title: 'MURO DE TIERRA REFORZADA',
+    title: 'MURO DE TIERRA REFORZADA CANCHA ECUESTRE',
     description: 'MURO DE TIERRA REFORZADA. CANCHA ECUESTRE. PARACOTOS.',
     type: 'Muro de Tierra Reforzada',
   },
