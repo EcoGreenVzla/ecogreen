@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import Home from './pages/index'; 
+import Home from './pages/index';
 import UnderConstruction from './components/UnderConstruction';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -60,16 +60,26 @@ import PetroleoProducto2 from './pages/PetroleoProducto2';
 import PetroleoProducto3 from './pages/PetroleoProducto3';
 import PetroleoProducto4 from './pages/PetroleoProducto4';
 import PetroleoProducto5 from './pages/PetroleoProducto5';
+import MurosAncladosPantallas from './pages/muros-anclados-y-pantallas-atirantadas';
+import MurosConcretoArmado from './pages/muros-de-concreto-armado';
+import MurosCiclopeos from './pages/muros-de-ciclopeos';
+import PilotesMicropilotes from './pages/pilotes-y-micropilotes';
+import EstabilizacionTaludes from './pages/estabilizacion-de-taludes';
+import RefuerzoTaludesTerraplenes from './pages/refuerzo-de-taludes-y-terraplenes';
+import Reforestacion from './Reforestacion';
+import Canalizaciones from './pages/canalizaciones';
+import DiquesYPresas from './pages/diques-y-presas';
+import ProteccionRiberas from './pages/proteccion-de-riberas';
 
 const App: React.FC = () => {
   return (
     <BrowserRouter>
       {/* ScrollToTop: Reinicia el scroll al inicio de la página en cada navegación */}
       <ScrollToTop />
-      
+
       <div className="flex flex-col min-h-screen bg-white">
         <Header />
-        
+
         <main className="flex-grow">
           <Routes>
             {/* INICIO */}
@@ -94,6 +104,49 @@ const App: React.FC = () => {
             <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion-reforzados" element={<GavionReforzado />} />
             <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/muros-mixtos" element={<MurosMixtos />} />
             <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes" element={<RefuerzoTaludes />} />
+            <Route
+              path="/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas"
+              element={<MurosAncladosPantallas />}
+            />
+            <Route
+              path="/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado"
+              element={<MurosConcretoArmado />}
+            />
+           <Route
+              path="/muros-de-contencion/sistemas-de-contencion-rigidos/muros-ciclopeos"
+              element={<MurosCiclopeos />}
+            />
+               <Route
+              path="/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes"
+              element={<PilotesMicropilotes />}
+            />
+
+            {/* SUB-RUTAS: CONTROL DE EROSION */}
+             <Route
+              path="/control-de-erosion/estabilizacion-de-taludes"
+              element={<EstabilizacionTaludes />}
+            />
+               <Route
+              path="/control-de-erosion/refuerzo-de-taludes-y-terraplenes"
+              element={<RefuerzoTaludesTerraplenes />}
+            />
+                <Route
+              path="/control-de-erosion/reforestacion"
+              element={<Reforestacion />}
+            />
+                     <Route
+              path="/control-de-erosion/canalizaciones"
+              element={<Canalizaciones />}
+            />
+                      <Route
+              path="/control-de-erosion/diques-y-presas"
+              element={<DiquesYPresas />}
+            />
+                         <Route
+              path="/control-de-erosion/proteccion-de-riberas"
+              element={<ProteccionRiberas />}
+            />
+            
 
             {/* SUB-RUTAS: CAMPOS DE APLICACIÓN */}
             <Route path="/campos-de-aplicacion/infraestructura-urbana" element={<InfraestructuraUrbana />} />

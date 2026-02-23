@@ -86,6 +86,8 @@ export const navigationData: NavItemType[] = [
         { label: 'OBRA ECOGREEN #150', href: '/casos-de-obras/150' },
         { label: 'OBRA ECOGREEN #200', href: '/casos-de-obras/200' },
         { label: 'OBRA ECOGREEN #215', href: '/casos-de-obras/215' },
+        { label: 'OBRA ECOGREEN #135', href: '/casos-de-obras/135' },
+        { label: 'OBRA ECOGREEN #270', href: '/casos-de-obras/270' },
     ]
   },
   { label: 'CONTÁCTANOS', href: '/contactanos' },
