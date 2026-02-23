@@ -8,22 +8,23 @@ import ScrollToTop from './components/ScrollToTop';
 
 /**
  * =================================================================
- * GUÍA DE MANTENIMIENTO DE PÁGINAS (ROUTES)
+ * EJEMPLOS PRÁCTICOS DE MANTENIMIENTO
  * =================================================================
- * * ➕ AÑADIR: 
- * 1. Importa el componente: import MiPagina from './pages/mi-archivo';
- * 2. Agrega la etiqueta: <Route path="/mi-url" element={<MiPagina />} />
- * * 🔄 ACTUALIZAR:
- * - Cambia el texto en 'path="/..."' para cambiar la URL.
- * - Cambia el destino en 'import ... from "./pages/..."' si mueves el archivo.
- * * 🚫 DESHABILITAR:
- * - Comenta la línea de la <Route /> usando // al principio. 
- * El usuario verá la página 404 (UnderConstruction) si intenta entrar.
+ * * ➕ AÑADIR (Ejemplo: Nueva página de "Garantía"):
+ * 1. Arriba en imports: import Garantia from './pages/garantia';
+ * 2. En el bloque de Routes: <Route path="/garantia" element={<Garantia />} />
+ * * 🔄 ACTUALIZAR (Ejemplo: Cambiar la URL de Vialidad):
+ * - Antes: <Route path="/vialidad" element={<Vialidad />} />
+ * - Después: <Route path="/servicios-viales" element={<Vialidad />} />
+ * * 🚫 DESHABILITAR (Ejemplo: Mantenimiento temporal de Muros Mixtos):
+ * - Opción A (Comentar): // <Route path="/muros-mixtos" element={<MurosMixtos />} />
+ * - Opción B (Usar el componente de construcción): 
+ * <Route path="/muros-mixtos" element={<UnderConstruction title="MUROS MIXTOS" />} />
  * * ❌ ELIMINAR:
- * - Borra el 'import' arriba y la etiqueta '<Route />' abajo.
+ * - Simplemente borra la línea de 'import' de la página y su etiqueta <Route /> correspondiente.
  */
 
-// --- IMPORTS DE PÁGINAS ---
+
 import MurosDeContencion from './pages/muros-de-contencion';
 import Vialidad from './pages/vialidad';
 import Petroleo from './pages/petroleo';
