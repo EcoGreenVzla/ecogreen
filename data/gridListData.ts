@@ -272,5 +272,24 @@ export const gridListData: Record<string, GridSection> = {
       { title: 'Contra Caída de Rocas', href: '#', imgSrc: 'https://tumuro.com/images/Unica-CAIDA-DE-ROCAS-1800x1200.jpg' },
       { title: 'Reforestación', href: '/control-de-erosion/reforestacion', imgSrc: 'https://tumuro.com/images/reforestacion-cda.jpg' },
     ]
+  },
+
+
+
+
+// ... (dentro de export const gridListData: Record<string, GridSection> = { )
+
+  // 14. CASOS DE OBRAS
+  'ID-casos-de-obras.tsx': {
+    title: 'PROYECTOS EJECUTADOS',
+    items: [
+      { title: 'OBRA ECOGREEN #100', href: '/casos-de-obras/100', imgSrc: 'https://tumuro.com/images/ECO100.PRINCIPAL.JPG' },
+      { title: 'OBRA ECOGREEN #150', href: '/casos-de-obras/150', imgSrc: 'https://tumuro.com/images/ECO150.PRINCIPAL.JPG' },
+      { title: 'OBRA ECOGREEN #200', href: '/casos-de-obras/200', imgSrc: 'https://tumuro.com/images/ECO200.PRINCIPAL.JPG' },
+      { title: 'OBRA ECOGREEN #215', href: '/casos-de-obras/215', imgSrc: 'https://tumuro.com/images/ECO215.PRINCIPAL.jpg' },
+    ]
   }
+
+// ...
+
 };

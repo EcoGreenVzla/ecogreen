@@ -466,6 +466,100 @@ export const galeriasData: Record<string, GaleriaData> = {
 
 
 
+  // =====================================================================
+  // 21. CASOS DE OBRAS: OBRA #100 (100.tsx)
+  // =====================================================================
+
+  'ID-obra-100.tsx': {
+    id: 'ID-obra-100.tsx',
+    items: [
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.01.JPG', title: 'Estado inicial del talud en la Autopista Prados del Este.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.02.JPG', title: 'Falla de talud infinito por saturación hídrica.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.03.JPG', title: 'Perfilado manual de material suelto.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.04.JPG', title: 'Instalación de andamiaje para perforaciones.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.05.JPG', title: 'Ejecución de anclajes pasivos de 3m de profundidad.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.06.JPG', title: 'Colocación de Geomantas Verdes ECOGREEN.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.07.JPG', title: 'Instalación de Geomallas Metálicas de doble torsión.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.08.JPG', title: 'Fijación del sistema con planchas metálicas.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.16.JPG', title: 'Detalle técnico del sistema de anclaje.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.10.jpg', title: 'Proceso de hidrosiembra y reforestación.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.11.JPG', title: 'Crecimiento de la cobertura vegetal a corto plazo.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.12.JPG', title: 'Control efectivo de la escorrentía superficial.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.13.JPG', title: 'Vista panorámica del talud estabilizado.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.14.JPG', title: 'Integración paisajística de la obra.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/100/ECO100.17.JPG', title: 'Estado de la obra 8 años después (Año 2017).' }
+    ]
+  },
+
+// ... dentro de galeriasData, antes del }; final
+  'ID-obra-150.tsx': {
+    id: 'ID-obra-150.tsx',
+    items: [
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/150/ECO150.1.JPG', title: 'Margen del Río Castán antes de la intervención.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/150/ECO150.2.JPG', title: 'Nivel del río cercano a la cota de fundación del hospital.' },
+      // ... (Items 3 al 30 con .JPG)
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/150/ECO150.31.jpg', title: 'Detalle de protección con gaviones y colchonetas.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/150/ECO150.32.jpg', title: 'Acabado de la caminería en la cresta del terraplén.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/150/ECO150.33.jpg', title: 'Integración de infraestructura verde al paisaje.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/150/ECO150.34.jpg', title: 'Vista del dique consolidado 3 años después.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/150/ECO150.35.jpg', title: 'Estabilidad del sistema bajo carga hidráulica.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/150/ECO150.36.JPG', title: 'Vista panorámica final de la obra.' }
+    ]
+  },
+
+
+  // ... dentro del objeto galeriasData
+  'ID-obra-200.tsx': {
+    id: 'ID-obra-200.tsx',
+    items: [
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/200/ECO200.01.JPG', title: 'Vista del talud erosionado antes de la intervención.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/200/ECO200.02.jpg', title: 'Estado de la vialidad tras el deslizamiento del Cerro El Salto.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/200/ECO200.03.jpg', title: 'Inicio de perfilado y remoción de material suelto.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/200/ECO200.04.jpg', title: 'Construcción de terrazas para control de altura.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/200/ECO200.05.jpg', title: 'Detalle de la pendiente pronunciada del esquisto meteorizado.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/200/ECO200.06.JPG', title: 'Instalación de andamiaje sobre la superficie perfilada.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/200/ECO200.07.jpg', title: 'Perforaciones para el sistema de anclajes pasivos.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/200/ECO200.08.jpg', title: 'Preparación de la cara del talud para geomantas.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/200/ECO200.29.JPG', title: 'Colocación de Geomantas Verdes ECOGREEN.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/200/ECO200.10.jpg', title: 'Instalación de Geomallas Metálicas de refuerzo.' },
+      // ... (Items 11 al 21)
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/200/ECO200.22.JPG', title: 'Fijación de mallas con planchas y tuercas.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/200/ECO200.27.JPG', title: 'Vista panorámica del Cerro El Salto estabilizado.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/200/ECO200.28.JPG', title: 'Integración final del sistema con el paisaje vial.' }
+    ]
+  },
+
+  // ... dentro del objeto galeriasData
+  'ID-obra-215.tsx': {
+    id: 'ID-obra-215.tsx',
+    items: [
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.01.JPG', title: 'Estado del talud marginal del Río La Guama antes de la obra.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.02.jpg', title: 'Grietas observadas en la carpeta de rodamiento por erosión hídrica.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.03.jpg', title: 'Inicio de excavación y preparación de la base del muro.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.04.jpg', title: 'Instalación de las primeras cestas de gavión ECOGREEN.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.05.jpg', title: 'Detalle del armado y tensores internos de los gaviones.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.06.JPG', title: 'Avance longitudinal de la protección de 130 m.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.07.JPG', title: 'Conformación de los niveles superiores del muro de 6 m.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.08.jpg', title: 'Colocación de filtro geotextil no tejido en el trasdós.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.09.jpg', title: 'Instalación de colchonetas protectoras en la base.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.10.jpg', title: 'Detalle del amarre entre cestas y colchonetas.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.11.jpg', title: 'Adaptación del sistema a la geometría del meandro.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.12.jpg', title: 'Vista estructural del muro consolidado.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.13.jpg', title: 'Control efectivo de la corriente del río contra el talud.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.14.jpg', title: 'Vista panorámica de la margen derecha protegida.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.15.jpg', title: 'Comportamiento del sistema durante la crecida del río.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.16.jpg', title: 'Protección de la vialidad adyacente a la Troncal 005.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.17.jpg', title: 'Detalle del acabado y alineación de los gaviones.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.18.jpg', title: 'Vista desde el cauce hacia la ribera estabilizada.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.19.jpg', title: 'Integración del sistema con el entorno natural.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.20.jpg', title: 'Efectividad de la colchoneta contra la socavación.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.21.jpg', title: 'Inspección final de la obra de protección hidráulica.' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/215/ECO215.22.jpg', title: 'Vista general del proyecto finalizado.' }
+    ]
+  },
+
+
+}; // <-- ESTA ES LA ÚNICA LLAVE FINAL. NO PONGAS NADA MÁS ABAJO.
 
 
 
@@ -477,5 +571,3 @@ export const galeriasData: Record<string, GaleriaData> = {
 
 
 
-
-};

@@ -992,5 +992,106 @@ export const textosData: Record<string, TextoData> = {
   },
 
 
+  // =====================================================================
+  // CASOS DE OBRAS (casos-de-obras.tsx)
+  // =====================================================================
+  'ID-casos-de-obras.tsx': {
+    title: "Casos de Obras",
+    introContent: (
+      <>
+        <p>
+          En ECOGREEN nos sentimos orgullosos de mostrar la trayectoria y el éxito de nuestras intervenciones a nivel nacional. A continuación, presentamos una selección de proyectos emblemáticos donde la ingeniería verde ha garantizado la estabilidad estructural y armonía ambiental.
+        </p>
+      </>
+    )
+  },
+
+// ...
+
+
+// ... dentro de textosData
+  'ID-obra-100.tsx': {
+    title: "ESTABILIZACIÓN Y CONTROL DE EROSIÓN",
+    introContent: (
+      <>
+        <h3 className="text-xl font-bold text-[#0E306F] mb-2 uppercase">OBRA ECOGREEN #100</h3>
+        <p>
+          Estabilización de talud de 30 m de alto por 120 m de largo, ubicado en la Autopista Prados del Este, a la altura del mural de la Urb. Santa Rosa de Lima. Municipio Baruta, Estado Miranda. Venezuela, 2009.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <div className="space-y-4">
+        <p>Este deslizamiento ocurrió en una de las principales autopistas de la ciudad de Caracas, La Autopista Prados del Este...</p>
+        <p>El derrumbe ocurrió debido a que el talud no contaba con un sistema de recolección de aguas de lluvia eficiente...</p>
+        <p>Para estabilizar el talud se construyó en la cresta un canal de concreto capaz de captar el agua de escorrentía...</p>
+        <p>Finalmente sobre las Geomantas Verdes ECOGREEN, se colocaron Geomallas Metálicas de doble torsión ECOGREEN...</p>
+        <p className="italic text-sm">La última foto presentada en la secuencia fue tomada en el año 2017, 8 años después de la culminación de la obra.</p>
+      </div>
+    )
+  },
+// ... dentro de textosData
+  'ID-obra-150.tsx': {
+    title: "TERRAPLÉN SOBRE SUELO BLANDO",
+    introContent: (
+      <>
+        <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #150</h3>
+        <p>
+          Construcción de Terraplén de tierra reforzada de 6 m de alto por 600 m de largo, para incrementar la altura de la margen izquierda del Rio Castán, ubicado en Valera, Estado Trujillo. Venezuela, 2012.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <div className="space-y-4">
+        <p>En un terreno ubicado en la población de Pampanito de la ciudad de Valera, se proyectó construir un centro hospitalario... el nivel del rio superó la cresta e inundó todo el terreno paralizando la ejecución.</p>
+        <p>Se diseñó un terraplén de 6 m de altura libre (7 m totales) utilizando Geomallas ECOGREEN de alto módulo Uniaxiales con resistencia de 50 kN/m para garantizar la estabilidad hidráulica.</p>
+        <p>El diseño incorporó una protección con gaviones y colchonetas metálicas ECOGREEN en la cara interna para proteger contra impactos de rocas o troncos arrastrados por la corriente.</p>
+        <p className="italic text-sm">El registro fotográfico incluye imágenes tomadas en 2015, 3 años después de la culminación de la obra.</p>
+      </div>
+    )
+  },
+
+  // ... dentro del objeto textosData
+  'ID-obra-200.tsx': {
+    title: "ESTABILIZACIÓN Y CONTROL DE EROSIÓN",
+    introContent: (
+      <>
+        <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #200</h3>
+        <p>
+          Estabilización y Control de Erosión del Cerro El Salto, talud de 40 m de alto por 120 m de largo, ubicado en la Troncal 005 que une a Tinaquillo con San Carlos, Estado Cojedes. Venezuela, 2015.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <div className="space-y-4">
+        <p>El Cerro El Salto presentaba constantes deslizamientos que interrumpían el tránsito de una de las principales arterias viales del país, debido a la meteorización del esquisto y la saturación hídrica.</p>
+        <p>Para la estabilización, se realizó el perfilado a máquina del material suelto y la construcción de terrazas y bermas para distribuir la altura del talud.</p>
+        <p>Se instalaron anclajes pasivos de 1" a 3 m de profundidad, fijados con lechada de cemento, seguidos por la colocación de Geomantas Verdes ECOGREEN de alto módulo y Geomallas Metálicas de doble torsión.</p>
+        <p>Finalmente, se realizó la reforestación con pasto y riego controlado durante los primeros meses para garantizar la cobertura vegetal del sistema.</p>
+      </div>
+    )
+  },
+
+
+  // ... dentro del objeto textosData
+  'ID-obra-215.tsx': {
+    title: "PROTECCIÓN DE RIBERA",
+    introContent: (
+      <>
+        <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #215</h3>
+        <p>
+          Protección contra la erosión de 130 m de ribera de la margen derecha del Rio La Guama, ubicado en la progresiva 69+107 de la Troncal 005, Tinaco, Estado Cojedes. Venezuela, 2015.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <div className="space-y-4">
+        <p>El Rio La Guama se acerca de manera importante a la Troncal 005, produciendo fuerte erosión en el talud que sustenta la vía. Se diseñó una protección con un muro de cestas de gavión metálicas ECOGREEN de 130 m de largo por 6 m de altura.</p>
+        <p>Las cestas fueron fabricadas con alambre calibre 12, fuertemente galvanizadas con Zinc y doble torsionado (malla 8 x 10 cm), cumpliendo con las normas ASTM A641 M y ASTM A856 M-98.</p>
+        <p>Como factor de seguridad, se instalaron colchonetas de gavión de 30 cm de espesor al pie y cresta del muro para garantizar protección contra la socavación y adaptarse a posibles asentamientos del cauce.</p>
+        <p>Todo el sistema respetó la geometría del meandro natural del río para minimizar el impacto ecológico en el curso de agua.</p>
+      </div>
+    )
+  },
 
 };

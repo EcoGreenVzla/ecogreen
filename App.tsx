@@ -24,17 +24,23 @@ import ScrollToTop from './components/ScrollToTop';
  * - Simplemente borra la línea de 'import' de la página y su etiqueta <Route /> correspondiente.
  */
 
-
+// --- IMPORTS DE PÁGINAS PRINCIPALES ---
 import MurosDeContencion from './pages/muros-de-contencion';
 import Vialidad from './pages/vialidad';
 import Petroleo from './pages/petroleo';
-import ObrasCiviles from './pages/obras-civiles'; // Nueva Página
+import ObrasCiviles from './pages/obras-civiles'; 
 import ControlDeErosion from './pages/control-de-erosion';
 import CamposDeAplicacionPage from './pages/campos-de-aplicacion';
 import CasosDeObrasPage from './pages/casos-de-obras';
 import Contactanos from './pages/contactanos';
 
-// Detalles de Muros
+// --- NUEVO IMPORT: CASO DE OBRA #100 ---
+import Obra100 from './pages/casos-de-obras/100';
+import Obra150 from './pages/casos-de-obras/150';
+import Obra200 from './pages/casos-de-obras/200';
+import Obra215 from './pages/casos-de-obras/215';
+
+// --- DETALLES DE MUROS ---
 import SistemasFlexibles from './pages/sistemas-de-contencion-flexibles';
 import SistemasRigidos from './pages/sistemas-de-contencion-rigidos';
 import SistemasDrenaje from './pages/sistemas-de-drenaje';
@@ -44,7 +50,7 @@ import GavionReforzado from './pages/muros-de-gavion-reforzados';
 import MurosMixtos from './pages/muros-mixtos';
 import RefuerzoTaludes from './pages/refuerzo-de-taludes-y-terraplenes';
 
-// Detalles de Campos de Aplicación
+// --- DETALLES DE CAMPOS DE APLICACIÓN ---
 import InfraestructuraUrbana from './pages/infraestructura-urbana';
 import ConstruccionCivil from './pages/construccion-civil';
 import ProteccionAmbiental from './pages/proteccion-ambiental';
@@ -54,7 +60,7 @@ import ViasComunicacion from './pages/vias-de-comunicacion';
 import ObrasHidraulicas from './pages/obras-hidraulicas';
 import MineriaGeotecnia from './pages/mineria-geologia-y-geotecnia';
 
-// Detalles de Petróleo
+// --- DETALLES DE PETRÓLEO Y OTROS ---
 import PetroleoProducto1 from './pages/PetroleoProducto1';
 import PetroleoProducto2 from './pages/PetroleoProducto2';
 import PetroleoProducto3 from './pages/PetroleoProducto3';
@@ -89,11 +95,18 @@ const App: React.FC = () => {
             <Route path="/muros-de-contencion" element={<MurosDeContencion />} />
             <Route path="/vialidad" element={<Vialidad />} />
             <Route path="/petroleo" element={<Petroleo />} />
-            <Route path="/obras-civiles" element={<ObrasCiviles />} /> {/* Registro de nueva página */}
+            <Route path="/obras-civiles" element={<ObrasCiviles />} />
             <Route path="/control-de-erosion" element={<ControlDeErosion />} />
             <Route path="/campos-de-aplicacion" element={<CamposDeAplicacionPage />} />
             <Route path="/casos-de-obras" element={<CasosDeObrasPage />} />
             <Route path="/contactanos" element={<Contactanos />} />
+
+            {/* RUTA ESPECÍFICA: OBRA #100 */}
+            <Route path="/casos-de-obras/100" element={<Obra100 />} />
+            <Route path="/casos-de-obras/150" element={<Obra150 />} />
+            <Route path="/casos-de-obras/200" element={<Obra200 />} />
+            <Route path="/casos-de-obras/215" element={<Obra215 />} />
+
 
             {/* SUB-RUTAS: MUROS DE CONTENCIÓN */}
             <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles" element={<SistemasFlexibles />} />
@@ -104,6 +117,7 @@ const App: React.FC = () => {
             <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion-reforzados" element={<GavionReforzado />} />
             <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/muros-mixtos" element={<MurosMixtos />} />
             <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes" element={<RefuerzoTaludes />} />
+            
             <Route
               path="/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas"
               element={<MurosAncladosPantallas />}
@@ -112,37 +126,37 @@ const App: React.FC = () => {
               path="/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado"
               element={<MurosConcretoArmado />}
             />
-           <Route
+            <Route
               path="/muros-de-contencion/sistemas-de-contencion-rigidos/muros-ciclopeos"
               element={<MurosCiclopeos />}
             />
-               <Route
+            <Route
               path="/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes"
               element={<PilotesMicropilotes />}
             />
 
             {/* SUB-RUTAS: CONTROL DE EROSION */}
-             <Route
+            <Route
               path="/control-de-erosion/estabilizacion-de-taludes"
               element={<EstabilizacionTaludes />}
             />
-               <Route
+            <Route
               path="/control-de-erosion/refuerzo-de-taludes-y-terraplenes"
               element={<RefuerzoTaludesTerraplenes />}
             />
-                <Route
+            <Route
               path="/control-de-erosion/reforestacion"
               element={<Reforestacion />}
             />
-                     <Route
+            <Route
               path="/control-de-erosion/canalizaciones"
               element={<Canalizaciones />}
             />
-                      <Route
+            <Route
               path="/control-de-erosion/diques-y-presas"
               element={<DiquesYPresas />}
             />
-                         <Route
+            <Route
               path="/control-de-erosion/proteccion-de-riberas"
               element={<ProteccionRiberas />}
             />

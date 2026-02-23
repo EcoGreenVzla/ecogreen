@@ -643,4 +643,79 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
   },
 
 
+
+
+  // =====================================================================
+  // CASOS DE OBRAS (casos-de-obras.tsx)
+  // =====================================================================
+  'ID-casos-de-obras.tsx': {
+    title: "CASOS DE OBRAS",
+    subtitle: "PROYECTOS ECOLÓGICOS.",
+    link: "/casos-de-obras",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado1.png"
+    ]
+  },
+
+// ...
+
+
+// ... dentro de export const sliderData: Record<string, HeroSectionResponsive> = {
+
+  'ID-obra-100.tsx': {
+    title: "OBRA ECOGREEN #100",
+    subtitle: "ESTABILIZACIÓN Y CONTROL DE EROSIÓN.",
+    link: "/casos-de-obras/100",
+    desktopImages: [
+      "https://tumuro.com/data1/images/casos-de-obras/100/morocha/MOROCHA-1600x475.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/casos-de-obras/100/mobil/ECO100.171.JPG",
+      "https://tumuro.com/data3/images/casos-de-obras/100/mobil/ECO100.PRINCIPAL1.JPG"
+    ]
+  },
+// ... dentro de sliderData
+  'ID-obra-150.tsx': {
+    title: "OBRA ECOGREEN #150",
+    subtitle: "TERRAPLÉN SOBRE SUELO BLANDO.",
+    link: "/casos-de-obras/150",
+    desktopImages: [
+      "https://tumuro.com/data1/images/casos-de-obras/150/morocha/ECO150.PRINCIPAL.JPG"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/casos-de-obras/150/mobil/ECO150.PRINCIPAL.JPG"
+    ]
+  },
+
+
+  // ... dentro del objeto sliderData
+  'ID-obra-200.tsx': {
+    title: "OBRA ECOGREEN #200",
+    subtitle: "ESTABILIZACIÓN Y CONTROL DE EROSIÓN.",
+    link: "/casos-de-obras/200",
+    desktopImages: [
+      "https://tumuro.com/data1/images/casos-de-obras/200/morocha/ECO200.27-ECO200.PRINCIPAL.JPG"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/casos-de-obras/200/mobil/ECO200.PRINCIPAL.JPG"
+    ]
+  },
+
+
+  // ... dentro del objeto sliderData
+  'ID-obra-215.tsx': {
+    title: "OBRA ECOGREEN #215",
+    subtitle: "PROTECCIÓN DE RIBERA.",
+    link: "/casos-de-obras/215",
+    desktopImages: [
+      "https://tumuro.com/data1/images/casos-de-obras/215/morocha/ECO215.14-ECO215.PRINCIPAL.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/casos-de-obras/215/mobil/ECO215.PRINCIPAL.jpg"
+    ]
+  },
+
 };
