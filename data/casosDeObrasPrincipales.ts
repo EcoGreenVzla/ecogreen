@@ -36,4 +36,25 @@ export const casosDeObrasPrincipalesData: CasoDeObraPrincipal[] = [
     description: 'Protección de ribera en el Rio La Guama.',
     type: 'Protección de Ribera',
   },
+    {
+    id: 135,
+    image: 'https://tumuro.com/images/ECO135.PRINCIPAL.jpg',
+    title: 'PROTECCION DE TALUD EN EL VALLE ARRIBA ATHLETIC CLUB',
+    description: 'MURO DE TIERRA REFORZADA Y PROTECCION DE TALUD EN EL VALLE ARRIBA ATHLETIC CLUB',
+    type: 'Muro de Tierra Reforzada',
+  },
+   {
+    id: 270,
+    image: 'https://tumuro.com/images/ECO270.PRINCIPAL.jpg',
+    title: 'MURO DE TIERRA REFORZADA',
+    description: 'MURO DE TIERRA REFORZADA URB. CERRO VERDE',
+    type: 'Muro de Tierra Reforzada',
+  },
+   {
+    id: 300,
+    image: 'https://tumuro.com/images/ECO300.PRINCIPAL.jpg',
+    title: 'MURO DE TIERRA REFORZADA',
+    description: 'MURO DE TIERRA REFORZADA. CANCHA ECUESTRE. PARACOTOS.',
+    type: 'Muro de Tierra Reforzada',
+  },
 ];

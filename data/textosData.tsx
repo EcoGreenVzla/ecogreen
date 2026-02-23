@@ -1093,5 +1093,44 @@ export const textosData: Record<string, TextoData> = {
       </div>
     )
   },
+  'ID-obra-135.tsx': {
+    title: "INFRAESTRUCTURA URBANA",
+    introContent: (
+      <>
+        <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #135</h3>
+        <p>
+        ECOGREEN incorpora innumerables soluciones en diferentes campos de aplicación en la infraestructura urbana. Las obras proyectadas y ejecutadas por los profesionales de la arquitectura, urbanistas, ingenieros civiles, entre muchos otros, sirven de soporte para el desarrollo de otras actividades y su necesario funcionamiento en la organización estructural de las ciudades. Los aportes de las soluciones ECOGREEN abarcan muchos sectores importantes en los que se encuentran; el sector TRANSPORTE que contempla las calles, carreteras, autopistas, vías férreas, puertos y aeropuertos. La infraestructura ENERGÉTICA que incluye las redes eléctricas, transformación, distribución y alumbrado público, calefacción urbana, refinerías, oleoductos, gasoductos, plantas eólicas, térmicas y nucleares. Infraestructura HIDRÁULICA que agrupa todas las redes de recolección y reciclaje de residuos, vertederos y rellenos sanitarios, redes de desagüe y alcantarillado, embalses, depósitos, tratamiento y distribución de agua potable. Otro sector importante es las TELECOMUNICACIONES que está conformado por las obras de telefonía fija, redes de televisión, repetidoras, centrales, fibra óptica y celdas de telefonía celular. Y por último el sector de las EDIFICACIONES que abarca las principales obras de infraestructura que se encuentran más visibles y cercanas a las comunidades, como lo son las viviendas, instituciones educativas, comercios, industria, hospitales y centros de salud, parques, etc.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <div className="space-y-4">
+        <p>Las grandes obras de infraestructura, muchas veces generan impactos sociales y ambientales, poniendo en riesgo la salud y el bienestar de las comunidades afectadas, por lo que precisan de exhaustivos estudios de impacto ambiental previos a su realización.</p>
+        <p> Es por esto que ECOGREEN fomenta la incorporación de la INFRAESTRUCTURA VERDE, que se compone principalmente por los suelos y la vegetación, y que tiene como objetivo incorporar mayor número de áreas reforestadas y mejorar la gestión del agua de lluvia de los ambientes construidos, para lograr beneficios laterales tales como; mejorar la calidad del aire y reducir el efecto "Isla de Calor"</p>
+      </div>
+    )
+  },
+  'ID-obra-270.tsx': {
+    title: "MURO DE TIERRA REFORZADA",
+    introContent: (
+      <>
+        <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #270</h3>
+        <p>
+Construcción de muro de tierra reforzada de 25 m de largo por 10 m de altura, para reconstruir deslizamiento y ampliar el área social de jardín de la Qta 4 Aguas ubicada en la Urb. Cerro Verde. Municipio Baruta. Estado Miranda. 2022        </p>
+      </>
+    ),
+  },
+   'ID-obra-300.tsx': {
+    title: "MURO DE TIERRA REFORZADA",
+    introContent: (
+      <>
+        <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #300</h3>
+        <p>
+          Construcción de un muro de tierra reforzada de 70 m de largo por 6 m de altura para extensión de cancha ecuestre en la Urbanización Paracotos. Estado Miranda. 2024
+</p>
+      </>
+    ),
+  },
+
 
 };

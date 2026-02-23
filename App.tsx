@@ -39,6 +39,10 @@ import Obra100 from './pages/casos-de-obras/100';
 import Obra150 from './pages/casos-de-obras/150';
 import Obra200 from './pages/casos-de-obras/200';
 import Obra215 from './pages/casos-de-obras/215';
+import Obra135 from './pages/casos-de-obras/135';
+import Obra270 from './pages/casos-de-obras/270';
+import Obra300 from './pages/casos-de-obras/300';
+
 
 // --- DETALLES DE MUROS ---
 import SistemasFlexibles from './pages/sistemas-de-contencion-flexibles';
@@ -106,6 +110,10 @@ const App: React.FC = () => {
             <Route path="/casos-de-obras/150" element={<Obra150 />} />
             <Route path="/casos-de-obras/200" element={<Obra200 />} />
             <Route path="/casos-de-obras/215" element={<Obra215 />} />
+            <Route path="/casos-de-obras/135" element={<Obra135 />} />
+            <Route path="/casos-de-obras/270" element={<Obra270 />} />
+            <Route path="/casos-de-obras/300" element={<Obra300 />} />
+            
 
 
             {/* SUB-RUTAS: MUROS DE CONTENCIÓN */}
