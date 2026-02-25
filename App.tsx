@@ -42,6 +42,8 @@ import Obra215 from './pages/casos-de-obras/215';
 import Obra135 from './pages/casos-de-obras/135';
 import Obra270 from './pages/casos-de-obras/270';
 import Obra300 from './pages/casos-de-obras/300';
+import Obra255 from './pages/casos-de-obras/255';
+import Obra325 from './pages/casos-de-obras/325';
 
 
 // --- DETALLES DE MUROS ---
@@ -113,6 +115,8 @@ const App: React.FC = () => {
             <Route path="/casos-de-obras/135" element={<Obra135 />} />
             <Route path="/casos-de-obras/270" element={<Obra270 />} />
             <Route path="/casos-de-obras/300" element={<Obra300 />} />
+            <Route path="/casos-de-obras/255" element={<Obra255 />} />
+            <Route path="/casos-de-obras/325" element={<Obra325 />} />
             
 
 

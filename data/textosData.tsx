@@ -1131,6 +1131,24 @@ Construcción de muro de tierra reforzada de 25 m de largo por 10 m de altura, p
       </>
     ),
   },
-
-
+     'ID-obra-255.tsx': {
+    title: "MURO DE TIERRA REFORZADA",
+    introContent: (
+      <>
+        <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #255</h3>
+        <p>
+Construcción de muro de tierra reforzada de 60 m de largo por 7 m de altura, diseñado para ganar terreno y generar nueva área social de jardines que servirían al mismo tiempo como tribuna para las competencias de equitación en la caballeriza de la Urb. Paracotos. Estado Miranda. 2017</p>
+      </>
+    ),
+  },
+   'ID-obra-325.tsx': {
+    title: "MURO DE TIERRA REFORZADA",
+    introContent: (
+      <>
+        <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #325</h3>
+        <p>
+Construcción de muro de tierra reforzada de 28 m de largo por 5 m de altura, para ganar superficie plana de jardin de 140 m2 en la Urb. Oripoto. Estado Miranda. 2025</p>
+      </>
+    ),
+  },
 };

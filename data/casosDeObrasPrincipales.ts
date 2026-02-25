@@ -57,4 +57,19 @@ export const casosDeObrasPrincipalesData: CasoDeObraPrincipal[] = [
     description: 'MURO DE TIERRA REFORZADA. CANCHA ECUESTRE. PARACOTOS.',
     type: 'Muro de Tierra Reforzada',
   },
+     {
+    id: 255,
+    image: 'https://tumuro.com/data2/images/casos-de-obras/255/ECO255_1.jpg',
+    title: 'MURO DE TIERRA REFORZADA, CABALLERIZA',
+    description: 'MURO DE TIERRA REFORZADA, CABALLERIZA PARACOTOS',
+    type: 'Muro de Tierra Reforzada',
+  },
+       {
+    id: 325,
+    image: 'https://tumuro.com/data2/images/casos-de-obras/325/ECO325_1.jpg',
+    title: 'MURO DE TIERRA REFORZADA',
+    description: 'URB. ORIPOTO',
+    type: 'Muro de Tierra Reforzada',
+  },
+  
 ];

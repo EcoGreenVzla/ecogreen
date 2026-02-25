@@ -757,5 +757,29 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
       "https://tumuro.com/data2/images/casos-de-obras/300/mobil/ECO300_MOBILE2.jpg"
     ]
   },
+   'ID-obra-325.tsx': {
+    title: "OBRA ECOGREEN #325",
+    subtitle: "MURO DE TIERRA REFORZADA.",
+    link: "/casos-de-obras/325",
+    desktopImages: [
+      "https://tumuro.com/data2/images/casos-de-obras/325/MOROCHA_ECO325.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data2/images/casos-de-obras/325/ECO325_MOBILE1.jpg",
+      "https://tumuro.com/data2/images/casos-de-obras/325/ECO325_MOBILE2.jpg"
+    ]
+  },
+   'ID-obra-255.tsx': {
+    title: "OBRA ECOGREEN #255",
+    subtitle: "MURO DE TIERRA REFORZADA.",
+    link: "/casos-de-obras/255",
+    desktopImages: [
+      "https://tumuro.com/data2/images/casos-de-obras/255/MOROCHA_ECO255.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data2/images/casos-de-obras/255/ECO255_MOBILE1.jpg",
+      "https://tumuro.com/data2/images/casos-de-obras/255/ECO255_MOBILE2.jpg"
+    ]
+  },
 
 };
