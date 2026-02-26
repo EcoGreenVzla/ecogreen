@@ -77,7 +77,7 @@ const CamposAplicacion = () => {
                   className="uppercase"
                   style={{
                     fontFamily: 'GotchaLight, sans-serif',
-                    fontSize: '1.25em',
+                    fontSize: '1em',
                     letterSpacing: '1px',
                     color: '#000',
                     textAlign: 'center',
