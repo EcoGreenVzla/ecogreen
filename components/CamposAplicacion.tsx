@@ -1,178 +1,96 @@
-
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
-import { camposData } from '../data/camposAplicacion';
 import { Link } from 'react-router-dom';
+import { camposData } from '../data/camposAplicacion';
 
-// --- Animation Variants for Coordinated Micro-interactions ---
+// --- ANIMACIONES TÉCNICAS (EFECTO COMPÁS) ---
 
-const itemVariants: Variants = {
-  rest: { 
-    // Initial state for all child elements is defined in their own variants
-  },
-  hover: {
-    // Hover state triggers corresponding variants in children
-  },
-  tap: {
-    // Tap state triggers ripple effect
-  }
-};
-
-const circleGreenVariants: Variants = {
+// Círculo base verde (estático pero con grosor)
+const greenCircleVariants: Variants = {
   rest: { opacity: 1 },
-  hover: { opacity: 0.3, transition: { duration: 0.4 } },
+  hover: { opacity: 0.4 } // Se atenúa un poco para resaltar el azul
 };
 
-const circleBlueVariants: Variants = {
-  rest: { pathLength: 0 },
+// Círculo azul (Efecto compás / Dibujo del trazo)
+const blueCircleVariants: Variants = {
+  rest: { pathLength: 0, opacity: 0 },
   hover: { 
     pathLength: 1, 
-    transition: { type: "spring", stiffness: 100, damping: 15, duration: 1.5 } 
-  },
-};
-
-const iconVariants: Variants = {
-  rest: { y: 0, scale: 1, filter: "brightness(1)" },
-  hover: { 
-    y: -12, 
-    scale: 1.1, 
-    filter: "brightness(1.1)",
-    transition: { type: "spring", stiffness: 200, damping: 10 }
-  },
-};
-
-const glowVariants: Variants = {
-  rest: { opacity: 0, scale: 0.9 },
-  hover: { 
-    opacity: 1, 
-    scale: 1,
-    transition: { delay: 0.2, duration: 0.5 }
+    opacity: 1,
+    transition: { duration: 0.8, ease: "easeInOut" } 
   }
-}
-
-const titleVariants: Variants = {
-    rest: { color: '#4d5562', letterSpacing: '0.025em', fontWeight: 600 },
-    hover: { color: '#0E306F', letterSpacing: '0.05em', fontWeight: 600 },
-};
-
-const underlineVariants: Variants = {
-    rest: { scaleX: 0 },
-    hover: { scaleX: 1, transition: { duration: 0.4, ease: 'easeOut' } },
-};
-
-const rippleVariants: Variants = {
-    tap: {
-        scale: [1, 1.8],
-        opacity: [0.6, 0],
-        transition: { duration: 0.4, ease: "easeOut" }
-    }
-}
-
-
-const CampoItem: React.FC<{ title: string; icon: string; index: number; href: string }> = ({ title, icon, index, href }) => {
-  return (
-    <Link to={href}>
-      <motion.div
-        initial="rest"
-        whileInView={{ opacity: 1, y: 0 }}
-        whileHover="hover"
-        whileTap="tap"
-        viewport={{ once: true }}
-        variants={itemVariants}
-        className="flex flex-col items-center group cursor-pointer"
-        style={{ opacity: 0, y: 30 }}
-        transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
-      >
-        {/* Contenedor del Círculo con Borde Animado */}
-        <div className="relative w-32 h-32 sm:w-40 sm:h-40 flex items-center justify-center">
-          {/* Ripple Effect */}
-          <motion.div 
-              className="absolute w-full h-full rounded-full border-2 border-[#0E306F]"
-              variants={rippleVariants}
-              style={{ scale: 1, opacity: 0 }}
-          />
-          {/* Glow Effect */}
-          <motion.div 
-              className="absolute w-full h-full rounded-full"
-              style={{ boxShadow: "0 0 20px 5px rgba(14, 48, 111, 0.4)" }}
-              variants={glowVariants}
-          />
-
-          {/* SVG para el trazo del compás (dual path) */}
-          <svg className="absolute inset-0 w-full h-full -rotate-90">
-            {/* Círculo base verde */}
-            <motion.circle
-              cx="50%" cy="50%" r="48%"
-              stroke="#309400"
-              strokeWidth="2"
-              fill="transparent"
-              initial={{ pathLength: 0 }}
-              whileInView={{ pathLength: 1 }}
-              transition={{ duration: 1.5, ease: "easeInOut" }}
-              variants={circleGreenVariants}
-            />
-            {/* Círculo animado azul (hover) */}
-            <motion.circle
-              cx="50%" cy="50%" r="48%"
-              stroke="#0E306F"
-              strokeWidth="4"
-              fill="transparent"
-              variants={circleBlueVariants}
-            />
-          </svg>
-
-          {/* Icono Interno con levitación */}
-          <motion.div 
-            variants={iconVariants}
-            className="relative z-10 w-2/3 h-2/3 flex items-center justify-center p-4"
-          >
-            <img 
-              src={icon} 
-              alt={title} 
-              className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
-            />
-          </motion.div>
-        </div>
-
-        {/* Título con Tipografía Dinámica */}
-        <motion.h3 
-          variants={titleVariants}
-          className="mt-6 text-center text-[1.2rem] font-sans tracking-wider max-w-[180px]"
-        >
-          {title}
-          <motion.span 
-              variants={underlineVariants}
-              className="block h-[1px] bg-[#0E306F] mx-auto mt-1" 
-          />
-        </motion.h3>
-      </motion.div>
-    </Link>
-  );
 };
 
 const CamposAplicacion = () => {
   return (
-    <section className="py-20 bg-white">
-      <div className="container mx-auto px-4">
-        <motion.h2 
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-3xl font-light text-center mb-16 tracking-[0.2em] text-gray-500 uppercase"
-        >
-          Campos de Aplicación
-        </motion.h2>
+    <section id="featured-wrapper" className="bg-white py-16">
+      {/* ESPACIOS LATERALES Y CONTENEDOR CERRADO */}
+      <div id="featured" className="max-w-[1200px] mx-auto px-10 lg:px-24">
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-12 gap-x-8">
-          {camposData.map((campo, index) => (
-            <CampoItem 
-              key={campo.id} 
-              title={campo.title} 
-              icon={campo.icon} 
-              index={index}
-              href={campo.href}
-            />
+        <h2 className="text-3xl font-[200] text-center text-gray-500 mb-12 tracking-[0.2em] uppercase">
+          Campos de Aplicación
+        </h2>
+
+        {/* GRID DE 4 COLUMNAS */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
+          {camposData.map((campo) => (
+            <motion.div
+              key={campo.id}
+              initial="rest"
+              whileHover="hover"
+              animate="rest"
+              className="flex flex-col items-center group cursor-pointer"
+            >
+              <Link to={campo.href} className="flex flex-col items-center no-underline w-full">
+                
+                {/* 1. CONTENEDOR DEL CÍRCULO (Ajustado a 120px x 120px) */}
+                <div className="relative w-[120px] h-[120px] flex items-center justify-center mb-4">
+                  <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 100 100">
+                    {/* Círculo base verde - Grosor aumentado (strokeWidth: 4) */}
+                    <motion.circle
+                      cx="50" cy="50" r="45"
+                      stroke="#4ba406"
+                      strokeWidth="4"
+                      fill="transparent"
+                      variants={greenCircleVariants}
+                    />
+                    {/* Círculo azul animado (Efecto Compás) - Grosor aumentado (strokeWidth: 5) */}
+                    <motion.circle
+                      cx="50" cy="50" r="45"
+                      stroke="#0e306f"
+                      strokeWidth="5"
+                      fill="transparent"
+                      strokeLinecap="square"
+                      variants={blueCircleVariants}
+                    />
+                  </svg>
+                  
+                  {/* ICONO INTERNO (Ajustado proporcionalmente al círculo de 120px) */}
+                  <div className="relative z-10 w-16 h-16 flex items-center justify-center">
+                    <img 
+                      src={campo.icon} 
+                      alt={campo.title} 
+                      className="w-full h-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-500"
+                    />
+                  </div>
+                </div>
+
+                {/* 2. ESTILOS DE FUENTE H3 (Exactamente tu CSS) */}
+                <h3 
+                  className="uppercase"
+                  style={{
+                    fontFamily: 'GotchaLight, sans-serif',
+                    fontSize: '1em',
+                    letterSpacing: '1px',
+                    color: '#000',
+                    textAlign: 'center',
+                    margin: '0 0 1em 0'
+                  }}
+                >
+                  {campo.title}
+                </h3>
+              </Link>
+            </motion.div>
           ))}
         </div>
       </div>
