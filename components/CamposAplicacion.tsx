@@ -4,14 +4,11 @@ import { Link } from 'react-router-dom';
 import { camposData } from '../data/camposAplicacion';
 
 // --- ANIMACIONES TÉCNICAS (EFECTO COMPÁS) ---
-
-// Círculo base verde (estático pero con grosor)
 const greenCircleVariants: Variants = {
   rest: { opacity: 1 },
-  hover: { opacity: 0.4 } // Se atenúa un poco para resaltar el azul
+  hover: { opacity: 0.4 }
 };
 
-// Círculo azul (Efecto compás / Dibujo del trazo)
 const blueCircleVariants: Variants = {
   rest: { pathLength: 0, opacity: 0 },
   hover: { 
@@ -31,8 +28,11 @@ const CamposAplicacion = () => {
           Campos de Aplicación
         </h2>
 
-        {/* GRID DE 4 COLUMNAS */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-10">
+        {/* AJUSTE DE COLUMNAS:
+            - grid-cols-1: Una sola columna en móviles (Vista vertical).
+            - md:grid-cols-4: Cuatro columnas en escritorio (Vista horizontal).
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-x-6 gap-y-12">
           {camposData.map((campo) => (
             <motion.div
               key={campo.id}
@@ -43,10 +43,9 @@ const CamposAplicacion = () => {
             >
               <Link to={campo.href} className="flex flex-col items-center no-underline w-full">
                 
-                {/* 1. CONTENEDOR DEL CÍRCULO (Ajustado a 120px x 120px) */}
+                {/* CONTENEDOR DEL CÍRCULO (120px x 120px) */}
                 <div className="relative w-[120px] h-[120px] flex items-center justify-center mb-4">
                   <svg className="absolute inset-0 w-full h-full -rotate-90" viewBox="0 0 100 100">
-                    {/* Círculo base verde - Grosor aumentado (strokeWidth: 4) */}
                     <motion.circle
                       cx="50" cy="50" r="45"
                       stroke="#4ba406"
@@ -54,7 +53,6 @@ const CamposAplicacion = () => {
                       fill="transparent"
                       variants={greenCircleVariants}
                     />
-                    {/* Círculo azul animado (Efecto Compás) - Grosor aumentado (strokeWidth: 5) */}
                     <motion.circle
                       cx="50" cy="50" r="45"
                       stroke="#0e306f"
@@ -65,7 +63,6 @@ const CamposAplicacion = () => {
                     />
                   </svg>
                   
-                  {/* ICONO INTERNO (Ajustado proporcionalmente al círculo de 120px) */}
                   <div className="relative z-10 w-16 h-16 flex items-center justify-center">
                     <img 
                       src={campo.icon} 
@@ -75,12 +72,12 @@ const CamposAplicacion = () => {
                   </div>
                 </div>
 
-                {/* 2. ESTILOS DE FUENTE H3 (Exactamente tu CSS) */}
+                {/* ESTILOS DE FUENTE H3 */}
                 <h3 
                   className="uppercase"
                   style={{
                     fontFamily: 'GotchaLight, sans-serif',
-                    fontSize: '1em',
+                    fontSize: '1.25em',
                     letterSpacing: '1px',
                     color: '#000',
                     textAlign: 'center',
