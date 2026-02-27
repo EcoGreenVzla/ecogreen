@@ -1,12 +1,10 @@
 <?php
-// Configuración de cabeceras para permitir que React se comunique con este script
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: POST");
 header("Access-Control-Allow-Headers: Content-Type");
 header("Content-Type: application/json");
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Capturar los datos del formulario
     $json = file_get_contents('php://input');
     $data = json_decode($json, true);
 
@@ -14,33 +12,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $email    = filter_var($data['email'], FILTER_SANITIZE_EMAIL);
     $telefono = strip_tags($data['telefono']);
     $asunto   = strip_tags($data['asunto']);
-    $mensaje  = strip_tags($data['mensaje']);
+    $mensaje  = nl2br(strip_tags($data['mensaje'])); // Mantener saltos de línea
 
-    // --- CONFIGURACIÓN DEL EMAIL ---
     $para      = "info@tumuro.com";
-    $titulo    = "Nueva Solicitud: " . $asunto;
+    $titulo    = "=?UTF-8?B?".base64_encode("EcoGreen: " . $asunto)."?="; // Codificar asunto para evitar spam
     
-    // Cuerpo del mensaje
-    $cuerpo = "Has recibido un nuevo mensaje de contacto:\n\n";
-    $cuerpo .= "Nombre: $nombre\n";
-    $cuerpo .= "Email: $email\n";
-    $cuerpo .= "Teléfono: $telefono\n";
-    $cuerpo .= "Asunto: $asunto\n";
-    $cuerpo .= "Mensaje:\n$mensaje\n";
+    // Cuerpo en formato HTML elegante
+    $cuerpo = "
+    <html>
+    <head><title>$asunto</title></head>
+    <body style='font-family: Arial, sans-serif; color: #333;'>
+        <h2 style='color: #0E306F;'>Nueva solicitud de contacto</h2>
+        <p><strong>Nombre:</strong> $nombre</p>
+        <p><strong>Email:</strong> $email</p>
+        <p><strong>Teléfono:</strong> $telefono</p>
+        <p><strong>Mensaje:</strong><br>$mensaje</p>
+        <hr>
+        <p style='font-size: 10px; color: #999;'>Enviado desde el formulario web de EcoGreen</p>
+    </body>
+    </html>";
 
-    // Cabeceras (Hostinger requiere que el 'From' sea una cuenta real de tu dominio)
-    $headers = "From: info@tumuro.com\r\n";
-    $headers .= "Reply-To: $email\r\n";
-    $headers .= "X-Mailer: PHP/" . phpversion();
+    // CABECERAS PROFESIONALES
+    $headers = "MIME-Version: 1.0" . "\r\n";
+    $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n"; // Enviar como HTML
+    $headers .= "From: EcoGreen Web <info@tumuro.com>" . "\r\n"; // El remitente DEBE ser de tu dominio
+    $headers .= "Reply-To: $email" . "\r\n"; // Al darle a responder, le escribes al cliente
+    $headers .= "Return-Path: info@tumuro.com" . "\r\n";
 
-    // Enviar correo usando el motor interno de Hostinger
     if (mail($para, $titulo, $cuerpo, $headers)) {
-        echo json_encode(["status" => "success", "message" => "Mensaje enviado correctamente"]);
+        echo json_encode(["status" => "success"]);
     } else {
         http_response_code(500);
-        echo json_encode(["status" => "error", "message" => "Error al enviar el correo"]);
+        echo json_encode(["status" => "error"]);
     }
-} else {
-    echo json_encode(["status" => "error", "message" => "Método no permitido"]);
 }
 ?>
