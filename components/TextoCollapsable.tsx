@@ -16,7 +16,7 @@ const TextoCollapsable: React.FC<Props> = ({ data }) => {
     layout: {
       backgroundColor: '#FFFFFF',
       paddingVertical: 'py-10 md:py-20',
-      maxWidth: '1024px', 
+      maxWidth: '1080px', 
     },
     header: {
       titleColor: '#0E306F',
