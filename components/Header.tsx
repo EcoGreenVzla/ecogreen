@@ -5,7 +5,6 @@ import { navigationData } from '../data/navigation';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-// --- CONFIGURACIÓN DE REDES SOCIALES ---
 const socialNetworks = [
   { id: 'facebook', href: '#', iconUrl: 'https://img.icons8.com/?size=100&id=13912&format=png&color=3b599a', alt: 'Facebook' },
   { id: 'twitter', href: '#', iconUrl: 'https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=1ca1f1', alt: 'Twitter' },
@@ -35,37 +34,37 @@ const Header: React.FC = () => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
 
-    // --- CARGA DINÁMICA DEL TRADUCTOR ---
+    // INYECTOR DINÁMICO DE GOOGLE TRANSLATE
     const addGoogleTranslateScript = () => {
-      // 1. Definimos la función de inicialización en el objeto window
       (window as any).googleTranslateElementInit = () => {
         new (window as any).google.translate.TranslateElement({
-          pageLanguage: 'es',
-          includedLanguages: 'en,es',
+          pageLanguage: 'es', // Le decimos a Google que la página ESTÁ en español
+          includedLanguages: 'en', // SOLO OFRECEMOS TRADUCIR AL INGLÉS
           layout: (window as any).google.translate.TranslateElement.InlineLayout.SIMPLE,
           autoDisplay: false
         }, 'google_translate_element');
       };
 
-      // 2. Creamos y añadimos el script solo si no existe ya
       if (!document.querySelector('script[src*="translate.google.com"]')) {
         const script = document.createElement('script');
         script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
         script.async = true;
         document.body.appendChild(script);
       } else if ((window as any).google?.translate?.TranslateElement) {
-        // Si el script ya existe, lo reinicializamos
         (window as any).googleTranslateElementInit();
       }
     };
 
-    addGoogleTranslateScript();
+    const timer = setTimeout(addGoogleTranslateScript, 500);
 
-    return () => window.removeEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      clearTimeout(timer);
+    };
   }, []);
 
   return (
-    <header className={`relative z-50 bg-white w-full`}>
+    <header className={`relative z-50 bg-white w-full shadow-sm`}>
       <div className={`container mx-auto px-4 w-[99%] md:max-w-[80%]`}>
         <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4 lg:py-6'}`}>
           
@@ -91,8 +90,8 @@ const Header: React.FC = () => {
           </div>
 
           <div className="flex items-center space-x-4"> 
-             {/* Contenedor del Traductor: Ahora con un ancho mínimo para que no desaparezca */}
-             <div id="google_translate_element" className="google-translator-custom min-w-[140px] flex items-center"></div>
+             {/* AQUÍ VA EL TRADUCTOR */}
+             <div id="google_translate_element" className="google-translator-custom min-w-[140px] flex items-center h-[40px]"></div>
 
              <div className="hidden lg:flex items-center space-x-2 mr-4">
                 {socialNetworks.map((net) => (
