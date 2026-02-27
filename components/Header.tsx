@@ -5,7 +5,7 @@ import { navigationData } from '../data/navigation';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-// --- CONFIGURACIÓN DE REDES SOCIALES (Icons8) ---
+// --- CONFIGURACIÓN DE REDES SOCIALES (Icons8 Coloreados) ---
 const socialNetworks = [
   { id: 'facebook', href: '#', iconUrl: 'https://img.icons8.com/?size=100&id=13912&format=png&color=3b599a', alt: 'Facebook' },
   { id: 'twitter', href: '#', iconUrl: 'https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=1ca1f1', alt: 'Twitter' },
@@ -15,59 +15,78 @@ const socialNetworks = [
 ];
 
 const SocialIcon: React.FC<{ href: string; iconUrl: string; alt: string }> = ({ href, iconUrl, alt }) => (
-    <motion.a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex items-center justify-center transition-all duration-300 h-[40px] w-[40px]"
-        whileHover={{ scale: 1.15 }}
-        whileTap={{ scale: 0.95 }}
-    >
-        <img src={iconUrl} alt={alt} className="w-full h-full object-contain" />
-    </motion.a>
+  <motion.a
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="flex items-center justify-center transition-all duration-300 h-[32px] w-[32px] lg:h-[40px] lg:w-[40px]"
+    whileHover={{ scale: 1.15 }}
+    whileTap={{ scale: 0.95 }}
+  >
+    {/* Se eliminó grayscale para mantener los colores originales */}
+    <img src={iconUrl} alt={alt} className="w-full h-full object-contain transition-all" />
+  </motion.a>
 );
 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  // ============================================================
+  // PANEL DE CONTROL DE ESTILOS (THEME)
+  // ============================================================
+  const theme = {
+    layout: {
+      maxWidthResponsive: 'w-[99%] md:max-w-[80%]', // DISEÑO BOXED AL 80%
+      backgroundColor: 'bg-white',
+      paddingY: isScrolled ? 'py-2' : 'py-4 lg:py-6',
+    },
+    colors: {
+      primaryBlue: '#0E306F',
+    },
+    typography: {
+      fontFamily: "'Open Sans', sans-serif",
+    }
+  };
+
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-    };
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    /* LIMPIEZA TOTAL: Se eliminó border-b, border-gray-100 y shadow-md */
-    <header className="relative z-50 bg-white w-full">
-      <div className="container mx-auto px-4 md:px-8 lg:px-12">
-        <div className="flex justify-between items-center py-4 lg:py-6">
+    <header className={`relative z-50 ${theme.layout.backgroundColor} w-full shadow-sm`} style={{ fontFamily: theme.typography.fontFamily }}>
+      
+      {/* CONTENEDOR BOXED */}
+      <div className={`container mx-auto px-4 ${theme.layout.maxWidthResponsive}`}>
+        <div className={`flex justify-between items-center transition-all duration-300 ${theme.layout.paddingY}`}>
           
+          {/* BOTÓN MÓVIL (Mantiene el azul corporativo) */}
           <div className="fixed left-4 top-6 z-[9999] lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`inline-flex items-center justify-center p-2 rounded-md text-white transition-all duration-500 focus:outline-none shadow-lg ${
+              className={`inline-flex items-center justify-center p-2 rounded-md text-white transition-all duration-500 shadow-lg ${
                 isScrolled ? 'bg-[#0e306f]/20 backdrop-blur-sm' : 'bg-[#0e306f]'
               }`}
-              aria-label="Abrir menú"
             >
               <MenuIcon className="h-7 w-7" />
             </button>
           </div>
 
+          {/* LOGO - Tamaño ajustado a 90px en desktop */}
           <div className="flex-shrink-0 lg:flex-none w-full lg:w-auto flex justify-center lg:justify-start">
              <Link to="/" className="block">
                 <img 
-                   className="h-[64px] w-[220px] lg:h-[72px] lg:w-[250px] object-contain transition-all duration-300" 
+                   className={`object-contain transition-all duration-300 ${isScrolled ? 'h-[50px]' : 'h-[64px] lg:h-[90px]'} w-auto`} 
                    src="https://tumuro.com/images/ecogreen-logo.png" 
-                   alt="EcoGreen Construcciones Logo" 
+                   alt="EcoGreen Logo" 
                 />
              </Link>
           </div>
 
-          <div className="hidden lg:flex items-center space-x-0.5 mr-16"> 
+          {/* REDES SOCIALES COLOREADAS */}
+          <div className="hidden lg:flex items-center space-x-2 mr-4"> 
              {socialNetworks.map((net) => (
                   <SocialIcon key={net.id} href={net.href} iconUrl={net.iconUrl} alt={net.alt} />
              ))}
@@ -75,6 +94,7 @@ const Header: React.FC = () => {
         </div>
       </div>
 
+      {/* NAVEGACIÓN */}
       <Nav items={navigationData} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
     </header>
   );
