@@ -9,157 +9,209 @@ interface Props {
 }
 
 const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }) => {
-  // 1. DECLARAMOS TODOS LOS HOOKS PRIMERO
-  const [currentSlide, setCurrentSlide] = useState(0);
+  // --- ESTADOS ---
   const [isMobile, setIsMobile] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+  const [dragOffset, setDragOffset] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   
+  // Para el loop infinito, el índice inicial debe ser 1 (la primera imagen real)
+  const [currentSlide, setCurrentSlide] = useState(1);
+
   const startX = useRef<number>(0);
-  const currentX = useRef<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
-  // Extraemos la data de forma segura
-  const activeImages = isMobile ? data?.mobileImages : data?.desktopImages;
-  const safeImages = activeImages || [];
-  const totalSlides = safeImages.length;
+  const originalImages = (isMobile ? data?.mobileImages : data?.desktopImages) || [];
+  
+  // --- LÓGICA DE CLONACIÓN PARA LOOP INFINITO ---
+  // Creamos un array: [Última, Imagen1, Imagen2, ..., ImagenN, Primera]
+  const safeImages = originalImages.length > 0 
+    ? [originalImages[originalImages.length - 1], ...originalImages, originalImages[0]] 
+    : [];
+  
+  const totalOriginals = originalImages.length;
 
-  useEffect(() => {
-    setCurrentSlide(0);
-  }, [isMobile]);
-
+  // --- NAVEGACIÓN ---
   const nextSlide = useCallback(() => {
-    if (totalSlides <= 1) return;
-    setCurrentSlide((prev) => (prev === totalSlides - 1 ? 0 : prev + 1));
-  }, [totalSlides]);
+    if (isTransitioning || totalOriginals <= 1) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => prev + 1);
+  }, [isTransitioning, totalOriginals]);
 
   const prevSlide = useCallback(() => {
-    if (totalSlides <= 1) return;
-    setCurrentSlide((prev) => (prev === 0 ? totalSlides - 1 : prev - 1));
-  }, [totalSlides]);
+    if (isTransitioning || totalOriginals <= 1) return;
+    setIsTransitioning(true);
+    setCurrentSlide((prev) => prev - 1);
+  }, [isTransitioning, totalOriginals]);
+
+  // Manejador para el "Salto Invisible" al terminar la transición
+  const handleTransitionEnd = () => {
+    setIsTransitioning(false);
+
+    // Si llegamos al clon del final (índice total + 1), saltamos a la 1 real
+    if (currentSlide === totalOriginals + 1) {
+      setCurrentSlide(1);
+    }
+    // Si llegamos al clon del principio (índice 0), saltamos a la última real
+    if (currentSlide === 0) {
+      setCurrentSlide(totalOriginals);
+    }
+  };
 
   useEffect(() => {
-    if (totalSlides <= 1 || isDragging) return;
+    if (totalOriginals <= 1 || isDragging) return;
     const timer = setInterval(nextSlide, autoPlayDuration);
     return () => clearInterval(timer);
-  }, [nextSlide, autoPlayDuration, totalSlides, isDragging]);
+  }, [nextSlide, autoPlayDuration, totalOriginals, isDragging]);
 
-  // --- ARRASTRE ---
+  // --- ARRASTRE INTERACTIVO ---
   const handleStart = (clientX: number) => {
+    if (isTransitioning) return;
     setIsDragging(true);
     startX.current = clientX;
   };
 
   const handleMove = (clientX: number) => {
     if (!isDragging) return;
-    currentX.current = clientX;
+    const diff = startX.current - clientX;
+    setDragOffset(diff);
   };
 
   const handleEnd = () => {
     if (!isDragging) return;
     setIsDragging(false);
     
-    const distance = startX.current - currentX.current;
-    const minSwipeDistance = 50;
-
-    if (currentX.current === 0) return;
-
-    if (distance > minSwipeDistance) {
+    const threshold = 100; 
+    if (dragOffset > threshold) {
       nextSlide();
-    } else if (distance < -minSwipeDistance) {
+    } else if (dragOffset < -threshold) {
       prevSlide();
     }
-    
-    startX.current = 0;
-    currentX.current = 0;
+    setDragOffset(0);
   };
 
-  const onMouseDown = (e: React.MouseEvent) => { e.preventDefault(); handleStart(e.clientX); };
-  const onMouseMove = (e: React.MouseEvent) => handleMove(e.clientX);
-  const onMouseUp = () => handleEnd();
-  const onMouseLeave = () => { if (isDragging) setIsDragging(false); };
-  const onTouchStart = (e: React.TouchEvent) => handleStart(e.touches[0].clientX);
-  const onTouchMove = (e: React.TouchEvent) => handleMove(e.touches[0].clientX);
-  const onTouchEnd = () => handleEnd();
+  if (!data || totalOriginals === 0) return null;
 
-  // 2. AHORA SÍ, HACEMOS LOS RETURNS TEMPRANOS SI NO HAY DATA
-  if (!data || totalSlides === 0) return null;
+  // ============================================================
+  // PANEL DE DISEÑO (MANTENIDO)
+  // ============================================================
+  const theme = {
+    desktop: {
+      textContainer: {
+        position: 'absolute' as const,
+        bottom: '20%',
+        right: '50%',
+        marginRight: '-540px',
+        zIndex: 40,
+        padding: '1.9em 1.5em 0.6em 1.3em',
+        backgroundColor: '#092455',
+        opacity: 0.8,
+        textAlign: 'right' as const,
+        lineHeight: '3.2em',
+        borderRadius: '0',
+        fontFamily: 'GotchaLight, sans-serif',
+        pointerEvents: 'auto' as const,
+      },
+      title: { fontSize: '2.2em', color: '#5aef00', fontWeight: 'bold', letterSpacing: '2px', display: 'block' },
+      subtitle: { color: '#ffffff', fontSize: '1.2em', fontStyle: 'italic', fontWeight: 'bold', marginTop: '-1.2em', display: 'block', letterSpacing: '2.5px' },
+      arrows: { offset: '30px', width: '35px', height: '75px', background: 'rgba(0,0,0,0.4)', iconSize: '48px', iconThickness: '4px', zIndex: 99 }
+    },
+    mobile: {
+      textContainer: {
+        position: 'absolute' as const,
+        bottom: '10%',
+        left: '20%', 
+        right: '5%',
+        backgroundColor: '#092455',
+        opacity: 0.9,
+        padding: '0.6em 0.8em',
+        textAlign: 'right' as const,
+        borderRadius: '0',
+        pointerEvents: 'auto' as const,
+      },
+      title: { fontSize: '1.1em', color: '#5aef00', fontWeight: 'bold', display: 'block', lineHeight: '1.1em', letterSpacing: '1.2px' },
+      subtitle: { color: '#ffffff', fontSize: '0.85em', fontStyle: 'italic', fontWeight: 'bold', marginTop: '-0.1em', display: 'block', letterSpacing: '1px' },
+      arrows: { offset: '10px', width: '25px', height: '45px', background: 'rgba(0, 0, 0, 0.3)', iconSize: '24px', iconThickness: '3px', zIndex: 99 }
+    }
+  };
+
+  const current = isMobile ? theme.mobile : theme.desktop;
 
   return (
     <div 
-      ref={containerRef}
-      className={`relative w-full bg-gray-100 group overflow-hidden -mt-[1px] ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
-      onMouseDown={onMouseDown}
-      onMouseMove={onMouseMove}
-      onMouseUp={onMouseUp}
-      onMouseLeave={onMouseLeave}
-      onTouchStart={onTouchStart}
-      onTouchMove={onTouchMove}
-      onTouchEnd={onTouchEnd}
+      ref={containerRef} 
+      className={`relative w-full bg-white overflow-hidden ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+      onMouseDown={(e) => handleStart(e.clientX)}
+      onMouseMove={(e) => handleMove(e.clientX)}
+      onMouseUp={handleEnd}
+      onMouseLeave={handleEnd}
+      onTouchStart={(e) => handleStart(e.touches[0].clientX)}
+      onTouchMove={(e) => handleMove(e.touches[0].clientX)}
+      onTouchEnd={handleEnd}
     >
-      
-      {/* 1. SPACER */}
-      <div className="invisible relative pointer-events-none z-0">
-         <img src={safeImages[0]} alt="Spacer" className="w-full h-auto" />
+      {/* 1. ESPACIADOR (Usamos la primera imagen original) */}
+      <div className="invisible relative pointer-events-none">
+         <img src={originalImages[0]} alt="Spacer" className="w-full h-auto" />
       </div>
 
       {/* 2. CAPA DE TEXTO */}
-      <div className="absolute inset-0 z-20 flex items-end justify-end pointer-events-none pb-12 pr-6 md:pb-24 md:pr-16">
-        <div className="bg-ecogreen-blue/90 p-6 md:p-10 max-w-lg text-right pointer-events-auto shadow-lg backdrop-blur-[2px]">
-          <h2 className="text-xl md:text-4xl font-bold text-[#5aef00] uppercase mb-2 leading-tight tracking-wide">
-            {data.title}
-          </h2>
+      <div className="absolute inset-0 z-20 pointer-events-none select-none">
+        <div style={current.textContainer}>
+          <span style={current.title}>{data.title.toUpperCase()}</span>
           {data.subtitle && (
-            <p className="text-sm md:text-xl text-white font-light italic uppercase tracking-wider leading-relaxed">
-              {data.subtitle}
-            </p>
+            <span id="slider-p" style={current.subtitle}>{data.subtitle}</span>
           )}
         </div>
       </div>
 
-      {/* 3. TRACK DEL SLIDER */}
+      {/* 3. TRACK DE IMÁGENES (CON SOPORTE INFINITO) */}
       <div className="absolute inset-0 h-full z-10 overflow-hidden">
         <div 
-          className="flex h-full transition-transform duration-700 ease-in-out will-change-transform"
-          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+          onTransitionEnd={handleTransitionEnd}
+          className={`flex h-full will-change-transform ${
+            isTransitioning ? 'transition-transform duration-700 ease-in-out' : ''
+          }`}
+          style={{ 
+            transform: `translateX(calc(-${currentSlide * 100}% - ${dragOffset}px))`,
+            // Importante: quitamos la transición mientras arrastramos para suavidad total
+            transitionProperty: isDragging ? 'none' : 'transform'
+          }}
         >
           {safeImages.map((imgUrl, index) => (
-            <div key={`${isMobile ? 'mob' : 'desk'}-${index}`} className="min-w-full h-full relative select-none">
-              <img 
-                src={imgUrl} 
-                alt={`Slide ${index + 1}`} 
-                className="w-full h-full object-fill block pointer-events-none" 
-              />
+            <div key={index} className="min-w-full h-full relative select-none">
+              <img src={imgUrl} className="w-full h-full object-fill block pointer-events-none" alt={`Slide ${index}`} />
             </div>
           ))}
         </div>
       </div>
 
       {/* 4. FLECHAS DE NAVEGACIÓN */}
-      {totalSlides > 1 && (
+      {totalOriginals > 1 && (
         <>
-          <button
+          <button 
             onClick={(e) => { e.stopPropagation(); prevSlide(); }}
-            className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-30 p-2 md:p-3 text-white hover:text-ecogreen-green transition-all bg-black/20 hover:bg-black/50 rounded-full backdrop-blur-sm cursor-pointer"
+            style={{ zIndex: current.arrows.zIndex, width: current.arrows.width, height: current.arrows.height, backgroundColor: current.arrows.background, left: current.arrows.offset, display: 'flex', borderRadius: '0' }}
+            className="absolute top-1/2 -translate-y-1/2 items-center justify-center text-white transition-all hover:brightness-125 cursor-pointer border-none outline-none"
           >
-            <ChevronLeftIcon className="h-6 w-6 md:h-10 md:w-10" />
+            <ChevronLeftIcon style={{ width: current.arrows.iconSize, height: current.arrows.iconSize }} className={`stroke-[${current.arrows.iconThickness}]`} />
           </button>
           
-          <button
+          <button 
             onClick={(e) => { e.stopPropagation(); nextSlide(); }}
-            className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-30 p-2 md:p-3 text-white hover:text-ecogreen-green transition-all bg-black/20 hover:bg-black/50 rounded-full backdrop-blur-sm cursor-pointer"
+            style={{ zIndex: current.arrows.zIndex, width: current.arrows.width, height: current.arrows.height, backgroundColor: current.arrows.background, right: current.arrows.offset, display: 'flex', borderRadius: '0' }}
+            className="absolute top-1/2 -translate-y-1/2 items-center justify-center text-white transition-all hover:brightness-125 cursor-pointer border-none outline-none"
           >
-            <ChevronRightIcon className="h-6 w-6 md:h-10 md:w-10" />
+            <ChevronRightIcon style={{ width: current.arrows.iconSize, height: current.arrows.iconSize }} className={`stroke-[${current.arrows.iconThickness}]`} />
           </button>
         </>
       )}
-
     </div>
   );
 };
