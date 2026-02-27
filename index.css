@@ -36,13 +36,15 @@ body {
     background-color: #ffffff !important;
     border: 1px solid #0E306F !important;
     border-radius: 4px !important;
-    padding: 6px 10px !important;
+    padding: 6px 12px !important; /* Ligeramente más padding horizontal */
     font-family: 'Open Sans', sans-serif !important;
     font-size: 13px !important;
     font-weight: 600 !important;
     cursor: pointer !important;
     display: flex !important;
     align-items: center !important;
+    justify-content: space-between !important; /* Separa el texto de la flecha */
+    white-space: nowrap !important; /* CRÍTICO: Evita que el texto salte de línea */
     transition: all 0.3s ease;
 }
 
