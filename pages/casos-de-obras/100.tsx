@@ -11,22 +11,17 @@ const Obra100: React.FC = () => {
   const pageID = 'ID-obra-100.tsx';
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full m-0 p-0">
       <title>Obra #100 | EcoGreen</title>
 
-      {/* 1. Slider */}
+      {/* Bloque 1: Slider */}
       <HeroSliderResponsive data={sliderData[pageID]} />
 
-      {/* 2. Intro + Botón Leer Más */}
-      <div className="container mx-auto py-0 px-24">
-        <TextoCollapsable data={textosData[pageID]} />
-      </div>
+      {/* Bloque 2: Contenido de Texto */}
+      <TextoCollapsable data={textosData[pageID]} />
 
-      {/* 3. Galería (Patrón GaleriaData) */}
-      <div className="container mx-auto pb-24 px-24 border-t border-gray-100 pt-0">
-               {/* CORRECCIÓN: Usa la prop 'data' y pasa el objeto completo sin '.items' */}
-        <GaleriaImagenes data={galeriasData[pageID]} />
-      </div>
+      {/* Bloque 3: Galería de Imágenes */}
+      <GaleriaImagenes data={galeriasData[pageID]} />
     </div>
   );
 };
