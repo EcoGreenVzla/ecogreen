@@ -14,21 +14,63 @@ body {
 
 
 
-/* index.css */
+/* =======================================================
+   ESTILOS PERSONALIZADOS PARA GOOGLE TRANSLATE
+   ======================================================= */
 
-/* Ocultar el logo de Google y el texto "Powered by" sin ocultar el selector */
-.goog-te-gadget {
-    font-size: 0 !important; /* Oculta el texto "Powered by Google" */
-    color: transparent !important;
+/* 1. Ocultar el banner superior molesto de Google */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}
+body {
+    top: 0px !important;
 }
 
+/* 2. TU REGLA: Forzar alineación en línea de los elementos internos */
 .goog-te-gadget div {
-    display: inline-block;
+    display: ruby;
 }
 
-/* El selector volverá a tener tamaño y color de fuente normal */
-#google_translate_element select {
-    display: block !important;
-    font-size: 12px !important;
+/* 3. Estilizar el botón "Seleccionar idioma" (El layout SIMPLE) */
+.goog-te-gadget-simple {
+    background-color: #ffffff !important;
+    border: 1px solid #0E306F !important;
+    border-radius: 4px !important;
+    padding: 6px 10px !important;
+    font-family: 'Open Sans', sans-serif !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    cursor: pointer !important;
+    display: flex !important;
+    align-items: center !important;
+    transition: all 0.3s ease;
+}
+
+/* Efecto hover al pasar el mouse */
+.goog-te-gadget-simple:hover {
+    background-color: #f0f4f8 !important;
+}
+
+/* 4. Cambiar el color del texto a Azul EcoGreen */
+.goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
     color: #0E306F !important;
+}
+
+/* 5. Ocultar el icono de Google (la pequeña 'G') */
+.goog-te-gadget-icon {
+    display: none !important;
+}
+
+/* 6. Quitar la línea gris divisoria fea que trae por defecto */
+.goog-te-gadget-simple span[style*="border-left"] {
+    border-left: none !important;
+    padding-left: 0 !important;
+    margin-left: 5px !important;
+}
+
+/* 7. Color de la flechita hacia abajo (▼) */
+.goog-te-gadget-simple span[aria-hidden="true"] {
+    color: #0E306F !important;
+    font-size: 10px !important;
+    margin-left: 6px !important;
 }
