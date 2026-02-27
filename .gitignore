@@ -1,4 +1,10 @@
-# Logs
+# --- SEGURIDAD (CRÍTICO) ---
+# Nunca subir credenciales SMTP o llaves privadas
+.env
+.env.local
+.env.*.local
+
+# --- LOGS ---
 logs
 *.log
 npm-debug.log*
@@ -7,18 +13,35 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
+# --- DEPENDENCIAS ---
+node_modules/
+jspm_packages/
 
-# Editor directories and files
+# --- LIBRERÍAS DE TERCEROS (PHP) ---
+# Si prefieres no trackear PHPMailer y subirlo manual al server
+# public/phpmailer/
+
+# --- COMPILACIÓN / OUTPUT ---
+dist/
+dist-ssr/
+*.cache/
+
+# --- EDITOR (VS Code, JetBrains, etc) ---
 .vscode/*
 !.vscode/extensions.json
-.idea
+.idea/
 .DS_Store
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+
+# --- TEST ---
+/coverage
+/e2e/videos
+/e2e/screenshots
+
+# --- SISTEMA ---
+Thumbs.db
+desktop.ini
