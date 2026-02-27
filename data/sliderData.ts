@@ -782,4 +782,30 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     ]
   },
 
+
+  // =====================================================================
+  // contacto
+  // =====================================================================
+  'ID-contacto.tsx': {
+    title: "CONTÁCTANOS", 
+    subtitle: "ESTAMOS LISTOS PARA ATENDERTE.",
+    link: "/",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg",
+      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion2.jpg",
+      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion3.jpg",
+      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion4.jpg",
+      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion5.jpg",
+      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muro-de-tierra-reforzada1.png",
+      "https://tumuro.com/data3/images/muro-de-gavion-reforzado1.png",
+      "https://tumuro.com/data3/images/muro-de-gavion-reforzado2.png",
+      "https://tumuro.com/data3/images/muro-de-gavion-reforzado3.png",
+      "https://tumuro.com/data3/images/muro-de-tierra-reforzada2.png",
+      "https://tumuro.com/data3/images/muro-de-gavion-reforzado4.png"
+    ]
+  },
+
 };
