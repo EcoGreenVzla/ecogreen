@@ -18,7 +18,11 @@ body {
    ESTILOS PERSONALIZADOS PARA GOOGLE TRANSLATE
    ======================================================= */
 
-/* 1. Ocultar el banner superior molesto de Google */
+/* =======================================================
+   ESTILOS PERSONALIZADOS PARA GOOGLE TRANSLATE
+   ======================================================= */
+
+/* 1. Ocultar la barra superior de Google */
 .goog-te-banner-frame.skiptranslate {
     display: none !important;
 }
@@ -26,53 +30,59 @@ body {
     top: 0px !important;
 }
 
-/* 2. TU REGLA: Forzar alineación en línea de los elementos internos */
-.goog-te-gadget div {
-    display: ruby;
+/* 2. Evitar basura visual del contenedor padre */
+.goog-te-gadget > div {
+    display: inline-block !important;
 }
 
-/* 3. Estilizar el botón "Seleccionar idioma" (El layout SIMPLE) */
+/* 3. Estilizar el botón principal */
 .goog-te-gadget-simple {
     background-color: #ffffff !important;
     border: 1px solid #0E306F !important;
     border-radius: 4px !important;
-    padding: 6px 12px !important; /* Ligeramente más padding horizontal */
-    font-family: 'Open Sans', sans-serif !important;
+    padding: 6px 12px !important;
+    font-family: 'Din Condensed Light', 'Open Sans', sans-serif !important;
     font-size: 13px !important;
     font-weight: 600 !important;
     cursor: pointer !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: space-between !important; /* Separa el texto de la flecha */
-    white-space: nowrap !important; /* CRÍTICO: Evita que el texto salte de línea */
     transition: all 0.3s ease;
+    
+    /* CRÍTICO PARA UNA SOLA LÍNEA */
+    display: inline-flex !important;
+    align-items: center !important;
+    white-space: nowrap !important;
 }
 
-/* Efecto hover al pasar el mouse */
 .goog-te-gadget-simple:hover {
     background-color: #f0f4f8 !important;
 }
 
-/* 4. Cambiar el color del texto a Azul EcoGreen */
-.goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span {
-    color: #0E306F !important;
+/* 4. Forzar a que el enlace interno y sus span sean inline-flex perfectos */
+.goog-te-gadget-simple span, 
+.goog-te-gadget-simple a {
+    display: inline-flex !important;
+    align-items: center !important;
+    text-decoration: none !important;
+    color: #0E306F !important; /* Color Azul EcoGreen */
+    white-space: nowrap !important;
 }
 
-/* 5. Ocultar el icono de Google (la pequeña 'G') */
-.goog-te-gadget-icon {
+/* 5. Ocultar el icono de Google y las imágenes invisibles que rompen la línea */
+.goog-te-gadget-icon,
+.goog-te-gadget-simple img {
     display: none !important;
 }
 
-/* 6. Quitar la línea gris divisoria fea que trae por defecto */
+/* 6. Ocultar completamente la línea divisoria original de Google */
 .goog-te-gadget-simple span[style*="border-left"] {
-    border-left: none !important;
-    padding-left: 0 !important;
-    margin-left: 5px !important;
+    display: none !important;
 }
 
-/* 7. Color de la flechita hacia abajo (▼) */
+/* 7. Estilo exacto de la flecha (▼) para que quede centrada junto al texto */
 .goog-te-gadget-simple span[aria-hidden="true"] {
     color: #0E306F !important;
     font-size: 10px !important;
-    margin-left: 6px !important;
+    margin-left: 8px !important;
+    display: block !important;
+    line-height: 1 !important;
 }
