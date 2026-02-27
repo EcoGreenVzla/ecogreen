@@ -30,7 +30,7 @@ const GaleriaImagenes: React.FC<{ data: GaleriaData | undefined }> = ({ data }) 
       paddingVertical: 'py-16',
       backgroundColor: 'bg-white',
       // BOXED RESPONSIVO: 99% en móvil para aprovechar espacio, 80% en desktop para lectura técnica
-      maxWidthResponsive: 'w-[99%] md:max-w-[80%]', 
+      maxWidthResponsive: 'w-full md:max-w-[80%]',
     },
     typography: {
       // Tipografía general de la sección
@@ -55,7 +55,7 @@ const GaleriaImagenes: React.FC<{ data: GaleriaData | undefined }> = ({ data }) 
       borderRadius: 'rounded-none', // Bordes rectos técnicos
       shadow: 'shadow-md',
       // DIMENSIONES DECLARADAS: Relación de aspecto mantenida con object-cover
-      imageHeight: '242.4px', 
+      imageHeight: '242.4px',
       hoverScale: 1.02,
     },
     modal: {
@@ -90,10 +90,11 @@ const GaleriaImagenes: React.FC<{ data: GaleriaData | undefined }> = ({ data }) 
 
   return (
     <section className={`${theme.layout.paddingVertical} ${theme.layout.backgroundColor}`} style={{ fontFamily: theme.typography.fontFamily }}>
-      
+
       {/* 1. CONTENEDOR BOXED RESPONSIVO */}
-      <div className={`container mx-auto px-6 ${theme.layout.maxWidthResponsive}`}>
-        
+      {/* Añadimos mx-auto para que si mide 80%, ese 20% sobrante se reparta a los lados */}
+      <div className={`container mx-auto px-6 ${theme.layout.maxWidthResponsive} mx-auto`}>
+
         {/* Grid de Thumbnails */}
         <div className={`grid ${theme.grid.columns} ${theme.grid.gap}`}>
           {data.items.map((item, index) => (
@@ -124,7 +125,7 @@ const GaleriaImagenes: React.FC<{ data: GaleriaData | undefined }> = ({ data }) 
               className={`fixed inset-0 z-[2000] flex items-center justify-center p-4 sm:p-8 ${theme.modal.overlayBg}`}
               onClick={() => setSelectedIndex(null)}
             >
-              
+
               {/* Botón Cerrar */}
               <button
                 className="absolute top-4 right-4 md:top-8 md:right-8 z-[2010] p-2 text-white/50 hover:text-white transition-colors"
@@ -148,7 +149,7 @@ const GaleriaImagenes: React.FC<{ data: GaleriaData | undefined }> = ({ data }) 
               </button>
 
               {/* BLOQUE CENTRAL UNIFICADO */}
-              <div 
+              <div
                 className={`flex flex-col w-min mx-auto shadow-2xl ${theme.modal.contentBg} ${theme.modal.padding} ${theme.modal.borderRadius}`}
                 onClick={(e) => e.stopPropagation()}
               >
@@ -161,52 +162,50 @@ const GaleriaImagenes: React.FC<{ data: GaleriaData | undefined }> = ({ data }) 
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.98 }}
                     transition={{ duration: 0.2 }}
-                    className="max-h-[60vh] md:max-h-[65vh] max-w-[80vw] md:max-w-[75vw] w-auto h-auto block object-contain rounded-sm shadow-md"
-                  />
+                    className="max-h-[65vh] md:max-h-[75vh] max-w-[90vw] md:max-w-[80vw] w-auto h-auto block object-contain rounded-sm shadow-md mx-auto" />
                 </AnimatePresence>
 
                 {/* FILA 2: LEYENDA Y ESTADÍSTICAS */}
                 <div className="w-full flex flex-col mt-4">
-                  
+
                   {/* Título de la Imagen (Leyenda en Open Sans) */}
-                  <p 
+                  <p
                     className={`text-white ${theme.typography.legendFontSize} leading-snug break-words`}
-                    style={{ 
-                        fontFamily: theme.typography.legendFontFamily, 
-                        fontWeight: theme.typography.legendFontWeight 
+                    style={{
+                      fontFamily: theme.typography.legendFontFamily,
+                      fontWeight: theme.typography.legendFontWeight
                     }}
                   >
                     {data.items[selectedIndex].title}
                   </p>
-                  
+
                   {/* Barra de progreso animada */}
                   <div className="w-full h-1 bg-white/20 mt-4 overflow-hidden rounded-full">
-                     <motion.div 
-                        className={`h-full ${theme.modal.progressColor}`}
-                        initial={{ width: 0 }}
-                        animate={{ width: `${((selectedIndex + 1) / data.items.length) * 100}%` }}
-                        transition={{ duration: 0.3 }}
-                     />
+                    <motion.div
+                      className={`h-full ${theme.modal.progressColor}`}
+                      initial={{ width: 0 }}
+                      animate={{ width: `${((selectedIndex + 1) / data.items.length) * 100}%` }}
+                      transition={{ duration: 0.3 }}
+                    />
                   </div>
 
                   {/* Fila inferior: Contador y Paginación (Dots) */}
                   <div className="flex items-center justify-between w-full mt-2">
-                    <span 
-                        className={`text-white/40 uppercase ${theme.typography.statsFontSize} ${theme.typography.statsTracking}`}
+                    <span
+                      className={`text-white/40 uppercase ${theme.typography.statsFontSize} ${theme.typography.statsTracking}`}
                     >
                       {selectedIndex + 1} / {data.items.length}
                     </span>
-                    
+
                     <div className="flex gap-1.5 overflow-x-auto no-scrollbar">
                       {data.items.map((_, i) => (
                         <button
                           key={i}
                           onClick={() => setSelectedIndex(i)}
-                          className={`h-1.5 transition-all rounded-full ${
-                            selectedIndex === i 
-                              ? 'w-5 bg-white' 
-                              : 'w-1.5 bg-white/30 hover:bg-white/60'
-                          }`}
+                          className={`h-1.5 transition-all rounded-full ${selectedIndex === i
+                            ? 'w-5 bg-white'
+                            : 'w-1.5 bg-white/30 hover:bg-white/60'
+                            }`}
                         />
                       ))}
                     </div>
