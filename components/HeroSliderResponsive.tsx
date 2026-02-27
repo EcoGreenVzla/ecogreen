@@ -138,7 +138,7 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
       },
       title: { fontSize: '1.1em', color: '#5aef00', fontWeight: 'bold', display: 'block', lineHeight: '1.1em', letterSpacing: '1.2px' },
       subtitle: { color: '#ffffff', fontSize: '0.85em', fontStyle: 'italic', fontWeight: 'bold', marginTop: '-0.1em', display: 'block', letterSpacing: '1px' },
-      arrows: { offset: '10px', width: '25px', height: '45px', background: 'rgba(0, 0, 0, 0.3)', iconSize: '24px', iconThickness: '3px', zIndex: 99 }
+      arrows: { offset: '10px', width: '25px', height: '45px', background: 'rgba(0, 0, 0, 0.3)', iconSize: '24px', iconThickness: '3px', zIndex: 10 }
     }
   };
 
