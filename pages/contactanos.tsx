@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// --- COMPONENTES Y DATA (Mantener igual) ---
+// --- COMPONENTES Y DATA ---
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
 import { sliderData } from '../data/sliderData';
 
-// --- OpenLayers (Mantener igual) ---
+// --- OpenLayers (Mapa) ---
 import Map from 'ol/Map';
 import View from 'ol/View';
 import TileLayer from 'ol/layer/Tile';
@@ -18,48 +18,36 @@ const Contactanos: React.FC = () => {
   const mapRef = useRef<HTMLDivElement>(null);
   const pageID = 'ID-contacto.tsx';
 
-  // --- ESTADOS ---
   const [formData, setFormData] = useState({ nombre: '', email: '', telefono: '', asunto: '', mensaje: '' });
   const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>('idle');
 
-  // --- PANEL DE TEMA (Tus ajustes memorizados) ---
   const theme = {
     layout: { paddingVertical: 'py-16 md:py-24', backgroundColor: '#FFFFFF', maxWidthResponsive: 'w-[99%] md:max-w-[80%]' },
     typography: { titleFontFamily: "font-gotcha", titleSize: 'text-4xl md:text-5xl', contactFontFamily: "'Open Sans', sans-serif", labelSize: '14px', infoSize: '22px' },
-    colors: { primaryBlue: '#0E306F', primaryGreen: '#4BA406', labelColor: '#0E306F', infoColor: '#555555' },
-    form: { borderRadius: 'rounded-none', padding: 'p-8 md:p-12', inputPadding: 'px-4 py-4' }
+    colors: { primaryBlue: '#0E306F', primaryGreen: '#0e306f', labelColor: '#0E306F', infoColor: '#555555' },
+    form: { borderRadius: 'rounded-none', padding: 'p-8 md:p-12' }
   };
 
-  // --- LÓGICA DE ENVÍO DIRECTO A PHP ---
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus('sending');
-
     try {
-      // Llamamos al archivo PHP que creaste en public/contact.php
       const response = await fetch('/contact.php', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(formData)
       });
-
       if (response.ok) {
         setStatus('success');
         setFormData({ nombre: '', email: '', telefono: '', asunto: '', mensaje: '' });
-      } else {
-        setStatus('error');
-      }
-    } catch (error) {
-      console.error(error);
-      setStatus('error');
-    }
+      } else { setStatus('error'); }
+    } catch (error) { setStatus('error'); }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // --- Lógica del Mapa (Skin Google + Favicon Pin) ---
   useEffect(() => {
     if (!mapRef.current) return;
     const coordinate = fromLonLat([-66.7760, 10.4180]);
@@ -92,28 +80,28 @@ const Contactanos: React.FC = () => {
                 <div><h4 style={{ fontSize: theme.typography.labelSize, color: theme.colors.labelColor }} className="font-bold uppercase mb-1">Email</h4><p style={{ fontSize: theme.typography.infoSize, color: theme.colors.primaryGreen }}>tumuroecogreen@gmail.com</p></div>
               </div>
             </div>
-            <motion.div className={`bg-white ${theme.form.padding} shadow-2xl border-l-8`} style={{ borderLeftColor: theme.colors.primaryGreen }}>
+            <div className={`bg-white ${theme.form.padding} shadow-2xl border-l-8`} style={{ borderLeftColor: theme.colors.primaryGreen }}>
               <AnimatePresence>
                 {status === 'success' ? (
-                  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="text-center py-10">
-                    <h3 className="text-2xl font-bold text-[#0E306F] mb-4">¡MENSAJE ENVIADO!</h3>
-                    <p className="text-gray-500">Nos pondremos en contacto pronto.</p>
+                  <div className="text-center py-10">
+                    <h3 className="text-2xl font-bold text-[#0E306F] mb-4">¡ENVIADO!</h3>
+                    <p className="text-gray-500">Pronto te contactaremos.</p>
                     <button onClick={() => setStatus('idle')} className="mt-6 text-[#4BA406] font-bold">VOLVER</button>
-                  </motion.div>
+                  </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
-                    <input name="nombre" value={formData.nombre} onChange={handleChange} type="text" placeholder="NOMBRE" required className="w-full px-4 py-4 border-b focus:border-[#4BA406] outline-none" />
-                    <input name="email" value={formData.email} onChange={handleChange} type="email" placeholder="EMAIL" required className="w-full px-4 py-4 border-b focus:border-[#4BA406] outline-none" />
-                    <input name="telefono" value={formData.telefono} onChange={handleChange} type="tel" placeholder="TELÉFONO" required className="w-full px-4 py-4 border-b focus:border-[#4BA406] outline-none" />
-                    <input name="asunto" value={formData.asunto} onChange={handleChange} type="text" placeholder="ASUNTO" required className="w-full px-4 py-4 border-b focus:border-[#4BA406] outline-none" />
-                    <textarea name="mensaje" value={formData.mensaje} onChange={handleChange} rows={4} placeholder="MENSAJE" required className="w-full px-4 py-4 border-b focus:border-[#4BA406] outline-none"></textarea>
-                    <button type="submit" disabled={status === 'sending'} className="w-full text-white font-bold py-5 uppercase" style={{ backgroundColor: theme.colors.primaryGreen }}>
+                    <input name="nombre" value={formData.nombre} onChange={handleChange} type="text" placeholder="NOMBRE" required className="w-full px-4 py-4 border-b outline-none" />
+                    <input name="email" value={formData.email} onChange={handleChange} type="email" placeholder="EMAIL" required className="w-full px-4 py-4 border-b outline-none" />
+                    <input name="telefono" value={formData.telefono} onChange={handleChange} type="tel" placeholder="TELÉFONO" required className="w-full px-4 py-4 border-b outline-none" />
+                    <input name="asunto" value={formData.asunto} onChange={handleChange} type="text" placeholder="ASUNTO" required className="w-full px-4 py-4 border-b outline-none" />
+                    <textarea name="mensaje" value={formData.mensaje} onChange={handleChange} rows={4} placeholder="MENSAJE" required className="w-full px-4 py-4 border-b outline-none"></textarea>
+                    <button type="submit" disabled={status === 'sending'} className="w-full text-white font-bold py-5" style={{ backgroundColor: theme.colors.primaryGreen }}>
                       {status === 'sending' ? 'Enviando...' : 'Enviar Mensaje'}
                     </button>
                   </form>
                 )}
               </AnimatePresence>
-            </motion.div>
+            </div>
           </div>
         </div>
       </section>
