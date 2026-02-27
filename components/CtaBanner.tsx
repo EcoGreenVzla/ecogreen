@@ -2,21 +2,25 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const CtaBanner: React.FC = () => {
+  // ============================================================
+  // PANEL DE CONTROL DE ESTILOS (TEMA) - ESTÁNDAR 80%
+  // ============================================================
+  const theme = {
+    layout: {
+      paddingVertical: 'py-10',
+      backgroundColor: 'bg-white',
+      maxWidthResponsive: 'w-[99%] md:max-w-[80%]', // REGLA BOXED
+    }
+  };
+
   return (
-    <section className="bg-white py-10">
-      {/* CONFIGURACIÓN DE DISEÑO:
-        - 'max-w-5xl' (1024px): Limita el ancho para centrarlo más hacia adentro.
-        - 'px-4': Mantiene un margen de seguridad en dispositivos móviles.
-      */}
-      <div className="container mx-auto px-4 max-w-5xl">
+    <section className={`${theme.layout.backgroundColor} ${theme.layout.paddingVertical}`}>
+      {/* CONTENEDOR BOXED (MAX-WIDTH 80%) */}
+      <div className={`container mx-auto px-4 ${theme.layout.maxWidthResponsive}`}>
         
-        {/* ENLACE: Ahora apunta directamente a muros de contención */}
+        {/* ENLACE: Apunta directamente a muros de contención */}
         <Link to="/muros-de-contencion">
           
-          {/* BLOQUE ESTÁTICO:
-            - Se eliminó 'motion.div' para quitar el efecto grow y animaciones de entrada.
-            - Se eliminaron 'shadow-lg' y 'rounded-lg' (Bordes rectos y sin sombra).
-          */}
           <div className="block overflow-hidden cursor-pointer">
             <picture>
               {/* Imagen Mobile: 768px */}
@@ -24,7 +28,7 @@ const CtaBanner: React.FC = () => {
                 media="(max-width: 768px)"
                 srcSet="https://tumuro.com/media/banner/BANNER-HOME-mobil.webp"
               />
-              {/* Imagen Desktop: Ruta absoluta */}
+              {/* Imagen Desktop */}
               <img
                 src="https://tumuro.com/media/banner/BANNER-HOME-3.webp"
                 alt="Banner Muros de Contención EcoGreen"

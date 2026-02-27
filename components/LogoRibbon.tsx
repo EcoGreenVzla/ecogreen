@@ -28,43 +28,38 @@ const logoVariants: Variants = {
 const LogoRibbon: React.FC = () => {
 
   // ============================================================
-  // PANEL DE CONTROL DE ESTILOS (TEMA DEL RIBBON)
+  // PANEL DE CONTROL DE ESTILOS (TEMA DINÁMICO) - ESTÁNDAR 80%
   // ============================================================
   const theme = {
-    section: {
-      backgroundColor: '#FFFFFF', // Fondo totalmente blanco
-      paddingVertical: '2rem',    // py-8 (Espacio arriba y abajo del ribbon)
-      borderTop: '1px solid #f9fafb', // Línea sutil de separación superior
-    },
-    container: {
-      maxWidth: '1024px',         // max-w-4xl (Fuerza los logos hacia adentro)
-      paddingHorizontal: '1rem',  // px-4 (Margen de seguridad móvil)
-      margin: '0 auto',           // mx-auto (Centrado horizontal)
+    layout: {
+      backgroundColor: '#FFFFFF',
+      paddingVertical: 'py-8',
+      maxWidthResponsive: 'w-[99%] md:max-w-[80%]', // REGLA BOXED PARA ALINEACIÓN GLOBAL
+      borderTop: 'border-t border-gray-50',
     },
     grid: {
-      gap: '2rem',                // gap-8 (Espacio entre logos)
-      alignItems: 'center' as const,
+      gap: 'gap-8',
+      alignItems: 'items-center',
     },
     logo: {
-      heightDesktop: '7rem',      // h-28 (Aumentado ligeramente de h-24)
-      heightMobile: '5.5rem',     // h-22 (Aumentado ligeramente de h-20)
-      transitionDuration: '0.3s',
+      heightDesktop: 'h-28',
+      heightMobile: 'h-22',
     },
     animation: {
-      rotateY: 360,               // Giro completo sobre su eje
-      scaleHover: 1.18,           // Crecimiento al pasar el mouse (Aumentado)
+      rotateY: 360,
+      scaleHover: 1.18,
       springStiffness: 200,
       springDamping: 15,
     }
   };
 
   return (
-    <section style={{ backgroundColor: theme.section.backgroundColor, padding: `${theme.section.paddingVertical} 0`, borderTop: theme.section.borderTop }}>
-      <div className="container mx-auto" style={{ maxWidth: theme.container.maxWidth, paddingLeft: theme.container.paddingHorizontal, paddingRight: theme.container.paddingHorizontal }}>
+    <section className={`${theme.layout.backgroundColor} ${theme.layout.paddingVertical} ${theme.layout.borderTop}`}>
+      {/* CONTENEDOR BOXED (MAX-WIDTH 80% EN DESKTOP) */}
+      <div className={`container mx-auto px-4 ${theme.layout.maxWidthResponsive}`}>
         
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 items-center"
-          style={{ gap: theme.grid.gap }}
+          className={`grid grid-cols-2 md:grid-cols-4 ${theme.grid.alignItems} ${theme.grid.gap}`}
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -76,15 +71,20 @@ const LogoRibbon: React.FC = () => {
               variants={logoVariants}
               className="flex justify-center cursor-pointer"
               title={logo.alt}
-              /* EFECTO RESTAURADO: Giro sobre eje Y + Crecimiento */
-              whileHover={{ rotateY: theme.animation.rotateY, scale: theme.animation.scaleHover }}
-              transition={{ type: "spring", stiffness: theme.animation.springStiffness, damping: theme.animation.springDamping }}
+              whileHover={{ 
+                rotateY: theme.animation.rotateY, 
+                scale: theme.animation.scaleHover 
+              }}
+              transition={{ 
+                type: "spring", 
+                stiffness: theme.animation.springStiffness, 
+                damping: theme.animation.springDamping 
+              }}
             >
                 <img
                   src={logo.src}
                   alt={logo.alt}
-                  style={{ transition: theme.logo.transitionDuration }}
-                  className="h-[5.5rem] md:h-[7rem] w-auto object-contain filter grayscale hover:grayscale-0"
+                  className={`${theme.logo.heightMobile} md:${theme.logo.heightDesktop} w-auto object-contain filter grayscale hover:grayscale-0 transition-all duration-300`}
                 />
             </motion.div>
           ))}
