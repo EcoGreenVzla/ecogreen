@@ -1,132 +1,153 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { motion, Variants } from 'framer-motion';
-import { casosDeObrasPrincipalesData } from '../data/casosDeObrasPrincipales';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
-// --- ANIMACIONES ---
-const cardVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
-  visible: { 
-    opacity: 1, 
-    y: 0, 
-    transition: { duration: 0.4, ease: 'easeOut' } 
+// --- CONFIGURACIÓN DE RUTAS ABSOLUTAS ---
+// Usamos la URL base para asegurar que las imágenes carguen siempre correctamente.
+const BASE_IMG_URL = "https://tumuro.com/images/";
+
+const OBRAS_FIJAS = [
+  {
+    id: 100,
+    href: "/100",
+    image: `${BASE_IMG_URL}ECO100.PRINCIPAL.JPG`,
+    title: "ESTABILIZACIÓN Y CONTROL DE EROSIÓN",
+    description: "Estabilización de talud de 30 m de alto por 120 m de largo, ubicado en la Autopista Prados del Este, a la altura del mural de la Urb. Santa Rosa de Lima. Municipio Baruta, Estado Miranda. Venezuela, 2009."
   },
-  hover: {
-    scale: 1.02,
-    transition: { duration: 0.3, ease: 'easeOut' }
+  {
+    id: 150,
+    href: "/150",
+    image: `${BASE_IMG_URL}ECO150.PRINCIPAL.JPG`,
+    title: "TERRAPLÉN SOBRE SUELO BLANDO",
+    description: "Construcción de Terraplén de tierra reforzada de 6 m de alto por 600 m de largo, para incrementar la altura de la margen izquierda del Rio Castán, ubicado en Valera, Estado Trujillo. Venezuela, 2012."
+  },
+  {
+    id: 200,
+    href: "/200",
+    image: `${BASE_IMG_URL}ECO200.PRINCIPAL.JPG`,
+    title: "ESTABILIZACIÓN Y CONTROL DE EROSIÓN",
+    description: "Estabilización y Control de Erosión del Cerro El Salto, talud de 40 m de alto por 120 m de largo, ubicado en la progresiva 69+107, de la Troncal 005 que une a Tinaquillo con San Carlos, Estado Cojedes. Venezuela, 2015."
+  },
+  {
+    id: 215,
+    href: "/215",
+    image: `${BASE_IMG_URL}ECO215.PRINCIPAL.jpg`,
+    title: "PROTECCIÓN DE RIBERA",
+    description: "Protección contra la erosión de 130 m de ribera de la margen derecha del Rio La Guama, ubicado en la progresiva 69+107 de la Troncal 005, Tinaco, Estado Cojedes. Venezuela, 2015."
   }
-};
+];
 
-const CasoCard: React.FC<{ caso: typeof casosDeObrasPrincipalesData[0] }> = ({ caso }) => {
-  return (
-    <motion.div
-      className="group bg-white flex flex-col rounded-none overflow-hidden cursor-pointer border border-gray-100 shadow-sm"
-      style={{ 
-        width: '630px', 
-        height: '480px',
-        maxWidth: '100%' 
-      }}
-      variants={cardVariants}
-      whileHover="hover"
-      whileTap={{ scale: 0.98 }}
-    >
-      <div className="w-full h-[80%] overflow-hidden bg-gray-200"> 
-        <img
-          src={caso.image}
-          alt={caso.title}
-          className="w-full h-full object-cover" 
-        />
-      </div>
+const CasosDeObras: React.FC = () => {
 
-      <div className="flex-1 flex flex-col justify-start items-center text-center px-10 mt-1 py-1">
-        <h3 className="text-[18pt] font-bold text-ecogreen-blue uppercase tracking-tight leading-none mb-1">
-          {caso.title}
-        </h3>
-        <p className="text-[12pt] text-gray-600 leading-tight line-clamp-2 max-w-[95%]">
-          {caso.description}
-        </p>
-      </div>
-    </motion.div>
-  );
-};
-
-const CasosDeObras = () => {
-  const [visibleCount, setVisibleCount] = useState(4);
-  const containerRef = useRef<HTMLDivElement>(null);
-  const totalItems = casosDeObrasPrincipalesData.length;
-  const isAllShown = visibleCount >= totalItems;
-
-  // Lógica para detectar el incremento según el dispositivo
-  const getIncrement = () => {
-    return window.innerWidth < 768 ? 1 : 2;
-  };
-
-  const handleToggle = () => {
-    if (isAllShown) {
-      // RESET: Volver a 4 obras
-      setVisibleCount(4);
-      const section = document.getElementById('seccion-obras');
-      if (section) {
-        window.scrollTo({ top: section.offsetTop - 50, behavior: 'smooth' });
-      }
-    } else {
-      // CARGAR MÁS: 2 en desktop, 1 en mobile
-      const nextCount = Math.min(visibleCount + getIncrement(), totalItems);
-      setVisibleCount(nextCount);
+  // ============================================================
+  // PANEL DE CONTROL DE ESTILOS (TEMA DE LA SECCIÓN)
+  // ============================================================
+  const theme = {
+    sectionTitle: {
+      fontSize: '2rem',
+      fontWeight: 600,
+      textAlign: 'center' as const,
+      marginBottom: '2rem', // <-- AJUSTE: Espacio entre el título "CASOS DE OBRAS" y las imágenes.
+      letterSpacing: '0.1em',
+      color: '#8d8d8d',
+      textTransform: 'uppercase' as const,
+    },
+    cardTitle: {
+      /* INSTRUCCIÓN: 
+         - El primer valor (1em) es el margen superior (espacio con la imagen).
+         - El tercer valor (1em) es el margen inferior (espacio con la descripción).
+      */
+      margin: '1em 0 0.5em 0', 
+      fontFamily: 'GotchaLight, sans-serif',
+      fontSize: '1.2em',
+      letterSpacing: '0px',
+      color: '#686767',
+      textAlign: 'center' as const,
+      textTransform: 'uppercase' as const,
+      lineHeight: '1.2',
+    },
+    cardDescription: {
+      /* INSTRUCCIÓN:
+         - El tercer valor (1.25em) controla el espacio debajo de la descripción.
+      */
+      margin: '0em 0 0em 0',
+      fontFamily: 'GotchaLight, sans-serif',
+      fontSize: '0.8em',
+      lineHeight: '1.5em',
+      letterSpacing: '0px',
+      color: '#555555',
+      textAlign: 'center' as const,
+    },
+    button: {
+      backgroundColor: '#0E306F',
+      color: '#FFFFFF',
+      fontSize: '12px',
+      letterSpacing: '1px',
+      borderRadius: '30px',
+      padding: '5px 30px',
+      fontFamily: 'GotchaLight, sans-serif',
+      textTransform: 'uppercase' as const,
+      fontWeight: 'normal',
+      margin: '0',
     }
   };
 
-  // EFECTO DE FOCO: Cuando cambia el número de obras, hacemos scroll a la parte inferior
-  useEffect(() => {
-    if (visibleCount > 4 && !isAllShown) {
-      // Esperamos un pequeño instante a que React renderice las nuevas tarjetas
-      setTimeout(() => {
-        const cards = containerRef.current?.children;
-        if (cards && cards.length > 0) {
-          const lastNewCard = cards[cards.length - 1];
-          lastNewCard.scrollIntoView({ behavior: 'smooth', block: 'end' });
-        }
-      }, 100);
-    }
-  }, [visibleCount, isAllShown]);
-
   return (
-    <section id="seccion-obras" className="py-16 bg-white">
-      <div className="max-w-[1600px] mx-auto px-10 lg:px-20 relative">
-        <h2 className="text-4xl font-light text-center mb-12 tracking-[0.25em] text-gray-600 uppercase">
-          Casos de Obras
+    <section id="main-wrapper" className="py-16 bg-white plans-background">
+      <div id="main" className="container mx-auto px-4 md:px-8 lg:px-20">
+        
+        {/* TÍTULO PRINCIPAL */}
+        <h2 style={theme.sectionTitle}>
+          CASOS DE OBRAS
         </h2>
 
-        <motion.div
-          ref={containerRef}
-          className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10 justify-items-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.1 }}
-        >
-          {casosDeObrasPrincipalesData.slice(0, visibleCount).map((caso) => (
-            <CasoCard key={caso.id} caso={caso} />
-          ))}
-        </motion.div>
+        {/* INSTRUCCIÓN DE ESPACIADO (GAP):
+           - gap-x-12: Espacio horizontal entre columnas. Disminuye a gap-x-6 para juntarlas.
+           - gap-y-16: Espacio vertical entre filas. Disminuye a gap-y-8 para acercarlas.
+        */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+          {OBRAS_FIJAS.map((obra) => (
+            <motion.div 
+              key={obra.id} 
+              className="flex flex-col items-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+            >
+              {/* IMAGEN: 'mb-2' añade un pequeño margen extra debajo de la foto */}
+              <Link to={obra.href} className="block w-full overflow-hidden mb-2 group">
+                <img 
+                  src={obra.image} 
+                  alt={obra.title} 
+                  className="w-full h-[350px] object-cover" 
+                />
+              </Link>
 
-        <div className="text-center mt-12">
-          <button
-            onClick={handleToggle}
-            className="font-gotcha inline-block bg-ecogreen-blue text-white uppercase border-0 cursor-pointer outline-0 transition-colors duration-250 ease-in-out hover:bg-ecogreen-green"
-            style={{
-              fontSize: '14px',
-              lineHeight: '16px',
-              letterSpacing: '1px',
-              borderRadius: '30px',
-              padding: '8px 40px',
-              appearance: 'none',
-              display: 'inline-block',
-              verticalAlign: 'middle',
-              fontFamily: 'GotchaLight, sans-serif'
-            }}
-          >
-            {isAllShown ? 'Mostrar Menos' : 'Ver Más'}
-          </button>
+              {/* TÍTULO DE LA OBRA */}
+              <h3 style={theme.cardTitle}>
+                {obra.title}
+              </h3>
+
+              {/* DESCRIPCIÓN DE LA OBRA */}
+              <p style={theme.cardDescription}>
+                {obra.description}
+              </p>
+            </motion.div>
+          ))}
         </div>
+
+        {/* FOOTER: 'mt-20' controla qué tan lejos queda el botón de las obras */}
+        <footer className="mt-20 text-center">
+          <div className="button-div">
+            <Link 
+              to="/casos-de-obras" 
+              className="inline-block transition-colors hover:bg-[#4BA406]"
+              style={theme.button}
+            >
+              VER MAS
+            </Link>
+          </div>
+        </footer>
       </div>
     </section>
   );
