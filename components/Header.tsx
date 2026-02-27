@@ -29,18 +29,21 @@ const SocialIcon: React.FC<{ href: string; iconUrl: string; alt: string }> = ({ 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  
+  // ESTADO PARA CONTROLAR EL IDIOMA ACTUAL
+  const [currentLang, setCurrentLang] = useState<'es' | 'en'>('es');
 
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
 
-    // INYECTOR DINÁMICO DE GOOGLE TRANSLATE
+    // INYECTOR DE GOOGLE (Oculto)
     const addGoogleTranslateScript = () => {
       (window as any).googleTranslateElementInit = () => {
         new (window as any).google.translate.TranslateElement({
-          pageLanguage: 'es', // Le decimos a Google que la página ESTÁ en español
-          includedLanguages: 'en', // SOLO OFRECEMOS TRADUCIR AL INGLÉS
-          layout: (window as any).google.translate.TranslateElement.InlineLayout.SIMPLE,
+          pageLanguage: 'es',
+          includedLanguages: 'en,es', // Ambos idiomas
+          // ELIMINAMOS EL LAYOUT SIMPLE PARA QUE EL SELECTOR OCULTO EXISTAR
           autoDisplay: false
         }, 'google_translate_element');
       };
@@ -62,6 +65,19 @@ const Header: React.FC = () => {
       clearTimeout(timer);
     };
   }, []);
+
+  // FUNCIÓN PARA CAMBIAR EL IDIOMA DESDE NUESTRO BOTÓN
+  const toggleLanguage = () => {
+    // Buscamos el selector real de Google que ahora está fuera de pantalla
+    const select = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+    if (select) {
+      const targetLang = currentLang === 'es' ? 'en' : 'es';
+      select.value = targetLang;
+      // Añadimos { bubbles: true } para que Google registre el cambio correctamente
+      select.dispatchEvent(new Event('change', { bubbles: true })); 
+      setCurrentLang(targetLang);
+    }
+  };
 
   return (
     <header className={`relative z-50 bg-white w-full shadow-sm`}>
@@ -90,8 +106,27 @@ const Header: React.FC = () => {
           </div>
 
           <div className="flex items-center space-x-4"> 
-             {/* AQUÍ VA EL TRADUCTOR */}
-             <div id="google_translate_element" className="google-translator-custom min-w-[140px] flex items-center h-[40px]"></div>
+             
+             {/* 1. EL TRADUCTOR REAL DE GOOGLE (Está mandado fuera de pantalla por CSS) */}
+             <div id="google_translate_element"></div>
+
+             {/* 2. NUESTRO BOTÓN SIMPLE CON BANDERAS REALES */}
+             <button 
+                onClick={toggleLanguage}
+                className="flex items-center justify-center space-x-2 px-3 py-1.5 border border-[#0E306F] text-[#0E306F] rounded-md font-semibold text-[13px] hover:bg-gray-100 transition-colors min-w-[100px]"
+             >
+                {currentLang === 'es' ? (
+                  <>
+                    <img src="https://cdn.parcellab.com/img/flags/us.png" alt="English" className="w-4 h-auto" />
+                    <span>English</span>
+                  </>
+                ) : (
+                  <>
+                    <img src="https://cdn.parcellab.com/img/flags/es.png" alt="Español" className="w-4 h-auto" />
+                    <span>Español</span>
+                  </>
+                )}
+             </button>
 
              <div className="hidden lg:flex items-center space-x-2 mr-4">
                 {socialNetworks.map((net) => (
