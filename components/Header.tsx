@@ -5,7 +5,7 @@ import { navigationData } from '../data/navigation';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
-// --- CONFIGURACIÓN DE REDES SOCIALES (Icons8 Coloreados) ---
+// --- CONFIGURACIÓN DE REDES SOCIALES ---
 const socialNetworks = [
   { id: 'facebook', href: '#', iconUrl: 'https://img.icons8.com/?size=100&id=13912&format=png&color=3b599a', alt: 'Facebook' },
   { id: 'twitter', href: '#', iconUrl: 'https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=1ca1f1', alt: 'Twitter' },
@@ -23,8 +23,7 @@ const SocialIcon: React.FC<{ href: string; iconUrl: string; alt: string }> = ({ 
     whileHover={{ scale: 1.15 }}
     whileTap={{ scale: 0.95 }}
   >
-    {/* Se eliminó grayscale para mantener los colores originales */}
-    <img src={iconUrl} alt={alt} className="w-full h-full object-contain transition-all" />
+    <img src={iconUrl} alt={alt} className="w-full h-full object-contain" />
   </motion.a>
 );
 
@@ -32,41 +31,48 @@ const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // ============================================================
-  // PANEL DE CONTROL DE ESTILOS (THEME)
-  // ============================================================
-  const theme = {
-    layout: {
-      maxWidthResponsive: 'w-[99%] md:max-w-[80%]', // DISEÑO BOXED AL 80%
-      backgroundColor: 'bg-white',
-      paddingY: isScrolled ? 'py-2' : 'py-4 lg:py-6',
-    },
-    colors: {
-      primaryBlue: '#0E306F',
-    },
-    typography: {
-      fontFamily: "'Open Sans', sans-serif",
-    }
-  };
-
   useEffect(() => {
     const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener('scroll', handleScroll);
+
+    // --- CARGA DINÁMICA DEL TRADUCTOR ---
+    const addGoogleTranslateScript = () => {
+      // 1. Definimos la función de inicialización en el objeto window
+      (window as any).googleTranslateElementInit = () => {
+        new (window as any).google.translate.TranslateElement({
+          pageLanguage: 'es',
+          includedLanguages: 'en,es',
+          layout: (window as any).google.translate.TranslateElement.InlineLayout.SIMPLE,
+          autoDisplay: false
+        }, 'google_translate_element');
+      };
+
+      // 2. Creamos y añadimos el script solo si no existe ya
+      if (!document.querySelector('script[src*="translate.google.com"]')) {
+        const script = document.createElement('script');
+        script.src = "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+        script.async = true;
+        document.body.appendChild(script);
+      } else if ((window as any).google?.translate?.TranslateElement) {
+        // Si el script ya existe, lo reinicializamos
+        (window as any).googleTranslateElementInit();
+      }
+    };
+
+    addGoogleTranslateScript();
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <header className={`relative z-50 ${theme.layout.backgroundColor} w-full shadow-sm`} style={{ fontFamily: theme.typography.fontFamily }}>
-      
-      {/* CONTENEDOR BOXED */}
-      <div className={`container mx-auto px-4 ${theme.layout.maxWidthResponsive}`}>
-        <div className={`flex justify-between items-center transition-all duration-300 ${theme.layout.paddingY}`}>
+    <header className={`relative z-50 bg-white w-full`}>
+      <div className={`container mx-auto px-4 w-[99%] md:max-w-[80%]`}>
+        <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4 lg:py-6'}`}>
           
-          {/* BOTÓN MÓVIL (Mantiene el azul corporativo) */}
           <div className="fixed left-4 top-6 z-[9999] lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`inline-flex items-center justify-center p-2 rounded-md text-white transition-all duration-500 shadow-lg ${
+              className={`inline-flex items-center justify-center p-2 rounded-md text-white shadow-lg transition-all duration-500 ${
                 isScrolled ? 'bg-[#0e306f]/20 backdrop-blur-sm' : 'bg-[#0e306f]'
               }`}
             >
@@ -74,7 +80,6 @@ const Header: React.FC = () => {
             </button>
           </div>
 
-          {/* LOGO - Tamaño ajustado a 90px en desktop */}
           <div className="flex-shrink-0 lg:flex-none w-full lg:w-auto flex justify-center lg:justify-start">
              <Link to="/" className="block">
                 <img 
@@ -85,16 +90,18 @@ const Header: React.FC = () => {
              </Link>
           </div>
 
-          {/* REDES SOCIALES COLOREADAS */}
-          <div className="hidden lg:flex items-center space-x-2 mr-4"> 
-             {socialNetworks.map((net) => (
-                  <SocialIcon key={net.id} href={net.href} iconUrl={net.iconUrl} alt={net.alt} />
-             ))}
+          <div className="flex items-center space-x-4"> 
+             {/* Contenedor del Traductor: Ahora con un ancho mínimo para que no desaparezca */}
+             <div id="google_translate_element" className="google-translator-custom min-w-[140px] flex items-center"></div>
+
+             <div className="hidden lg:flex items-center space-x-2 mr-4">
+                {socialNetworks.map((net) => (
+                    <SocialIcon key={net.id} href={net.href} iconUrl={net.iconUrl} alt={net.alt} />
+                ))}
+             </div>
           </div>
         </div>
       </div>
-
-      {/* NAVEGACIÓN */}
       <Nav items={navigationData} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
     </header>
   );

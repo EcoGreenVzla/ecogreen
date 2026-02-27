@@ -11,3 +11,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #f3f4f6; /* bg-gray-100 */
 }
+
+
+
+/* index.css */
+
+/* Ocultar el logo de Google y el texto "Powered by" sin ocultar el selector */
+.goog-te-gadget {
+    font-size: 0 !important; /* Oculta el texto "Powered by Google" */
+    color: transparent !important;
+}
+
+.goog-te-gadget div {
+    display: inline-block;
+}
+
+/* El selector volverá a tener tamaño y color de fuente normal */
+#google_translate_element select {
+    display: block !important;
+    font-size: 12px !important;
+    color: #0E306F !important;
+}
