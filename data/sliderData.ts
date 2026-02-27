@@ -388,29 +388,7 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
   },
   // =====================================================================
   // Final del bloque de slider
-  // =====================================================================
-
-// =====================================================================
-  // 16. REFORESTACIÓN (reforestacion.tsx)
-  // =====================================================================
-  'ID-reforestacion.tsx': {
-    title: "REFORESTACIÓN",
-    subtitle: "MUROS 100% VERDES.",
-    link: "/control-de-erosion/reforestacion",
-    desktopImages: [
-      "https://tumuro.com/data1/images/reforestation/MOROCHA.JPG"
-    ],
-    mobileImages: [
-      "https://tumuro.com/data3/images/reforestation/MOROCHA-DERECHA.jpg",
-      "https://tumuro.com/data3/images/reforestation/MOROCHA-IZQ.jpg"
-    ]
-  },
-  // =====================================================================
-  // Final del bloque de slider
-  // =====================================================================
-
-
-
+  // ====================================================================
 // =====================================================================
   // 17. CANALIZACIONES (canalizaciones.tsx)
   // =====================================================================
@@ -753,8 +731,8 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
       "https://tumuro.com/data2/images/casos-de-obras/300/MOROCHA_ECO300.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/300/mobil/ECO300_MOBILE1.jpg",
-      "https://tumuro.com/data2/images/casos-de-obras/300/mobil/ECO300_MOBILE2.jpg"
+      "https://tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE1.jpg",
+      "https://tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE2.jpg"
     ]
   },
    'ID-obra-325.tsx': {
@@ -807,5 +785,28 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
       "https://tumuro.com/data3/images/muro-de-gavion-reforzado4.png"
     ]
   },
+
+   'ID-reforestacion.tsx': {
+    title: "REOFORESTACIÓN", 
+    subtitle: "MUROS 100% VERDES.",
+    link: "/",
+    desktopImages: [
+      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg",
+      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion2.jpg",
+      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion3.jpg",
+      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion4.jpg",
+      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion5.jpg",
+      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data3/images/muro-de-tierra-reforzada1.png",
+      "https://tumuro.com/data3/images/muro-de-gavion-reforzado1.png",
+      "https://tumuro.com/data3/images/muro-de-gavion-reforzado2.png",
+      "https://tumuro.com/data3/images/muro-de-gavion-reforzado3.png",
+      "https://tumuro.com/data3/images/muro-de-tierra-reforzada2.png",
+      "https://tumuro.com/data3/images/muro-de-gavion-reforzado4.png"
+    ]
+  },
+  
 
 };

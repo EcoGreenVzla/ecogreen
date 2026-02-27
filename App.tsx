@@ -78,7 +78,7 @@ import MurosCiclopeos from './pages/muros-de-ciclopeos';
 import PilotesMicropilotes from './pages/pilotes-y-micropilotes';
 import EstabilizacionTaludes from './pages/estabilizacion-de-taludes';
 import RefuerzoTaludesTerraplenes from './pages/refuerzo-de-taludes-y-terraplenes';
-import Reforestacion from './Reforestacion';
+import Reforestacion from './pages/reforestacion';
 import Canalizaciones from './pages/canalizaciones';
 import DiquesYPresas from './pages/diques-y-presas';
 import ProteccionRiberas from './pages/proteccion-de-riberas';

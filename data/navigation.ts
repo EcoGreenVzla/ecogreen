@@ -1,11 +1,34 @@
 import { NavItemType } from '../types';
 
 /**
- * ARCHIVO DE CONFIGURACIÓN DE NAVEGACIÓN
- * - Los saltos de línea se definen con <br>.
- * - Para añadir un elemento: Inserta un nuevo objeto { label, href }.
- * - Para deshabilitar: Comenta el objeto con // o /*.
- * - Para eliminar: Borra el objeto del array.
+ * LISTA DE CASOS DE OBRAS
+ * - Puedes añadir obras en cualquier orden aquí.
+ * - La función 'obrasOrdenadas' se encarga de organizarlas numéricamente.
+ */
+const obrasRaw = [
+  { label: 'OBRA ECOGREEN #100', href: '/casos-de-obras/100' },
+  { label: 'OBRA ECOGREEN #150', href: '/casos-de-obras/150' },
+  { label: 'OBRA ECOGREEN #200', href: '/casos-de-obras/200' },
+  { label: 'OBRA ECOGREEN #215', href: '/casos-de-obras/215' },
+  { label: 'OBRA ECOGREEN #135', href: '/casos-de-obras/135' },
+  { label: 'OBRA ECOGREEN #270', href: '/casos-de-obras/270' },
+  { label: 'OBRA ECOGREEN #255', href: '/casos-de-obras/255' },
+  { label: 'OBRA ECOGREEN #325', href: '/casos-de-obras/325' },
+  { label: 'OBRA ECOGREEN #300', href: '/casos-de-obras/300' },
+];
+
+/**
+ * LÓGICA DE ORDENADO AUTOMÁTICO
+ * Extrae el número del label y ordena de mayor a menor.
+ */
+const obrasOrdenadas = [...obrasRaw].sort((a, b) => {
+  const numA = parseInt(a.label.replace(/\D/g, '')) || 0;
+  const numB = parseInt(b.label.replace(/\D/g, '')) || 0;
+  return numB - numA; // Las obras con números más altos aparecerán primero
+});
+
+/**
+ * ARCHIVO DE CONFIGURACIÓN DE NAVEGACIÓN PRINCIPAL
  */
 export const navigationData: NavItemType[] = [
   { label: 'ECOGREEN', href: '/' },
@@ -29,7 +52,7 @@ export const navigationData: NavItemType[] = [
         href: '/muros-de-contencion/sistemas-de-contencion-rigidos',
         children: [
           { label: 'MUROS ANCLADOS Y PANTALLAS ATIRANTADAS', href: '/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas' },
-          { label: 'MUROS DE CONCRETO ARMADO', href: '/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado' },
+          { label: 'MUROS DE CONCRETO ARMADO', href: '/muros-de-contencion/sistemas-de-contre-armado' },
           { label: 'MUROS CICLÓPEOS', href: '/muros-de-contencion/sistemas-de-contencion-rigidos/muros-ciclopeos' },
           { label: 'PILOTES Y MICROPILOTES', href: '/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes' },
         ],
@@ -61,7 +84,6 @@ export const navigationData: NavItemType[] = [
         { label: 'PRODUCTO / SERVICIO 5', href: '/petroleo/producto-5' },
     ]
   },
-  // ADICIONAL: Obras Civiles después de Petróleo
   { label: 'OBRAS CIVILES', href: '/obras-civiles' },
   {
     label: 'CAMPOS DE<br>APLICACIÓN',
@@ -81,14 +103,7 @@ export const navigationData: NavItemType[] = [
     label: 'CASOS DE<br>OBRAS', 
     href: '/casos-de-obras', 
     isMegaMenu: true,
-    children: [
-        { label: 'OBRA ECOGREEN #100', href: '/casos-de-obras/100' },
-        { label: 'OBRA ECOGREEN #150', href: '/casos-de-obras/150' },
-        { label: 'OBRA ECOGREEN #200', href: '/casos-de-obras/200' },
-        { label: 'OBRA ECOGREEN #215', href: '/casos-de-obras/215' },
-        { label: 'OBRA ECOGREEN #135', href: '/casos-de-obras/135' },
-        { label: 'OBRA ECOGREEN #270', href: '/casos-de-obras/270' },
-    ]
+    children: obrasOrdenadas // Se inyecta la lista ya procesada
   },
   { label: 'CONTÁCTANOS', href: '/contactanos' },
 ];

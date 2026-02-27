@@ -291,6 +291,7 @@ export const gridListData: Record<string, GridSection> = {
       { title: 'OBRA ECOGREEN #270', href: '/casos-de-obras/270', imgSrc: 'https://tumuro.com/images/ECO270.PRINCIPAL.jpg' },
       { title: 'OBRA ECOGREEN #255', href: '/casos-de-obras/255', imgSrc: 'https://tumuro.com/data2/images/casos-de-obras/255/ECO255_1.jpg' },
       { title: 'OBRA ECOGREEN #325', href: '/casos-de-obras/325', imgSrc: 'https://tumuro.com/data2/images/casos-de-obras/325/ECO325_1.jpg' },
+      { title: 'OBRA ECOGREEN #300', href: '/casos-de-obras/300', imgSrc: 'https://tumuro.com/data2/images/casos-de-obras/300/ECO300_3.jpg' },
     ]
   }
 
