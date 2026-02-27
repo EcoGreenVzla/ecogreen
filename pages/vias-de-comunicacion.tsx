@@ -1,12 +1,13 @@
 import React from 'react';
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
 import TextoCollapsable from '../components/TextoCollapsable';
-import GridViasDeComunicacion from '../components/GridViasDeComunicacion';
+import GridList from '../components/GridList';
 
 import { sliderData } from '../data/sliderData';
 import { textosData } from '../data/textosData';
 
 const ViasComunicacion: React.FC = () => {
+  // ID exacto del archivo gridListData.ts
   const pageID = 'ID-vias-de-comunicacion.tsx';
 
   return (
@@ -14,7 +15,7 @@ const ViasComunicacion: React.FC = () => {
       <title>Vías de Comunicación | EcoGreen</title>
       <HeroSliderResponsive data={sliderData[pageID]} />
       <TextoCollapsable data={textosData[pageID]} />
-      <GridViasDeComunicacion />
+      <GridList id={pageID} />
     </div>
   );
 };

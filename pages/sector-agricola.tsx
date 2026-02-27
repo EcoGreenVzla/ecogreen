@@ -1,12 +1,13 @@
 import React from 'react';
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
 import TextoCollapsable from '../components/TextoCollapsable';
-import GridSectorAgricola from '../components/GridSectorAgricola';
+import GridList from '../components/GridList';
 
 import { sliderData } from '../data/sliderData';
 import { textosData } from '../data/textosData';
 
 const SectorAgricola: React.FC = () => {
+  // ID exacto del archivo gridListData.ts
   const pageID = 'ID-sector-agricola.tsx';
 
   return (
@@ -14,7 +15,7 @@ const SectorAgricola: React.FC = () => {
       <title>Sector Agrícola | EcoGreen</title>
       <HeroSliderResponsive data={sliderData[pageID]} />
       <TextoCollapsable data={textosData[pageID]} />
-      <GridSectorAgricola />
+      <GridList id={pageID} />
     </div>
   );
 };

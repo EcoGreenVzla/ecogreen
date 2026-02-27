@@ -1,12 +1,13 @@
 import React from 'react';
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
 import TextoCollapsable from '../components/TextoCollapsable';
-import GridObrasHidraulicas from '../components/GridObrasHidraulicas';
+import GridList from '../components/GridList';
 
 import { sliderData } from '../data/sliderData';
 import { textosData } from '../data/textosData';
 
 const ObrasHidraulicas: React.FC = () => {
+  // ID exacto del archivo gridListData.ts
   const pageID = 'ID-obras-hidraulicas.tsx';
 
   return (
@@ -14,7 +15,7 @@ const ObrasHidraulicas: React.FC = () => {
       <title>Obras Hidráulicas | EcoGreen</title>
       <HeroSliderResponsive data={sliderData[pageID]} />
       <TextoCollapsable data={textosData[pageID]} />
-      <GridObrasHidraulicas />
+      <GridList id={pageID} />
     </div>
   );
 };

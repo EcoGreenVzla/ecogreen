@@ -1,16 +1,17 @@
 import React from 'react';
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
 import TextoCollapsable from '../components/TextoCollapsable';
-import GridProteccionAmbiental from '../components/GridProteccionAmbiental';
+import GridList from '../components/GridList';
 
 import { sliderData } from '../data/sliderData';
 import { textosData } from '../data/textosData';
 
 const ProteccionAmbiental: React.FC = () => {
+  // ID exacto del archivo gridListData.ts
   const pageID = 'ID-proteccion-ambiental.tsx';
 
   if (!sliderData[pageID] || !textosData[pageID]) {
-    return <div className="p-20 text-center">Cargando datos de Protección Ambiental...</div>;
+    return <div className="p-20 text-center">Cargando...</div>;
   }
 
   return (
@@ -18,7 +19,7 @@ const ProteccionAmbiental: React.FC = () => {
       <title>Protección Ambiental | EcoGreen</title>
       <HeroSliderResponsive data={sliderData[pageID]} />
       <TextoCollapsable data={textosData[pageID]} />
-      <GridProteccionAmbiental />
+      <GridList id={pageID} />
     </div>
   );
 };

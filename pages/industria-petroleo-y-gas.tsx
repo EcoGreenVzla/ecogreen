@@ -1,17 +1,17 @@
 import React from 'react';
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
 import TextoCollapsable from '../components/TextoCollapsable';
-import GridIndustriaPetroleoGas from '../components/GridIndustriaPetroleoGas';
+import GridList from '../components/GridList';
 
 import { sliderData } from '../data/sliderData';
 import { textosData } from '../data/textosData';
 
 const IndustriaPetroleoGas: React.FC = () => {
+  // ID exacto del archivo gridListData.ts
   const pageID = 'ID-industria-petroleo-y-gas.tsx';
 
-  // Validación de seguridad para evitar errores de renderizado
   if (!sliderData[pageID] || !textosData[pageID]) {
-    return <div className="p-20 text-center text-ecogreen-blue font-bold">Cargando contenido de Industria, Petróleo y Gas...</div>;
+    return <div className="p-20 text-center text-ecogreen-blue font-bold">Cargando...</div>;
   }
 
   return (
@@ -19,7 +19,8 @@ const IndustriaPetroleoGas: React.FC = () => {
       <title>Industria, Petróleo y Gas | EcoGreen</title>
       <HeroSliderResponsive data={sliderData[pageID]} />
       <TextoCollapsable data={textosData[pageID]} />
-      <GridIndustriaPetroleoGas />
+      {/* Implementación de GridList con ID específico */}
+      <GridList id={pageID} />
     </div>
   );
 };
