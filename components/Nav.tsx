@@ -23,9 +23,11 @@ const Nav: React.FC<NavProps> = ({ items, isMobileMenuOpen, setIsMobileMenuOpen 
       container: {
         backgroundColor: '#0E306F',
         color: '#FFFFFF',
-        fontSize: '9.5px',
+        fontSize: '11px',
         fontFamily: "'Open Sans', sans-serif",
         textTransform: 'uppercase' as const,
+        fontWeight: '700',
+        letterSpacing: '1px',
       }
     },
     mobile: {
