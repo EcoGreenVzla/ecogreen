@@ -10,7 +10,7 @@ export interface TextoData {
 
 // Creamos el diccionario de textos al que accederemos por ID
 export const textosData: Record<string, TextoData> = {
-  
+
   // =====================================================================
   // 2. MUROS DE CONTENCIÓN (muros-de-contencion.tsx)
   // =====================================================================
@@ -64,14 +64,14 @@ export const textosData: Record<string, TextoData> = {
           Entre las principales ventajas que ofrecen las estructuras flexibles podemos enumerar:
         </p>
         <ul className="list-disc list-inside space-y-2 pl-4 mt-4 font-medium text-gray-700">
-            <li>Disponibilidad de los materiales geosintéticos que los conforman.</li>
-            <li>Excelente tiempo de ejecución.</li>
-            <li>Disponibilidad de los equipos y maquinarias especializadas para su construcción.</li>
-            <li>No requiere de mano de obra calificada.</li>
-            <li>Son consideradas como la solución más económica.</li>
+          <li>Disponibilidad de los materiales geosintéticos que los conforman.</li>
+          <li>Excelente tiempo de ejecución.</li>
+          <li>Disponibilidad de los equipos y maquinarias especializadas para su construcción.</li>
+          <li>No requiere de mano de obra calificada.</li>
+          <li>Son consideradas como la solución más económica.</li>
         </ul>
       </>
-    ) 
+    )
   },
   // =====================================================================
   //  Final del bloque de texto
@@ -100,10 +100,10 @@ export const textosData: Record<string, TextoData> = {
           Entre los muros de contención considerados como estructuras rígidas tenemos:
         </p>
         <ul className="list-disc list-inside space-y-2 pl-4 mt-4 font-medium text-gray-700">
-            <li>Muros Anclados y Pantallas Atirantadas.</li>
-            <li>Muros de Concreto Armado.</li>
-            <li>Muros Ciclópeos.</li>
-            <li>Pilotes y Micropilotes.</li>
+          <li>Muros Anclados y Pantallas Atirantadas.</li>
+          <li>Muros de Concreto Armado.</li>
+          <li>Muros Ciclópeos.</li>
+          <li>Pilotes y Micropilotes.</li>
         </ul>
       </>
     )
@@ -150,7 +150,7 @@ export const textosData: Record<string, TextoData> = {
     title: "",
     introContent: (
       <>
-       
+
       </>
     )
   },
@@ -161,7 +161,7 @@ export const textosData: Record<string, TextoData> = {
 
 
 
-// =====================================================================
+  // =====================================================================
   // 6. SISTEMAS DE DRENAJE (sistemas-de-drenaje.tsx)
   // =====================================================================
   'ID-sistemas-de-drenaje.tsx': {
@@ -198,7 +198,7 @@ export const textosData: Record<string, TextoData> = {
   //  Final del bloque de texto
   // =====================================================================
 
-// =====================================================================
+  // =====================================================================
   // 7. MUROS DE TIERRA REFORZADA (muros-de-tierra-reforzada.tsx)
   // =====================================================================
   'ID-muros-de-tierra-reforzada.tsx': {
@@ -219,13 +219,13 @@ export const textosData: Record<string, TextoData> = {
           Los muros de tierra reforzada construidos con productos geosintéticos se rigen bajo el mismo basamento teórico del sistema “tierra armada” con la diferencia que las tiras metálicas son sustituidas por geotextiles o por geomallas de diferentes tipos. Estos muros son considerados el mejor sistema de contención de la ingeniería contemporánea debido a que presentan muchas ventajas:
         </p>
         <ul className="list-disc list-inside space-y-2 pl-4 mt-4 font-medium text-gray-700">
-            <li>Disponibilidad de los materiales geosintéticos que los conforman.</li>
-            <li>Reutilización del material fallado en casos de derrumbes.</li>
-            <li>Excelente tiempo de ejecución.</li>
-            <li>Disponibilidad de equipos y maquinarias especializadas.</li>
-            <li>No requiere de mano de obra calificada.</li>
-            <li>Solución más económica.</li>
-            <li>Mínimo impacto ambiental (fachada reforestada).</li>
+          <li>Disponibilidad de los materiales geosintéticos que los conforman.</li>
+          <li>Reutilización del material fallado en casos de derrumbes.</li>
+          <li>Excelente tiempo de ejecución.</li>
+          <li>Disponibilidad de equipos y maquinarias especializadas.</li>
+          <li>No requiere de mano de obra calificada.</li>
+          <li>Solución más económica.</li>
+          <li>Mínimo impacto ambiental (fachada reforestada).</li>
         </ul>
         <p className="mt-4">
           Es muy importante resaltar la virtud que tienen los muros de tierra reforzada en cuanto al acabado de su fachada, tomando en cuenta que existe la flexibilidad de colocarles bloques, concreto proyectado, gaviones o reforestarlos con la vegetación de la zona, logrando minimizar el impacto ambiental armonizando ecológicamente el sistema de muro con el ambiente.
@@ -253,7 +253,7 @@ export const textosData: Record<string, TextoData> = {
 
 
 
-// =====================================================================
+  // =====================================================================
   // 8. MUROS DE GAVIÓN (muros-de-gavion.tsx)
   // =====================================================================
   'ID-muros-de-gavion.tsx': {
@@ -274,12 +274,12 @@ export const textosData: Record<string, TextoData> = {
           Las estructuras de gavión son muy ventajosas desde el punto de vista técnico y económico, ya que poseen un conjunto de características funcionales que los diferencian de los demás sistemas de contención. Entre las principales ventajas se encuentran:
         </p>
         <ul className="list-disc list-inside space-y-2 pl-4 mt-4 font-medium text-gray-700">
-            <li>Excelente tiempo de ejecución y disponibilidad de materiales.</li>
-            <li>No requiere de mano de obra calificada ni maquinaria pesada especializada.</li>
-            <li>Estructuras monolíticas y altamente resistentes a la tracción.</li>
-            <li>Gran flexibilidad: se adaptan a los movimientos del terreno sin perder estabilidad.</li>
-            <li>Máxima permeabilidad: alivian por completo el empuje hidrostático.</li>
-            <li>Ideales para la conformación de obras hidráulicas.</li>
+          <li>Excelente tiempo de ejecución y disponibilidad de materiales.</li>
+          <li>No requiere de mano de obra calificada ni maquinaria pesada especializada.</li>
+          <li>Estructuras monolíticas y altamente resistentes a la tracción.</li>
+          <li>Gran flexibilidad: se adaptan a los movimientos del terreno sin perder estabilidad.</li>
+          <li>Máxima permeabilidad: alivian por completo el empuje hidrostático.</li>
+          <li>Ideales para la conformación de obras hidráulicas.</li>
         </ul>
       </>
     )
@@ -308,12 +308,12 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Las ventajas que ofrecen los muros de gavión reforzados son:</p>
         <ul className="list-disc list-inside space-y-2 pl-4 mt-2 font-medium text-gray-700">
-            <li>Disponibilidad inmediata de materiales geosintéticos y cestas de gavión.</li>
-            <li>Excelente tiempo de ejecución y uso de maquinaria convencional.</li>
-            <li>Alta flexibilidad para adaptarse a deformaciones y movimientos del terreno.</li>
-            <li>En casos de derrumbes, permite reutilizar el material fallado como relleno.</li>
-            <li>Construcción eficiente en márgenes de río y costas con requerimiento reducido de material pétreo.</li>
-            <li>No requiere de mano de obra calificada.</li>
+          <li>Disponibilidad inmediata de materiales geosintéticos y cestas de gavión.</li>
+          <li>Excelente tiempo de ejecución y uso de maquinaria convencional.</li>
+          <li>Alta flexibilidad para adaptarse a deformaciones y movimientos del terreno.</li>
+          <li>En casos de derrumbes, permite reutilizar el material fallado como relleno.</li>
+          <li>Construcción eficiente en márgenes de río y costas con requerimiento reducido de material pétreo.</li>
+          <li>No requiere de mano de obra calificada.</li>
         </ul>
       </>
     )
@@ -325,7 +325,7 @@ export const textosData: Record<string, TextoData> = {
 
 
 
-// =====================================================================
+  // =====================================================================
   // 10. MUROS MIXTOS (muros-mixtos.tsx)
   // =====================================================================
   'ID-muros-mixtos.tsx': {
@@ -344,12 +344,12 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Ventajas principales:</p>
         <ul className="list-disc list-inside space-y-2 pl-4 mt-2 font-medium text-gray-700">
-            <li>Disponibilidad de los materiales que los conforman.</li>
-            <li>Excelente tiempo de ejecución.</li>
-            <li>Disponibilidad de los equipos y maquinarias especializadas para su construcción.</li>
-            <li>No requiere de mano de obra calificada.</li>
-            <li>Son muy flexibles ya que se adaptan a las deformaciones y movimientos del terreno, sin perder su estabilidad.</li>
-            <li>Se adaptan a la disponibilidad del material de relleno para su conformación.</li>
+          <li>Disponibilidad de los materiales que los conforman.</li>
+          <li>Excelente tiempo de ejecución.</li>
+          <li>Disponibilidad de los equipos y maquinarias especializadas para su construcción.</li>
+          <li>No requiere de mano de obra calificada.</li>
+          <li>Son muy flexibles ya que se adaptan a las deformaciones y movimientos del terreno, sin perder su estabilidad.</li>
+          <li>Se adaptan a la disponibilidad del material de relleno para su conformación.</li>
         </ul>
       </>
     )
@@ -360,7 +360,7 @@ export const textosData: Record<string, TextoData> = {
 
 
 
-// =====================================================================
+  // =====================================================================
   // 11. REFUERZO DE TALUDES Y TERRAPLENES (refuerzo-de-taludes-y-terraplenes.tsx)
   // =====================================================================
   'ID-refuerzo-de-taludes-y-terraplenes.tsx': {
@@ -382,10 +382,10 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Ventajas principales:</p>
         <ul className="list-disc list-inside space-y-2 pl-4 mt-2 font-medium text-gray-700">
-            <li>Disponibilidad inmediata de materiales geosintéticos y equipos especializados.</li>
-            <li>Reutilización del material fallado, eliminando a menudo la necesidad de material de préstamo.</li>
-            <li>Excelente tiempo de ejecución y solución económica por no requerir mano de obra calificada.</li>
-            <li>Bajo impacto ambiental: fachada completamente reforestada que armoniza con el entorno.</li>
+          <li>Disponibilidad inmediata de materiales geosintéticos y equipos especializados.</li>
+          <li>Reutilización del material fallado, eliminando a menudo la necesidad de material de préstamo.</li>
+          <li>Excelente tiempo de ejecución y solución económica por no requerir mano de obra calificada.</li>
+          <li>Bajo impacto ambiental: fachada completamente reforestada que armoniza con el entorno.</li>
         </ul>
       </>
     )
@@ -393,7 +393,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
   // Final del bloque de texto
   // =====================================================================
-// =====================================================================
+  // =====================================================================
   // 12. MUROS ANCLADOS Y PANTALLAS ATIRANTADAS (muros-anclados-y-pantallas-atirantadas.tsx)
   // =====================================================================
   'ID-muros-anclados-y-pantallas-atirantadas.tsx': {
@@ -410,17 +410,17 @@ export const textosData: Record<string, TextoData> = {
         <p>
           Existen dos técnicas principales en esta categoría:
         </p>
-        
+
         <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Anclajes Pasivos (Pernos individuales)</h3>
         <p>
           Constituidos por varillas de acero colocadas dentro de perforaciones inyectadas con cemento. El macizo de roca se refuerza por intermedio de la cabilla, evitando caídas de roca y deslizamientos en macizos fracturados.
         </p>
         <p className="mt-2 font-semibold">Ventajas de los anclajes pasivos:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
-            <li>Estabilización de bloques individuales o puntos específicos.</li>
-            <li>Técnica simple de instalación relativamente rápida.</li>
-            <li>Disponibilidad de materiales y equipos especializados.</li>
-            <li>Solución medianamente económica.</li>
+          <li>Estabilización de bloques individuales o puntos específicos.</li>
+          <li>Técnica simple de instalación relativamente rápida.</li>
+          <li>Disponibilidad de materiales y equipos especializados.</li>
+          <li>Solución medianamente económica.</li>
         </ul>
 
         <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Anclajes Activos (Pantallas Atirantadas)</h3>
@@ -429,10 +429,10 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-2 font-semibold">Ventajas de las pantallas atirantadas:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 font-medium text-gray-700">
-            <li>Ideal para limitaciones severas de espacio (pendientes fuertes, sótanos).</li>
-            <li>Construcción progresiva de arriba hacia abajo (descendente) durante la excavación.</li>
-            <li>Permite excavar con seguridad junto a edificios o estructuras existentes.</li>
-            <li>Capacidad para alcanzar alturas considerables.</li>
+          <li>Ideal para limitaciones severas de espacio (pendientes fuertes, sótanos).</li>
+          <li>Construcción progresiva de arriba hacia abajo (descendente) durante la excavación.</li>
+          <li>Permite excavar con seguridad junto a edificios o estructuras existentes.</li>
+          <li>Capacidad para alcanzar alturas considerables.</li>
         </ul>
       </>
     )
@@ -444,7 +444,7 @@ export const textosData: Record<string, TextoData> = {
 
 
 
-// =====================================================================
+  // =====================================================================
   // 13. MUROS CICLÓPEOS (muros-de-ciclopeos.tsx)
   // =====================================================================
   'ID-muros-de-ciclopeos.tsx': {
@@ -463,11 +463,11 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Ventajas de esta técnica:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
-            <li>Disponibilidad de los materiales que los conforman.</li>
-            <li>Uso de equipos y maquinarias de construcción convencionales.</li>
-            <li>No requiere de mano de obra calificada.</li>
-            <li>Simplicidad constructiva.</li>
-            <li>Alta adaptabilidad a diseños arquitectónicos variados.</li>
+          <li>Disponibilidad de los materiales que los conforman.</li>
+          <li>Uso de equipos y maquinarias de construcción convencionales.</li>
+          <li>No requiere de mano de obra calificada.</li>
+          <li>Simplicidad constructiva.</li>
+          <li>Alta adaptabilidad a diseños arquitectónicos variados.</li>
         </ul>
       </>
     )
@@ -477,7 +477,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
 
 
-// =====================================================================
+  // =====================================================================
   // 14. PILOTES Y MICROPILOTES (pilotes-y-micropilotes.tsx)
   // =====================================================================
   'ID-pilotes-y-micropilotes.tsx': {
@@ -499,10 +499,10 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Ventajas principales:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
-            <li>Disponibilidad de materiales y equipos especializados.</li>
-            <li>Tiempo de construcción relativamente rápido.</li>
-            <li>Capacidad de construcción en sitios de difícil acceso.</li>
-            <li>Alta eficiencia como refuerzo en materiales fracturados o sueltos.</li>
+          <li>Disponibilidad de materiales y equipos especializados.</li>
+          <li>Tiempo de construcción relativamente rápido.</li>
+          <li>Capacidad de construcción en sitios de difícil acceso.</li>
+          <li>Alta eficiencia como refuerzo en materiales fracturados o sueltos.</li>
         </ul>
       </>
     )
@@ -512,7 +512,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
 
 
-// =====================================================================
+  // =====================================================================
   // 15. ESTABILIZACIÓN DE TALUDES (estabilizacion-de-taludes.tsx)
   // =====================================================================
   'ID-estabilizacion-de-taludes.tsx': {
@@ -542,7 +542,7 @@ export const textosData: Record<string, TextoData> = {
   // Final del bloque de textos
   // =====================================================================
 
-// =====================================================================
+  // =====================================================================
   // 16. REFORESTACIÓN (reforestacion.tsx)
   // =====================================================================
   'ID-reforestacion.tsx': {
@@ -564,10 +564,10 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Consideraciones técnicas para el éxito:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
-            <li>Análisis químico del suelo y aporte de material orgánico.</li>
-            <li>Selección de la especie vegetal acorde al clima y topografía.</li>
-            <li>Mantenimiento y riego constante durante la fase de establecimiento.</li>
-            <li>Uso de geomallas de alto módulo para garantizar la estabilidad estructural inicial.</li>
+          <li>Análisis químico del suelo y aporte de material orgánico.</li>
+          <li>Selección de la especie vegetal acorde al clima y topografía.</li>
+          <li>Mantenimiento y riego constante durante la fase de establecimiento.</li>
+          <li>Uso de geomallas de alto módulo para garantizar la estabilidad estructural inicial.</li>
         </ul>
         <p className="mt-4">
           Los muros de tierra reforzada reforestados son la técnica más económica y ecológica hoy día, contribuyendo activamente con la <strong>Infraestructura Verde</strong> urbana y rural.
@@ -580,7 +580,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
 
 
-// =====================================================================
+  // =====================================================================
   // 17. CANALIZACIONES (canalizaciones.tsx)
   // =====================================================================
   'ID-canalizaciones.tsx': {
@@ -605,8 +605,8 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Tipos de canales según su geometría:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
-            <li><strong>Canales Rectangulares:</strong> Utilizados en zonas urbanas con espacio limitado, a menudo embaulados totalmente.</li>
-            <li><strong>Canales Trapezoidales:</strong> Comunes en zonas rurales y agrícolas para riego o recuperación de cursos naturales.</li>
+          <li><strong>Canales Rectangulares:</strong> Utilizados en zonas urbanas con espacio limitado, a menudo embaulados totalmente.</li>
+          <li><strong>Canales Trapezoidales:</strong> Comunes en zonas rurales y agrícolas para riego o recuperación de cursos naturales.</li>
         </ul>
       </>
     )
@@ -618,7 +618,7 @@ export const textosData: Record<string, TextoData> = {
 
 
 
-// =====================================================================
+  // =====================================================================
   // 18. DIQUES Y PRESAS (diques-y-presas.tsx)
   // =====================================================================
   'ID-diques-y-presas.tsx': {
@@ -640,10 +640,10 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Ventajas de los sistemas EcoGreen en presas:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
-            <li>Alta resistencia mecánica y durabilidad ante la erosión hidráulica.</li>
-            <li>Capacidad de filtración y drenaje natural.</li>
-            <li>Bajo impacto ambiental al permitir la integración de vegetación.</li>
-            <li>Facilidad de transporte y montaje en sitios de difícil acceso fluvial.</li>
+          <li>Alta resistencia mecánica y durabilidad ante la erosión hidráulica.</li>
+          <li>Capacidad de filtración y drenaje natural.</li>
+          <li>Bajo impacto ambiental al permitir la integración de vegetación.</li>
+          <li>Facilidad de transporte y montaje en sitios de difícil acceso fluvial.</li>
         </ul>
       </>
     )
@@ -652,7 +652,7 @@ export const textosData: Record<string, TextoData> = {
   // Final del bloque de textos
   // =====================================================================
 
-// =====================================================================
+  // =====================================================================
   // 19. PROTECCIÓN DE RIBERAS (proteccion-de-riberas.tsx)
   // =====================================================================
   'ID-proteccion-de-riberas.tsx': {
@@ -674,11 +674,11 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Principales Obras Fluviales:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
-            <li>Delimitación de cauces y protección de márgenes de ríos.</li>
-            <li>Construcción de espigones y obras transversales para retención de sedimentos.</li>
-            <li>Control de erosión en tomas y almacenes de agua ribereños.</li>
-            <li>Modificación de pendientes del cauce para control de velocidad del caudal.</li>
-            <li>Conformación de estructuras flexibles de revestimiento de orillas.</li>
+          <li>Delimitación de cauces y protección de márgenes de ríos.</li>
+          <li>Construcción de espigones y obras transversales para retención de sedimentos.</li>
+          <li>Control de erosión en tomas y almacenes de agua ribereños.</li>
+          <li>Modificación de pendientes del cauce para control de velocidad del caudal.</li>
+          <li>Conformación de estructuras flexibles de revestimiento de orillas.</li>
         </ul>
       </>
     )
@@ -689,7 +689,7 @@ export const textosData: Record<string, TextoData> = {
 
 
 
-// =====================================================================
+  // =====================================================================
   // 20. MUROS DE CONCRETO ARMADO (muros-de-concreto-armado.tsx)
   // =====================================================================
   'ID-muros-de-concreto-armado.tsx': {
@@ -711,11 +711,11 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Ventajas principales:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
-            <li>Disponibilidad universal de materiales (acero y concreto).</li>
-            <li>Uso de métodos y maquinarias convencionales de construcción.</li>
-            <li>No requiere de mano de obra altamente especializada.</li>
-            <li>Capacidad de alcanzar alturas considerables bajo diseño riguroso.</li>
-            <li>Solución estructural de larga durabilidad y probada eficiencia.</li>
+          <li>Disponibilidad universal de materiales (acero y concreto).</li>
+          <li>Uso de métodos y maquinarias convencionales de construcción.</li>
+          <li>No requiere de mano de obra altamente especializada.</li>
+          <li>Capacidad de alcanzar alturas considerables bajo diseño riguroso.</li>
+          <li>Solución estructural de larga durabilidad y probada eficiencia.</li>
         </ul>
       </>
     )
@@ -725,7 +725,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
 
 
-// =====================================================================
+  // =====================================================================
   // 21. INFRAESTRUCTURA URBANA (infraestructura-urbana.tsx)
   // =====================================================================
   'ID-infraestructura-urbana.tsx': {
@@ -753,7 +753,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
 
 
-// =====================================================================
+  // =====================================================================
   // 22. CONSTRUCCIÓN CIVIL (construccion-civil.tsx)
   // =====================================================================
   'ID-construccion-civil.tsx': {
@@ -781,7 +781,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
 
 
-// =====================================================================
+  // =====================================================================
   // 23. PROTECCIÓN AMBIENTAL (proteccion-ambiental.tsx)
   // =====================================================================
   'ID-proteccion-ambiental.tsx': {
@@ -800,12 +800,12 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Nuestras principales soluciones ecológicas incluyen:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
-            <li>Estabilización de taludes con geomantas verdes ECOGREEN.</li>
-            <li>Muros reforestables de tierra reforzada con geomallas de poliéster.</li>
-            <li>Obras hidráulicas, diques y canales con gaviones metálicos de bajo impacto.</li>
-            <li>Separación de subrasantes con geosintéticos para reducir volúmenes de relleno.</li>
-            <li>Sistemas de subdrenaje para el manejo eficiente de lixiviados y aguas pluviales.</li>
-            <li>Construcción de rellenos sanitarios y lagunas de oxidación.</li>
+          <li>Estabilización de taludes con geomantas verdes ECOGREEN.</li>
+          <li>Muros reforestables de tierra reforzada con geomallas de poliéster.</li>
+          <li>Obras hidráulicas, diques y canales con gaviones metálicos de bajo impacto.</li>
+          <li>Separación de subrasantes con geosintéticos para reducir volúmenes de relleno.</li>
+          <li>Sistemas de subdrenaje para el manejo eficiente de lixiviados y aguas pluviales.</li>
+          <li>Construcción de rellenos sanitarios y lagunas de oxidación.</li>
         </ul>
       </>
     )
@@ -817,7 +817,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
 
 
-// =====================================================================
+  // =====================================================================
   // 24. INDUSTRIA, PETRÓLEO Y GAS (industria-petroleo-y-gas.tsx)
   // =====================================================================
   'ID-industria-petroleo-y-gas.tsx': {
@@ -836,12 +836,12 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Nuestras principales aplicaciones incluyen:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
-            <li>Refuerzo y estabilización de vías de penetración en suelos blandos para zonas de difícil acceso.</li>
-            <li>Estabilización de taludes y control de erosión con Ecomantos Verdes para rápida reforestación.</li>
-            <li>Uso de geomallas de refuerzo para aumentar la capacidad de soporte en pavimentos sin grandes volúmenes de relleno.</li>
-            <li>Sistemas de drenaje, rampas, terraplenes y protección de estribos de puentes.</li>
-            <li>Construcción de diques, presas e impermeabilización de canales y lagunas para lodos de perforación.</li>
-            <li>Suministro de tuberías y válvulas especializadas para procesos de extracción y transporte.</li>
+          <li>Refuerzo y estabilización de vías de penetración en suelos blandos para zonas de difícil acceso.</li>
+          <li>Estabilización de taludes y control de erosión con Ecomantos Verdes para rápida reforestación.</li>
+          <li>Uso de geomallas de refuerzo para aumentar la capacidad de soporte en pavimentos sin grandes volúmenes de relleno.</li>
+          <li>Sistemas de drenaje, rampas, terraplenes y protección de estribos de puentes.</li>
+          <li>Construcción de diques, presas e impermeabilización de canales y lagunas para lodos de perforación.</li>
+          <li>Suministro de tuberías y válvulas especializadas para procesos de extracción y transporte.</li>
         </ul>
         <p className="mt-4">
           En ECOGREEN ratificamos nuestra filosofía de negocio con conciencia de prácticas y políticas <strong>"VERDES"</strong>, innovando en alternativas de mayor factibilidad económica para el sector energético.
@@ -850,13 +850,13 @@ export const textosData: Record<string, TextoData> = {
     )
   },
 
-   // =====================================================================
+  // =====================================================================
   // Final del bloque de textos
   // =====================================================================
 
 
 
-// =====================================================================
+  // =====================================================================
   // 25. SECTOR AGRÍCOLA (sector-agricola.tsx)
   // =====================================================================
   'ID-sector-agricola.tsx': {
@@ -877,10 +877,10 @@ export const textosData: Record<string, TextoData> = {
           Nuestras contribuciones clave al sector incluyen:
         </p>
         <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
-            <li>Estabilización de vialidad agrícola para el transporte de cosechas.</li>
-            <li>Canalizaciones y protección de riberas para evitar inundaciones en sembradíos.</li>
-            <li>Construcción de diques, presas y lagunas para el almacenamiento de agua de riego.</li>
-            <li>Garantía de producción agrícola constante incluso en épocas de sequía.</li>
+          <li>Estabilización de vialidad agrícola para el transporte de cosechas.</li>
+          <li>Canalizaciones y protección de riberas para evitar inundaciones en sembradíos.</li>
+          <li>Construcción de diques, presas y lagunas para el almacenamiento de agua de riego.</li>
+          <li>Garantía de producción agrícola constante incluso en épocas de sequía.</li>
         </ul>
         <p className="mt-4">
           La agricultura es un pilar económico fundamental, y ECOGREEN se compromete con soluciones que promueven el desarrollo sustentable del campo.
@@ -894,7 +894,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
 
 
-// =====================================================================
+  // =====================================================================
   // 26. VÍAS DE COMUNICACIÓN (vias-de-comunicacion.tsx)
   // =====================================================================
   'ID-vias-de-comunicacion.tsx': {
@@ -913,12 +913,12 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Nuestras aplicaciones en vialidad incluyen:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
-            <li>Reconstrucción de fallas de borde con muros de contención flexibles y rígidos.</li>
-            <li>Refuerzo de pavimentos para aumentar la capacidad de carga.</li>
-            <li>Estabilización de vías de acceso a zonas petroleras y agrícolas.</li>
-            <li>Sistemas de drenaje y subdrenaje para proteger el cuerpo de la vía.</li>
-            <li>Protección de estribos de puentes y construcción de diques de defensa.</li>
-            <li>Sistemas contra caída de rocas en cortes de carretera.</li>
+          <li>Reconstrucción de fallas de borde con muros de contención flexibles y rígidos.</li>
+          <li>Refuerzo de pavimentos para aumentar la capacidad de carga.</li>
+          <li>Estabilización de vías de acceso a zonas petroleras y agrícolas.</li>
+          <li>Sistemas de drenaje y subdrenaje para proteger el cuerpo de la vía.</li>
+          <li>Protección de estribos de puentes y construcción de diques de defensa.</li>
+          <li>Sistemas contra caída de rocas en cortes de carretera.</li>
         </ul>
       </>
     )
@@ -932,7 +932,7 @@ export const textosData: Record<string, TextoData> = {
 
 
 
-// =====================================================================
+  // =====================================================================
   // 27. OBRAS HIDRÁULICAS (obras-hidraulicas.tsx)
   // =====================================================================
   'ID-obras-hidraulicas.tsx': {
@@ -951,8 +951,8 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Tipos de Canales según Aplicación:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
-            <li><strong>Canales Rectangulares:</strong> Ideales para zonas urbanas con espacio limitado, a menudo embaulados para permitir el paso de vías de comunicación.</li>
-            <li><strong>Canales Trapezoidales:</strong> Utilizados en zonas rurales y agrícolas para riego, recuperación de cauces naturales y control de erosión a cielo abierto.</li>
+          <li><strong>Canales Rectangulares:</strong> Ideales para zonas urbanas con espacio limitado, a menudo embaulados para permitir el paso de vías de comunicación.</li>
+          <li><strong>Canales Trapezoidales:</strong> Utilizados en zonas rurales y agrícolas para riego, recuperación de cauces naturales y control de erosión a cielo abierto.</li>
         </ul>
         <p className="mt-4">
           Nuestros gaviones cuentan con recubrimiento galvanizado de zinc y, en ambientes agresivos, con recubrimiento de <strong>PVC</strong>, cumpliendo con todas las normas internacionales de durabilidad y bajo impacto ambiental.
@@ -961,7 +961,7 @@ export const textosData: Record<string, TextoData> = {
     )
   },
 
-// =====================================================================
+  // =====================================================================
   // 28. MINERÍA, GEOLOGÍA Y GEOTECNIA (mineria-geologia-y-geotecnia.tsx)
   // =====================================================================
   'ID-mineria.tsx': {
@@ -980,12 +980,12 @@ export const textosData: Record<string, TextoData> = {
         </p>
         <p className="mt-4 font-semibold">Procesos clave que ejecutamos:</p>
         <ul className="list-disc list-inside space-y-1 pl-4 mt-2 font-medium text-gray-700">
-            <li>Estudios de suelo previos con recuperación de núcleos e instalación de pozos.</li>
-            <li>Levantamientos topográficos, geofísicos y geomática cartográfica.</li>
-            <li>Geología de superficie y prospección en campo para mapas de exploración.</li>
-            <li>Certificación de muestras y categorización de recursos minerales para mercados internacionales.</li>
-            <li>Ejecución de proyectos y montaje de plantas de explotación en minas.</li>
-            <li>Sistemas de contención para taludes y protección contra caída de rocas.</li>
+          <li>Estudios de suelo previos con recuperación de núcleos e instalación de pozos.</li>
+          <li>Levantamientos topográficos, geofísicos y geomática cartográfica.</li>
+          <li>Geología de superficie y prospección en campo para mapas de exploración.</li>
+          <li>Certificación de muestras y categorización de recursos minerales para mercados internacionales.</li>
+          <li>Ejecución de proyectos y montaje de plantas de explotación en minas.</li>
+          <li>Sistemas de contención para taludes y protección contra caída de rocas.</li>
         </ul>
       </>
     )
@@ -1006,10 +1006,10 @@ export const textosData: Record<string, TextoData> = {
     )
   },
 
-// ...
+  // ...
 
 
-// ... dentro de textosData
+  // ... dentro de textosData
   'ID-obra-100.tsx': {
     title: "ESTABILIZACIÓN Y CONTROL DE EROSIÓN",
     introContent: (
@@ -1030,7 +1030,7 @@ export const textosData: Record<string, TextoData> = {
       </div>
     )
   },
-// ... dentro de textosData
+  // ... dentro de textosData
   'ID-obra-150.tsx': {
     title: "TERRAPLÉN SOBRE SUELO BLANDO",
     introContent: (
@@ -1099,7 +1099,7 @@ export const textosData: Record<string, TextoData> = {
       <>
         <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #135</h3>
         <p>
-        ECOGREEN incorpora innumerables soluciones en diferentes campos de aplicación en la infraestructura urbana. Las obras proyectadas y ejecutadas por los profesionales de la arquitectura, urbanistas, ingenieros civiles, entre muchos otros, sirven de soporte para el desarrollo de otras actividades y su necesario funcionamiento en la organización estructural de las ciudades. Los aportes de las soluciones ECOGREEN abarcan muchos sectores importantes en los que se encuentran; el sector TRANSPORTE que contempla las calles, carreteras, autopistas, vías férreas, puertos y aeropuertos. La infraestructura ENERGÉTICA que incluye las redes eléctricas, transformación, distribución y alumbrado público, calefacción urbana, refinerías, oleoductos, gasoductos, plantas eólicas, térmicas y nucleares. Infraestructura HIDRÁULICA que agrupa todas las redes de recolección y reciclaje de residuos, vertederos y rellenos sanitarios, redes de desagüe y alcantarillado, embalses, depósitos, tratamiento y distribución de agua potable. Otro sector importante es las TELECOMUNICACIONES que está conformado por las obras de telefonía fija, redes de televisión, repetidoras, centrales, fibra óptica y celdas de telefonía celular. Y por último el sector de las EDIFICACIONES que abarca las principales obras de infraestructura que se encuentran más visibles y cercanas a las comunidades, como lo son las viviendas, instituciones educativas, comercios, industria, hospitales y centros de salud, parques, etc.
+          ECOGREEN incorpora innumerables soluciones en diferentes campos de aplicación en la infraestructura urbana. Las obras proyectadas y ejecutadas por los profesionales de la arquitectura, urbanistas, ingenieros civiles, entre muchos otros, sirven de soporte para el desarrollo de otras actividades y su necesario funcionamiento en la organización estructural de las ciudades. Los aportes de las soluciones ECOGREEN abarcan muchos sectores importantes en los que se encuentran; el sector TRANSPORTE que contempla las calles, carreteras, autopistas, vías férreas, puertos y aeropuertos. La infraestructura ENERGÉTICA que incluye las redes eléctricas, transformación, distribución y alumbrado público, calefacción urbana, refinerías, oleoductos, gasoductos, plantas eólicas, térmicas y nucleares. Infraestructura HIDRÁULICA que agrupa todas las redes de recolección y reciclaje de residuos, vertederos y rellenos sanitarios, redes de desagüe y alcantarillado, embalses, depósitos, tratamiento y distribución de agua potable. Otro sector importante es las TELECOMUNICACIONES que está conformado por las obras de telefonía fija, redes de televisión, repetidoras, centrales, fibra óptica y celdas de telefonía celular. Y por último el sector de las EDIFICACIONES que abarca las principales obras de infraestructura que se encuentran más visibles y cercanas a las comunidades, como lo son las viviendas, instituciones educativas, comercios, industria, hospitales y centros de salud, parques, etc.
         </p>
       </>
     ),
@@ -1116,38 +1116,49 @@ export const textosData: Record<string, TextoData> = {
       <>
         <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #270</h3>
         <p>
-Construcción de muro de tierra reforzada de 25 m de largo por 10 m de altura, para reconstruir deslizamiento y ampliar el área social de jardín de la Qta 4 Aguas ubicada en la Urb. Cerro Verde. Municipio Baruta. Estado Miranda. 2022        </p>
+          Construcción de muro de tierra reforzada de 25 m de largo por 10 m de altura, para reconstruir deslizamiento y ampliar el área social de jardín de la Qta 4 Aguas ubicada en la Urb. Cerro Verde. Municipio Baruta. Estado Miranda. 2022        </p>
       </>
     ),
   },
-   'ID-obra-300.tsx': {
+  'ID-obra-300.tsx': {
     title: "MURO DE TIERRA REFORZADA",
     introContent: (
       <>
         <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #300</h3>
         <p>
           Construcción de un muro de tierra reforzada de 70 m de largo por 6 m de altura para extensión de cancha ecuestre en la Urbanización Paracotos. Estado Miranda. 2024
-</p>
+        </p>
       </>
     ),
   },
-     'ID-obra-255.tsx': {
+  'ID-obra-255.tsx': {
     title: "MURO DE TIERRA REFORZADA",
     introContent: (
       <>
         <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #255</h3>
         <p>
-Construcción de muro de tierra reforzada de 60 m de largo por 7 m de altura, diseñado para ganar terreno y generar nueva área social de jardines que servirían al mismo tiempo como tribuna para las competencias de equitación en la caballeriza de la Urb. Paracotos. Estado Miranda. 2017</p>
+          Construcción de muro de tierra reforzada de 60 m de largo por 7 m de altura, diseñado para ganar terreno y generar nueva área social de jardines que servirían al mismo tiempo como tribuna para las competencias de equitación en la caballeriza de la Urb. Paracotos. Estado Miranda. 2017</p>
       </>
     ),
   },
-   'ID-obra-325.tsx': {
+  'ID-obra-325.tsx': {
     title: "MURO DE TIERRA REFORZADA",
     introContent: (
       <>
         <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #325</h3>
         <p>
-Construcción de muro de tierra reforzada de 28 m de largo por 5 m de altura, para ganar superficie plana de jardin de 140 m2 en la Urb. Oripoto. Estado Miranda. 2025</p>
+          Construcción de muro de tierra reforzada de 28 m de largo por 5 m de altura, para ganar superficie plana de jardin de 140 m2 en la Urb. Oripoto. Estado Miranda. 2025</p>
+      </>
+    ),
+  },
+  'ID-obra-296.tsx': {
+    title: "MURO DE TIERRA REFORZADA",
+    introContent: (
+      <>
+        <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #296</h3>
+        <p>
+          Construcción de 7 muros de tierra reforzada de diferentes alturas para generar terrazas de contención para todas las viviendas afectadas por fuertes periodos de lluvias anteriores a la obra y protección contra la erosión de los taludes de las laderas de la Quebrada Caraballo, ubicada en el sector Cotiza de la parroquia San José del Municipio Libertador de Caracas. 2023
+        </p>
       </>
     ),
   },

@@ -71,5 +71,12 @@ export const casosDeObrasPrincipalesData: CasoDeObraPrincipal[] = [
     description: 'URB. ORIPOTO',
     type: 'Muro de Tierra Reforzada',
   },
+     {
+    id: 296,
+    image: 'https://tumuro.com/data2/images/casos-de-obras/296/ECO296_1.jpg',
+    title: 'MURO DE TIERRA REFORZADA Y PROTECCIÓN DE TALUDES',
+    description: 'QUEBRADA CARABALLO.',
+    type: 'Muro de Tierra Reforzada',
+  },
   
 ];

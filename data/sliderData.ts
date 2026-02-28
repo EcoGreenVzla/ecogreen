@@ -807,6 +807,17 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
       "https://tumuro.com/data3/images/muro-de-gavion-reforzado4.png"
     ]
   },
-  
+   'ID-obra-296.tsx': {
+    title: "OBRA ECOGREEN #296",
+    subtitle: "MURO DE TIERRA REFORZADA.",
+    link: "/casos-de-obras/296",
+    desktopImages: [
+      "https://tumuro.com/data2/images/casos-de-obras/296/MOROCHA_ECO296.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data2/images/casos-de-obras/296/ECO296_MOBILE1.jpg",
+      "https://tumuro.com/data2/images/casos-de-obras/296/ECO296_MOBILE2.jpg"
+    ]
+  },
 
 };
