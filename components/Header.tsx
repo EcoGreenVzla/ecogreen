@@ -139,7 +139,38 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
-      <Nav items={navigationData} isMobileMenuOpen={isMobileMenuOpen} setIsMobileMenuOpen={setIsMobileMenuOpen} />
+      {/* ... (tu código anterior) ... */}
+
+      <Nav
+        items={navigationData}
+        isMobileMenuOpen={isMobileMenuOpen}
+        setIsMobileMenuOpen={setIsMobileMenuOpen}
+      />
+
+      {/* ESTO ES LO QUE DEBES AGREGAR AQUÍ: */}
+      <style>{`
+        /* Oculta la barra de Google y el espacio en blanco que deja arriba */
+        .goog-te-banner-frame.skiptranslate, .goog-te-banner-frame {
+          display: none !important;
+        }
+        body {
+          top: 0 !important;
+          position: static !important;
+        }
+        /* Oculta el tooltip de 'Texto original' al pasar el mouse */
+        .goog-te-balloon-frame {
+          display: none !important;
+        }
+        /* Asegura que el contenedor de Google no ocupe espacio invisible */
+        #google_translate_element {
+          display: none !important;
+        }
+        /* Quita el margen que Google le pone al html */
+        html {
+          margin-top: 0 !important;
+        }
+      `}</style>
+
     </header>
   );
 };
