@@ -60,9 +60,24 @@ const Header: React.FC = () => {
 
     const timer = setTimeout(addGoogleTranslateScript, 500);
 
+    const interval = setInterval(() => {
+      const googleBar = document.querySelector('.goog-te-banner-frame');
+      const skipTranslate = document.querySelector('.skiptranslate');
+      
+      if (googleBar) googleBar.remove(); // Elimina la barra gris
+      if (skipTranslate) {
+        (skipTranslate as HTMLElement).style.display = 'none';
+      }
+      
+      // Forzamos que el cuerpo de la página no se baje
+      document.body.style.top = '0px';
+      document.documentElement.style.marginTop = '0px';
+    }, 500); // Revisa cada medio segundo
+
     return () => {
       window.removeEventListener('scroll', handleScroll);
       clearTimeout(timer);
+      clearInterval(interval);
     };
   }, []);
 
