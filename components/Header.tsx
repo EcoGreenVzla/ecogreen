@@ -29,7 +29,7 @@ const SocialIcon: React.FC<{ href: string; iconUrl: string; alt: string }> = ({ 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  
+
   // ESTADO PARA CONTROLAR EL IDIOMA ACTUAL
   const [currentLang, setCurrentLang] = useState<'es' | 'en'>('es');
 
@@ -74,7 +74,7 @@ const Header: React.FC = () => {
       const targetLang = currentLang === 'es' ? 'en' : 'es';
       select.value = targetLang;
       // Añadimos { bubbles: true } para que Google registre el cambio correctamente
-      select.dispatchEvent(new Event('change', { bubbles: true })); 
+      select.dispatchEvent(new Event('change', { bubbles: true }));
       setCurrentLang(targetLang);
     }
   };
@@ -83,56 +83,59 @@ const Header: React.FC = () => {
     <header className={`relative z-50 bg-white w-full shadow-sm`}>
       <div className={`container mx-auto px-4 w-[99%] md:max-w-[80%]`}>
         <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4 lg:py-6'}`}>
-          
+
           <div className="fixed left-4 top-6 z-[9999] lg:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`inline-flex items-center justify-center p-2 rounded-md text-white shadow-lg transition-all duration-500 ${
-                isScrolled ? 'bg-[#0e306f]/20 backdrop-blur-sm' : 'bg-[#0e306f]'
-              }`}
+              className={`inline-flex items-center justify-center p-2 rounded-md text-white shadow-lg transition-all duration-500 ${isScrolled ? 'bg-[#0e306f]/20 backdrop-blur-sm' : 'bg-[#0e306f]'
+                }`}
             >
               <MenuIcon className="h-7 w-7" />
             </button>
           </div>
 
           <div className="flex-shrink-0 lg:flex-none w-full lg:w-auto flex justify-center lg:justify-start">
-             <Link to="/" className="block">
-                <img 
-                   className={`object-contain transition-all duration-300 ${isScrolled ? 'h-[50px]' : 'h-[64px] lg:h-[90px]'} w-auto`} 
-                   src="https://tumuro.com/images/ecogreen-logo.png" 
-                   alt="EcoGreen Logo" 
-                />
-             </Link>
+            <Link to="/" className="block">
+              <img
+                className={`object-contain transition-all duration-300 ${isScrolled ? 'h-[50px]' : 'h-[64px] lg:h-[90px]'} w-auto`}
+                src="https://tumuro.com/images/ecogreen-logo.png"
+                alt="EcoGreen Logo"
+              />
+            </Link>
           </div>
+          <div className="flex items-center space-x-4">
+            {/* 1. EL TRADUCTOR REAL DE GOOGLE (Oculto para que no rompa el diseño) */}
+            <div id="google_translate_element" style={{ display: 'none' }}></div>
 
-          <div className="flex items-center space-x-4"> 
-             
-             {/* 1. EL TRADUCTOR REAL DE GOOGLE (Está mandado fuera de pantalla por CSS) */}
-             <div id="google_translate_element"></div>
+            {/* 2. NUESTRO BOTÓN OPTIMIZADO PARA MÓVIL */}
+            <button
+              onClick={toggleLanguage}
+              className="absolute right-2 top-4 md:top-0 md:relative md:right-0 flex items-center justify-center border border-[#0E306F] text-[#0E306F] rounded-md font-semibold transition-colors hover:bg-gray-100
+    /* Tamaños: pequeño en móvil, normal en PC */
+    px-2 py-1 md:px-3 md:py-1.5 
+    min-w-[40px] md:min-w-[100px] 
+    text-[11px] md:text-[13px] z-[1000]"
+            >
+              {currentLang === 'es' ? (
+                <>
+                  <img src="https://cdn.parcellab.com/img/flags/us.png" alt="English" className="w-4 h-auto" />
+                  {/* El texto se oculta en móvil (hidden) y aparece en escritorio (md:block) */}
+                  <span className="hidden md:block ml-2">English</span>
+                </>
+              ) : (
+                <>
+                  <img src="https://cdn.parcellab.com/img/flags/es.png" alt="Español" className="w-4 h-auto" />
+                  <span className="hidden md:block ml-2">Español</span>
+                </>
+              )}
+            </button>
 
-             {/* 2. NUESTRO BOTÓN SIMPLE CON BANDERAS REALES */}
-             <button 
-                onClick={toggleLanguage}
-                className="flex items-center justify-center space-x-2 px-3 py-1.5 border border-[#0E306F] text-[#0E306F] rounded-md font-semibold text-[13px] hover:bg-gray-100 transition-colors min-w-[100px]"
-             >
-                {currentLang === 'es' ? (
-                  <>
-                    <img src="https://cdn.parcellab.com/img/flags/us.png" alt="English" className="w-4 h-auto" />
-                    <span>English</span>
-                  </>
-                ) : (
-                  <>
-                    <img src="https://cdn.parcellab.com/img/flags/es.png" alt="Español" className="w-4 h-auto" />
-                    <span>Español</span>
-                  </>
-                )}
-             </button>
-
-             <div className="hidden lg:flex items-center space-x-2 mr-4">
-                {socialNetworks.map((net) => (
-                    <SocialIcon key={net.id} href={net.href} iconUrl={net.iconUrl} alt={net.alt} />
-                ))}
-             </div>
+            {/* Redes sociales (se mantienen igual) */}
+            <div className="hidden lg:flex items-center space-x-2 mr-4">
+              {socialNetworks.map((net) => (
+                <SocialIcon key={net.id} href={net.href} iconUrl={net.iconUrl} alt={net.alt} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
