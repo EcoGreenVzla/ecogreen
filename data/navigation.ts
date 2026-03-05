@@ -16,6 +16,7 @@ const obrasRaw = [
   { label: 'OBRA ECOGREEN #325', href: '/casos-de-obras/325' },
   { label: 'OBRA ECOGREEN #300', href: '/casos-de-obras/300' },
   { label: 'OBRA ECOGREEN #296', href: '/casos-de-obras/296' },
+  { label: 'OBRA ECOGREEN #285', href: '/casos-de-obras/285' },
 ];
 
 /**

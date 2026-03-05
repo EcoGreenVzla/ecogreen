@@ -820,4 +820,19 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     ]
   },
 
+     'ID-obra-285.tsx': {
+    title: "OBRA ECOGREEN #285",
+    subtitle: "MURO DE TIERRA REFORZADA.",
+    link: "/casos-de-obras/285",
+    desktopImages: [
+      "https://tumuro.com/data2/images/casos-de-obras/285/MOROCHA_ECO285.jpg"
+    ],
+    mobileImages: [
+      "https://tumuro.com/data2/images/casos-de-obras/285/ECO285_MOBILE1.jpg",
+      "https://tumuro.com/data2/images/casos-de-obras/285/ECO285_MOBILE2.jpg"
+    ]
+  },
+
+  
+
 };

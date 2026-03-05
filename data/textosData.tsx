@@ -1162,4 +1162,17 @@ export const textosData: Record<string, TextoData> = {
       </>
     ),
   },
+  'ID-obra-285.tsx': {
+    title: " CONTROL DE EROSIÓN HÍDRICA",
+    introContent: (
+      <>
+        <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #285</h3>
+        <p>
+          La red de torres de transmisión del sistema eléctrico nacional, está expuesta permanentemente al desgaste por agentes ambientales como el viento, el sol y la lluvia. Este último produce mucho daño en los periodos de invierno de alta intensidad, debido a que causa un importante aumento del caudal de agua en los ríos a nivel nacional, produciendo una fuerte erosión hídrica en las márgenes y a su vez generan fuertes meandros que desvían el trayecto del cauce del río, afectando en muchos casos las laderas donde se encuentran fundadas las torres de transmisión.
+          Año 2023
+
+        </p>
+      </>
+    ),
+  },
 };

@@ -78,5 +78,12 @@ export const casosDeObrasPrincipalesData: CasoDeObraPrincipal[] = [
     description: 'QUEBRADA CARABALLO.',
     type: 'Muro de Tierra Reforzada',
   },
+     {
+    id: 285,
+    image: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_1.jpg',
+    title: 'CONTROL DE EROSIÓN HÍDRICA. ',
+    description: 'TORRES DE TRANSMISIÓN DEL SISTEMA ELÉCTRICO NACIONAL.',
+    type: 'Control de Erosión',
+  },
   
 ];

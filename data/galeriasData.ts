@@ -758,6 +758,31 @@ export const galeriasData: Record<string, GaleriaData> = {
     ]
   },
 
+  'ID-obra-285.tsx': {
+    id: 'ID-obra-285.tsx',
+    items: [
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_1.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_2.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_3.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_4.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_5.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_6.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_7.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_8.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_9.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_10.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_11.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_12.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_13.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_14.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_15.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_16.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_17.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_18.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/285/ECO285_19.jpg', title: '' },
+    ]
+  },
+
 
 }; // <-- ESTA ES LA ÚNICA LLAVE FINAL. NO PONGAS NADA MÁS ABAJO.
 
