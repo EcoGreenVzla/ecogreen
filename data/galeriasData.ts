@@ -578,10 +578,10 @@ export const galeriasData: Record<string, GaleriaData> = {
       { src: 'https://tumuro.com/data2/images/casos-de-obras/135/ECO135_14.jpg', title: '' },
       { src: 'https://tumuro.com/data2/images/casos-de-obras/135/ECO135_15.jpg', title: '' },
       { src: 'https://tumuro.com/data2/images/casos-de-obras/135/ECO135_16.jpg', title: '' },
-      { src: 'https://tumuro.com/data2/images/casos-de-obras/135/ECO135_17.JPG', title: '' },
-      { src: 'https://tumuro.com/data2/images/casos-de-obras/135/ECO135_18.JPG', title: '' },
-      { src: 'https://tumuro.com/data2/images/casos-de-obras/135/ECO135_19.JPG', title: '' },
-      { src: 'https://tumuro.com/data2/images/casos-de-obras/135/ECO135_20.JPG', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/135/ECO135_17.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/135/ECO135_18.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/135/ECO135_19.jpg', title: '' },
+      { src: 'https://tumuro.com/data2/images/casos-de-obras/135/ECO135_20.jpg', title: '' },
     ]
   },
   'ID-obra-270.tsx': {

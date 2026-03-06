@@ -1094,7 +1094,7 @@ export const textosData: Record<string, TextoData> = {
     )
   },
   'ID-obra-135.tsx': {
-    title: "INFRAESTRUCTURA URBANA",
+    title: "MURO DE TIERRA REFORZADA Y PROTECCION DE TALUD EN EL VALLE ARRIBA ATHLETIC CLUB",
     introContent: (
       <>
         <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #135</h3>
@@ -1111,7 +1111,7 @@ export const textosData: Record<string, TextoData> = {
     )
   },
   'ID-obra-270.tsx': {
-    title: "MURO DE TIERRA REFORZADA",
+    title: "MURO DE TIERRA REFORZADA URB. CERRO VERDE",
     introContent: (
       <>
         <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #270</h3>
@@ -1121,7 +1121,7 @@ export const textosData: Record<string, TextoData> = {
     ),
   },
   'ID-obra-300.tsx': {
-    title: "MURO DE TIERRA REFORZADA",
+    title: "MURO DE TIERRA REFORZADA. CANCHA ECUESTRE. PARACOTOS.",
     introContent: (
       <>
         <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #300</h3>
@@ -1132,7 +1132,7 @@ export const textosData: Record<string, TextoData> = {
     ),
   },
   'ID-obra-255.tsx': {
-    title: "MURO DE TIERRA REFORZADA",
+    title: "MURO DE TIERRA REFORZADA, CABALLERIZA PARACOTOS",
     introContent: (
       <>
         <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #255</h3>
@@ -1142,7 +1142,7 @@ export const textosData: Record<string, TextoData> = {
     ),
   },
   'ID-obra-325.tsx': {
-    title: "MURO DE TIERRA REFORZADA",
+    title: "MURO DE TIERRA REFORZADA. URB. ORIPOTO.",
     introContent: (
       <>
         <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #325</h3>
@@ -1152,7 +1152,7 @@ export const textosData: Record<string, TextoData> = {
     ),
   },
   'ID-obra-296.tsx': {
-    title: "MURO DE TIERRA REFORZADA",
+    title: "7 MUROS DE TIERRA REFORZADA Y PROTECCIÓN DE TALUDES. QUEBRADA CARABALLO.",
     introContent: (
       <>
         <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #296</h3>
@@ -1163,7 +1163,7 @@ export const textosData: Record<string, TextoData> = {
     ),
   },
   'ID-obra-285.tsx': {
-    title: " CONTROL DE EROSIÓN HÍDRICA",
+    title: "CONTROL DE EROSIÓN HÍDRICA. TORRES DE TRANSMISIÓN DEL SISTEMA ELÉCTRICO NACIONAL.",
     introContent: (
       <>
         <h3 className="text-xl font-bold text-[#0E306F] mb-4 uppercase">OBRA ECOGREEN #285</h3>
