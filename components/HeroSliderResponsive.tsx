@@ -148,6 +148,7 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
     <div 
       ref={containerRef} 
       className={`relative w-full bg-white overflow-hidden ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
+      onContextMenu={(e) => e.preventDefault()}
       onMouseDown={(e) => handleStart(e.clientX)}
       onMouseMove={(e) => handleMove(e.clientX)}
       onMouseUp={handleEnd}
@@ -158,7 +159,11 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
     >
       {/* 1. ESPACIADOR (Usamos la primera imagen original) */}
       <div className="invisible relative pointer-events-none">
-         <img src={originalImages[0]} alt="Spacer" className="w-full h-auto" />
+         <img src={originalImages[0]} 
+         onContextMenu={(e) => e.preventDefault()}
+         draggable="false"
+         alt="Spacer" 
+         className="w-full h-auto select-none" />
       </div>
 
       {/* 2. CAPA DE TEXTO */}
@@ -186,7 +191,12 @@ const HeroSliderResponsive: React.FC<Props> = ({ data, autoPlayDuration = 8000 }
         >
           {safeImages.map((imgUrl, index) => (
             <div key={index} className="min-w-full h-full relative select-none">
-              <img src={imgUrl} className="w-full h-full object-fill block pointer-events-none" alt={`Slide ${index}`} />
+              <img src={imgUrl} 
+             className="w-full h-full object-fill block pointer-events-none select-none"
+              alt={`Slide ${index}`}
+              onContextMenu={(e) => e.preventDefault()}
+              draggable="false"
+               />
             </div>
           ))}
         </div>

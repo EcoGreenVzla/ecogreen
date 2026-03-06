@@ -108,7 +108,10 @@ const GaleriaImagenes: React.FC<{ data: GaleriaData | undefined }> = ({ data }) 
               <img
                 src={item.src}
                 alt={item.title}
-                className="w-full h-full object-cover"
+                // Añadimos select-none para que no se pueda seleccionar/azulear
+                className="w-full h-full object-cover select-none"
+                // Añadimos esto para bloquear el clic derecho
+                onContextMenu={(e) => e.preventDefault()}
                 loading="lazy"
               />
             </motion.div>
@@ -158,11 +161,12 @@ const GaleriaImagenes: React.FC<{ data: GaleriaData | undefined }> = ({ data }) 
                   <motion.img
                     key={selectedIndex}
                     src={data.items[selectedIndex].src}
+                    onContextMenu={(e) => e.preventDefault()}
                     initial={{ opacity: 0, scale: 0.98 }}
                     animate={{ opacity: 1, scale: 1 }}
                     exit={{ opacity: 0, scale: 0.98 }}
                     transition={{ duration: 0.2 }}
-                    className="max-h-[65vh] md:max-h-[75vh] max-w-[90vw] md:max-w-[80vw] w-auto h-auto block object-contain rounded-sm shadow-md mx-auto" />
+                    className="max-h-[65vh] md:max-h-[75vh] max-w-[90vw] md:max-w-[80vw] w-auto h-auto block object-contain rounded-sm shadow-md mx-auto select-none" />
                 </AnimatePresence>
 
                 {/* FILA 2: LEYENDA Y ESTADÍSTICAS */}
