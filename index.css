@@ -36,3 +36,16 @@ body {
     overflow: hidden !important;
     opacity: 0 !important;
 }
+
+/* Bloqueo global de interacción con imágenes para Mobile y Desktop */
+img {
+  /* Evita que aparezca el menú "Guardar imagen" en iOS y Android al dejar presionado */
+  -webkit-touch-callout: none !important;
+  
+  /* Evita que se pueda seleccionar la imagen como si fuera texto */
+  -webkit-user-select: none !important;
+  user-select: none !important;
+
+  /* Evita que la imagen sea arrastrable */
+  -webkit-user-drag: none !important;
+}
