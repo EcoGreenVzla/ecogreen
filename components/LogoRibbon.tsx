@@ -2,10 +2,10 @@ import React from 'react';
 import { motion, Variants } from 'framer-motion';
 
 const logos = [
-  { src: 'https://tumuro.com/media/banner/cdidv.webp', alt: 'Cámara de Industriales del estado de Vargas' },
-  { src: 'https://tumuro.com/media/banner/ieca.webp', alt: 'International Erosion Control Association' },
-  { src: 'https://tumuro.com/media/banner/igs.webp', alt: 'International Geosynthetics Society' },
-  { src: 'https://tumuro.com/media/banner/svdg.webp', alt: 'Sociedad Venezolana de Geotecnia' },
+  { src: 'https://media.tumuro.com/media/banner/cdidv.webp', alt: 'Cámara de Industriales del estado de Vargas' },
+  { src: 'https://media.tumuro.com/media/banner/ieca.webp', alt: 'International Erosion Control Association' },
+  { src: 'https://media.tumuro.com/media/banner/igs.webp', alt: 'International Geosynthetics Society' },
+  { src: 'https://media.tumuro.com/media/banner/svdg.webp', alt: 'Sociedad Venezolana de Geotecnia' },
 ];
 
 const containerVariants: Variants = {

@@ -10,20 +10,20 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "LA MEJOR ALTERNATIVA TECNOLÓGICA Y ECONÓMICA",
     link: "/",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion2.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion3.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion4.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion5.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion2.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion3.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion4.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion5.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muro-de-tierra-reforzada1.png",
-      "https://tumuro.com/data3/images/muro-de-gavion-reforzado1.png",
-      "https://tumuro.com/data3/images/muro-de-gavion-reforzado2.png",
-      "https://tumuro.com/data3/images/muro-de-gavion-reforzado3.png",
-      "https://tumuro.com/data3/images/muro-de-tierra-reforzada2.png",
-      "https://tumuro.com/data3/images/muro-de-gavion-reforzado4.png"
+      "https://media.tumuro.com/data3/images/muro-de-tierra-reforzada1.png",
+      "https://media.tumuro.com/data3/images/muro-de-gavion-reforzado1.png",
+      "https://media.tumuro.com/data3/images/muro-de-gavion-reforzado2.png",
+      "https://media.tumuro.com/data3/images/muro-de-gavion-reforzado3.png",
+      "https://media.tumuro.com/data3/images/muro-de-tierra-reforzada2.png",
+      "https://media.tumuro.com/data3/images/muro-de-gavion-reforzado4.png"
     ]
   },
   
@@ -40,29 +40,29 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "SOLUCIONES VERDES, PRÁCTICAS Y ECONÓMICAS.", 
     link: "/muros-de-contencion",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion2.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion3.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion4.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion5.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion2.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion3.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion4.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion5.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado1.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada1.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado2.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado3.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada2.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado4.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/muro-mixto1.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion1.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/pantalla-atirantada-mixta-reticulada1.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada3.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/pantalla-atirantada1.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada4.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion1.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion2.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/muros-de-contencion3.png"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado1.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada1.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado2.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado3.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada2.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado4.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muro-mixto1.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muro-de-gavion1.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/pantalla-atirantada-mixta-reticulada1.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada3.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/pantalla-atirantada1.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muro-de-tierra-reforzada4.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muros-de-contencion1.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muros-de-contencion2.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muros-de-contencion3.png"
     ]
   },
 
@@ -80,28 +80,28 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "TECNOLOGÍA A PRUEBA DE ASENTAMIENTOS.", // Detectado en span #slider-p
     link: "/muros-de-contencion/sistemas-de-contencion-flexibles",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles-1.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles-2.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles-3.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles-4.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles-5.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles-6.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles-1.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles-2.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles-3.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles-4.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles-5.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles-6.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/talud-reforzado1.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-tierra-reforzada1.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-tierra-reforzada4.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-gavion-reforzado1.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-gavion-reforzado2.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-reforzado1.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-tierra-reforzada2.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-mixto1.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-gavion-reforzado3.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-mixto2.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-tierra-reforzada3.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-tierra-reforzada5.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles2.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles1.png"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/talud-reforzado1.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-tierra-reforzada1.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-tierra-reforzada4.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-gavion-reforzado1.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-gavion-reforzado2.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-reforzado1.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-tierra-reforzada2.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-mixto1.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-gavion-reforzado3.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-mixto2.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-tierra-reforzada3.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muro-de-tierra-reforzada5.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles2.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/sistemas-de-contencion-flexibles1.png"
     ]
   },
 
@@ -119,27 +119,27 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "SOLUCIONES EN CONCRETO.", // Texto exacto del span #slider-p
     link: "/muros-de-contencion/sistemas-de-contencion-rigidos",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos1.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos2.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos3.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos4.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos5.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos6.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos1.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos2.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos3.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos4.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos5.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos6.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos1.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos2.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos3.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos4.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos5.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos6.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos7.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos8.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos9.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos10.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos11.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos12.jpg",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos13.jpg"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos1.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos2.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos3.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos4.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos5.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos6.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos7.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos8.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos9.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos10.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos11.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos12.jpg",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/sistemas-de-contencion-rigidos13.jpg"
     ]
   },
   // =====================================================================
@@ -154,23 +154,23 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
   subtitle: "LA PROTECCIÓN DEL SUELO.", // Extraído de span #slider-p
   link: "/control-de-erosion",
   desktopImages: [
-    "https://tumuro.com/data1/images/control-de-erosion/ROTA-MOROCHA-1.JPG",
-    "https://tumuro.com/data1/images/control-de-erosion/ROTA-MOROCHA-2.jpg",
-    "https://tumuro.com/data1/images/control-de-erosion/ROTA-MOROCHA-3.JPG",
-    "https://tumuro.com/data1/images/control-de-erosion/ROTA-MOROCHA-4.JPG",
-    "https://tumuro.com/data1/images/control-de-erosion/ROTA-MOROCHA-5.JPG"
+    "https://media.tumuro.com/data1/images/control-de-erosion/ROTA-MOROCHA-1.JPG",
+    "https://media.tumuro.com/data1/images/control-de-erosion/ROTA-MOROCHA-2.jpg",
+    "https://media.tumuro.com/data1/images/control-de-erosion/ROTA-MOROCHA-3.JPG",
+    "https://media.tumuro.com/data1/images/control-de-erosion/ROTA-MOROCHA-4.JPG",
+    "https://media.tumuro.com/data1/images/control-de-erosion/ROTA-MOROCHA-5.JPG"
   ],
   mobileImages: [
-    "https://tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-1-DER.jpg",
-    "https://tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-1-IZQ.jpg",
-    "https://tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-2-DER.jpg",
-    "https://tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-2-IZQ.jpg",
-    "https://tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-3-DER.jpg",
-    "https://tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-3-IZQ.jpg",
-    "https://tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-4-DER.jpg",
-    "https://tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-4-IZQ.jpg",
-    "https://tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-5-DER.jpg",
-    "https://tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-5-IZQ.jpg"
+    "https://media.tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-1-DER.jpg",
+    "https://media.tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-1-IZQ.jpg",
+    "https://media.tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-2-DER.jpg",
+    "https://media.tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-2-IZQ.jpg",
+    "https://media.tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-3-DER.jpg",
+    "https://media.tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-3-IZQ.jpg",
+    "https://media.tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-4-DER.jpg",
+    "https://media.tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-4-IZQ.jpg",
+    "https://media.tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-5-DER.jpg",
+    "https://media.tumuro.com/data3/images/control-de-erosion/ROTA-MOROCHA-5-IZQ.jpg"
   ]
 },
 // =====================================================================
@@ -186,11 +186,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
   subtitle: "INFRAESTRUCTURA VERDE.", // Extraído de span #slider-p
   link: "/campos-de-aplicacion",
   desktopImages: [
-    "https://tumuro.com/images/infraestructura-urbana.jpg"
+    "https://media.tumuro.com/images/infraestructura-urbana.jpg"
   ],
   mobileImages: [
-    "https://tumuro.com/images/infraestructura-urbana2.jpg",
-    "https://tumuro.com/images/infraestructura-urbana3.jpg"
+    "https://media.tumuro.com/images/infraestructura-urbana2.jpg",
+    "https://media.tumuro.com/images/infraestructura-urbana3.jpg"
   ]
 },
 // =====================================================================
@@ -207,10 +207,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "UNA VÍA PARA EL AGUA.", // Extraído del span #slider-p
     link: "/muros-de-contencion/sistemas-de-drenaje",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-drenaje/sistemas-de-drenaje.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-drenaje/sistemas-de-drenaje.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-drenaje/sistemas-de-drenaje.jpg"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-drenaje/sistemas-de-drenaje.jpg"
     ]
   },
   // =====================================================================
@@ -227,10 +227,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "SOLUCIONES VERDES DE ALTA RESISTENCIA.",
     link: "/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-tierra-reforzada",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-tierra-reforzada/talud-reforzado1.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-tierra-reforzada/talud-reforzado1.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-tierra-reforzada/talud-reforzado1.png"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-tierra-reforzada/talud-reforzado1.png"
     ]
   },
 
@@ -247,10 +247,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "LA SOLUCIÓN PARA LAS OBRAS HIDRÁULICAS.",
     link: "/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion/muros-de-gavion.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion/muros-de-gavion.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion/muros-de-gavion.png"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion/muros-de-gavion.png"
     ]
   },
   // =====================================================================
@@ -266,10 +266,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "SISTEMAS ECOLÓGICOS PARA LA ARQUITECTURA.",
     link: "/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion-reforzados",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion-reforzados/muros-de-gavion-reforzados.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion-reforzados/muros-de-gavion-reforzados.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion-reforzados/muros-de-gavion-reforzados.png"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion-reforzados/muros-de-gavion-reforzados.png"
     ]
   },
   // =====================================================================
@@ -285,10 +285,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "COMBINACIÓN DE SOLUCIONES PARA CADA NECESIDAD.",
     link: "/muros-de-contencion/sistemas-de-contencion-flexibles/muros-mixtos",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-mixtos/muros-mixtos.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-mixtos/muros-mixtos.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-mixtos/muros-mixtos.png"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/muros-mixtos/muros-mixtos.png"
     ]
   },
   // =====================================================================
@@ -304,11 +304,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "SISTEMAS DE CONTENCIÓN REFORESTABLES.",
     link: "/refuerzo-de-taludes-y-terraplenes",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/refuerzo-de-taludes-y-terraplenes.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/refuerzo-de-taludes-y-terraplenes.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/refuerzo-de-taludes-y-terraplenes.png",
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/Morocha-1B.jpg"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/refuerzo-de-taludes-y-terraplenes.png",
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/Morocha-1B.jpg"
     ]
   },
   // =====================================================================
@@ -323,10 +323,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "CUANDO LA GEOTECNIA EXIGE PROFUNDIDAD.",
     link: "/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas/muros-anclados-y-pantallas-atirantadas.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas/muros-anclados-y-pantallas-atirantadas.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas/muros-anclados-y-pantallas-atirantadas.jpg"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas/muros-anclados-y-pantallas-atirantadas.jpg"
     ]
   },
   // =====================================================================
@@ -343,10 +343,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "CUANDO LO COLONIAL IMPERA.",
     link: "/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-ciclopeos",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-ciclopeos/muros-de-ciclopeos.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-ciclopeos/muros-de-ciclopeos.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-ciclopeos/muros-de-ciclopeos.jpg"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-ciclopeos/muros-de-ciclopeos.jpg"
     ]
   },
   // =====================================================================
@@ -361,10 +361,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "FUNDACIONES EN SUELO FIRME.",
     link: "/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes/pilotes-y-micropilotes.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes/pilotes-y-micropilotes.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes/pilotes-y-micropilotes.jpg"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes/pilotes-y-micropilotes.jpg"
     ]
   },
   // =====================================================================
@@ -379,11 +379,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "SOLUCIONES ECOLÓGICAS PERMANENTES.",
     link: "/control-de-erosion/estabilizacion-de-taludes",
     desktopImages: [
-      "https://tumuro.com/data1/images/estabilization-de-taludes/Morocha.JPG"
+      "https://media.tumuro.com/data1/images/estabilization-de-taludes/Morocha.JPG"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/estabilization-de-taludes/Morocha-Derecha.jpg",
-      "https://tumuro.com/data3/images/estabilization-de-taludes/Morocha-Izquierda.jpg"
+      "https://media.tumuro.com/data3/images/estabilization-de-taludes/Morocha-Derecha.jpg",
+      "https://media.tumuro.com/data3/images/estabilization-de-taludes/Morocha-Izquierda.jpg"
     ]
   },
   // =====================================================================
@@ -397,11 +397,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "PROTECCIÓN DE LOS CAUCES.",
     link: "/control-de-erosion/canalizaciones",
     desktopImages: [
-      "https://tumuro.com/data1/images/canalizaciones/MOROCHAS/MOROCHAS.jpg"
+      "https://media.tumuro.com/data1/images/canalizaciones/MOROCHAS/MOROCHAS.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/canalizaciones/mobiles/Foto-Banner-Derecha-Canalizaciones.jpg",
-      "https://tumuro.com/data3/images/canalizaciones/mobiles/Foto-Banner-Izquierda-Canalizaciones.jpg"
+      "https://media.tumuro.com/data3/images/canalizaciones/mobiles/Foto-Banner-Derecha-Canalizaciones.jpg",
+      "https://media.tumuro.com/data3/images/canalizaciones/mobiles/Foto-Banner-Izquierda-Canalizaciones.jpg"
     ]
   },
   // =====================================================================
@@ -417,10 +417,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "CONTROL EFECTIVO DE FLUJOS HÍDRICOS.",
     link: "/control-de-erosion/diques-y-presas",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/refuerzo-de-taludes-y-terraplenes.jpg" // Imagen referencial de ingeniería hidráulica
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/refuerzo-de-taludes-y-terraplenes.jpg" // Imagen referencial de ingeniería hidráulica
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/refuerzo-de-taludes-y-terraplenes.png"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes/refuerzo-de-taludes-y-terraplenes.png"
     ]
   },
   // =====================================================================
@@ -435,11 +435,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "CONTROL DE LA EROSIÓN HÍDRICA.",
     link: "/control-de-erosion/proteccion-de-riberas",
     desktopImages: [
-      "https://tumuro.com/data1/images/proteccion-de-riberas/Morocha-Proteccion-de-Riberas.jpg"
+      "https://media.tumuro.com/data1/images/proteccion-de-riberas/Morocha-Proteccion-de-Riberas.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/proteccion-de-riberas/Morocha-Derecha-Proteción-de-Riberas.jpg",
-      "https://tumuro.com/data3/images/proteccion-de-riberas/Morocha%20Izquierda%20Proteccion%20de%20Riberas%20.JPG"
+      "https://media.tumuro.com/data3/images/proteccion-de-riberas/Morocha-Derecha-Proteción-de-Riberas.jpg",
+      "https://media.tumuro.com/data3/images/proteccion-de-riberas/Morocha%20Izquierda%20Proteccion%20de%20Riberas%20.JPG"
     ]
   },
   // =====================================================================
@@ -456,10 +456,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "UNA SOLUCIÓN TRADICIONAL CONFIABLE.",
     link: "/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado/muros-de-concreto-armado.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado/muros-de-concreto-armado.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado/muros-de-concreto-armado.jpg"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado/muros-de-concreto-armado.jpg"
     ]
   },
   // =====================================================================
@@ -474,10 +474,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     title: "INFRAESTRUCTURA URBANA",
     subtitle: "SOLUCIONES ECOLÓGICAS.",
     link: "/campos-de-aplicacion/infraestructura-urbana",
-    desktopImages: ["https://tumuro.com/images/infraestructura-urbana.jpg"],
+    desktopImages: ["https://media.tumuro.com/images/infraestructura-urbana.jpg"],
     mobileImages: [
-      "https://tumuro.com/images/infraestructura-urbana2.jpg",
-      "https://tumuro.com/images/infraestructura-urbana3.jpg"
+      "https://media.tumuro.com/images/infraestructura-urbana2.jpg",
+      "https://media.tumuro.com/images/infraestructura-urbana3.jpg"
     ]
   },
   // =====================================================================
@@ -491,10 +491,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     title: "CONSTRUCCIÓN CIVIL",
     subtitle: "INFRAESTRUCTURA VERDE.",
     link: "/campos-de-aplicacion/construccion-civil",
-    desktopImages: ["https://tumuro.com/images/construccion-civil.jpg"],
+    desktopImages: ["https://media.tumuro.com/images/construccion-civil.jpg"],
     mobileImages: [
-      "https://tumuro.com/images/construccion-civil2.jpg",
-      "https://tumuro.com/images/construccion-civil3.jpg"
+      "https://media.tumuro.com/images/construccion-civil2.jpg",
+      "https://media.tumuro.com/images/construccion-civil3.jpg"
     ]
   },
   // =====================================================================
@@ -508,11 +508,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "DESARROLLO SUSTENTABLE.",
     link: "/campos-de-aplicacion/proteccion-ambiental",
     desktopImages: [
-      "https://tumuro.com/images/proteccion-ambiental.jpg"
+      "https://media.tumuro.com/images/proteccion-ambiental.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/images/proteccion-ambiental2.jpg",
-      "https://tumuro.com/images/proteccion-ambiental3.jpg"
+      "https://media.tumuro.com/images/proteccion-ambiental2.jpg",
+      "https://media.tumuro.com/images/proteccion-ambiental3.jpg"
     ]
   },
 
@@ -527,10 +527,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     title: "INDUSTRIA, PETRÓLEO Y GAS",
     subtitle: "SECTOR ENERGÉTICO.",
     link: "/campos-de-aplicacion/industria-petroleo-y-gas",
-    desktopImages: ["https://tumuro.com/images/industria-petroleo-y-gas.jpg"],
+    desktopImages: ["https://media.tumuro.com/images/industria-petroleo-y-gas.jpg"],
     mobileImages: [
-      "https://tumuro.com/images/industria-petroleo-y-gas2.jpg",
-      "https://tumuro.com/images/industria-petroleo-y-gas3.jpg"
+      "https://media.tumuro.com/images/industria-petroleo-y-gas2.jpg",
+      "https://media.tumuro.com/images/industria-petroleo-y-gas3.jpg"
     ]
   },
 
@@ -549,11 +549,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "SEGURIDAD ALIMENTARIA.",
     link: "/campos-de-aplicacion/sector-agricola",
     desktopImages: [
-      "https://tumuro.com/images/sector-agricola.jpg"
+      "https://media.tumuro.com/images/sector-agricola.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/images/sector-agricola2.jpg",
-      "https://tumuro.com/images/sector-agricola3.jpg"
+      "https://media.tumuro.com/images/sector-agricola2.jpg",
+      "https://media.tumuro.com/images/sector-agricola3.jpg"
     ]
   },
 
@@ -570,11 +570,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "VIALIDAD SEGURA.",
     link: "/campos-de-aplicacion/vias-de-comunicacion",
     desktopImages: [
-      "https://tumuro.com/data1/images/vias-de-comunicacion/vias-de-comunicacion.jpg"
+      "https://media.tumuro.com/data1/images/vias-de-comunicacion/vias-de-comunicacion.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/vias-de-comunicacion/vias-de-comunicacion2.jpg",
-      "https://tumuro.com/data3/images/vias-de-comunicacion/vias-de-comunicacion3.jpg"
+      "https://media.tumuro.com/data3/images/vias-de-comunicacion/vias-de-comunicacion2.jpg",
+      "https://media.tumuro.com/data3/images/vias-de-comunicacion/vias-de-comunicacion3.jpg"
     ]
   },
 
@@ -595,11 +595,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "PROTECCIÓN DE CAUCES.",
     link: "/campos-de-aplicacion/obras-hidraulicas",
     desktopImages: [
-      "https://tumuro.com/images/obras-hidraulicas.jpg"
+      "https://media.tumuro.com/images/obras-hidraulicas.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/images/obras-hidraulicas2.jpg",
-      "https://tumuro.com/images/obras-hidraulicas3.jpg"
+      "https://media.tumuro.com/images/obras-hidraulicas2.jpg",
+      "https://media.tumuro.com/images/obras-hidraulicas3.jpg"
     ]
   },
  
@@ -612,11 +612,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "PROYECTOS DE EXPLOTACIÓN RESPONSABLES.",
     link: "/campos-de-aplicacion/mineria-geologia-y-geotecnia",
     desktopImages: [
-      "https://tumuro.com/images/Morocha-MINERIA.JPG"
+      "https://media.tumuro.com/images/Morocha-MINERIA.JPG"
     ],
     mobileImages: [
-      "https://tumuro.com/images/Morocha-Derecha-MINERIA.jpg",
-      "https://tumuro.com/images/Morocha-Izquierda-MINERIA.jpg"
+      "https://media.tumuro.com/images/Morocha-Derecha-MINERIA.jpg",
+      "https://media.tumuro.com/images/Morocha-Izquierda-MINERIA.jpg"
     ]
   },
 
@@ -631,10 +631,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "PROYECTOS ECOLÓGICOS.",
     link: "/casos-de-obras",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado1.png"
+      "https://media.tumuro.com/data3/images/muros-de-contencion/muro-de-gavion-reforzado1.png"
     ]
   },
 
@@ -648,11 +648,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "ESTABILIZACIÓN Y CONTROL DE EROSIÓN.",
     link: "/casos-de-obras/100",
     desktopImages: [
-      "https://tumuro.com/data1/images/casos-de-obras/100/morocha/MOROCHA-1600x475.jpg"
+      "https://media.tumuro.com/data1/images/casos-de-obras/100/morocha/MOROCHA-1600x475.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/casos-de-obras/100/mobil/ECO100.171.JPG",
-      "https://tumuro.com/data3/images/casos-de-obras/100/mobil/ECO100.PRINCIPAL1.JPG"
+      "https://media.tumuro.com/data3/images/casos-de-obras/100/mobil/ECO100.171.JPG",
+      "https://media.tumuro.com/data3/images/casos-de-obras/100/mobil/ECO100.PRINCIPAL1.JPG"
     ]
   },
 // ... dentro de sliderData
@@ -661,10 +661,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "TERRAPLÉN SOBRE SUELO BLANDO.",
     link: "/casos-de-obras/150",
     desktopImages: [
-      "https://tumuro.com/data1/images/casos-de-obras/150/morocha/ECO150.PRINCIPAL.JPG"
+      "https://media.tumuro.com/data1/images/casos-de-obras/150/morocha/ECO150.PRINCIPAL.JPG"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/casos-de-obras/150/mobil/ECO150.PRINCIPAL.JPG"
+      "https://media.tumuro.com/data3/images/casos-de-obras/150/mobil/ECO150.PRINCIPAL.JPG"
     ]
   },
 
@@ -675,11 +675,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "ESTABILIZACIÓN Y CONTROL DE EROSIÓN.",
     link: "/casos-de-obras/200",
     desktopImages: [
-      "https://tumuro.com/data1/images/casos-de-obras/200/morocha/ECO200.27-ECO200.PRINCIPAL.JPG"
+      "https://media.tumuro.com/data1/images/casos-de-obras/200/morocha/ECO200.27-ECO200.PRINCIPAL.JPG"
     ],
     mobileImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE1.jpg",
-      "https://tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE2.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE1.jpg",
+      "https://media.tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE2.jpg"
     ]
   },
 
@@ -690,10 +690,10 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "PROTECCIÓN DE RIBERA.",
     link: "/casos-de-obras/215",
     desktopImages: [
-      "https://tumuro.com/data1/images/casos-de-obras/215/morocha/ECO215.14-ECO215.PRINCIPAL.jpg"
+      "https://media.tumuro.com/data1/images/casos-de-obras/215/morocha/ECO215.14-ECO215.PRINCIPAL.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/casos-de-obras/215/mobil/ECO215.PRINCIPAL.jpg"
+      "https://media.tumuro.com/data3/images/casos-de-obras/215/mobil/ECO215.PRINCIPAL.jpg"
     ]
   },
 
@@ -703,11 +703,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "MURO DE TIERRA REFORZADA.",
     link: "/casos-de-obras/135",
     desktopImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/135/MOROCHA_135.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/135/MOROCHA_135.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/135/ECO135_MOBILE1.jpg",
-      "https://tumuro.com/data2/images/casos-de-obras/135/ECO135_MOBILE2.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/135/ECO135_MOBILE1.jpg",
+      "https://media.tumuro.com/data2/images/casos-de-obras/135/ECO135_MOBILE2.jpg"
     ]
   },
    'ID-obra-270.tsx': {
@@ -715,11 +715,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "MURO DE TIERRA REFORZADA.",
     link: "/casos-de-obras/270",
     desktopImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/270/MOROCHA_ECO270.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/270/MOROCHA_ECO270.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/270/ECO270_MOBILE1.jpg",
-      "https://tumuro.com/data2/images/casos-de-obras/270/ECO270_MOBILE2.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/270/ECO270_MOBILE1.jpg",
+      "https://media.tumuro.com/data2/images/casos-de-obras/270/ECO270_MOBILE2.jpg"
 
     ]
   },
@@ -728,11 +728,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "MURO DE TIERRA REFORZADA.",
     link: "/casos-de-obras/300",
     desktopImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/300/MOROCHA_ECO300.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/300/MOROCHA_ECO300.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE1.jpg",
-      "https://tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE2.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE1.jpg",
+      "https://media.tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE2.jpg"
     ]
   },
    'ID-obra-325.tsx': {
@@ -740,11 +740,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "MURO DE TIERRA REFORZADA.",
     link: "/casos-de-obras/325",
     desktopImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/325/MOROCHA_ECO325.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/325/MOROCHA_ECO325.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/325/ECO325_MOBILE1.jpg",
-      "https://tumuro.com/data2/images/casos-de-obras/325/ECO325_MOBILE2.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/325/ECO325_MOBILE1.jpg",
+      "https://media.tumuro.com/data2/images/casos-de-obras/325/ECO325_MOBILE2.jpg"
     ]
   },
    'ID-obra-255.tsx': {
@@ -752,11 +752,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "MURO DE TIERRA REFORZADA.",
     link: "/casos-de-obras/255",
     desktopImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/255/MOROCHA_ECO255.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/255/MOROCHA_ECO255.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/255/ECO255_MOBILE1.jpg",
-      "https://tumuro.com/data2/images/casos-de-obras/255/ECO255_MOBILE2.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/255/ECO255_MOBILE1.jpg",
+      "https://media.tumuro.com/data2/images/casos-de-obras/255/ECO255_MOBILE2.jpg"
     ]
   },
 
@@ -769,20 +769,20 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "ESTAMOS LISTOS PARA ATENDERTE.",
     link: "/",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion2.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion3.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion4.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion5.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion2.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion3.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion4.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion5.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muro-de-tierra-reforzada1.png",
-      "https://tumuro.com/data3/images/muro-de-gavion-reforzado1.png",
-      "https://tumuro.com/data3/images/muro-de-gavion-reforzado2.png",
-      "https://tumuro.com/data3/images/muro-de-gavion-reforzado3.png",
-      "https://tumuro.com/data3/images/muro-de-tierra-reforzada2.png",
-      "https://tumuro.com/data3/images/muro-de-gavion-reforzado4.png"
+      "https://media.tumuro.com/data3/images/muro-de-tierra-reforzada1.png",
+      "https://media.tumuro.com/data3/images/muro-de-gavion-reforzado1.png",
+      "https://media.tumuro.com/data3/images/muro-de-gavion-reforzado2.png",
+      "https://media.tumuro.com/data3/images/muro-de-gavion-reforzado3.png",
+      "https://media.tumuro.com/data3/images/muro-de-tierra-reforzada2.png",
+      "https://media.tumuro.com/data3/images/muro-de-gavion-reforzado4.png"
     ]
   },
 
@@ -791,20 +791,20 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "MUROS 100% VERDES.",
     link: "/",
     desktopImages: [
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion2.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion3.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion4.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion5.jpg",
-      "https://tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg"
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion1.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion2.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion3.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion4.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion5.jpg",
+      "https://media.tumuro.com/data1/images/muros-de-contencion/combined/muros-de-contencion6.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data3/images/muro-de-tierra-reforzada1.png",
-      "https://tumuro.com/data3/images/muro-de-gavion-reforzado1.png",
-      "https://tumuro.com/data3/images/muro-de-gavion-reforzado2.png",
-      "https://tumuro.com/data3/images/muro-de-gavion-reforzado3.png",
-      "https://tumuro.com/data3/images/muro-de-tierra-reforzada2.png",
-      "https://tumuro.com/data3/images/muro-de-gavion-reforzado4.png"
+      "https://media.tumuro.com/data3/images/muro-de-tierra-reforzada1.png",
+      "https://media.tumuro.com/data3/images/muro-de-gavion-reforzado1.png",
+      "https://media.tumuro.com/data3/images/muro-de-gavion-reforzado2.png",
+      "https://media.tumuro.com/data3/images/muro-de-gavion-reforzado3.png",
+      "https://media.tumuro.com/data3/images/muro-de-tierra-reforzada2.png",
+      "https://media.tumuro.com/data3/images/muro-de-gavion-reforzado4.png"
     ]
   },
    'ID-obra-296.tsx': {
@@ -812,11 +812,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "MURO DE TIERRA REFORZADA.",
     link: "/casos-de-obras/296",
     desktopImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/296/MOROCHA_ECO296.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/296/MOROCHA_ECO296.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/296/ECO296_MOBILE1.jpg",
-      "https://tumuro.com/data2/images/casos-de-obras/296/ECO296_MOBILE2.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/296/ECO296_MOBILE1.jpg",
+      "https://media.tumuro.com/data2/images/casos-de-obras/296/ECO296_MOBILE2.jpg"
     ]
   },
 
@@ -825,11 +825,11 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
     subtitle: "MURO DE TIERRA REFORZADA.",
     link: "/casos-de-obras/285",
     desktopImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/285/MOROCHA_ECO285.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/285/MOROCHA_ECO285.jpg"
     ],
     mobileImages: [
-      "https://tumuro.com/data2/images/casos-de-obras/285/ECO285_MOBILE1.jpg",
-      "https://tumuro.com/data2/images/casos-de-obras/285/ECO285_MOBILE2.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/285/ECO285_MOBILE1.jpg",
+      "https://media.tumuro.com/data2/images/casos-de-obras/285/ECO285_MOBILE2.jpg"
     ]
   },
 

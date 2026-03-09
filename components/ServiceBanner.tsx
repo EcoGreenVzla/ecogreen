@@ -5,22 +5,22 @@ import { Link } from 'react-router-dom';
 const services = [
   {
     title: 'MUROS DE CONTENCIÓN',
-    imageSrc: 'https://tumuro.com/media/banner-services/muros-de-contencion.webp',
-    iconSrc: 'https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp',
+    imageSrc: 'https://media.tumuro.com/media/banner-services/muros-de-contencion.webp',
+    iconSrc: 'https://media.tumuro.com/media/banner-services/muros-de-contencion-icon.webp',
     color: '#0e306f',
     href: '/muros-de-contencion'
   },
   {
     title: 'CONTROL DE EROSIÓN',
-    imageSrc: 'https://tumuro.com/media/banner-services/control-de-erosion.webp',
-    iconSrc: 'https://tumuro.com/media/banner-services/control-de-erosion-icon.png',
+    imageSrc: 'https://media.tumuro.com/media/banner-services/control-de-erosion.webp',
+    iconSrc: 'https://media.tumuro.com/media/banner-services/control-de-erosion-icon.png',
     color: '#309400',
     href: '/control-de-erosion'
   },
   {
     title: 'VIALIDAD',
-    imageSrc: 'https://tumuro.com/media/banner-services/vialidad.webp',
-    iconSrc: 'https://tumuro.com/media/banner-services/vialidad-icon.png',
+    imageSrc: 'https://media.tumuro.com/media/banner-services/vialidad.webp',
+    iconSrc: 'https://media.tumuro.com/media/banner-services/vialidad-icon.png',
     color: '#f87004',
     href: '/vialidad'
   }

@@ -23,23 +23,23 @@ const XIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 // --- Data for Gallery ---
 const galleryImages = [
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/10.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/11.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/12.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/13.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/14.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/15.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/16.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/17.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/18.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/2.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/3.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/4.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/5.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/6.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/7.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/8.jpg',
-    'https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/9.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/10.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/11.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/12.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/13.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/14.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/15.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/16.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/17.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/18.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/2.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/3.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/4.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/5.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/6.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/7.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/8.jpg',
+    'https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/grid-refuerzo-de-taludes-y-terraplenes/9.jpg',
 ];
 
 
@@ -193,7 +193,7 @@ const RefuerzoTaludes: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url('https://tumuro.com/media/refuerzo-de-taludes-y-terraplenes/slider/refuerzo-de-taludes-y-terraplenes.webp')` }}
+            style={{ backgroundImage: `url('https://media.tumuro.com/media/refuerzo-de-taludes-y-terraplenes/slider/refuerzo-de-taludes-y-terraplenes.webp')` }}
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center p-4 z-10">
@@ -218,7 +218,7 @@ const RefuerzoTaludes: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <div className="flex items-center mb-8">
-                <img src="https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono Refuerzo de Taludes" className="w-16 h-16 mr-6" />
+                <img src="https://media.tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono Refuerzo de Taludes" className="w-16 h-16 mr-6" />
                 <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Refuerzo de Taludes y Terraplenes</h2>
             </div>
             <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">

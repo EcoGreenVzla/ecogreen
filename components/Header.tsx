@@ -113,7 +113,7 @@ const Header: React.FC = () => {
             <Link to="/" className="block">
               <img
                 className={`object-contain transition-all duration-300 ${isScrolled ? 'h-[50px]' : 'h-[64px] lg:h-[90px]'} w-auto`}
-                src="https://tumuro.com/images/ecogreen-logo.png"
+                src="https://media.tumuro.com/images/ecogreen-logo.png"
                 alt="EcoGreen Logo"
               />
             </Link>

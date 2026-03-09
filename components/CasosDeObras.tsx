@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 // --- CONFIGURACIÓN DE RUTAS ABSOLUTAS ---
 // Usamos la URL base para asegurar que las imágenes carguen siempre correctamente.
-const BASE_IMG_URL = "https://tumuro.com/images/";
+const BASE_IMG_URL = "https://media.tumuro.com/images/";
 
 const OBRAS_FIJAS = [
   {

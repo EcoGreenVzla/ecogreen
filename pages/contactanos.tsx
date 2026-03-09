@@ -53,7 +53,7 @@ const Contactanos: React.FC = () => {
     const coordinate = fromLonLat([-66.7760, 10.4180]);
     const markerEl = document.createElement('div');
     markerEl.className = 'custom-pin-wrapper';
-    markerEl.innerHTML = `<div class="pin-main-body" style="border-color: #0E306F"><img src="https://tumuro.com/media/icons/favicon.png" class="pin-favicon" /></div><div class="pin-tip" style="background-color: #0E306F"></div>`;
+    markerEl.innerHTML = `<div class="pin-main-body" style="border-color: #0E306F"><img src="https://media.tumuro.com/media/icons/favicon.png" class="pin-favicon" /></div><div class="pin-tip" style="background-color: #0E306F"></div>`;
     const overlay = new Overlay({ element: markerEl, positioning: 'bottom-center', stopEvent: false });
     const map = new Map({
       target: mapRef.current,

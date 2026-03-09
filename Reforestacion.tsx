@@ -22,7 +22,7 @@ const XIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 );
 
 // --- Data for Gallery ---
-const galleryImages = Array.from({ length: 12 }, (_, i) => `https://tumuro.com/media/reforestacion/grid-reforestacion/${i + 1}.jpg`);
+const galleryImages = Array.from({ length: 12 }, (_, i) => `https://media.tumuro.com/media/reforestacion/grid-reforestacion/${i + 1}.jpg`);
 
 // --- Animation Variants ---
 const textVariants: Variants = {
@@ -71,7 +71,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ src, onClick }) => (
         </div>
         <div className="bg-ecogreen-green flex items-center p-2 h-16">
             <div className="bg-white rounded-full p-1 mr-4 flex-shrink-0 transition-transform duration-300 ease-in-out group-hover:scale-110">
-                <img src='https://tumuro.com/media/banner-services/control-de-erosion-icon.png' alt="Icono Control de Erosión" className="h-10 w-10" />
+                <img src='https://media.tumuro.com/media/banner-services/control-de-erosion-icon.png' alt="Icono Control de Erosión" className="h-10 w-10" />
             </div>
         </div>
     </motion.div>
@@ -169,7 +169,7 @@ const Reforestacion: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url('https://tumuro.com/media/reforestacion/slide/morocha.webp')` }}
+            style={{ backgroundImage: `url('https://media.tumuro.com/media/reforestacion/slide/morocha.webp')` }}
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center p-4 z-10">
@@ -194,7 +194,7 @@ const Reforestacion: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <div className="flex items-center mb-8">
-                <img src="https://tumuro.com/media/banner-services/control-de-erosion-icon.png" alt="Icono Reforestación" className="w-16 h-16 mr-6" />
+                <img src="https://media.tumuro.com/media/banner-services/control-de-erosion-icon.png" alt="Icono Reforestación" className="w-16 h-16 mr-6" />
                 <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Reforestación</h2>
             </div>
             <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">

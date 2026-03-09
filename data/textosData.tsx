@@ -16,7 +16,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
   'ID-muros-de-contencion.tsx': {
     title: "Muros de Contención",
-    iconSrc: "https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp",
+    iconSrc: "https://media.tumuro.com/media/banner-services/muros-de-contencion-icon.webp",
     introContent: (
       <>
         <p>
@@ -82,7 +82,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
   'ID-sistemas-de-contencion-rigidos.tsx': {
     title: "Sistemas de Contención Rígidos",
-    iconSrc: "https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp",
+    iconSrc: "https://media.tumuro.com/media/banner-services/muros-de-contencion-icon.webp",
     introContent: (
       <>
         <p>
@@ -117,7 +117,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
   'ID-control-de-erosion.tsx': {
     title: "Control de Erosión",
-    iconSrc: "https://tumuro.com/images/control-de-erosion-icon-blue.png",
+    iconSrc: "https://media.tumuro.com/images/control-de-erosion-icon-blue.png",
     introContent: (
       <>
         <p>
@@ -166,7 +166,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
   'ID-sistemas-de-drenaje.tsx': {
     title: "Sistemas de Drenaje",
-    // iconSrc: "https://tumuro.com/media/banner-services/drenaje-icon.webp", // Opcional, si tienes un ícono para esta sección
+    // iconSrc: "https://media.tumuro.com/media/banner-services/drenaje-icon.webp", // Opcional, si tienes un ícono para esta sección
     introContent: (
       <>
         <p>

@@ -23,21 +23,21 @@ const XIcon: React.FC<React.SVGProps<SVGSVGElement>> = (props) => (
 
 // --- Data for Gallery ---
 const galleryImages = [
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-gavion-reforzado1.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada1.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada10.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada11.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada12.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada13.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada2.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada3.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada4.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada5.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada6.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada7.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada8.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada9.webp',
-    'https://tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-reforzado1.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-gavion-reforzado1.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada1.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada10.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada11.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada12.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada13.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada2.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada3.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada4.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada5.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada6.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada7.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada8.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-de-tierra-reforzada9.webp',
+    'https://media.tumuro.com/media/muros-de-tierra-reforzada/grid-muros-de-tierra-reforzada/muro-reforzado1.webp',
 ];
 
 
@@ -191,7 +191,7 @@ const TierraReforzada: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1.5, ease: [0.22, 1, 0.36, 1] }}
             className="absolute inset-0 bg-cover bg-center"
-            style={{ backgroundImage: `url('https://tumuro.com/media/muros-de-tierra-reforzada/slider/talud-reforzado1.webp')` }}
+            style={{ backgroundImage: `url('https://media.tumuro.com/media/muros-de-tierra-reforzada/slider/talud-reforzado1.webp')` }}
         />
         <div className="absolute inset-0 bg-black/40" />
         <div className="absolute inset-0 flex items-center justify-center p-4 z-10">
@@ -216,7 +216,7 @@ const TierraReforzada: React.FC = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl">
             <div className="flex items-center mb-8">
-                <img src="https://tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono Muros de Tierra Reforzada" className="w-16 h-16 mr-6" />
+                <img src="https://media.tumuro.com/media/banner-services/muros-de-contencion-icon.webp" alt="Icono Muros de Tierra Reforzada" className="w-16 h-16 mr-6" />
                 <h2 className="text-3xl md:text-4xl font-bold text-ecogreen-blue uppercase tracking-wide">Muros de Tierra Reforzada</h2>
             </div>
             <p className="text-xl text-gray-700 leading-relaxed mb-6 text-left">

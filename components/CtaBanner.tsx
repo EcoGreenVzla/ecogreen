@@ -26,11 +26,11 @@ const CtaBanner: React.FC = () => {
               {/* Imagen Mobile: 768px */}
               <source
                 media="(max-width: 768px)"
-                srcSet="https://tumuro.com/media/banner/BANNER-HOME-mobil.webp"
+                srcSet="https://media.tumuro.com/media/banner/BANNER-HOME-mobil.webp"
               />
               {/* Imagen Desktop */}
               <img
-                src="https://tumuro.com/media/banner/BANNER-HOME-3.webp"
+                src="https://media.tumuro.com/media/banner/BANNER-HOME-3.webp"
                 alt="Banner Muros de Contención EcoGreen"
                 className="w-full h-auto object-cover"
               />

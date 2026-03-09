@@ -37,11 +37,11 @@ const Footer: React.FC = () => {
   };
 
   const socialLinks = [
-    { id: 'fb', href: '#', src: 'https://tumuro.com/images/fb-white.png', alt: 'Facebook' },
-    { id: 'tw', href: '#', src: 'https://tumuro.com/images/tw-white.png', alt: 'Twitter' },
-    { id: 'inst', href: '#', src: 'https://tumuro.com/images/inst-white.png', alt: 'Instagram' },
-    { id: 'ld', href: '#', src: 'https://tumuro.com/images/ld-white.png', alt: 'LinkedIn' },
-    { id: 'mail', href: 'mailto:info@ecogreenvzla.com', src: 'https://tumuro.com/images/inst-logo-mail-white.png', alt: 'Mail' },
+    { id: 'fb', href: '#', src: 'https://media.tumuro.com/images/fb-white.png', alt: 'Facebook' },
+    { id: 'tw', href: '#', src: 'https://media.tumuro.com/images/tw-white.png', alt: 'Twitter' },
+    { id: 'inst', href: '#', src: 'https://media.tumuro.com/images/inst-white.png', alt: 'Instagram' },
+    { id: 'ld', href: '#', src: 'https://media.tumuro.com/images/ld-white.png', alt: 'LinkedIn' },
+    { id: 'mail', href: 'mailto:info@ecogreenvzla.com', src: 'https://media.tumuro.com/images/inst-logo-mail-white.png', alt: 'Mail' },
   ];
 
   return (
@@ -62,7 +62,7 @@ const Footer: React.FC = () => {
             {/* 1. LOGO (Centrado en mobile) */}
             <div className="lg:col-span-2 flex justify-center lg:justify-start items-start">
               <img 
-                src="https://tumuro.com/media/ui/ecogreen-logo-white.png" 
+                src="https://media.tumuro.com/media/ui/ecogreen-logo-white.png" 
                 alt="EcoGreen Logo" 
                 className="h-14 w-auto object-contain" 
               />

@@ -7,7 +7,7 @@ const sistemasDrenaje = [
   { 
     title: 'Sistemas de Drenaje', 
     href: '/muros-de-contencion/sistemas-de-drenaje', 
-    imgSrc: 'https://tumuro.com/media/muros-de-contencion/grid-sistemas-de-drenaje/sistemas-de-drenaje.webp' 
+    imgSrc: 'https://media.tumuro.com/media/muros-de-contencion/grid-sistemas-de-drenaje/sistemas-de-drenaje.webp' 
   },
 ];
 
