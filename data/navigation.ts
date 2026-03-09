@@ -54,7 +54,7 @@ export const navigationData: NavItemType[] = [
         href: '/muros-de-contencion/sistemas-de-contencion-rigidos',
         children: [
           { label: 'MUROS ANCLADOS Y PANTALLAS ATIRANTADAS', href: '/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas' },
-          { label: 'MUROS DE CONCRETO ARMADO', href: '/muros-de-contencion/sistemas-de-contre-armado' },
+          { label: 'MUROS DE CONCRETO ARMADO', href: '/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado' },
           { label: 'MUROS CICLÓPEOS', href: '/muros-de-contencion/sistemas-de-contencion-rigidos/muros-ciclopeos' },
           { label: 'PILOTES Y MICROPILOTES', href: '/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes' },
         ],
