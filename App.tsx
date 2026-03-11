@@ -1,28 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async'; // <-- AGREGADO
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/index';
 import UnderConstruction from './components/UnderConstruction';
 import ScrollToTop from './components/ScrollToTop';
 import AnalyticsTracker from './components/AnalyticsTracker'; 
-/**
- * =================================================================
- * EJEMPLOS PRÁCTICOS DE MANTENIMIENTO
- * =================================================================
- * * ➕ AÑADIR (Ejemplo: Nueva página de "Garantía"):
- * 1. Arriba en imports: import Garantia from './pages/garantia';
- * 2. En el bloque de Routes: <Route path="/garantia" element={<Garantia />} />
- * * 🔄 ACTUALIZAR (Ejemplo: Cambiar la URL de Vialidad):
- * - Antes: <Route path="/vialidad" element={<Vialidad />} />
- * - Después: <Route path="/servicios-viales" element={<Vialidad />} />
- * * 🚫 DESHABILITAR (Ejemplo: Mantenimiento temporal de Muros Mixtos):
- * - Opción A (Comentar): // <Route path="/muros-mixtos" element={<MurosMixtos />} />
- * - Opción B (Usar el componente de construcción): 
- * <Route path="/muros-mixtos" element={<UnderConstruction title="MUROS MIXTOS" />} />
- * * ❌ ELIMINAR:
- * - Simplemente borra la línea de 'import' de la página y su etiqueta <Route /> correspondiente.
- */
 
 // --- IMPORTS DE PÁGINAS PRINCIPALES ---
 import MurosDeContencion from './pages/muros-de-contencion';
@@ -88,89 +72,89 @@ import PetroleoProducto5 from './pages/PetroleoProducto5';
 
 const App: React.FC = () => {
   return (
-    <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-      <ScrollToTop />
-      <AnalyticsTracker />
+    <HelmetProvider> {/* <-- AGREGADO */}
+      <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+        <ScrollToTop />
+        <AnalyticsTracker />
 
-      <div className="flex flex-col min-h-screen bg-white">
-        <Header />
+        <div className="flex flex-col min-h-screen bg-white">
+          <Header />
 
-        {/* El padding-top asegura que el contenido no quede oculto bajo el Header fijo */}
-        <main className="flex-grow">
-          <Routes>
-            {/* INICIO */}
-            <Route path="/" element={<Home />} />
+          <main className="flex-grow">
+            <Routes>
+              {/* INICIO */}
+              <Route path="/" element={<Home />} />
 
-            {/* RUTAS PRINCIPALES */}
-            <Route path="/muros-de-contencion" element={<MurosDeContencion />} />
-            <Route path="/vialidad" element={<Vialidad />} />
-            <Route path="/petroleo" element={<Petroleo />} />
-            <Route path="/obras-civiles" element={<ObrasCiviles />} />
-            <Route path="/control-de-erosion" element={<ControlDeErosion />} />
-            <Route path="/campos-de-aplicacion" element={<CamposDeAplicacionPage />} />
-            <Route path="/casos-de-obras" element={<CasosDeObrasPage />} />
-            <Route path="/contactanos" element={<Contactanos />} />
+              {/* RUTAS PRINCIPALES */}
+              <Route path="/muros-de-contencion" element={<MurosDeContencion />} />
+              <Route path="/vialidad" element={<Vialidad />} />
+              <Route path="/petroleo" element={<Petroleo />} />
+              <Route path="/obras-civiles" element={<ObrasCiviles />} />
+              <Route path="/control-de-erosion" element={<ControlDeErosion />} />
+              <Route path="/campos-de-aplicacion" element={<CamposDeAplicacionPage />} />
+              <Route path="/casos-de-obras" element={<CasosDeObrasPage />} />
+              <Route path="/contactanos" element={<Contactanos />} />
 
-            {/* CASOS DE OBRAS INDIVIDUALES */}
-            <Route path="/casos-de-obras/100" element={<Obra100 />} />
-            <Route path="/casos-de-obras/135" element={<Obra135 />} />
-            <Route path="/casos-de-obras/150" element={<Obra150 />} />
-            <Route path="/casos-de-obras/200" element={<Obra200 />} />
-            <Route path="/casos-de-obras/215" element={<Obra215 />} />
-            <Route path="/casos-de-obras/255" element={<Obra255 />} />
-            <Route path="/casos-de-obras/270" element={<Obra270 />} />
-            <Route path="/casos-de-obras/300" element={<Obra300 />} />
-            <Route path="/casos-de-obras/325" element={<Obra325 />} />
-            <Route path="/casos-de-obras/296" element={<Obra296 />} />
-            <Route path="/casos-de-obras/285" element={<Obra285 />} />
+              {/* CASOS DE OBRAS INDIVIDUALES */}
+              <Route path="/casos-de-obras/100" element={<Obra100 />} />
+              <Route path="/casos-de-obras/135" element={<Obra135 />} />
+              <Route path="/casos-de-obras/150" element={<Obra150 />} />
+              <Route path="/casos-de-obras/200" element={<Obra200 />} />
+              <Route path="/casos-de-obras/215" element={<Obra215 />} />
+              <Route path="/casos-de-obras/255" element={<Obra255 />} />
+              <Route path="/casos-de-obras/270" element={<Obra270 />} />
+              <Route path="/casos-de-obras/300" element={<Obra300 />} />
+              <Route path="/casos-de-obras/325" element={<Obra325 />} />
+              <Route path="/casos-de-obras/296" element={<Obra296 />} />
+              <Route path="/casos-de-obras/285" element={<Obra285 />} />
 
-            {/* SUB-RUTAS: MUROS DE CONTENCIÓN */}
-            <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles" element={<SistemasFlexibles />} />
-            <Route path="/muros-de-contencion/sistemas-de-contencion-rigidos" element={<SistemasRigidos />} />
-            <Route path="/muros-de-contencion/sistemas-de-drenaje" element={<SistemasDrenaje />} />
-            <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-tierra-reforzada" element={<TierraReforzada />} />
-            <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion" element={<Gavion />} />
-            <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion-reforzados" element={<GavionReforzado />} />
-            <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/muros-mixtos" element={<MurosMixtos />} />
-            <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes" element={<RefuerzoTaludes />} />
-            <Route path="/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas" element={<MurosAncladosPantallas />} />
-            <Route path="/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado" element={<MurosConcretoArmado />} />
-            <Route path="/muros-de-contencion/sistemas-de-contencion-rigidos/muros-ciclopeos" element={<MurosCiclopeos />} />
-            <Route path="/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes" element={<PilotesMicropilotes />} />
+              {/* SUB-RUTAS: MUROS DE CONTENCIÓN */}
+              <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles" element={<SistemasFlexibles />} />
+              <Route path="/muros-de-contencion/sistemas-de-contencion-rigidos" element={<SistemasRigidos />} />
+              <Route path="/muros-de-contencion/sistemas-de-drenaje" element={<SistemasDrenaje />} />
+              <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-tierra-reforzada" element={<TierraReforzada />} />
+              <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion" element={<Gavion />} />
+              <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/muros-de-gavion-reforzados" element={<GavionReforzado />} />
+              <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/muros-mixtos" element={<MurosMixtos />} />
+              <Route path="/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes" element={<RefuerzoTaludes />} />
+              <Route path="/muros-de-contencion/sistemas-de-contencion-rigidos/muros-anclados-y-pantallas-atirantadas" element={<MurosAncladosPantallas />} />
+              <Route path="/muros-de-contencion/sistemas-de-contencion-rigidos/muros-de-concreto-armado" element={<MurosConcretoArmado />} />
+              <Route path="/muros-de-contencion/sistemas-de-contencion-rigidos/muros-ciclopeos" element={<MurosCiclopeos />} />
+              <Route path="/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes" element={<PilotesMicropilotes />} />
 
-            {/* SUB-RUTAS: CONTROL DE EROSION */}
-            <Route path="/control-de-erosion/estabilizacion-de-taludes" element={<EstabilizacionTaludes />} />
-            <Route path="/control-de-erosion/refuerzo-de-taludes-y-terraplenes" element={<RefuerzoTaludesTerraplenes />} />
-            <Route path="/control-de-erosion/reforestacion" element={<Reforestacion />} />
-            <Route path="/control-de-erosion/canalizaciones" element={<Canalizaciones />} />
-            <Route path="/control-de-erosion/diques-y-presas" element={<DiquesYPresas />} />
-            <Route path="/control-de-erosion/proteccion-de-riberas" element={<ProteccionRiberas />} />
+              {/* SUB-RUTAS: CONTROL DE EROSION */}
+              <Route path="/control-de-erosion/estabilizacion-de-taludes" element={<EstabilizacionTaludes />} />
+              <Route path="/control-de-erosion/refuerzo-de-taludes-y-terraplenes" element={<RefuerzoTaludesTerraplenes />} />
+              <Route path="/control-de-erosion/reforestacion" element={<Reforestacion />} />
+              <Route path="/control-de-erosion/canalizaciones" element={<Canalizaciones />} />
+              <Route path="/control-de-erosion/diques-y-presas" element={<DiquesYPresas />} />
+              <Route path="/control-de-erosion/proteccion-de-riberas" element={<ProteccionRiberas />} />
 
-            {/* SUB-RUTAS: CAMPOS DE APLICACIÓN */}
-            <Route path="/campos-de-aplicacion/infraestructura-urbana" element={<InfraestructuraUrbana />} />
-            <Route path="/campos-de-aplicacion/construccion-civil" element={<ConstruccionCivil />} />
-            <Route path="/campos-de-aplicacion/proteccion-ambiental" element={<ProteccionAmbiental />} />
-            <Route path="/campos-de-aplicacion/industria-petroleo-y-gas" element={<IndustriaPetroleoGas />} />
-            <Route path="/campos-de-aplicacion/sector-agricola" element={<SectorAgricola />} />
-            <Route path="/campos-de-aplicacion/vias-de-comunicacion" element={<ViasComunicacion />} />
-            <Route path="/campos-de-aplicacion/obras-hidraulicas" element={<ObrasHidraulicas />} />
-            <Route path="/campos-de-aplicacion/mineria-geologia-y-geotecnia" element={<MineriaGeotecnia />} />
+              {/* SUB-RUTAS: CAMPOS DE APLICACIÓN */}
+              <Route path="/campos-de-aplicacion/infraestructura-urbana" element={<InfraestructuraUrbana />} />
+              <Route path="/campos-de-aplicacion/construccion-civil" element={<ConstruccionCivil />} />
+              <Route path="/campos-de-aplicacion/proteccion-ambiental" element={<ProteccionAmbiental />} />
+              <Route path="/campos-de-aplicacion/industria-petroleo-y-gas" element={<IndustriaPetroleoGas />} />
+              <Route path="/campos-de-aplicacion/sector-agricola" element={<SectorAgricola />} />
+              <Route path="/campos-de-aplicacion/vias-de-comunicacion" element={<ViasComunicacion />} />
+              <Route path="/campos-de-aplicacion/obras-hidraulicas" element={<ObrasHidraulicas />} />
+              <Route path="/campos-de-aplicacion/mineria-geologia-y-geotecnia" element={<MineriaGeotecnia />} />
 
-            {/* SUB-RUTAS: PETRÓLEO */}
-            <Route path="/petroleo/producto-1" element={<PetroleoProducto1 />} />
-            <Route path="/petroleo/producto-2" element={<PetroleoProducto2 />} />
-            <Route path="/petroleo/producto-3" element={<PetroleoProducto3 />} />
-            <Route path="/petroleo/producto-4" element={<PetroleoProducto4 />} />
-            <Route path="/petroleo/producto-5" element={<PetroleoProducto5 />} />
+              {/* SUB-RUTAS: PETRÓLEO */}
+              <Route path="/petroleo/producto-1" element={<PetroleoProducto1 />} />
+              <Route path="/petroleo/producto-2" element={<PetroleoProducto2 />} />
+              <Route path="/petroleo/producto-3" element={<PetroleoProducto3 />} />
+              <Route path="/petroleo/producto-4" element={<PetroleoProducto4 />} />
+              <Route path="/petroleo/producto-5" element={<PetroleoProducto5 />} />
 
-            {/* 404 - FALLBACK */}
-            <Route path="*" element={<UnderConstruction title="Página no encontrada" />} />
-          </Routes>
-        </main>
+              <Route path="*" element={<UnderConstruction title="Página no encontrada" />} />
+            </Routes>
+          </main>
 
-        <Footer />
-      </div>
-    </BrowserRouter>
+          <Footer />
+        </div>
+      </BrowserRouter>
+    </HelmetProvider>
   );
 };
 

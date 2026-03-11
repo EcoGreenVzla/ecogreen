@@ -1,8 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
-// --- COMPONENTES Y DATA ---
+// --- Componentes ---
+import SEO from '../components/SEO';
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
+
+// --- Data ---
+import { seoData } from '../data/seoData';
 import { sliderData } from '../data/sliderData';
 
 // --- OpenLayers (Mapa) ---
@@ -16,6 +20,8 @@ import 'ol/ol.css';
 
 const Contactanos: React.FC = () => {
   const mapRef = useRef<HTMLDivElement>(null);
+  
+  // CLAVE: El ID unificado que conecta con todos los archivos de /data
   const pageID = 'ID-contacto.tsx';
 
   const [formData, setFormData] = useState({ nombre: '', email: '', telefono: '', asunto: '', mensaje: '' });
@@ -68,7 +74,12 @@ const Contactanos: React.FC = () => {
 
   return (
     <div className="w-full m-0 p-0">
+      {/* 1. SEO Dinámico: Inyectado con spread operator y el pageID correcto */}
+      <SEO {...seoData[pageID]} />
+
+      {/* 2. Hero Slider Dinámico */}
       <HeroSliderResponsive data={sliderData[pageID]} />
+
       <section className={`${theme.layout.paddingVertical}`}>
         <div className={`container mx-auto px-6 ${theme.layout.maxWidthResponsive}`}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
@@ -81,13 +92,18 @@ const Contactanos: React.FC = () => {
               </div>
             </div>
             <div className={`bg-white ${theme.form.padding} shadow-2xl border-l-8`} style={{ borderLeftColor: theme.colors.primaryGreen }}>
-              <AnimatePresence>
+              <AnimatePresence mode='wait'>
                 {status === 'success' ? (
-                  <div className="text-center py-10">
+                  <motion.div 
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="text-center py-10"
+                  >
                     <h3 className="text-2xl font-bold text-[#0E306F] mb-4">¡ENVIADO!</h3>
                     <p className="text-gray-500">Pronto te contactaremos.</p>
                     <button onClick={() => setStatus('idle')} className="mt-6 text-[#4BA406] font-bold">VOLVER</button>
-                  </div>
+                  </motion.div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <input name="nombre" value={formData.nombre} onChange={handleChange} type="text" placeholder="NOMBRE" required className="w-full px-4 py-4 border-b outline-none" />

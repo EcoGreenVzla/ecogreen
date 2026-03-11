@@ -1,4 +1,6 @@
 import React from 'react';
+import SEO from '../../components/SEO'; 
+import { seoData } from '../../data/seoData'; 
 import HeroSliderResponsive from '../../components/HeroSliderResponsive';
 import TextoCollapsable from '../../components/TextoCollapsable';
 import GaleriaImagenes from '../../components/GaleriaImagenes';
@@ -11,9 +13,9 @@ const Obra135: React.FC = () => {
   const pageID = 'ID-obra-135.tsx';
 
   return (
-   <div className="w-full m-0 p-0">
-      <title>Obra #135 | EcoGreen</title>
-
+      <div className="w-full m-0 p-0">
+         <SEO {...seoData['pageID']} />
+      
       {/* Bloque 1: Slider */}
       <HeroSliderResponsive data={sliderData[pageID]} />
 

@@ -1,4 +1,6 @@
 import React from 'react';
+import SEO from '../components/SEO';
+import { seoData } from '../data/seoData';
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
 import TextoCollapsable from '../components/TextoCollapsable';
 import GridList from '../components/GridList';
@@ -16,7 +18,7 @@ const IndustriaPetroleoGas: React.FC = () => {
 
   return (
     <div className="w-full m-0 p-0">
-      <title>Industria, Petróleo y Gas | EcoGreen</title>
+      <SEO data={seoData[pageID]} />
       <HeroSliderResponsive data={sliderData[pageID]} />
       <TextoCollapsable data={textosData[pageID]} />
       {/* Implementación de GridList con ID específico */}

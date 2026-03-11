@@ -1,7 +1,8 @@
 import React from 'react';
-// 1. CAMBIO DE IMPORTACIONES
-import HeroSliderResponsive from '../components/HeroSliderResponsive'; // Nuevo componente
-import { sliderData } from '../data/sliderData'; // Nuevos datos
+import SEO from '../components/SEO';
+import { seoData } from '../data/seoData';
+import HeroSliderResponsive from '../components/HeroSliderResponsive'; 
+import { sliderData } from '../data/sliderData'; 
 import ServiceBanner from '../components/ServiceBanner';
 import CamposAplicacion from '../components/CamposAplicacion';
 import CasosDeObras from '../components/CasosDeObras';
@@ -9,12 +10,14 @@ import CtaBanner from '../components/CtaBanner';
 import LogoRibbon from '../components/LogoRibbon';
 
 const Home: React.FC = () => {
+  // Definimos el ID único para esta página
+  const pageID = 'ID-index.tsx';
+
   return (
     <>
-      {/* 2. REEMPLAZO DEL COMPONENTE */}
-      
-      <HeroSliderResponsive data={sliderData['ID-index.tsx']} />
-      
+      {/* CORRECCIÓN: Ahora usa la llave unificada [...] */}
+      <SEO {...seoData[pageID]} />
+      <HeroSliderResponsive data={sliderData[pageID]} />      
       <ServiceBanner />
       <CamposAplicacion />
       <CasosDeObras />

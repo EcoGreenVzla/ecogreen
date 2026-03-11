@@ -1,8 +1,9 @@
 import React from 'react';
+import SEO from '../../components/SEO'; 
+import { seoData } from '../../data/seoData'; 
 import HeroSliderResponsive from '../../components/HeroSliderResponsive';
 import TextoCollapsable from '../../components/TextoCollapsable';
 import GaleriaImagenes from '../../components/GaleriaImagenes';
-
 import { sliderData } from '../../data/sliderData';
 import { textosData } from '../../data/textosData';
 import { galeriasData } from '../../data/galeriasData';
@@ -12,7 +13,7 @@ const Obra100: React.FC = () => {
 
   return (
     <div className="w-full m-0 p-0">
-      <title>Obra #100 | EcoGreen</title>
+      <SEO {...seoData['pageID']} />
 
       {/* Bloque 1: Slider */}
       <HeroSliderResponsive data={sliderData[pageID]} />

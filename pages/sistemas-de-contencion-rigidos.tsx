@@ -1,29 +1,33 @@
 import React from 'react';
 
 // Componentes
+import SEO from '../components/SEO';
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
 import TextoCollapsable from '../components/TextoCollapsable';
-import GridSistemasDeContencionRigidos from '../components/GridSistemasDeContencionRigidos';
-import GridList from '../components/GridList'; // <--- Importamos el componente único
+import GridList from '../components/GridList';
 
 // Data
+import { seoData } from '../data/seoData';
 import { sliderData } from '../data/sliderData';
 import { textosData } from '../data/textosData';
 
 const SistemasDeContencionRigidos: React.FC = () => {
+  // CLAVE: ID maestro unificado que conecta con todos los archivos de /data
+  const pageID = 'ID-sistemas-de-contencion-rigidos.tsx';
+
   return (
     <div className="w-full m-0 p-0">
-      <title>Sistemas de Contención Rígidos | EcoGreen</title>
+      {/* 1. SEO Dinámico: Reemplaza la etiqueta <title> manual */}
+      <SEO {...seoData[pageID]} />
 
-      {/* 1. Hero Slider Dinámico */}
-      <HeroSliderResponsive data={sliderData['ID-sistemas-de-contencion-rigidos.tsx']} />
+      {/* 2. Hero Slider Dinámico */}
+      <HeroSliderResponsive data={sliderData[pageID]} />
 
-      {/* 2. Sección Teórica Dinámica */}
-      <TextoCollapsable data={textosData['ID-sistemas-de-contencion-rigidos.tsx']} />
+      {/* 3. Sección Teórica Dinámica */}
+      <TextoCollapsable data={textosData[pageID]} />
 
-      {/* Sistemas Rígidos */}
-      <GridList id="ID-sistemas-de-contencion-rigidos.tsx" />
-
+      {/* 4. Grid de Sistemas Rígidos dinámico */}
+      <GridList id={pageID} />
     </div>
   );
 };

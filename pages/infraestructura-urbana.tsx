@@ -1,29 +1,25 @@
 import React from 'react';
+
+// Componentes
+import SEO from '../components/SEO';
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
 import TextoCollapsable from '../components/TextoCollapsable';
-import GridInfraestructuraUrbana from '../components/GridInfraestructuraUrbana';
+import GridList from '../components/GridList';
 
+// Data
+import { seoData } from '../data/seoData';
 import { sliderData } from '../data/sliderData';
 import { textosData } from '../data/textosData';
-import GridList from '@/components/GridList';
 
 const InfraestructuraUrbana: React.FC = () => {
   const pageID = 'ID-infraestructura-urbana.tsx';
 
   return (
     <div className="w-full m-0 p-0">
-      <title>Infraestructura Urbana | EcoGreen</title>
-
-      {/* Slider Superior */}
+      <SEO {...seoData[pageID]} />
       <HeroSliderResponsive data={sliderData[pageID]} />
-
-      {/* Introducción y Texto Expandible */}
       <TextoCollapsable data={textosData[pageID]} />
-
-      {/*GRID DINAMICO SISTEMAS DE CONTENCIÓN RÍGIDOS*/}
-      <GridList id="ID-infraestructura-urbana.tsx" />
-
-
+      <GridList id={pageID} />
     </div>
   );
 };

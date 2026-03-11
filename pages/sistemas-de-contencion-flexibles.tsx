@@ -1,30 +1,33 @@
 import React from 'react';
 
-// Componentes Reutilizables
+// Componentes
+import SEO from '../components/SEO'; 
 import HeroSliderResponsive from '../components/HeroSliderResponsive';
 import TextoCollapsable from '../components/TextoCollapsable';
-import GridList from '../components/GridList'; // <--- Importamos el componente único
+import GridList from '../components/GridList';
 
-// Bases de datos
+// Data
+import { seoData } from '../data/seoData';
 import { sliderData } from '../data/sliderData';
 import { textosData } from '../data/textosData';
 
 const SistemasDeContencionFlexibles: React.FC = () => {
+  // CLAVE: ID maestro unificado para esta página en todas las series data
+  const pageID = 'ID-sistemas-de-contencion-flexibles.tsx';
+
   return (
     <div className="w-full m-0 p-0">
-      <title>Sistemas de Contención Flexibles | EcoGreen</title>
+      {/* 1. SEO Dinámico: Reemplaza la etiqueta <title> manual */}
+      <SEO {...seoData[pageID]} />
 
-      {/* 1. Hero Slider Dinámico */}
-      <HeroSliderResponsive data={sliderData['ID-sistemas-de-contencion-flexibles.tsx']} />
+      {/* 2. Hero Slider Dinámico */}
+      <HeroSliderResponsive data={sliderData[pageID]} />
 
-      {/* 2. Sección Teórica Dinámica */}
-      <TextoCollapsable data={textosData['ID-sistemas-de-contencion-flexibles.tsx']} />
+      {/* 3. Sección Teórica Dinámica */}
+      <TextoCollapsable data={textosData[pageID]} />
 
-
-           {/* Sistemas Flexibles */}
-      <GridList id="ID-sistemas-de-contencion-flexibles.tsx" /> 
-
-
+      {/* 4. Grid de Sistemas Flexibles */}
+      <GridList id={pageID} /> 
     </div>
   );
 };

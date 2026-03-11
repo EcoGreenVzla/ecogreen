@@ -2,14 +2,14 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import ReactGA from 'react-ga4';
 
-// 1. Inicializamos GA4 con TU ID REAL
+// Inicialización con tu ID real
 ReactGA.initialize("G-BWR8HT54CS");
 
 const AnalyticsTracker = () => {
   const location = useLocation();
 
   useEffect(() => {
-    // 2. Cada vez que cambia la ruta (location), le avisa a Google
+    // Enviamos la vista de página cada vez que la ruta cambia
     ReactGA.send({ 
         hitType: "pageview", 
         page: location.pathname + location.search,
@@ -17,7 +17,7 @@ const AnalyticsTracker = () => {
     });
   }, [location]);
 
-  return null; // Este componente es invisible en tu web
+  return null; 
 };
 
 export default AnalyticsTracker;
