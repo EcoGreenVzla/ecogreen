@@ -5,7 +5,7 @@ import Footer from './components/Footer';
 import Home from './pages/index';
 import UnderConstruction from './components/UnderConstruction';
 import ScrollToTop from './components/ScrollToTop';
-
+import AnalyticsTracker from './components/AnalyticsTracker'; 
 /**
  * =================================================================
  * EJEMPLOS PRÁCTICOS DE MANTENIMIENTO
@@ -90,6 +90,7 @@ const App: React.FC = () => {
   return (
     <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
       <ScrollToTop />
+      <AnalyticsTracker />
 
       <div className="flex flex-col min-h-screen bg-white">
         <Header />
