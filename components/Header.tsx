@@ -6,9 +6,9 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const socialNetworks = [
-  { id: 'facebook', href: '#', iconUrl: 'https://img.icons8.com/?size=100&id=13912&format=png&color=3b599a', alt: 'Facebook' },
+  { id: 'tiktok', href: '#', iconUrl: 'https://img.icons8.com/?size=100&id=118638&format=png&color=000000', alt: 'TikTok' },
   { id: 'twitter', href: '#', iconUrl: 'https://img.icons8.com/?size=100&id=phOKFKYpe00C&format=png&color=1ca1f1', alt: 'Twitter' },
-  { id: 'instagram', href: '#', iconUrl: 'https://img.icons8.com/?size=100&id=119026&format=png&color=ff3970', alt: 'Instagram' },
+  { id: 'instagram', href: 'https://instagram.com/murosecogreen', iconUrl: 'https://img.icons8.com/?size=100&id=119026&format=png&color=ff3970', alt: 'Instagram' },
   { id: 'linkedin', href: '#', iconUrl: 'https://img.icons8.com/?size=100&id=13930&format=png&color=017bb6', alt: 'LinkedIn' },
   { id: 'mail', href: 'mailto:info@ecogreenvzla.com', iconUrl: 'https://img.icons8.com/?size=100&id=tiHbAqWU3ZCQ&format=png&color=e94335', alt: 'Email' },
 ];
@@ -95,7 +95,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={`relative z-50 bg-white w-full shadow-sm`}>
+    <header className={`relative z-[999] bg-white w-full shadow-sm`}>
       <div className={`container mx-auto px-4 w-[99%] md:max-w-[80%]`}>
         <div className={`flex justify-between items-center transition-all duration-300 ${isScrolled ? 'py-2' : 'py-4 lg:py-6'}`}>
 
