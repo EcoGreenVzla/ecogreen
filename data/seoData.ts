@@ -6,56 +6,138 @@ export interface SEOContent {
   canonicalUrl: string;
 }
 
+
+// data/seoData.ts
+
+// 1. Esquema de Identidad Corporativa (Para la Home)
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "EngineeringBusiness",
+  "name": "EcoGreen Ingeniería",
+  "alternateName": "EcoGreen Venezuela",
+  "description": "Líderes en ingeniería geotécnica y ambiental en Venezuela, especialistas en muros de contención sostenibles y control de erosión.",
+  "url": "https://tumuro.com",
+  "logo": "https://media.tumuro.com/media/icons/favicon.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "VE",
+    "addressLocality": "Caracas"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "contactType": "atención técnica y ventas",
+    "telephone": "+58-XXX-XXXXXXX", // Reemplazar con dato real
+    "email": "contacto@tumuro.com"
+  },
+  "sameAs": [
+    "https://www.instagram.com/ecogreenvzla",
+    "https://twitter.com/ecogreen",
+    "https://www.facebook.com/ecogreen"
+  ]
+};
+
+// 2. Esquema FAQ: Muros de Contención
+const faqMurosSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Cuál es la ventaja de los muros de gavión de EcoGreen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nuestros muros de gavión ofrecen flexibilidad estructural inigualable, permitiendo deformaciones sin pérdida de estabilidad y facilitando el drenaje natural del terreno."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Qué materiales se usan en la tierra reforzada?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Utilizamos geomallas de poliéster de alta tenacidad que permiten construir taludes con inclinaciones de hasta 90 grados, optimizando el uso del espacio."
+      }
+    }
+  ]
+};
+
+// 3. Esquema FAQ: Aplicaciones Industriales (Minería y Petróleo)
+const faqIndustriaSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿EcoGreen realiza estudios geológicos para minería?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí, realizamos prospección geológica, estudios de suelos y diseños de contención específicos para la industria minera y geotécnica."
+      }
+    }
+  ]
+};
+
 export const seoData: Record<string, SEOContent> = {
   // =================================================================
   // PÁGINAS PRINCIPALES (Raíz de /pages)
   // =================================================================
+// =================================================================
+  // PÁGINAS PRINCIPALES (Raíz de /pages)
+  // =================================================================
+
   'ID-index.tsx': {
     title: "EcoGreen | Ingeniería Ecológica y Muros de Contención",
-    description: "Expertos en sistemas de contención sostenibles, control de erosión y estabilización de taludes en Venezuela. Soluciones de ingeniería verde.",
-    canonicalUrl: "https://tumuro.com/"
+    description: "Expertos en sistemas de contención sostenibles y control de erosión en Venezuela.",
+    canonicalUrl: "https://tumuro.com/",
+    schemas: [organizationSchema] 
   },
   'ID-muros-de-contencion.tsx': {
     title: "Muros de Contención | Soluciones Flexibles y Rígidas",
     description: "Diseño y construcción de muros de contención. Especialistas en sistemas adaptables a diversos terrenos y necesidades estructurales.",
-    canonicalUrl: "https://tumuro.com/muros-de-contencion"
+    canonicalUrl: "https://tumuro.com/muros-de-contencion",
+    schemas: [faqMurosContencion]
   },
   'ID-control-de-erosion.tsx': {
     title: "Control de Erosión y Protección de Suelos",
     description: "Tecnologías avanzadas para la prevención de erosión, estabilización de taludes y recuperación de suelos degradados.",
-    canonicalUrl: "https://tumuro.com/control-de-erosion"
+    canonicalUrl: "https://tumuro.com/control-de-erosion",
+    schemas: [faqControlErosion]
   },
   'ID-vialidad.tsx': {
     title: "Ingeniería Vial y Pavimentación Sostenible",
     description: "Soluciones especializadas para infraestructura vial, refuerzo de asfalto y estabilización de bases para carreteras.",
-    canonicalUrl: "https://tumuro.com/vialidad"
+    canonicalUrl: "https://tumuro.com/vialidad",
+    schemas: [faqVialidad]
   },
   'ID-petroleo.tsx': {
     title: "Ingeniería y Protección para la Industria Petrolera",
     description: "Servicios técnicos y productos especializados para la contención y protección en infraestructuras del sector petróleo y gas.",
-    canonicalUrl: "https://tumuro.com/petroleo"
+    canonicalUrl: "https://tumuro.com/petroleo",
+    schemas: [faqPetroleo]
   },
   'ID-obras-civiles.tsx': {
     title: "Construcción y Obras Civiles de Alta Ingeniería",
     description: "Ejecución de proyectos de ingeniería civil con enfoque en durabilidad, eficiencia estructural y respeto ambiental.",
-    canonicalUrl: "https://tumuro.com/obras-civiles"
+    canonicalUrl: "https://tumuro.com/obras-civiles",
+    schemas: [faqObrasCiviles]
   },
   'ID-campos-de-aplicacion.tsx': {
     title: "Campos de Aplicación | Ingeniería Geoecológica",
     description: "Sectores de aplicación: minería, industria, urbanismo, protección ambiental y obras hidráulicas.",
-    canonicalUrl: "https://tumuro.com/campos-de-aplicacion"
+    canonicalUrl: "https://tumuro.com/campos-de-aplicacion",
+    schemas: [faqCamposAplicacion]
   },
   'ID-casos-de-obras.tsx': {
     title: "Casos de Éxito | Portafolio de Proyectos Ejecutados",
     description: "Galería de obras de ingeniería civil y ecológica realizadas con experiencia y calidad demostrada.",
-    canonicalUrl: "https://tumuro.com/casos-de-obras"
+    canonicalUrl: "https://tumuro.com/casos-de-obras",
+    schemas: [faqCasosObras]
   },
-  'ID-contacto.tsx': { // Este coincide con el pageID definido en contactanos.tsx
+  'ID-contacto.tsx': { 
     title: "Contáctanos | Asesoría Técnica Especializada",
     description: "Solicita presupuestos y consultoría técnica para tus proyectos de muros de contención y control de erosión.",
-    canonicalUrl: "https://tumuro.com/contactanos"
+    canonicalUrl: "https://tumuro.com/contactanos",
+    schemas: [contactPageSchema]
   },
-
  
 
   // =================================================================
