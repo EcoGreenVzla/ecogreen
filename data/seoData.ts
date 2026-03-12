@@ -1,21 +1,23 @@
 // data/seoData.ts
 
+// 1. ACTUALIZAMOS LA INTERFAZ PARA QUE ACEPTE SCHEMAS
 export interface SEOContent {
   title: string;
   description: string;
   canonicalUrl: string;
+  schemas?: any[]; // <--- Agregamos esto para evitar errores de TypeScript
 }
 
+// =================================================================
+// 2. DEFINICIÓN DE ESQUEMAS (SIEMPRE ARRIBA DE seoData)
+// =================================================================
 
-// data/seoData.ts
-
-// 1. Esquema de Identidad Corporativa (Para la Home)
 const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "EngineeringBusiness",
   "name": "EcoGreen Ingeniería",
   "alternateName": "EcoGreen Venezuela",
-  "description": "Líderes en ingeniería geotécnica y ambiental en Venezuela, especialistas en muros de contención sostenibles y control de erosión.",
+  "description": "Expertos en sistemas de contención sostenibles, control de erosión y estabilización de taludes en Venezuela.",
   "url": "https://tumuro.com",
   "logo": "https://media.tumuro.com/media/icons/favicon.png",
   "address": {
@@ -25,65 +27,141 @@ const organizationSchema = {
   },
   "contactPoint": {
     "@type": "ContactPoint",
-    "contactType": "atención técnica y ventas",
-    "telephone": "+58-XXX-XXXXXXX", // Reemplazar con dato real
-    "email": "contacto@tumuro.com"
-  },
-  "sameAs": [
-    "https://www.instagram.com/ecogreenvzla",
-    "https://twitter.com/ecogreen",
-    "https://www.facebook.com/ecogreen"
-  ]
+    "contactType": "Ventas y Consultoría Técnica",
+    "email": "contacto@tumuro.com",
+    "url": "https://tumuro.com/contactanos"
+  }
 };
 
-// 2. Esquema FAQ: Muros de Contención
-const faqMurosSchema = {
+const faqMurosContencion = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿Cuál es la ventaja de los muros de gavión de EcoGreen?",
+      "name": "¿Qué tipos de muros de contención construye EcoGreen?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Nuestros muros de gavión ofrecen flexibilidad estructural inigualable, permitiendo deformaciones sin pérdida de estabilidad y facilitando el drenaje natural del terreno."
+        "text": "Diseñamos y construimos sistemas flexibles (muros de gavión, tierra reforzada, muros mixtos) y sistemas rígidos (concreto armado, ciclópeos y pantallas atirantadas) adaptados a cada requerimiento geotécnico."
       }
     },
     {
       "@type": "Question",
-      "name": "¿Qué materiales se usan en la tierra reforzada?",
+      "name": "¿Cómo elegir el muro de contención adecuado?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Utilizamos geomallas de poliéster de alta tenacidad que permiten construir taludes con inclinaciones de hasta 90 grados, optimizando el uso del espacio."
+        "text": "La elección depende del estudio de suelos, la topografía, los empujes hidrostáticos y el presupuesto. Nuestro equipo de ingeniería evalúa cada caso para ofrecer la solución más segura y rentable."
       }
     }
   ]
 };
 
-// 3. Esquema FAQ: Aplicaciones Industriales (Minería y Petróleo)
-const faqIndustriaSchema = {
+const faqControlErosion = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "¿EcoGreen realiza estudios geológicos para minería?",
+      "name": "¿Qué tecnologías utiliza EcoGreen para el control de erosión?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Sí, realizamos prospección geológica, estudios de suelos y diseños de contención específicos para la industria minera y geotécnica."
+        "text": "Utilizamos geomantas ecológicas, hidrosiembra, reforestación técnica y sistemas de bioingeniería para estabilizar taludes, proteger riberas y recuperar suelos degradados de forma permanente."
       }
     }
   ]
 };
+
+const faqVialidad = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué soluciones de ingeniería vial ofrece EcoGreen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ofrecemos refuerzo de pavimentos con geosintéticos, reparación de fallas de borde, estabilización de bases para carreteras y sistemas de drenaje vial de alta durabilidad."
+      }
+    }
+  ]
+};
+
+const faqPetroleo = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué servicios presta EcoGreen a la industria petrolera?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Proveemos soluciones de contención para derrames, protección de tuberías y oleoductos, sistemas antisocavación y estabilización de terrenos en zonas de explotación de hidrocarburos."
+      }
+    }
+  ]
+};
+
+const faqObrasCiviles = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué tipo de obras civiles ejecuta EcoGreen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Ejecutamos proyectos de alta ingeniería civil, incluyendo canalizaciones, presas, urbanismos y movimientos de tierra, garantizando la estabilidad estructural y el respeto por el medio ambiente."
+      }
+    }
+  ]
+};
+
+const faqCamposAplicacion = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿En qué sectores industriales trabaja EcoGreen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nuestras soluciones geoecológicas se aplican en infraestructura urbana, minería, sector agrícola, protección ambiental, vialidad y obras hidráulicas."
+      }
+    }
+  ]
+};
+
+const faqCasosObras = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Dónde puedo ver los proyectos ejecutados por EcoGreen?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Puedes visitar nuestro portafolio de Casos de Obras para ver proyectos reales ejecutados a nivel nacional, abarcando contención, urbanismos y canalización de ríos."
+      }
+    }
+  ]
+};
+
+const contactPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contacto EcoGreen Ingeniería",
+  "description": "Comunícate con nuestro equipo de ingenieros para asesoría, estudios de suelo y cotizaciones de obras civiles en Venezuela.",
+  "url": "https://tumuro.com/contactanos"
+};
+
+// =================================================================
+// 3. EXPORTACIÓN PRINCIPAL (AQUÍ YA EXISTEN LAS VARIABLES)
+// =================================================================
 
 export const seoData: Record<string, SEOContent> = {
   // =================================================================
   // PÁGINAS PRINCIPALES (Raíz de /pages)
   // =================================================================
-// =================================================================
-  // PÁGINAS PRINCIPALES (Raíz de /pages)
-  // =================================================================
-
   'ID-index.tsx': {
     title: "EcoGreen | Ingeniería Ecológica y Muros de Contención",
     description: "Expertos en sistemas de contención sostenibles y control de erosión en Venezuela.",
@@ -138,7 +216,6 @@ export const seoData: Record<string, SEOContent> = {
     canonicalUrl: "https://tumuro.com/contactanos",
     schemas: [contactPageSchema]
   },
- 
 
   // =================================================================
   // CATEGORÍAS DE MUROS DE CONTENCIÓN
@@ -159,8 +236,6 @@ export const seoData: Record<string, SEOContent> = {
     canonicalUrl: "https://tumuro.com/muros-de-contencion/sistemas-de-drenaje"
   },
 
-
- 
   // =================================================================
   // SUB-PÁGINAS: SISTEMAS DE CONTENCIÓN FLEXIBLES
   // =================================================================
@@ -190,8 +265,6 @@ export const seoData: Record<string, SEOContent> = {
     canonicalUrl: "https://tumuro.com/muros-de-contencion/sistemas-de-contencion-flexibles/refuerzo-de-taludes-y-terraplenes"
   },
 
-
-
   // =================================================================
   // SUB-PÁGINAS: SISTEMAS DE CONTENCIÓN RÍGIDOS
   // =================================================================
@@ -216,7 +289,6 @@ export const seoData: Record<string, SEOContent> = {
     canonicalUrl: "https://tumuro.com/muros-de-contencion/sistemas-de-contencion-rigidos/pilotes-y-micropilotes"
   },
 
-
   // =================================================================
   // SUB-PÁGINAS (Categorías y Servicios en /pages)
   // =================================================================
@@ -240,7 +312,6 @@ export const seoData: Record<string, SEOContent> = {
     description: "Sistemas de protección y contención diseñados para operaciones petroleras exigentes.",
     canonicalUrl: "https://tumuro.com/campos-de-aplicacion/industria-petroleo-y-gas"
   },
- 
 
   // =================================================================
   // GRUPO: CASOS DE OBRAS (/pages/casos-de-obras)
@@ -301,8 +372,6 @@ export const seoData: Record<string, SEOContent> = {
     canonicalUrl: "https://tumuro.com/casos-de-obras/325"
   },
 
-
-
   // =================================================================
   // GRUPO: CAMPOS DE APLICACIÓN
   // =================================================================
@@ -341,7 +410,6 @@ export const seoData: Record<string, SEOContent> = {
     description: "Estudios de suelo, prospección geológica y sistemas de contención para proyectos de explotación minera responsable.",
     canonicalUrl: "https://tumuro.com/campos-de-aplicacion/mineria-geologia-y-geotecnia"
   },
-
 
   // =================================================================
   // GRUPO: PRODUCTOS DE PETRÓLEO
