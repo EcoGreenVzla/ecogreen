@@ -1,19 +1,24 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-interface SEOProps {
+export interface SEOProps {
   title?: string;
   description?: string;
   canonicalUrl?: string;
+  keywords?: string;
+  schemas?: any[];
 }
 
 const SEO: React.FC<SEOProps> = ({ 
   title = "Ingeniería Especializada", 
-  description = "Especialistas en muros de contención y control de erosión.", 
-  canonicalUrl = 'https://tumuro.com'
+  description = "Empresa número 1 en muros de contención, control de erosión y estabilización de taludes en Venezuela.", 
+  canonicalUrl = 'https://tumuro.com',
+  keywords = "Muros, Muros de Contención, Muros de Gavión, Control de Erosión, Estabilización de Taludes, Protección de Riberas, Muros de Concreto Armado, Pantallas Atirantadas, Micropilotes, Taludes, Sistemas de Drenajes, Proyectos, Construcción, Muros Ecologicos",
+  schemas = []
 }) => {
   
-  const structuredData = {
+  // Schema por defecto solo si no se envía ninguno específico
+  const defaultStructuredData = {
     "@context": "https://schema.org",
     "@type": "ConstructionBusiness",
     "name": "EcoGreen",
@@ -27,16 +32,30 @@ const SEO: React.FC<SEOProps> = ({
     ]
   };
 
+  // Determinar qué schemas renderizar
+  const schemasToRender = schemas.length > 0 ? schemas : [defaultStructuredData];
+
   return (
     <Helmet>
-      {/* CORRECCIÓN: Sin espacios dentro de la etiqueta title para evitar errores de Helmet */}
       <title>{`${title} | EcoGreen`}</title>
       <meta name="description" content={description} />
+      <meta name="keywords" content={keywords} />
+      
+      {/* Etiquetas Open Graph (Mejora cómo se comparte en WhatsApp y Redes, y sirve para AI Search) */}
+      <meta property="og:title" content={`${title} | EcoGreen`} />
+      <meta property="og:description" content={description} />
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={canonicalUrl} />
+      <meta property="og:site_name" content="EcoGreen Ingeniería" />
+
       <link rel="canonical" href={canonicalUrl} />
       
-      <script type="application/ld+json">
-        {JSON.stringify(structuredData)}
-      </script>
+      {/* Mapeo dinámico de Schemas para SEO Técnico y de IA */}
+      {schemasToRender.map((schema, index) => (
+        <script key={index} type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
+      ))}
     </Helmet>
   );
 };
