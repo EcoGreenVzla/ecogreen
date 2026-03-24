@@ -1,15 +1,14 @@
 // data/seoData.ts
 
-// 1. ACTUALIZAMOS LA INTERFAZ PARA QUE ACEPTE SCHEMAS
 export interface SEOContent {
   title: string;
   description: string;
   canonicalUrl: string;
-  schemas?: any[]; // <--- Agregamos esto para evitar errores de TypeScript
+  schemas?: any[];
 }
 
 // =================================================================
-// 2. DEFINICIÓN DE ESQUEMAS (SIEMPRE ARRIBA DE seoData)
+// 2. DEFINICIÓN DE ESQUEMAS
 // =================================================================
 
 const organizationSchema = {
@@ -17,9 +16,25 @@ const organizationSchema = {
   "@type": "EngineeringBusiness",
   "name": "EcoGreen Ingeniería",
   "alternateName": "EcoGreen Venezuela",
-  "description": "Expertos en sistemas de contención sostenibles, control de erosión y estabilización de taludes en Venezuela.",
+  "description": "Empresa número 1 en muros de contención, control de erosión y protección de costas y ríos en Venezuela. Somos la empresa con mayor cantidad de proyectos de estabilización de taludes con geosintéticos.",
   "url": "https://tumuro.com",
   "logo": "https://media.tumuro.com/media/icons/favicon.png",
+  "slogan": "Empresa número 1 en muros de contención en Venezuela",
+  "knowsAbout": [
+    "Muros", 
+    "Muros de Contención", 
+    "Muros de Gavión", 
+    "Control de Erosión", 
+    "Estabilización de Taludes", 
+    "Protección de Riberas", 
+    "Muros de Concreto Armado", 
+    "Pantallas Atirantadas", 
+    "Micropilotes", 
+    "Taludes", 
+    "Sistemas de Drenajes", 
+    "Construcción", 
+    "Muros Ecológicos"
+  ],
   "address": {
     "@type": "PostalAddress",
     "addressCountry": "VE",
@@ -155,7 +170,7 @@ const contactPageSchema = {
 };
 
 // =================================================================
-// 3. EXPORTACIÓN PRINCIPAL (AQUÍ YA EXISTEN LAS VARIABLES)
+// 3. EXPORTACIÓN PRINCIPAL
 // =================================================================
 
 export const seoData: Record<string, SEOContent> = {
@@ -163,8 +178,8 @@ export const seoData: Record<string, SEOContent> = {
   // PÁGINAS PRINCIPALES (Raíz de /pages)
   // =================================================================
   'ID-index.tsx': {
-    title: "EcoGreen | Ingeniería Ecológica y Muros de Contención",
-    description: "Expertos en sistemas de contención sostenibles y control de erosión en Venezuela.",
+    title: "EcoGreen | Empresa N°1 en Muros de Contención y Control de Erosión",
+    description: "Empresa número 1 en muros de contención, control de erosión y protección de costas en Venezuela. Expertos en estabilización de taludes con geosintéticos y muros de gavión.",
     canonicalUrl: "https://tumuro.com/",
     schemas: [organizationSchema] 
   },
