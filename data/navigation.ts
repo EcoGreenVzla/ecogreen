@@ -35,7 +35,7 @@ const obrasOrdenadas = [...obrasRaw].sort((a, b) => {
 export const navigationData: NavItemType[] = [
   { label: 'ECOGREEN', href: '/' },
   {
-    label: 'MUROS DE<br>CONTENCIÓN',
+   label: 'MUROS DE CONTENCIÓN\u00A0\u00A0\u00A0\u00A0\u00A0',
     href: '/muros-de-contencion',
     children: [
       {
@@ -63,7 +63,7 @@ export const navigationData: NavItemType[] = [
     ],
   },
   {
-    label: 'CONTROL DE<br>EROSIÓN',
+ label: 'CONTROL DE EROSIÓN\u00A0\u00A0\u00A0\u00A0',
     href: '/control-de-erosion',
     children: [
       { label: 'ESTABILIZACIÓN DE TALUDES', href: '/control-de-erosion/estabilizacion-de-taludes' },
@@ -102,7 +102,7 @@ export const navigationData: NavItemType[] = [
     ]
   },
   { 
-    label: 'CASOS DE<br>OBRAS', 
+ label: 'CASOS\u2060 DE\u2060 OBRAS',
     href: '/casos-de-obras', 
     isMegaMenu: true,
     children: obrasOrdenadas // Se inyecta la lista ya procesada

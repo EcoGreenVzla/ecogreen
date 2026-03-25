@@ -49,3 +49,36 @@ img {
   /* Evita que la imagen sea arrastrable */
   -webkit-user-drag: none !important;
 }
+
+/* Asegura que el texto dentro del span se comporte igual que el resto */
+header nav a span.notranslate {
+  display: inline-block;
+  white-space: nowrap !important;
+}
+
+/* El seguro para que no se baje en Desktop */
+@media (min-width: 1025px) {
+  header nav > div > div > a {
+    white-space: nowrap !important;
+    display: flex !important;
+    align-items: center !important;
+    height: 64px !important;
+  }
+}
+
+/* --- ESTABILIZADOR PARA EVITAR EL TEMBLOR --- */
+header nav > div > div > a {
+  /* Estas 3 líneas eliminan micro-movimientos de renderizado */
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: none !important; /* El temblor a veces es por una transición de milisegundos */
+
+  /* Forzamos que el contenedor de la palabra sea rígido */
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap !important;
+  
+  /* Evita que al ponerse en negrita (si lo hace) la palabra crezca */
+  text-rendering: optimizeLegibility;
+}
