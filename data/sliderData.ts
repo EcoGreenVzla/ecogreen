@@ -678,8 +678,8 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
       "https://media.tumuro.com/data1/images/casos-de-obras/200/morocha/ECO200.27-ECO200.PRINCIPAL.JPG"
     ],
     mobileImages: [
-      "https://media.tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE1.jpg",
-      "https://media.tumuro.com/data2/images/casos-de-obras/300/ECO300_MOBILE2.jpg"
+      "https://media.tumuro.com/data2/images/casos-de-obras/200/ECO200_MOBILE1.jpg",
+      "https://media.tumuro.com/data2/images/casos-de-obras/200/ECO200_MOBILE2.jpg"
     ]
   },
 
