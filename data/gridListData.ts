@@ -52,7 +52,7 @@ export const gridListData: Record<string, GridSection> = {
       { title: 'Subdrenajes y Alcantarillas', href: '#', imgSrc: 'https://media.tumuro.com/images/subdrenajes-y-alcantarillas-cda.jpg' },
       { title: 'Aceras y Caminerias', href: '#', imgSrc: 'https://media.tumuro.com/images/aceras-y-caminerias-cda.jpg' },
       { title: 'Mantenimiento de Areas Verdes', href: '#', imgSrc: 'https://media.tumuro.com/images/mantenimiento-de-areas-verdes-cda.jpg' },
-      { title: 'Jardines Verticales y Techos Verdes', href: '#', imgSrc: 'https://media.tumuro.com/images/subdrenajes-y-alcantarillas-cda.jpg' },
+      { title: 'Jardines Verticales y Techos Verdes', href: '#', imgSrc: 'https://media.tumuro.com/images/jardines-verticales-y-techos-verdes.jpg' },
     ]
   },
 
