@@ -1,12 +1,12 @@
 import React from 'react';
-import SEO from '../components/SEO';
-import { seoData } from '../data/seoData';
-import HeroSliderResponsive from '../components/HeroSliderResponsive';
-import TextoCollapsable from '../components/TextoCollapsable';
-import GridList from '../components/GridList';
+import SEO from '../../components/SEO';
+import { seoData } from '../../data/seoData';
+import HeroSliderResponsive from '../../components/HeroSliderResponsive';
+import TextoCollapsable from '../../components/TextoCollapsable';
+import GridList from '../../components/GridList';
 
-import { sliderData } from '../data/sliderData';
-import { textosData } from '../data/textosData';
+import { sliderData } from '../../data/sliderData';
+import { textosData } from '../../data/textosData';
 
 const IndustriaPetroleoGas: React.FC = () => {
   // ID exacto del archivo gridListData.ts

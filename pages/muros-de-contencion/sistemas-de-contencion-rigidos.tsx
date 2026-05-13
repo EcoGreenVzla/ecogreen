@@ -1,15 +1,15 @@
 import React from 'react';
 
 // Componentes
-import SEO from '../components/SEO';
-import HeroSliderResponsive from '../components/HeroSliderResponsive';
-import TextoCollapsable from '../components/TextoCollapsable';
-import GridList from '../components/GridList';
+import SEO from '../../components/SEO';
+import HeroSliderResponsive from '../../components/HeroSliderResponsive';
+import TextoCollapsable from '../../components/TextoCollapsable';
+import GridList from '../../components/GridList';
 
 // Data
-import { seoData } from '../data/seoData';
-import { sliderData } from '../data/sliderData';
-import { textosData } from '../data/textosData';
+import { seoData } from '../../data/seoData';
+import { sliderData } from '../../data/sliderData';
+import { textosData } from '../../data/textosData';
 
 const SistemasDeContencionRigidos: React.FC = () => {
   // CLAVE: ID maestro unificado que conecta con todos los archivos de /data
