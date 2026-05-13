@@ -536,6 +536,86 @@ export const sliderData: Record<string, HeroSectionResponsive> = {
 
 
   // =====================================================================
+  // PETRÓLEO & GAS (petroleo.tsx)
+  // =====================================================================
+  'ID-petroleo.tsx': {
+    title: "PETRÓLEO & GAS",
+    subtitle: "SOLUCIONES INTEGRALES PARA LA INDUSTRIA.",
+    link: "/petroleo",
+    desktopImages: [
+      "https://media.tumuro.com/images/industria-petroleo-y-gas.jpg"
+    ],
+    mobileImages: [
+      "https://media.tumuro.com/images/industria-petroleo-y-gas2.jpg",
+      "https://media.tumuro.com/images/industria-petroleo-y-gas3.jpg"
+    ]
+  },
+
+  // =====================================================================
+  // PERFORACIÓN Y WORKOVER
+  // =====================================================================
+  'ID-perforacion-y-workover.tsx': {
+    title: "PERFORACIÓN Y WORKOVER",
+    subtitle: "ALIADO TÉCNICO-OPERATIVO EN EL POZO.",
+    link: "/petroleo/perforacion-y-workover",
+    desktopImages: [
+      "https://media.tumuro.com/images/industria-petroleo-y-gas.jpg"
+    ],
+    mobileImages: [
+      "https://media.tumuro.com/images/industria-petroleo-y-gas2.jpg",
+      "https://media.tumuro.com/images/industria-petroleo-y-gas3.jpg"
+    ]
+  },
+
+  // =====================================================================
+  // PRODUCCIÓN Y OPERACIONES DE CAMPO
+  // =====================================================================
+  'ID-produccion-y-operaciones.tsx': {
+    title: "PRODUCCIÓN Y OPERACIONES",
+    subtitle: "VIDA PRODUCTIVA DEL ACTIVO.",
+    link: "/petroleo/produccion-y-operaciones",
+    desktopImages: [
+      "https://media.tumuro.com/images/industria-petroleo-y-gas.jpg"
+    ],
+    mobileImages: [
+      "https://media.tumuro.com/images/industria-petroleo-y-gas2.jpg",
+      "https://media.tumuro.com/images/industria-petroleo-y-gas3.jpg"
+    ]
+  },
+
+  // =====================================================================
+  // CONSTRUCCIÓN E INFRAESTRUCTURA OIL & GAS
+  // =====================================================================
+  'ID-infraestructura-oil-gas.tsx': {
+    title: "INFRAESTRUCTURA OIL & GAS",
+    subtitle: "HABILITAMOS PERFORACIÓN Y PRODUCCIÓN.",
+    link: "/petroleo/infraestructura-oil-gas",
+    desktopImages: [
+      "https://media.tumuro.com/images/industria-petroleo-y-gas.jpg"
+    ],
+    mobileImages: [
+      "https://media.tumuro.com/images/industria-petroleo-y-gas2.jpg",
+      "https://media.tumuro.com/images/industria-petroleo-y-gas3.jpg"
+    ]
+  },
+
+  // =====================================================================
+  // INGENIERÍA, CONSULTORÍA Y TECNOLOGÍA
+  // =====================================================================
+  'ID-ingenieria-y-consultoria.tsx': {
+    title: "INGENIERÍA Y CONSULTORÍA",
+    subtitle: "EFICIENCIA, SEGURIDAD Y SOSTENIBILIDAD.",
+    link: "/petroleo/ingenieria-y-consultoria",
+    desktopImages: [
+      "https://media.tumuro.com/images/industria-petroleo-y-gas.jpg"
+    ],
+    mobileImages: [
+      "https://media.tumuro.com/images/industria-petroleo-y-gas2.jpg",
+      "https://media.tumuro.com/images/industria-petroleo-y-gas3.jpg"
+    ]
+  },
+
+  // =====================================================================
   // Final del bloque de slider
   // =====================================================================
 

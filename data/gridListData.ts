@@ -279,6 +279,17 @@ export const gridListData: Record<string, GridSection> = {
 
 // ... (dentro de export const gridListData: Record<string, GridSection> = { )
 
+  // PETRÓLEO & GAS
+  'ID-petroleo.tsx': {
+    title: 'SOLUCIONES PARA LA INDUSTRIA PETROLERA',
+    items: [
+      { title: 'PERFORACIÓN Y WORKOVER', href: '/petroleo/perforacion-y-workover', imgSrc: 'https://media.tumuro.com/images/industria-petroleo-y-gas.jpg' },
+      { title: 'PRODUCCIÓN Y OPERACIONES', href: '/petroleo/produccion-y-operaciones', imgSrc: 'https://media.tumuro.com/images/INDUSTRIA,-PETROLEO-Y-GAS1.jpg' },
+      { title: 'INFRAESTRUCTURA OIL & GAS', href: '/petroleo/infraestructura-oil-gas', imgSrc: 'https://media.tumuro.com/images/rampas-y-vias-de-penetracion-cda.jpg' },
+      { title: 'INGENIERÍA Y CONSULTORÍA', href: '/petroleo/ingenieria-y-consultoria', imgSrc: 'https://media.tumuro.com/images/separacion-y-estabilizacion-de-subrasantes-cda.jpg' },
+    ]
+  },
+
   // 14. CASOS DE OBRAS
   'ID-casos-de-obras.tsx': {
     title: 'PROYECTOS EJECUTADOS',

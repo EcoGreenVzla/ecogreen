@@ -202,10 +202,30 @@ export const seoData: Record<string, SEOContent> = {
     schemas: [faqVialidad]
   },
   'ID-petroleo.tsx': {
-    title: "Ingeniería y Protección para la Industria Petrolera",
-    description: "Servicios técnicos y productos especializados para la contención y protección en infraestructuras del sector petróleo y gas.",
+    title: "Petróleo & Gas | Soluciones Integrales para la Industria",
+    description: "EcoGreen ofrece soluciones integrales para la industria de Petróleo y Gas: perforación, producción, infraestructura, manejo de desechos y consultoría tecnológica con cumplimiento RNC.",
     canonicalUrl: "https://tumuro.com/petroleo",
     schemas: [faqPetroleo]
+  },
+  'ID-perforacion-y-workover.tsx': {
+    title: "Perforación y Workover | Servicios Petroleros EcoGreen",
+    description: "Fluidos de perforación, aditivos, control de sólidos, manejo de desechos y soporte operativo en sitio. Aliado técnico-operativo para operadoras petroleras.",
+    canonicalUrl: "https://tumuro.com/petroleo/perforacion-y-workover"
+  },
+  'ID-produccion-y-operaciones.tsx': {
+    title: "Producción y Operaciones de Campo | EcoGreen",
+    description: "Levantamiento artificial, químicos de producción, control de parafinas, manejo de agua producida, infraestructura y mantenimiento de instalaciones petroleras.",
+    canonicalUrl: "https://tumuro.com/petroleo/produccion-y-operaciones"
+  },
+  'ID-infraestructura-oil-gas.tsx': {
+    title: "Construcción e Infraestructura Oil & Gas | EcoGreen",
+    description: "Movimiento de tierra, construcción de pads, vialidad, campamentos y edificaciones industriales para habilitar perforación y producción en el sector petrolero.",
+    canonicalUrl: "https://tumuro.com/petroleo/infraestructura-oil-gas"
+  },
+  'ID-ingenieria-y-consultoria.tsx': {
+    title: "Ingeniería, Consultoría y Tecnología | EcoGreen",
+    description: "Consultoría técnica, desarrollo tecnológico, optimización de procesos y gestión de proyectos para eficiencia, seguridad y sostenibilidad en activos petroleros.",
+    canonicalUrl: "https://tumuro.com/petroleo/ingenieria-y-consultoria"
   },
   'ID-obras-civiles.tsx': {
     title: "Construcción y Obras Civiles de Alta Ingeniería",
@@ -429,29 +449,5 @@ export const seoData: Record<string, SEOContent> = {
   // =================================================================
   // GRUPO: PRODUCTOS DE PETRÓLEO
   // =================================================================
-  'ID-petroleo-1.tsx': {
-    title: "Producto Petrolero 1 | Ingeniería EcoGreen",
-    description: "Especificaciones técnicas y aplicaciones del producto especializado para el sector petróleo y gas.",
-    canonicalUrl: "https://tumuro.com/petroleo/producto-1"
-  },
-  'ID-petroleo-2.tsx': {
-    title: "Producto Petrolero 2 | Ingeniería EcoGreen",
-    description: "Sistemas de protección y contención diseñados para operaciones petroleras exigentes.",
-    canonicalUrl: "https://tumuro.com/petroleo/producto-2"
-  },
-  'ID-petroleo-3.tsx': {
-    title: "Producto Petrolero 3 | Ingeniería EcoGreen",
-    description: "Soluciones de ingeniería para infraestructura de transporte y almacenamiento de hidrocarburos.",
-    canonicalUrl: "https://tumuro.com/petroleo/producto-3"
-  },
-  'ID-petroleo-4.tsx': {
-    title: "Producto Petrolero 4 | Ingeniería EcoGreen",
-    description: "Tecnología avanzada para el control de derrames y protección ambiental en zonas petroleras.",
-    canonicalUrl: "https://tumuro.com/petroleo/producto-4"
-  },
-  'ID-petroleo-5.tsx': {
-    title: "Producto Petrolero 5 | Ingeniería EcoGreen",
-    description: "Mantenimiento y refuerzo de estructuras críticas en plantas y complejos petroquímicos.",
-    canonicalUrl: "https://tumuro.com/petroleo/producto-5"
-  }
+  // IDs de productos petroleros legacy eliminados - reemplazados por páginas reales
 };

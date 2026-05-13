@@ -79,11 +79,10 @@ export const navigationData: NavItemType[] = [
     label: 'PETRÓLEO',
     href: '/petroleo',
     children: [
-        { label: 'PRODUCTO / SERVICIO 1', href: '/petroleo/producto-1' },
-        { label: 'PRODUCTO / SERVICIO 2', href: '/petroleo/producto-2' },
-        { label: 'PRODUCTO / SERVICIO 3', href: '/petroleo/producto-3' },
-        { label: 'PRODUCTO / SERVICIO 4', href: '/petroleo/producto-4' },
-        { label: 'PRODUCTO / SERVICIO 5', href: '/petroleo/producto-5' },
+        { label: 'PERFORACIÓN Y WORKOVER', href: '/petroleo/perforacion-y-workover' },
+        { label: 'PRODUCCIÓN Y OPERACIONES', href: '/petroleo/produccion-y-operaciones' },
+        { label: 'INFRAESTRUCTURA OIL & GAS', href: '/petroleo/infraestructura-oil-gas' },
+        { label: 'INGENIERÍA Y CONSULTORÍA', href: '/petroleo/ingenieria-y-consultoria' },
     ]
   },
   { label: 'OBRAS CIVILES', href: '/obras-civiles' },

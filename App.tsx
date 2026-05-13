@@ -64,11 +64,10 @@ import ObrasHidraulicas from './pages/obras-hidraulicas';
 import MineriaGeotecnia from './pages/mineria-geologia-y-geotecnia';
 
 // --- SUB-RUTAS: PETRÓLEO ---
-import PetroleoProducto1 from './pages/PetroleoProducto1';
-import PetroleoProducto2 from './pages/PetroleoProducto2';
-import PetroleoProducto3 from './pages/PetroleoProducto3';
-import PetroleoProducto4 from './pages/PetroleoProducto4';
-import PetroleoProducto5 from './pages/PetroleoProducto5';
+import PetroleoPerforacionWorkover from './pages/petroleo/perforacion-y-workover';
+import PetroleoProduccionOperaciones from './pages/petroleo/produccion-y-operaciones';
+import PetroleoInfraestructura from './pages/petroleo/infraestructura-oil-gas';
+import PetroleoIngenieriaConsultoria from './pages/petroleo/ingenieria-y-consultoria';
 
 const App: React.FC = () => {
   return (
@@ -141,11 +140,10 @@ const App: React.FC = () => {
               <Route path="/campos-de-aplicacion/mineria-geologia-y-geotecnia" element={<MineriaGeotecnia />} />
 
               {/* SUB-RUTAS: PETRÓLEO */}
-              <Route path="/petroleo/producto-1" element={<PetroleoProducto1 />} />
-              <Route path="/petroleo/producto-2" element={<PetroleoProducto2 />} />
-              <Route path="/petroleo/producto-3" element={<PetroleoProducto3 />} />
-              <Route path="/petroleo/producto-4" element={<PetroleoProducto4 />} />
-              <Route path="/petroleo/producto-5" element={<PetroleoProducto5 />} />
+              <Route path="/petroleo/perforacion-y-workover" element={<PetroleoPerforacionWorkover />} />
+              <Route path="/petroleo/produccion-y-operaciones" element={<PetroleoProduccionOperaciones />} />
+              <Route path="/petroleo/infraestructura-oil-gas" element={<PetroleoInfraestructura />} />
+              <Route path="/petroleo/ingenieria-y-consultoria" element={<PetroleoIngenieriaConsultoria />} />
 
               <Route path="*" element={<UnderConstruction title="Página no encontrada" />} />
             </Routes>

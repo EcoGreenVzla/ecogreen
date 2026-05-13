@@ -798,6 +798,66 @@ export const galeriasData: Record<string, GaleriaData> = {
   },
 
 
+  // =====================================================================
+  // PETRÓLEO: PERFORACIÓN Y WORKOVER
+  // =====================================================================
+  'ID-perforacion-y-workover.tsx': {
+    id: 'ID-perforacion-y-workover.tsx',
+    items: [
+      { src: 'https://media.tumuro.com/images/industria-petroleo-y-gas.jpg', title: 'Operaciones de perforación con fluidos especializados en campo petrolero.' },
+      { src: 'https://media.tumuro.com/images/INDUSTRIA,-PETROLEO-Y-GAS1.jpg', title: 'Preparación y mantenimiento de lodos de perforación base agua.' },
+      { src: 'https://media.tumuro.com/images/rampas-y-vias-de-penetracion-cda.jpg', title: 'Equipos de control de sólidos y zarandas en sitio de perforación.' },
+      { src: 'https://media.tumuro.com/images/separacion-y-estabilizacion-de-subrasantes-cda.jpg', title: 'Manejo de desechos de perforación y procesos de dewatering.' },
+      { src: 'https://media.tumuro.com/images/refuerzo-de-terraplenes-sobre-suelos-blandos-cda.jpg', title: 'Soporte operativo en sitio con coordinación de logística e inventarios.' },
+      { src: 'https://media.tumuro.com/images/mantenimiento-de-areas-verdes-cda.jpg', title: 'HSE en sitio para garantizar la seguridad de las operaciones de perforación.' },
+    ]
+  },
+
+  // =====================================================================
+  // PETRÓLEO: PRODUCCIÓN Y OPERACIONES
+  // =====================================================================
+  'ID-produccion-y-operaciones.tsx': {
+    id: 'ID-produccion-y-operaciones.tsx',
+    items: [
+      { src: 'https://media.tumuro.com/images/industria-petroleo-y-gas.jpg', title: 'Sistemas de levantamiento artificial en pozos productores.' },
+      { src: 'https://media.tumuro.com/images/INDUSTRIA,-PETROLEO-Y-GAS1.jpg', title: 'Optimización de producción mediante análisis nodal.' },
+      { src: 'https://media.tumuro.com/images/rampas-y-vias-de-penetracion-cda.jpg', title: 'Tratamiento de agua producida para reinyección o disposición.' },
+      { src: 'https://media.tumuro.com/images/separacion-y-estabilizacion-de-subrasantes-cda.jpg', title: 'Control de parafinas e incrustaciones en líneas de producción.' },
+      { src: 'https://media.tumuro.com/images/refuerzo-de-terraplenes-sobre-suelos-blandos-cda.jpg', title: 'Facilidades superficiales y líneas de flujo en campo petrolero.' },
+      { src: 'https://media.tumuro.com/images/mantenimiento-de-areas-verdes-cda.jpg', title: 'Mantenimiento mecánico e integral de instalaciones petroleras.' },
+    ]
+  },
+
+  // =====================================================================
+  // PETRÓLEO: INFRAESTRUCTURA OIL & GAS
+  // =====================================================================
+  'ID-infraestructura-oil-gas.tsx': {
+    id: 'ID-infraestructura-oil-gas.tsx',
+    items: [
+      { src: 'https://media.tumuro.com/images/industria-petroleo-y-gas.jpg', title: 'Construcción de pads de perforación con estabilización de suelos.' },
+      { src: 'https://media.tumuro.com/images/INDUSTRIA,-PETROLEO-Y-GAS1.jpg', title: 'Vialidad interna y accesos para equipos pesados en campo petrolero.' },
+      { src: 'https://media.tumuro.com/images/rampas-y-vias-de-penetracion-cda.jpg', title: 'Campamentos modulares para personal operativo.' },
+      { src: 'https://media.tumuro.com/images/separacion-y-estabilizacion-de-subrasantes-cda.jpg', title: 'Edificaciones industriales y bodegas de apoyo logístico.' },
+      { src: 'https://media.tumuro.com/images/refuerzo-de-terraplenes-sobre-suelos-blandos-cda.jpg', title: 'Movimiento de tierra y preparación de solares para operaciones.' },
+      { src: 'https://media.tumuro.com/images/mantenimiento-de-areas-verdes-cda.jpg', title: 'Mantenimiento de instalaciones e infraestructura operativa.' },
+    ]
+  },
+
+  // =====================================================================
+  // PETRÓLEO: INGENIERÍA Y CONSULTORÍA
+  // =====================================================================
+  'ID-ingenieria-y-consultoria.tsx': {
+    id: 'ID-ingenieria-y-consultoria.tsx',
+    items: [
+      { src: 'https://media.tumuro.com/images/industria-petroleo-y-gas.jpg', title: 'Consultoría técnica especializada en diseño de programas de fluidos.' },
+      { src: 'https://media.tumuro.com/images/INDUSTRIA,-PETROLEO-Y-GAS1.jpg', title: 'Desarrollo tecnológico e innovación para la industria petrolera.' },
+      { src: 'https://media.tumuro.com/images/rampas-y-vias-de-penetracion-cda.jpg', title: 'Optimización de procesos operativos y reducción de costos.' },
+      { src: 'https://media.tumuro.com/images/separacion-y-estabilizacion-de-subrasantes-cda.jpg', title: 'Gestión de proyectos petroleros multidisciplinarios.' },
+      { src: 'https://media.tumuro.com/images/refuerzo-de-terraplenes-sobre-suelos-blandos-cda.jpg', title: 'Estrategias de eficiencia energética en activos petroleros.' },
+      { src: 'https://media.tumuro.com/images/mantenimiento-de-areas-verdes-cda.jpg', title: 'Programas de sostenibilidad y reducción de huella ambiental.' },
+    ]
+  },
+
 }; // <-- ESTA ES LA ÚNICA LLAVE FINAL. NO PONGAS NADA MÁS ABAJO.
 
 

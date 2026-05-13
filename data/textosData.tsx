@@ -1175,4 +1175,244 @@ export const textosData: Record<string, TextoData> = {
       </>
     ),
   },
+
+  // =====================================================================
+  // PETRÓLEO & GAS (petroleo.tsx)
+  // =====================================================================
+  'ID-petroleo.tsx': {
+    title: "Petróleo & Gas",
+    iconSrc: "https://media.tumuro.com/images/industria-petroleo-y-gas.jpg",
+    introContent: (
+      <>
+        <p>
+          EcoGreen ofrece soluciones integrales para la industria de Petróleo y Gas, cubriendo todas las fases del ciclo de vida del pozo y del activo. Desde la perforación hasta la producción, infraestructura, manejo de desechos y consultoría tecnológica, acompañamos al operador con ingeniería, experiencia y cumplimiento RNC para garantizar eficiencia, seguridad y sostenibilidad.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <p>
+          EcoGreen se posiciona como un proveedor integral de soluciones para la industria de Petróleo y Gas, acompañando al operador desde la perforación hasta la producción, mantenimiento, manejo de desechos y optimización del activo. Nuestro enfoque combina ingeniería, tecnología, operaciones y sostenibilidad, alineado con los códigos RNC requeridos por operadoras y entes reguladores.
+        </p>
+        <p className="mt-4 font-semibold">Nuestros servicios destacados incluyen:</p>
+        <ul className="list-disc list-inside space-y-2 pl-4 mt-2 font-medium text-gray-700">
+          <li><strong>Suministro de aditivos y soluciones químicas</strong> para perforación, completación, cementación, estimulación, producción y fractura.</li>
+          <li><strong>Manejo integral de desechos petroleros</strong> incluyendo fluidos de descarte, ripios, desechos de cementación, agua contaminada y procesos de dewatering.</li>
+          <li><strong>Consultoría y desarrollo tecnológico</strong> para innovación desde la idea hasta la comercialización.</li>
+        </ul>
+      </>
+    )
+  },
+
+  // =====================================================================
+  // PERFORACIÓN Y WORKOVER
+  // =====================================================================
+  'ID-perforacion-y-workover.tsx': {
+    title: "Perforación y Workover",
+    introContent: (
+      <>
+        <p>
+          EcoGreen actúa como aliado técnico-operativo, no solo como proveedor de químicos. Acompañamos al operador en todas las operaciones de perforación y workover con soluciones integrales que abarcan desde el diseño de fluidos hasta el manejo de desechos y el soporte operativo en sitio.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Fluidos de Perforación y Completación</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Diseño de programas de fluidos adaptados a cada formación.</li>
+          <li>Preparación y mantenimiento de lodos base agua, sintéticos y aceite.</li>
+          <li>Fluidos de completación y workover para máxima recuperación.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Aditivos y Control de Desempeño</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Estabilizadores de arcilla para control de formaciones reactivas.</li>
+          <li>Bactericidas y control de filtrado.</li>
+          <li>Control de pérdidas de circulación e inhibidores especiales.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Manejo de Desechos de Perforación</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Gestión de ripios de perforación y fluidos de descarte.</li>
+          <li>Procesos de dewatering para recuperación de agua.</li>
+          <li>Tratamiento y disposición final conforme a normativa.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Equipos y Soporte Operativo</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Mallas, zarandas y equipos de control de sólidos.</li>
+          <li>Herramientas de pesca y equipos auxiliares de taladro.</li>
+          <li>Coordinación de sitio, logística, inventarios y reportes operativos.</li>
+          <li>HSE en sitio para garantizar la seguridad de las operaciones.</li>
+        </ul>
+
+        <p className="mt-4">
+          <strong>Códigos RNC aplicables:</strong> 12000000 (Productos químicos), 12160000 (Aditivos), 71000000 (Servicios de perforación), 47000000 (Limpieza / Dewatering), 20000000 (Maquinaria de perforación), 27000000 (Herramientas y maquinaria).
+        </p>
+      </>
+    )
+  },
+
+  // =====================================================================
+  // PRODUCCIÓN Y OPERACIONES DE CAMPO
+  // =====================================================================
+  'ID-produccion-y-operaciones.tsx': {
+    title: "Producción y Operaciones de Campo",
+    introContent: (
+      <>
+        <p>
+          Acompañamos al operador durante toda la vida productiva del activo. Nuestros servicios de producción y operaciones de campo garantizan la continuidad operativa, la optimización de la extracción y el mantenimiento integral de las instalaciones petroleras.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Producción y Levantamiento Artificial</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Soporte a sistemas de levantamiento artificial.</li>
+          <li>Optimización de producción mediante análisis nodal.</li>
+          <li>Diagnóstico y solución de problemas de declinación.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Fluidos, Químicos y Tratamiento</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Químicos de producción especializados.</li>
+          <li>Control de parafinas e incrustaciones.</li>
+          <li>Tratamiento de agua producida para reinyección o disposición.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Manejo de Desechos y Fluidos</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Gestión de agua producida y desechos aceitosos.</li>
+          <li>Limpieza de tanques y restauración de áreas contaminadas.</li>
+          <li>Procesos de tratamiento conforme a estándares ambientales.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Infraestructura y Facilidades</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Construcción y mantenimiento de pads y fundaciones.</li>
+          <li>Tanques de almacenamiento y líneas de flujo.</li>
+          <li>Facilidades superficiales y edificaciones industriales.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Operaciones de Campo y Mantenimiento</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Mantenimiento mecánico, eléctrico e instrumental.</li>
+          <li>Integridad de instalaciones y servicios continuos de campo.</li>
+          <li>Inspecciones preventivas y correctivas.</li>
+        </ul>
+
+        <p className="mt-4">
+          <strong>Códigos RNC aplicables:</strong> 12000000 (Productos químicos), 12160000 (Aditivos), 47000000 (Limpieza industrial), 72000000 (Construcción y mantenimiento), 72130000 (Construcción industrial).
+        </p>
+      </>
+    )
+  },
+
+  // =====================================================================
+  // CONSTRUCCIÓN E INFRAESTRUCTURA OIL & GAS
+  // =====================================================================
+  'ID-infraestructura-oil-gas.tsx': {
+    title: "Construcción e Infraestructura Oil & Gas",
+    introContent: (
+      <>
+        <p>
+          Infraestructura que habilita perforación, producción y operaciones de campo. Construimos las bases físicas necesarias para que cada activo petrolero opere con eficiencia y seguridad desde el primer día.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Movimiento de Tierra y Preparación de Solares</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Excavación, relleno y compactación para pads de perforación.</li>
+          <li>Nivelación y preparación de terrenos en condiciones difíciles.</li>
+          <li>Estabilización de suelos con geomallas de refuerzo.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Construcción de Pads y Vialidad</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Construcción de pads de perforación con capacidad de carga específica.</li>
+          <li>Vialidad interna y accesos para equipos pesados.</li>
+          <li>Superficies de trabajo estabilizadas y drenadas.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Campamentos y Edificaciones Industriales</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Campamentos modulares para personal operativo.</li>
+          <li>Edificaciones industriales, bodegas y talleres.</li>
+          <li>Instalaciones de apoyo logístico y administrativo.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Mantenimiento de Instalaciones</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Mantenimiento correctivo y preventivo de infraestructura existente.</li>
+          <li>Reparación de vialidad y áreas de trabajo.</li>
+          <li>Ampliaciones y modificaciones de instalaciones operativas.</li>
+        </ul>
+
+        <p className="mt-4">
+          <strong>Códigos RNC aplicables:</strong> 72000000 (Construcción y mantenimiento), 72130000 (Construcción industrial).
+        </p>
+      </>
+    )
+  },
+
+  // =====================================================================
+  // INGENIERÍA, CONSULTORÍA Y TECNOLOGÍA
+  // =====================================================================
+  'ID-ingenieria-y-consultoria.tsx': {
+    title: "Ingeniería, Consultoría y Tecnología",
+    introContent: (
+      <>
+        <p>
+          La capa que habilita eficiencia, seguridad y sostenibilidad en todo el activo. Desarrollamos soluciones tecnológicas y estrategias de optimización que transforman la operación petrolera desde la ingeniería conceptual hasta la implementación.
+        </p>
+      </>
+    ),
+    expandedContent: (
+      <>
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Consultoría Técnica Especializada</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Asesoría en diseño de programas de fluidos y cementación.</li>
+          <li>Evaluación de estabilidad de pozos y formaciones.</li>
+          <li>Diagnóstico de problemas operativos y recomendaciones técnicas.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Desarrollo Tecnológico</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Innovación desde la idea hasta la comercialización.</li>
+          <li>Gestión por fases de proyectos de I+D.</li>
+          <li>Desarrollo de productos químicos especializados.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Optimización de Procesos</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Análisis de eficiencia operativa y reducción de costos.</li>
+          <li>Optimización de consumo de químicos y recursos.</li>
+          <li>Mejora continua de indicadores de producción.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Gestión de Proyectos</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Planificación, ejecución y control de proyectos petroleros.</li>
+          <li>Coordinación multidisciplinaria de equipos técnicos.</li>
+          <li>Cumplimiento de plazos, presupuestos y estándares de calidad.</li>
+        </ul>
+
+        <h3 className="text-xl font-bold mt-6 mb-2 text-ecogreen-blue uppercase">Estrategias de Eficiencia, Seguridad y Sostenibilidad</h3>
+        <ul className="list-disc list-inside space-y-1 pl-4 mb-4 font-medium text-gray-700">
+          <li>Programas de reducción de huella ambiental.</li>
+          <li>Estrategias de economía circular en operaciones petroleras.</li>
+          <li>Capacitación y cultura de seguridad operativa.</li>
+        </ul>
+
+        <p className="mt-4">
+          <strong>Código RNC aplicable:</strong> 81000000 (Servicios basados en ingeniería, investigación y tecnología).
+        </p>
+      </>
+    )
+  },
+
 };
