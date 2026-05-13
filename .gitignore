@@ -45,3 +45,10 @@ dist-ssr/
 # --- SISTEMA ---
 Thumbs.db
 desktop.ini
+
+# --- AI/LLM GENERATED ---
+.agents/
+.cursor/
+.windsurfer/
+.claude/
+AGENTS.md
