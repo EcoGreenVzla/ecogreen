@@ -1181,7 +1181,7 @@ export const textosData: Record<string, TextoData> = {
   // =====================================================================
   'ID-petroleo.tsx': {
     title: "Petróleo & Gas",
-    iconSrc: "",
+    iconSrc: "https://media.tumuro.com/media/icons/ca-industria-petroleo-gas-icon.png",
     introContent: (
       <>
         <p>
