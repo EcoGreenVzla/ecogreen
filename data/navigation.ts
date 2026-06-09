@@ -35,7 +35,7 @@ const obrasOrdenadas = [...obrasRaw].sort((a, b) => {
 export const navigationData: NavItemType[] = [
   { label: 'ECOGREEN', href: '/' },
   {
-   label: 'MUROS DE CONTENCIÓN\u00A0\u00A0\u00A0\u00A0\u00A0',
+    label: 'MUROS DE CONTENCIÓN\u00A0\u00A0\u00A0\u00A0\u00A0',
     href: '/muros-de-contencion',
     children: [
       {
@@ -63,7 +63,7 @@ export const navigationData: NavItemType[] = [
     ],
   },
   {
- label: 'CONTROL DE EROSIÓN\u00A0\u00A0\u00A0\u00A0',
+    label: 'CONTROL DE EROSIÓN\u00A0\u00A0\u00A0\u00A0',
     href: '/control-de-erosion',
     children: [
       { label: 'ESTABILIZACIÓN DE TALUDES', href: '/control-de-erosion/estabilizacion-de-taludes' },
@@ -76,13 +76,13 @@ export const navigationData: NavItemType[] = [
   },
   { label: 'VIALIDAD', href: '/vialidad' },
   {
-    label: 'PETRÓLEO',
+    label: 'Petróleo & Gas',
     href: '/petroleo',
     children: [
-        { label: 'PERFORACIÓN Y WORKOVER', href: '/petroleo/perforacion-y-workover' },
-        { label: 'PRODUCCIÓN Y OPERACIONES', href: '/petroleo/produccion-y-operaciones' },
-        { label: 'INFRAESTRUCTURA OIL & GAS', href: '/petroleo/infraestructura-oil-gas' },
-        { label: 'INGENIERÍA Y CONSULTORÍA', href: '/petroleo/ingenieria-y-consultoria' },
+      { label: 'PERFORACIÓN Y WORKOVER', href: '/petroleo/perforacion-y-workover' },
+      { label: 'PRODUCCIÓN Y OPERACIONES', href: '/petroleo/produccion-y-operaciones' },
+      { label: 'INFRAESTRUCTURA OIL & GAS', href: '/petroleo/infraestructura-oil-gas' },
+      { label: 'INGENIERÍA Y CONSULTORÍA', href: '/petroleo/ingenieria-y-consultoria' },
     ]
   },
   { label: 'OBRAS CIVILES', href: '/obras-civiles' },
@@ -90,19 +90,19 @@ export const navigationData: NavItemType[] = [
     label: 'CAMPOS DE<br>APLICACIÓN',
     href: '/campos-de-aplicacion',
     children: [
-        { label: 'INFRAESTRUCTURA URBANA', href: '/campos-de-aplicacion/infraestructura-urbana' },
-        { label: 'CONSTRUCCIÓN CIVIL', href: '/campos-de-aplicacion/construccion-civil' },
-        { label: 'PROTECCIÓN AMBIENTAL', href: '/campos-de-aplicacion/proteccion-ambiental' },
-        { label: 'INDUSTRIA, PETRÓLEO Y GAS', href: '/campos-de-aplicacion/industria-petroleo-y-gas' },
-        { label: 'SECTOR AGRÍCOLA', href: '/campos-de-aplicacion/sector-agricola' },
-        { label: 'VÍAS DE COMUNICACIÓN', href: '/campos-de-aplicacion/vias-de-comunicacion' },
-        { label: 'OBRAS HIDRÁULICAS', href: '/campos-de-aplicacion/obras-hidraulicas' },
-        { label: 'MINERÍA, GEOLOGÍA Y GEOTECNIA', href: '/campos-de-aplicacion/mineria-geologia-y-geotecnia' },
+      { label: 'INFRAESTRUCTURA URBANA', href: '/campos-de-aplicacion/infraestructura-urbana' },
+      { label: 'CONSTRUCCIÓN CIVIL', href: '/campos-de-aplicacion/construccion-civil' },
+      { label: 'PROTECCIÓN AMBIENTAL', href: '/campos-de-aplicacion/proteccion-ambiental' },
+      { label: 'INDUSTRIA, PETRÓLEO Y GAS', href: '/campos-de-aplicacion/industria-petroleo-y-gas' },
+      { label: 'SECTOR AGRÍCOLA', href: '/campos-de-aplicacion/sector-agricola' },
+      { label: 'VÍAS DE COMUNICACIÓN', href: '/campos-de-aplicacion/vias-de-comunicacion' },
+      { label: 'OBRAS HIDRÁULICAS', href: '/campos-de-aplicacion/obras-hidraulicas' },
+      { label: 'MINERÍA, GEOLOGÍA Y GEOTECNIA', href: '/campos-de-aplicacion/mineria-geologia-y-geotecnia' },
     ]
   },
-  { 
- label: 'CASOS\u2060 DE\u2060 OBRAS',
-    href: '/casos-de-obras', 
+  {
+    label: 'CASOS\u2060 DE\u2060 OBRAS',
+    href: '/casos-de-obras',
     isMegaMenu: true,
     children: obrasOrdenadas // Se inyecta la lista ya procesada
   },

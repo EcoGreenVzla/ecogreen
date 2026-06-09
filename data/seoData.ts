@@ -202,7 +202,7 @@ export const seoData: Record<string, SEOContent> = {
     schemas: [faqVialidad]
   },
   'ID-petroleo.tsx': {
-    title: "Petróleo & Gas | Soluciones Integrales para la Industria",
+    title: "Petróleo y Gas | Soluciones Integrales para la Industria",
     description: "EcoGreen ofrece soluciones integrales para la industria de Petróleo y Gas: perforación, producción, infraestructura, manejo de desechos y consultoría tecnológica con cumplimiento RNC.",
     canonicalUrl: "https://tumuro.com/petroleo",
     schemas: [faqPetroleo]
